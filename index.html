@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/123/123234.png" />
+	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <title>SimPlant</title>
+<style>
+h6 {
+	display:inline; 
+	color:red;
+}
+button {
+	width:25%;
+	height:50px;
+}
+p {
+	text-align:center;
+}
+.buttons {
+	width: 50px;
+      height: 50px;
+      border: 3px solid #000000;
+      border-radius: 50%;
+      text-align: center;
+      font-size:40px;
+	margin-left: 16px;
+	margin-right: 12px;
+	float:left;
+	-webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}
+.plant {
+	width:170px;
+	height:220px;
+	float:left;
+}
+div.scrollmenu {
+    display: flex;
+    overflow-x: auto;
+}
+.links {
+  height: 60px;
+  width: 33%;
+   float: left;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+  font-size:17px;
+}
+td, th {
+  border: 1px solid black;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.select {
+	width:49%;
+	height:50px;
+}
+</style>
+</head>
+<body>
+	<center><div class="links"> <a href="https://www.youtube.com/watch?v=hwoL6hWd4l0" target="_blank"><img src="https://image.flaticon.com/icons/png/512/24/24933.png" width="60px" height="60px"></a> </div>
+	<div class="links"> <a href="https://www.youtube.com/channel/UCYCi70os3z_wIqRMJ1cfdTw?" target="_blank"><img src="https://images.chesscomfiles.com/uploads/v1/user/36625556.89da2303.161x161o.a3798a7a0b5a.png" width="60px" height="60px"></a> </div>
+	<div class="links"> <a href="https://github.com/jedzoka/simplant" target="_blank"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" width="60px" height="60px"></a> </div></center>
+<table id="table">
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Vitamin_A'">A <h6>ug</h6></td>
+     <td>0</td>
+     <td>2800</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Iodine'">Io <h6>mg</h6></td>
+     <td>0</td>
+     <td>770</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Vitamin_C'">C <h6>mg</h6></td>
+     <td>0</td>
+     <td>280</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Iron'">Fe <h6>mg</h6></td>
+     <td>0</td>
+     <td>1.89</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Vitamin_D'">D <h6>ug</h6></td>
+     <td>0</td>
+     <td>70</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Magnesium'">Mg <h6>mg</h6></td>
+     <td>0</td>
+     <td>210</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Vitamin_E'">E <h6>mg</h6></td>
+     <td>0</td>
+     <td>28</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Manganese'">Mn <h6>mg</h6></td>
+     <td>0</td>
+     <td>0.021</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Vitamin_K'">K <h6>ug</h6></td>
+     <td>0</td>
+     <td>14</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Molybdenum'">Mo <h6>ug</h6></td>
+     <td>0</td>
+     <td>14</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Thiamine'">B1 <h6>mg</h6></td>
+     <td>0</td>
+     <td>1.4</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Phosphorus'">P <h6>mg</h6></td>
+     <td>0</td>
+     <td>700</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Riboflavin'">B2 <h6>mg</h6></td>
+     <td>0</td>
+     <td>2.1</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Selenium'">Se <h6>ug</h6></td>
+     <td>0</td>
+     <td>105</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Niacin'">B3 <h6>mg</h6></td>
+     <td>0</td>
+     <td>14</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Zinc'">Zn <h6>mg</h6></td>
+     <td>0</td>
+     <td>14</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Vitamin_B6'">B6 <h6>mg</h6></td>
+     <td>0</td>
+     <td>0.7</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Potassium'">Pts <h6>g</h6></td>
+     <td>0</td>
+     <td>2.8</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Folate'">B9 <h6>ug</h6></td>
+     <td>0</td>
+     <td>455</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Sodium'">Na <h6>g</h6></td>
+     <td>0</td>
+     <td>0.84</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Pantothenic_acid'">B5 <h6>mg</h6></td>
+     <td>0</td>
+     <td>11.9</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Chloride'">Cl <h6>g</h6></td>
+     <td>0</td>
+     <td>1.26</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Biotin'">B7 <h6>ug</h6></td>
+     <td>0</td>
+     <td>35</td>
+     <td onclick="https://en.wikipedia.org/wiki/Water'">H2O <h6>ml</h6></td>
+     <td>0</td>
+     <td>4.9</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Choline'">Cho <h6>mg</h6></td>
+     <td>0</td>
+     <td>875</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Carbohydrate'">Crb <h6>g</h6></td>
+     <td>0</td>
+     <td>420</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Calcium'">Ca <h6>mg</h6></td>
+     <td>0</td>
+     <td>1400</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Dietary_fiber'">DF <h6>g</h6></td>
+     <td>0</td>
+     <td onclick="window.location.href='https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly'">NaN</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Chromium'">Cr <h6>ug</h6></td>
+     <td>0</td>
+     <td>1.4</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Protein'">Pr <h6>g</h6></td>
+     <td>0</td>
+     <td>63.7</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Copper'">Cu <h6>ug</h6></td>
+     <td>0</td>
+     <td>1400</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Linoleic_acid'">LA <h6>g</h6></td>
+     <td>0</td>
+     <td>30.8</td>
+  </tr>
+  <tr>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Fluoride'">F <h6>mg</h6></td>
+     <td>0</td>
+     <td>0.07</td>
+     <td onclick="window.location.href='https://en.wikipedia.org/wiki/Alpha-Linolenic_acid'">ALA <h6>g</h6></td>
+     <td>0</td>
+     <td>3.5</td>
+  </tr>
+</table><br>
+  	<select id="gender" class="select" onchange="set()">
+  <option value="a">man</option>
+  <option value="b">woman</option>
+  <option value="c">pregnancy</option>
+  <option value="d">lactation</option>
+</select>
+<select id="age" class="select" onchange="set()">
+  <option value="1">0-6 months</option>
+  <option value="2">7-12 months</option>
+  <option value="3">1-3 years</option>
+  <option value="4">4-8 years</option>
+  <option value="5">9-13 years</option>
+  <option value="6">14-18 years</option>
+  <option value="7">19-30 years</option>
+  <option value="8">31-50 years</option>
+  <option value="9">51-70 years</option>
+  <option value="0">+70 years</option><br>
+</select><br><br>
+<div class=scrollmenu>
+	<div class="plant"><img id="0"src="https://image.flaticon.com/icons/png/512/131/131348.png" width="170px" height="60px"><div class="buttons" onclick="calc(0)">+</div><div class="buttons" onclick="calc(1)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Water"><p>water(ml)</p></a></div>
+	<div class="plant"><img src="https://image.flaticon.com/icons/png/512/131/131287.png" width="170px" height="60px"><div class="buttons" onclick="calc(2)">+</div><div class="buttons" onclick="calc(3)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Apple"><p>apple</p></a></div>
+	<div class="plant"><img src="https://image.flaticon.com/icons/png/512/123/123241.png" width="170px" height="60px"><div class="buttons" onclick="calc(4)">+</div><div class="buttons" onclick="calc(5)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Agaricus_bisporus"><p>agaricus bisporus</p></a></div>
+	<div class="plant"><img id="0"src="https://image.flaticon.com/icons/png/512/119/119523.png" width="170px" height="60px"><div class="buttons" onclick="calc(6)">+</div><div class="buttons" onclick="calc(7)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Bean"><p>bean</p></a></div>
+	<div class="plant"><img src="https://image.flaticon.com/icons/png/512/131/131320.png" width="170px" height="60px"><div class="buttons" onclick="calc(8)">+</div><div class="buttons" onclick="calc(9)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Banana"><p>banana</p></a></div>
+	<div class="plant"><img src="https://image.flaticon.com/icons/png/512/113/113375.png" width="170px" height="60px"><div class="buttons" onclick="calc(10)">+</div><div class="buttons" onclick="calc(11)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Walnut"><p>walnut</p></a></div>
+	<div class="plant"><img src="https://image.flaticon.com/icons/png/512/123/123238.png" width="170px" height="60px"><div class="buttons" onclick="calc(12)">+</div><div class="buttons" onclick="calc(13)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Garlic"><p>garlic</p></a></div>
+	<div class="plant"><img src="https://image.flaticon.com/icons/png/512/123/123950.png" width="170px" height="60px"><div class="buttons" onclick="calc(14)">+</div><div class="buttons" onclick="calc(15)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Millet"><p>millet</p></a></div>
+	<div class="plant"><img src="https://image.flaticon.com/icons/png/512/123/123235.png" width="170px" height="60px"><div class="buttons" onclick="calc(16)">+</div><div class="buttons" onclick="calc(17)">-</div><br><br><br><br><p>0</p><a href="https://en.wikipedia.org/wiki/Pea"><p>pea</p></a></div>
+</div>
+<button type="button" onclick="results()">Resoults</button>
+<div id="output"width="100%"height="100%"></div>
+<h1>References:</h1>
+<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t2/?report=objectonly" target="_blank">DRI Vitamins</a><br>
+<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t3/?report=objectonly" target="_blank">DRI Minerals</a><br>
+<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly" target="_blank">DRI Macronutrients</a><br>
+<a href="https://en.wikipedia.org/wiki/Water" target="_blank">water</a><br>
+<a href="https://en.wikipedia.org/wiki/Apple" target="_blank">apple</a><br>
+<a href="https://en.wikipedia.org/wiki/Agaricus_bisporus" target="_blank">agaricus bisporus</a><br>
+<a href="https://en.wikipedia.org/wiki/bean" target="_blank">bean</a><br>
+<a href="https://en.wikipedia.org/wiki/banana" target="_blank">banana</a><br>
+<a href="https://en.wikipedia.org/wiki/walnut" target="_blank">walnut</a><br>
+<a href="https://en.wikipedia.org/wiki/garlic" target="_blank">garlic</a><br>
+<a href="https://en.wikipedia.org/wiki/millet" target="_blank">millet</a><br>
+<a href="https://en.wikipedia.org/wiki/pea" target="_blank">pea</a><br>
+<script>
+	var par=document.getElementsByTagName("p");
+	var table=document.getElementsByTagName("td");
+	var output=document.getElementById('output');
+	var plants=[35]
+	var values = [36];
+	var type;
+	var i=0;
+	function set() {
+	var gender = document.getElementById('gender'); gender=gender[gender.selectedIndex].value;
+	var age = document.getElementById('age'); age=age[age.selectedIndex].value;
+    gender=gender+age;
+    switch (gender) {
+  case 'a1':   case 'b1': values=['400','40','10','4','2.0','0.2','0.3','2','0.1','65','0.4','1.7','5','125', '200','0.2','200','0.01','110','0.27','30','0.003','2','100','15','2','0.4','0.12','0.18','0.7','60','-','31','4.4','0.5','9.1'];break;
+  case 'a2':   case 'b2': values=['500','50','10','5','2.5','0.3','0.4','4','0.3','80','0.5','1.8','6','150','260','5.5','220','0.5','130','11','75','0.6','3','275','20','3','0.7','0.37','0.57','0.8','95','-','30','4.6','0.5','11.0'];break;
+  case 'a3':   case 'b3': values=['300','15','15','6','30','0.5','0.5','6','0.5','150','0.9','2','8','200', '700','11','340','0.7','90','7','80','1.2','17','460','20','3','3.0','1.0','1.5','1.3','130','19','-','7','0.7','13'];break;
+  case 'a4':   case 'b4': values=['400','25','15','7','55','0.6','0.6','8','0.6','200','1.2','3','12','250', '1000','15','440','1','90','10','130','1.5','22','500','30','5','3.8','1.2','1.9','1.7','130','25','-','10','0.9','19'];break;
+  case 'a5':   values=['600','45','15','11','60','0.9','0.9','12','1.0','300','1.8','4','20','375','1300','25','700','2','120','8','240','1.9','34','1250','40','8','4.5','1.5','2.3','2.4','130','31','-','12','1.2','34'];break;
+  case 'a6':   values=['900','75','15','15','75','1.2','1.3','16','1.3','400','2.4','5','25','550','1300','35','890','3','150','11','410','2.2','43','1250','55','11','4.7','1.5','2.3','3.3','130','38','-','16','1.6','52'];break;
+  case 'a7':   values=['900','90','15','15','120','1.2','1.3','16','1.3','400','2.4','5','30','550','1000','35','900','4','150','8','400','2.3','45','700','55','11','4.7','1.5','2.3','3.7','130','38','-','17','1.6','56'];break;
+  case 'a8':   values=['900','90','15','15','120','1.2','1.3','16','1.3','400','2.4','5','30','550','1000','35','900','4','150','8','420','2.3','45','700','55','11','4.7','1.5','2.3','3.7','130','38','-','17','1.6','56'];break;
+  case 'a9':   values=['900','90','15','15','120','1.2','1.3','16','1.7','400','2.4','5','30','550','1000','30','900','4','150','8','420','2.3','45','700','55','11','4.7','1.3','2.0','3.7','130','30','-','14','1.6','56'];break;
+  case 'a0':   values=['900','90','20','15','120','1.2','1.3','16','1.7','400','2.4','5','30','550','1200','30','900','4','150','8','420','2.3','45','700','55','11','4.7','1.2','1.8','3.7','130','30','-','14','1.6','56'];break;
+  case 'b5':   values=['600','45','15','11','60','0.9','0.9','12','1.0','300','1.8','4','20','375','1300','21','700','2','120','8','240','1.6','34','1250','40','8','4.5','1.5','2.3','2.1','130','26','-','10','1.0','34'];break;
+  case 'b6':   values=['700','65','15','15','75','1.0','1.0','14','1.2','400','2.4','5','25','400','1300','24','890','3','150','15','360','1.6','43','1250','55','9','4.7','1.5','2.3','2.3','130','26','-','11','1.1','46'];break;
+  case 'b7':   values=['700','75','15','15','90','1.1','1.1','14','1.3','400','2.4','5','30','425','1000','25','900','3','150','18','310','1.8','45','700','55','8','4.7','1.5','2.3','2.7','130','25','-','12','1.1','46'];break;
+  case 'b8':   values=['700','75','15','15','90','1.1','1.1','14','1.3','400','2.4','5','30','425','1000','25','900','3','150','18','320','1.8','45','700','55','8','4.7','1.5','2.3','2.7','130','25','-','12','1.1','46'];break;
+  case 'b9':   values=['700','75','15','15','90','1.1','1.1','14','1.5','400','2.4','5','30','425','1200','20','900','3','150','8','320','1.8','45','700','55','8','4.7','1.3','2.0','2.7','130','21','-','11','1.1','46'];break;
+  case 'b0':   values=['700','75','20','15','90','1.1','1.1','14','1.5','400','2.4','5','30','425','1200','20','900','3','150','8','320','1.8','45','700','55','8','4.7','1.2','1.8','2.7','130','21','-','11','1.1','46'];break;
+  case 'c6':   values=['750','80','15','15','75','1.4','1.4','18','1.9','600','2.6','6','30','450','1300','29','1000','3','220','27','400','2.0','50','1250','60','12','4.7','1.5','2.3','3.0','175','28','-','13','1.4','71'];break;
+  case 'c7':   values=['770','85','15','15','90','1.4','1.4','18','1.9','600','2.6','6','30','450','1000','30','1000','3','220','27','350','2.0','50','700','60','11','4.7','1.5','2.3','3.0','175','28','-','13','1.4','71'];break;
+  case 'c8':   values=['770','85','15','15','90','1.4','1.4','18','1.9','600','2.6','6','30','450','1000','30','1000','3','220','27','360','2.0','50','700','60','11','4.7','1.5','2.3','3.0','175','28','-','13','1.4','71'];break;
+  case 'd6':   values=['1200','115','15','19','75','1.4','1.6','17','2.0','500','2.8','7','35','550','1300','44','1300','3','290','10','360','2.6','50','1250','70','13','5.1','1.5','2.3','3.8','210','29','-','13','1.3','71'];break;
+  case 'd7':   values=['1300','120','15','19','90','1.4','1.6','17','2.0','500','2.8','7','35','550','1000','45','1300','3','290','9','310','2.6','50','700','70','12','5.1','1.5','2.3','3.8','210','29','-','13','1.3','71'];break;
+  case 'd8':   values=['1300','120','15','19','90','1.4','1.6','17','2.0','500','2.8','7','35','550','1000','45','1300','3','290','9','320','2.6','50','700','70','12','5.1','1.5','2.3','3.8','210','29','-','13','1.3','71'];break;
+  case 'c1':case 'c2':case 'c3':case 'c4':case 'c5':case 'c9':case 'c0':case 'd1':case 'd2':case 'd3':case 'd4':case 'd5':case 'd9':case 'd0': values=[];break;
+	}
+  table[2].innerHTML = Math.round(values[0]*7 * 100) / 100;
+  table[8].innerHTML = Math.round(values[1]*7 * 100) / 100;
+  table[14].innerHTML = Math.round(values[2]*7 * 100) / 100;
+  table[20].innerHTML = Math.round(values[3]*7 * 100) / 100;
+  table[26].innerHTML = Math.round(values[4]*7 * 100) / 100;
+  table[32].innerHTML = Math.round(values[5]*7 * 100) / 100;
+  table[38].innerHTML = Math.round(values[6]*7 * 100) / 100;
+  table[44].innerHTML = Math.round(values[7]*7 * 100) / 100;
+  table[50].innerHTML = Math.round(values[8]*7 * 100) / 100;
+  table[56].innerHTML = Math.round(values[9]*7 * 100) / 100;
+  table[62].innerHTML = Math.round(values[11]*7 * 100) / 100;
+  table[68].innerHTML = Math.round(values[12]*7 * 100) / 100;
+  table[74].innerHTML = Math.round(values[13]*7 * 100) / 100;
+  table[80].innerHTML = Math.round(values[14]*7 * 100) / 100;
+  table[86].innerHTML = Math.round(values[15]*7 * 100) / 100;
+  table[92].innerHTML = Math.round(values[16]*7 * 100) / 100;
+  table[98].innerHTML = Math.round(values[17]*7 * 100) / 100;
+  table[5].innerHTML = Math.round(values[18]*7 * 100) / 100;
+  table[11].innerHTML = Math.round(values[19]*7 * 100) / 100;
+  table[17].innerHTML = Math.round(values[20]*7 * 100) / 100;
+  table[23].innerHTML = Math.round(values[21]*7 * 1000) / 1000;
+  table[29].innerHTML = Math.round(values[22]*7 * 100) / 100;
+  table[35].innerHTML = Math.round(values[23]*7 * 100) / 100;
+  table[41].innerHTML = Math.round(values[24]*7 * 100) / 100;
+  table[47].innerHTML = Math.round(values[25]*7 * 100) / 100;
+  table[53].innerHTML = Math.round(values[26]*7 * 100) / 100;
+  table[59].innerHTML = Math.round(values[27]*7 * 100) / 100;
+  table[65].innerHTML = Math.round(values[28]*7 * 100) / 100;
+  table[71].innerHTML = Math.round(values[29]*7 * 100) / 100;
+  table[77].innerHTML = Math.round(values[30]*7 * 100) / 100;
+  table[83].innerHTML = Math.round(values[31]*7 * 100) / 100;
+  table[95].innerHTML = Math.round(values[33]*7 * 100) / 100;
+  table[101].innerHTML = Math.round(values[34]*7 * 100) / 100;
+  table[89].innerHTML = Math.round(values[35]*7 * 100) / 100;
+}
+function calc(x){
+	if (x%2 == 0) type=1;  else {type=-1;x--;}
+	if (par[x].innerHTML == 0) type=1; //plants=[A,c,D,e,K,b1,b2,b3,b6,B9,b5,B7,choline,calcium,CHROMIUM,COPPER,fluoride,IODINE,iron,magnesium,manganese,MOLYBDENUM,phosphorus,SELENIUM,zinc,potassium(g),sodium(g),chloride(g),water,carbohydrate(g),dietary fiber(g),protein(g),linoleic acid(g),alpha-linoleic acid(g)] 
+	switch (x){
+	case 0: plants=[250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,0,0,0,0];break;
+	case 2: plants=[100,59,4.6,0,0.18,2.2,0.017,0.026,0.091,0.041,3,0.061,0,0,6,0,0,0,0,0.12,5,0.035,0,11,0,0.04,0.107,0.001,0,0.086,13.81,2.4,0.26,0,0];break;
+	case 4: plants=[100,0,2.1,0.2,0,0,0.081,0.402,3.607,0.104,17,1.497,0,0,0,0,0,0,0,0.5,9,0,0,86,0,0.52,0.318,0.003,0,0.092,3.26,13.81,3.09,0,0,0];break;
+	case 6: plants=[100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10.5,0,9.6,0,0];break;
+	case 8: plants=[100,0,8.7,0,0,0,0.031,0.073,0.665,0.4,20,0.334,0,9.8,0,0,0,0,0,0.26,27,0.27,0,22,0,0.15,0.358,0.001,0,0.075,22.84,2.6,1.09,9.6,0,0];break;
+	case 10: plants=[100,22,1.3,0,0.7,2.7,0.341,0.15,1.125,0.537,98,0.570,0,0,98,0,0,0,0,2.91,158,3.414,0,346,0,3.09,0.441,0.002,0,0.004,13.71,6.7,15.23,0,0];break;
+	case 12: plants=[100,0,31.2,0,0,0.2,0.11,0.7,1.235,3,0.596,0,0,181,0,0,0,0,1.7,25,1.672,0,153,0,1.16,0.401,0.017,0,0.059,33.09,2.1,6.36,0,0,0];break;
+	case 14: plants=[100,0,1.6,0,0,0.9,0,0.29,4.72,0.38,85,0.85,0,0,8,0,0.8,0,0,3.0,114,1.6,0,285,0,1.7,0,0.005,0,0.008,72.8,8.5,11,0.1,2.0];break;
+	case 16: plants=[100,38,40,0,0.13,24.8,0.266,0.132,2.09,0.169,65,0,0,0,25,0,0,0,0,1.47,33,0.41,0,108,0,1.24,0.244,0.005,0,0,14.45,5.1,5.42,0,0];break;
+	
+	}  
+	par[x].innerHTML = par[x].innerHTML*1+plants[0]*type;
+	table[1].innerHTML = table[1].innerHTML*1+plants[1]*type;table[1].innerHTML=Math.round(table[1].innerHTML*1000)/1000;
+	table[7].innerHTML = table[7].innerHTML*1+plants[2]*type;table[7].innerHTML=Math.round(table[7].innerHTML*1000)/1000;
+	table[13].innerHTML = table[13].innerHTML*1+plants[3]*type;table[13].innerHTML=Math.round(table[13].innerHTML*1000)/1000;
+	table[19].innerHTML = table[19].innerHTML*1+plants[4]*type;table[19].innerHTML=Math.round(table[19].innerHTML*1000)/1000;
+	table[25].innerHTML = table[25].innerHTML*1+plants[5]*type;table[25].innerHTML=Math.round(table[25].innerHTML*1000)/1000;
+	table[31].innerHTML = table[31].innerHTML*1+plants[6]*type;table[31].innerHTML=Math.round(table[31].innerHTML*1000)/1000;
+	table[37].innerHTML = table[37].innerHTML*1+plants[7]*type;table[37].innerHTML=Math.round(table[37].innerHTML*1000)/1000;
+	table[43].innerHTML = table[43].innerHTML*1+plants[8]*type;table[43].innerHTML=Math.round(table[43].innerHTML*1000)/1000;
+	table[49].innerHTML = table[49].innerHTML*1+plants[9]*type;table[49].innerHTML=Math.round(table[49].innerHTML*1000)/1000;
+	table[55].innerHTML = table[55].innerHTML*1+plants[10]*type;table[55].innerHTML=Math.round(table[55].innerHTML*1000)/1000;
+	table[61].innerHTML = table[61].innerHTML*1+plants[11]*type;table[61].innerHTML=Math.round(table[61].innerHTML*1000)/1000;
+	table[67].innerHTML = table[67].innerHTML*1+plants[12]*type;table[67].innerHTML=Math.round(table[67].innerHTML*1000)/1000;
+	table[73].innerHTML = table[73].innerHTML*1+plants[13]*type;table[73].innerHTML=Math.round(table[73].innerHTML*1000)/1000;
+	table[79].innerHTML = table[79].innerHTML*1+plants[14]*type;table[79].innerHTML=Math.round(table[79].innerHTML*1000)/1000;
+	table[85].innerHTML = table[85].innerHTML*1+plants[15]*type;table[85].innerHTML=Math.round(table[85].innerHTML*1000)/1000;
+	table[91].innerHTML = table[91].innerHTML*1+plants[16]*type;table[91].innerHTML=Math.round(table[91].innerHTML*1000)/1000;
+	table[97].innerHTML = table[97].innerHTML*1+plants[17]*type;table[97].innerHTML=Math.round(table[97].innerHTML*1000)/1000;
+	table[4].innerHTML = table[4].innerHTML*1+plants[18]*type;table[4].innerHTML=Math.round(table[4].innerHTML*1000)/1000;
+	table[10].innerHTML = table[10].innerHTML*1+plants[19]*type;table[10].innerHTML=Math.round(table[10].innerHTML*1000)/1000;
+	table[16].innerHTML = table[16].innerHTML*1+plants[20]*type;table[16].innerHTML=Math.round(table[16].innerHTML*1000)/1000;
+	table[22].innerHTML = table[22].innerHTML*1+plants[21]*type;table[22].innerHTML=Math.round(table[22].innerHTML*1000)/1000;
+	table[28].innerHTML = table[28].innerHTML*1+plants[22]*type;table[28].innerHTML=Math.round(table[28].innerHTML*1000)/1000;
+	table[34].innerHTML = table[34].innerHTML*1+plants[23]*type;table[34].innerHTML=Math.round(table[34].innerHTML*1000)/1000;
+	table[40].innerHTML = table[40].innerHTML*1+plants[24]*type;table[40].innerHTML=Math.round(table[40].innerHTML*1000)/1000;
+	table[46].innerHTML = table[46].innerHTML*1+plants[25]*type;table[46].innerHTML=Math.round(table[46].innerHTML*1000)/1000;
+	table[52].innerHTML = table[52].innerHTML*1+plants[26]*type;table[52].innerHTML=Math.round(table[52].innerHTML*1000)/1000;
+	table[58].innerHTML = table[58].innerHTML*1+plants[27]*type;table[58].innerHTML=Math.round(table[58].innerHTML*1000)/1000;
+	table[64].innerHTML = table[64].innerHTML*1+plants[28]*type;table[64].innerHTML=Math.round(table[64].innerHTML*1000)/1000;
+	table[70].innerHTML = table[70].innerHTML*1+plants[29]*type;table[70].innerHTML=Math.round(table[70].innerHTML*1000)/1000;
+	table[76].innerHTML = table[76].innerHTML*1+plants[30]*type;table[76].innerHTML=Math.round(table[76].innerHTML*1000)/1000;
+	table[82].innerHTML = table[82].innerHTML*1+plants[31]*type;table[82].innerHTML=Math.round(table[82].innerHTML*1000)/1000;
+	table[88].innerHTML = table[88].innerHTML*1+plants[32]*type;table[88].innerHTML=Math.round(table[88].innerHTML*1000)/1000;
+	table[94].innerHTML = table[94].innerHTML*1+plants[33]*type;table[94].innerHTML=Math.round(table[94].innerHTML*1000)/1000;
+	table[100].innerHTML = table[100].innerHTML*1+plants[34]*type;table[100].innerHTML=Math.round(table[100].innerHTML*1000)/1000;
+	}
+	function results(){
+		if (table[83].innerHTML=="NaN") values[10]=0.4;
+		output.innerHTML="<h1>Your package of food for 7 days:</h1<br>";
+		while (i < 18) { //number of plants * 2 
+  if (par[i].innerHTML > 0) {output.innerHTML=output.innerHTML+par[i].innerHTML+" grams of "+par[i+1].innerHTML+"</br>";}
+  i++;
+}i=0;
+output.innerHTML+="Also you need "+values[10]+" uq of vitamin B12 PER DAY from a "+'<a href="https://www.google.pl/search?q=b12+supplement&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiOxZrMmYDjAhUKxosKHaV9D5MQ_AUIESgC&biw=1366&bih=672">supplement</a>';
+}
+</script>
+  </body>
+</html> 
