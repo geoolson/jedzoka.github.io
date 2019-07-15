@@ -580,8 +580,8 @@ function calc(x){
 	case 312: plants=[100,33,75,26.3,0,0,0.03,0.04,0.3,0,0,0,9,0.2,12,0,11,0,0,0.103,0.003,0,7.49,0,0.4,0.8,0,0,0,0,0,0,0,0,0,0,0];break; //surinam cherry 
 	case 314: plants=[100,239,2,3.5,0.1,2.8,0.428,0.152,1.938,0.143,0.066,14,74,2.8,92,0,113,1.3,0.1,0.628,0.028,0.031,62.5,5.1,0.6,2.8,8.6,0,0,0,0,0,0,0,860,0,0];break; //tamarind 
 	case 316: plants=[100,56,0,41,0.1,11,0.04,0.05,0.1,0.064,0.07,8,33,1,13,0.186,44,0,0.23,0.275,0.001,0,13.8,4.3,0.2,1.4,7.6,0,0,0,0,0,0,0,0,0,0];break; //white currant
-        case 318: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,values[10],0,0,0,0,0,0];break; //b12 supplement
-        case 320: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,values[2],0,0,0,0,0,0,0];break; //d supplement
+        case 318: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; plants[30]=values[10]; break; //b12 supplement
+        case 320: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; plants[29]=values[2]; break; //d supplement
 	}  
 	document.getElementById(x).innerHTML = document.getElementById(x).innerHTML*1+plants[0]*type;//quantity
 	h[0].innerHTML = h[0].innerHTML*1+plants[2]*type;h[0].innerHTML=Math.round(h[0].innerHTML*1000)/1000;//vitamin a
