@@ -583,7 +583,7 @@ function calc(x){
         case 318: plants=[0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0]; break; //b12 supplement
         case 320: plants=[5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0]; break; //d supplement
 	}  
-	document.getElementById(x).innerHTML = Math.round(document.getElementById(x).innerHTML*1+plants[0]*type*1000)/1000;//quantity
+	document.getElementById(x).innerHTML = Math.round((document.getElementById(x).innerHTML*1+plants[0]*type)*1000)/1000;//quantity
 	h[0].innerHTML = h[0].innerHTML*1+plants[2]*type;h[0].innerHTML=Math.round(h[0].innerHTML*1000)/1000;//vitamin a
 	h[3].innerHTML = h[3].innerHTML*1+plants[3]*type;h[3].innerHTML=Math.round(h[3].innerHTML*1000)/1000;//vitamin c
 	h[6].innerHTML = h[6].innerHTML*1+plants[4]*type;h[6].innerHTML=Math.round(h[6].innerHTML*1000)/1000;//vitamin e
