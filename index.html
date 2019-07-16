@@ -378,43 +378,43 @@ color:black ;
   case 'd8':   values=['1300','120','15','19','90','1.4','1.6','17','2.0','500','2.8','7','35','550','1000','45','1300','3','290','9','320','2.6','50','700','70','12','5.1','1.5','2.3','3.8','210','29','0','13','1.3','71'];break;
   case 'c1':case 'c2':case 'c3':case 'c4':case 'c5':case 'c9':case 'c0':case 'd1':case 'd2':case 'd3':case 'd4':case 'd5':case 'd9':case 'd0': values=[];break;
 	}
-  h[0].innerHTML = Math.round(values[0]*-7 * 100) / 100; //a
-  h[3].innerHTML = Math.round(values[1]*-7 * 100) / 100;	//c
-  h[6].innerHTML = Math.round(values[3]*-7 * 100) / 100; //e
-  h[9].innerHTML = Math.round(values[4]*-7 * 100) / 100; //k
-  h[12].innerHTML = Math.round(values[5]*-7 * 100) / 100; //b1	
-  h[15].innerHTML = Math.round(values[6]*-7 * 100) / 100; //b2
-  h[18].innerHTML = Math.round(values[7]*-7 * 100) / 100; //b3	
-  h[21].innerHTML = Math.round(values[11]*-7 * 100) / 100; //b5	
-  h[24].innerHTML = Math.round(values[8]*-7 * 100) / 100; //b6	
-  h[27].innerHTML = Math.round(values[9]*-7 * 100) / 100; //b9	
-  h[30].innerHTML = Math.round(values[10]*-7 * 100) / 100; //b12
-  h[33].innerHTML = Math.round(values[2]*-7 * 100) / 100; //d		
+  h[0].innerHTML = values[0]*-1; //a
+  h[3].innerHTML = values[1]*-1; //c
+  h[6].innerHTML = values[3]*-1; //e
+  h[9].innerHTML = values[4]*-1; //k
+  h[12].innerHTML = values[5]*-1; //b1	
+  h[15].innerHTML = values[6]*-1; //b2
+  h[18].innerHTML = values[7]*-1; //b3	
+  h[21].innerHTML = values[11]*-1; //b5	
+  h[24].innerHTML = values[8]*-1; //b6	
+  h[27].innerHTML = values[9]*-1; //b9	
+  h[30].innerHTML = values[10]*-1; //b12
+  h[33].innerHTML = values[2]*-1; //d		
   
-  h[1].innerHTML = Math.round(values[12]*-7 * 100) / 100; //biotin
-  h[4].innerHTML = Math.round(values[13]*-7 * 100) / 100; //choline
-  h[7].innerHTML = Math.round(values[14]*-7 * 100) / 100; //calcium
-  h[10].innerHTML = Math.round(values[15]*-7 * 100) / 100; //chromium
-  h[13].innerHTML = Math.round(values[16]*-7 * 100) / 100; //copper
-  h[16].innerHTML = Math.round(values[17]*-7 * 100) / 100; //fluoride
-  h[19].innerHTML = Math.round(values[18]*-7 * 100) / 100; //iodine
-  h[22].innerHTML = Math.round(values[19]*-7 * 100) / 100; //iron
-  h[25].innerHTML = Math.round(values[20]*-7 * 100) / 100; //magnesium
-  h[28].innerHTML = Math.round(values[21]*-7 * 100) / 100; //magnese
-  h[31].innerHTML = Math.round(values[22]*-7 * 100) / 100; //molybednum
-  h[34].innerHTML = Math.round(values[32]*-7 * 100) / 100; //fat
+  h[1].innerHTML = values[12]*-1; //biotin
+  h[4].innerHTML = values[13]*-1; //choline
+  h[7].innerHTML = values[14]*-1; //calcium
+  h[10].innerHTML = values[15]*-1; //chromium
+  h[13].innerHTML = values[16]*-1; //copper
+  h[16].innerHTML = values[17]*-1; //fluoride
+  h[19].innerHTML = values[18]*-1; //iodine
+  h[22].innerHTML = values[19]*-1; //iron
+  h[25].innerHTML = values[20]*-1; //magnesium
+  h[28].innerHTML = values[21]*-1; //magnese
+  h[31].innerHTML = values[22]*-1; //molybednum
+  h[34].innerHTML = values[32]*-1; //fat
   
-  h[2].innerHTML = Math.round(values[23]*-7 * 100) / 100; //phosphorus	
-  h[5].innerHTML = Math.round(values[24]*-7 * 100) / 100; //selenium
-  h[8].innerHTML = Math.round(values[25]*-7 * 100) / 100; //zinc	
-  h[11].innerHTML = Math.round(values[26]*-7 * 100) / 100; //potassium
-  h[14].innerHTML = Math.round(values[27]*-7 * 100) / 100; //sodium
-  h[17].innerHTML = Math.round(values[29]*-7 * 100) / 100; //h2o
-  h[20].innerHTML = Math.round(values[30]*-7 * 100) / 100; //carbohydrate
-  h[23].innerHTML = Math.round(values[31]*-7 * 100) / 100; //dietetary fiber
-  h[26].innerHTML = Math.round(values[33]*-7 * 100) / 100; //om6
-  h[29].innerHTML = Math.round(values[34]*-7 * 100) / 100; //om3
-  h[32].innerHTML = Math.round(values[35]*-7 * 100) / 100; //protein	
+  h[2].innerHTML = values[23]*-1; //phosphorus	
+  h[5].innerHTML = values[24]*-1; //selenium
+  h[8].innerHTML = values[25]*-1; //zinc	
+  h[11].innerHTML = values[26]*-1; //potassium
+  h[14].innerHTML = values[27]*-1; //sodium
+  h[17].innerHTML = values[29]*-1; //h2o
+  h[20].innerHTML = values[30]*-1; //carbohydrate
+  h[23].innerHTML = values[31]*-1; //dietetary fiber
+  h[26].innerHTML = values[33]*-1; //om6
+  h[29].innerHTML = values[34]*-1; //om3
+  h[32].innerHTML = values[35]*-1; //protein	
 }
 function calc(x){
 	if (x%2 == 0) type=1;  else {type=-1;x--;}
@@ -630,7 +630,7 @@ function calc(x){
 	i=0;
 	}
 	function results(){
-		output.innerHTML="<h1>Your package of food for 7 days:</h1<br>";
+		output.innerHTML="<h1>Your package of food for today:</h1<br>";
 		while (i < 321) { //number of plants * 2+1
   if (document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+"-"+document.getElementById(i).innerHTML+" grams of "+document.getElementById(i+1).innerHTML+"</br>";
   i++;i++;
