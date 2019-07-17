@@ -152,8 +152,6 @@ color:black ;
 <div class="plant"><img src="https://billionvegans.com/wp-content/uploads/2018/04/HG0233924.jpg" class="images"><div class="buttons" onclick="calc(322)">+</div><div class="buttons" onclick="calc(323)">-</div><br><br><br><br><p id="322">0</p><a href="https://duckduckgo.com/?q=omega+3++vegan&t=brave&iar=images&iax=images&ia=images"id="323">Omega 3 supplement</a><h4>Om3</h4></div>
 <div class="plant"><img src="https://i5.walmartimages.com/asr/d9b8c166-fb7c-402c-8db1-b637db2461ed_1.4e0e2dfb2b0aaa84ddcd86ca0591a3ab.jpeg" class="images"><div class="buttons" onclick="calc(324)">+</div><div class="buttons" onclick="calc(325)">-</div><br><br><br><br><p id="324">0</p><a href="https://duckduckgo.com/?q=iodine+vegan+supplement&t=brave&iar=images&iax=images&ia=images"id="325">Iodine supplement</a><h4>Io</h4></div>
 <div class="plant"><img src="https://images-na.ssl-images-amazon.com/images/I/41BSjJDa-mL.jpg" class="images"><div class="buttons" onclick="calc(326)">+</div><div class="buttons" onclick="calc(327)">-</div><br><br><br><br><p id="326">0</p><a href="https://duckduckgo.com/?q=zinc+vegan+supplement&t=brave&iar=images&iax=images&ia=images"id="327">Zinc supplement</a><h4>Zn</h4></div>
-<div class="plant"><img src="https://www.vegan-momma.com/images/vegan-calcium-supplements.jpg" class="images"><div class="buttons" onclick="calc(328)">+</div><div class="buttons" onclick="calc(329)">-</div><br><br><br><br><p id="328">0</p><a href="https://duckduckgo.com/?q=calcium+vegan+supplement&t=brave&iax=images&ia=images "id="329">Calcium supplement</a><h4>Ca</h4></div>
-<div class="plant"><img src="https://images-na.ssl-images-amazon.com/images/I/51O4Uan196L.jpg" class="images"><div class="buttons" onclick="calc(330)">+</div><div class="buttons" onclick="calc(331)">-</div><br><br><br><br><p id="330">0</p><a href="https://duckduckgo.com/?q=iron+vegan+supploment&t=brave&iax=images&ia=images"id="331">Iron supplement</a><h4>Fe</h4></div>
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2017/08/24/05/18/amaranth-2675460__340.jpg" class="images"><div class="buttons" onclick="calc(2)">+</div><div class="buttons" onclick="calc(3)">-</div><br><br><br><br><p id="2">0</p><a href="https://en.wikipedia.org/wiki/Amaranth "id="3">Amaranth</a><h4>full-Pr</h4></div>
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/09/13/39/red-beets-1725799__340.jpg" class="images"><div class="buttons" onclick="calc(4)">+</div><div class="buttons" onclick="calc(5)">-</div><br><br><br><br><p id="4">0</p><a href="https://en.wikipedia.org/wiki/Beetroot "id="5">beet</a><h4></h4></div>
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/broccoli-1238250__340.jpg" class="images"><div class="buttons" onclick="calc(6)">+</div><div class="buttons" onclick="calc(7)">-</div><br><br><br><br><p id="6">0</p><a href="https://en.wikipedia.org/wiki/Broccoli "id="7">broccoli</a><h4>Cho</h4></div>
@@ -335,8 +333,6 @@ color:black ;
 <button type="button" onclick="results()">Output</button>
 <div id="output"width="100%"height="100%"></div>
 	<h1>References:</h1>
-	<a href="https://en.wikipedia.org/wiki/List_of_vegetables" target="_blank">list of vegetables</a><br>
-	<a href="https://simple.wikipedia.org/wiki/List_of_fruits" target="_blank">list of fruits</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t2/?report=objectonly" target="_blank">DRI Vitamins</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t3/?report=objectonly" target="_blank">DRI Minerals</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly" target="_blank">DRI Macronutrients</a><br><br>
@@ -352,7 +348,7 @@ color:black ;
 	var g=0;
 	function set() {
 	var p=document.getElementsByTagName("p");
-	while (i<163){
+	while (i<161){
 	p[i].innerHTML="0";
 	i++;
 	}
@@ -644,7 +640,7 @@ function calc(x){
 	}
 	function results(){
 		output.innerHTML="<h1>Your package of food for today:</h1<br>";
-		while (i < 331) { //number of plants * 2+1
+		while (i < 327) { //number of plants * 2+1
   if (document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+"-"+document.getElementById(i).innerHTML+" grams of "+document.getElementById(i+1).innerHTML+"</br>";
   i++;i++;
 }i=0;
