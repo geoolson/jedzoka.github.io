@@ -32,7 +32,7 @@ h6 {
 	display:inline; 
 	color:#f2840e;
 }
-#button {
+.button {
 	width:100%;
 	height:50px;
 }
@@ -314,7 +314,7 @@ color:black ;
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2015/02/15/09/06/tamarind-636962__340.jpg" class="images"><div class="buttons" onclick="calc(314)">+</div><div class="buttons" onclick="calc(315)">-</div><br><br><br><br><p id="314">0</p><a href="https://en.wikipedia.org/wiki/Tamarind "id="315">tamarind</a><h4>Cho Cu</h4></div>
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2014/12/11/20/45/white-currant-564737_960_720.jpg" class="images"><div class="buttons" onclick="calc(316)">+</div><div class="buttons" onclick="calc(317)">-</div><br><br><br><br><p id="316">0</p><a href="https://en.wikipedia.org/wiki/White_currant "id="317">white currant</a><h4>Cho</h4></div>
 </div>
-<button type="button" onclick="results()">Output</button>
+<button class="button" type="button" onclick="results()">Output</button>
 <div id="output"width="100%"height="100%"></div>
 	<h1>References:</h1>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t2/?report=objectonly" target="_blank">DRI Vitamins</a><br>
@@ -341,12 +341,12 @@ color:black ;
 	i=0;
 var gender=0;
 var age=0;
-        switch (select0.innerHTML){
+        switch (select0){
 case "man": select0.innerHTML="woman"; gender=20;break;
 case "woman": select0.innerHTML="pregnancy"; gender=30;break;
 case "pregnancy": select0.innerHTML="lactation"; gender=40;break;
 case "lactation": select0.innerHTML="man"; gender=10;break;}
-switch (select1.innerHTML){
+switch (select1){
 case "select age group": select1.innerHTML="0-6 months"; age=0;break;
 case "0-6 months": select1.innerHTML="7-12 months"; age=1;break;
 case "7-12 months": select1.innerHTML="1-3 years"; age=2;break;
