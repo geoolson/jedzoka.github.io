@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta name="description" content="Create your own plant-based diet">
@@ -68,10 +68,9 @@ td, th {
   color:#f916c1;
   text-align:left;
 }
-.select{
-     width:49%;
-	   height:50px;
-     float:left;
+.select {
+	width:49%;
+	height:50px;
 }
 h2 {
 display:inline; 
@@ -81,14 +80,31 @@ color:black ;
 </style>
 </head>
 <body>
-<div class="select" id="gender"onclick="set()">man</div>
-<div class="select" id="age"onclick="set()">select age group</div>
-<table id="table">
+  	<select id="gender" class="select" onchange="set()">
+  <option value="a">man</option>
+  <option value="b">woman</option>
+  <option value="c">pregnancy</option>
+  <option value="d">lactation</option>
+</select>
+<select id="age" class="select" onchange="set()">
+  <option selected="selected">select age group</option>
+  <option value="1">0-6 months</option>
+  <option value="2">7-12 months</option>
+  <option value="3">1-3 years</option>
+  <option value="4">4-8 years</option>
+  <option value="5">9-13 years</option>
+  <option value="6">14-18 years</option>
+  <option value="7">19-30 years</option>
+  <option value="8">31-50 years</option>
+  <option value="9">51-70 years</option>
+  <option value="0">+70 years</option><br>
+</select>
+	<table id="table">
 	<col width="33.333%">
 	<col width="33.334%">
 	<col width="33.333%">
   <tr>
-     <td onclick="window.open('https://en.wikipedia.org/wiki/Vitamin_A')">A <h6>μg</h6>&nbsp&nbsp&nbsp&nbsp&nbsp<h2>0</h2></td>
+     <td onclick="window.open('https://en.wikipedia.org/wiki/Vitamin_A')">A<h6> ug</h6>&nbsp&nbsp&nbsp&nbsp&nbsp<h2>0</h2></td>
 	 <td onclick="window.open('https://en.wikipedia.org/wiki/Biotin')">Bio <h6>μg</h6>&nbsp&nbsp&nbsp<h2>0</h2></td>
 	 <td onclick="window.open('https://en.wikipedia.org/wiki/Phosphorus')">P <h6>mg</h6>&nbsp&nbsp&nbsp<h2>0</h2></td> 
   </tr>
@@ -149,172 +165,51 @@ color:black ;
   </tr>
 </table>
 <div class=scrollmenu>
-<div class="plant"><img src="https://images.freeimages.com/images/small-previews/313/teapot-1-1309596.jpg" class="images"><div class="buttons" onclick="calc(0)">+</div><div class="buttons" onclick="calc(1)">-</div><br><br><br><br><p id="0">0</p><a href="https://en.wikipedia.org/wiki/Water" target="_blank" id="1">water(ml)</a></div>
-<div class="plant"><img src="http://g-ecx.images-amazon.com/images/G/01/aplus/detail-page/NM_Vitamin-B-12-1000mcg_left_img1_lg.jpg" class="images"><div class="buttons" onclick="calc(318)">+</div><div class="buttons" onclick="calc(319)">-</div><br><br><br><br><p id="318">0</p><a href="https://duckduckgo.com/?q=b12+supplements&t=fpas&iax=images&ia=images"id="319">B12 supplement(ug)</a><h4>B12</h4></div>
-<div class="plant"><img src="https://i5.walmartimages.com/asr/918053ac-f870-4e2c-99ee-99bbc2e62743_1.9d3974242e93cbd48c8f0c08664b42cd.jpeg" class="images"><div class="buttons" onclick="calc(320)">+</div><div class="buttons" onclick="calc(321)">-</div><br><br><br><br><p id="320">0</p><a href="https://duckduckgo.com/?q=d+supplement&t=fpas&ia=images&iax=images"id="321">D supplement(ug)</a><h4>D</h4></div>
-<div class="plant"><img src="https://billionvegans.com/wp-content/uploads/2018/04/HG0233924.jpg" class="images"><div class="buttons" onclick="calc(322)">+</div><div class="buttons" onclick="calc(323)">-</div><br><br><br><br><p id="322">0</p><a href="https://duckduckgo.com/?q=omega+3++vegan&t=brave&iar=images&iax=images&ia=images"id="323">Omega 3 supplement</a><h4>Om3</h4></div>
-<div class="plant"><img src="https://i5.walmartimages.com/asr/d9b8c166-fb7c-402c-8db1-b637db2461ed_1.4e0e2dfb2b0aaa84ddcd86ca0591a3ab.jpeg" class="images"><div class="buttons" onclick="calc(324)">+</div><div class="buttons" onclick="calc(325)">-</div><br><br><br><br><p id="324">0</p><a href="https://duckduckgo.com/?q=iodine+vegan+supplement&t=brave&iar=images&iax=images&ia=images"id="325">Iodine supplement</a><h4>Io</h4></div>
-<div class="plant"><img src="https://images-na.ssl-images-amazon.com/images/I/41BSjJDa-mL.jpg" class="images"><div class="buttons" onclick="calc(326)">+</div><div class="buttons" onclick="calc(327)">-</div><br><br><br><br><p id="326">0</p><a href="https://duckduckgo.com/?q=zinc+vegan+supplement&t=brave&iar=images&iax=images&ia=images"id="327">Zinc supplement</a><h4>Zn</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/08/24/05/18/amaranth-2675460__340.jpg" class="images"><div class="buttons" onclick="calc(2)">+</div><div class="buttons" onclick="calc(3)">-</div><br><br><br><br><p id="2">0</p><a href="https://en.wikipedia.org/wiki/Amaranth "id="3">Amaranth</a><h4>full-Pr</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/09/13/39/red-beets-1725799__340.jpg" class="images"><div class="buttons" onclick="calc(4)">+</div><div class="buttons" onclick="calc(5)">-</div><br><br><br><br><p id="4">0</p><a href="https://en.wikipedia.org/wiki/Beetroot "id="5">beet</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/broccoli-1238250__340.jpg" class="images"><div class="buttons" onclick="calc(6)">+</div><div class="buttons" onclick="calc(7)">-</div><br><br><br><br><p id="6">0</p><a href="https://en.wikipedia.org/wiki/Broccoli "id="7">broccoli</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/01/24/06/06/brussels-sprouts-3103226__340.jpg" class="images"><div class="buttons" onclick="calc(8)">+</div><div class="buttons" onclick="calc(9)">-</div><br><br><br><br><p id="8">0</p><a href="https://en.wikipedia.org/wiki/Brussels_sprout "id="9">brussels sprout</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://images.pexels.com/photos/134877/pexels-photo-134877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="images"><div class="buttons" onclick="calc(10)">+</div><div class="buttons" onclick="calc(11)">-</div><br><br><br><br><p id="10">0</p><a href="https://en.wikipedia.org/wiki/Cabbage "id="11">cabbage</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/05/18/04/03/celery-3410302__340.png" class="images"><div class="buttons" onclick="calc(12)">+</div><div class="buttons" onclick="calc(13)">-</div><br><br><br><br><p id="12">0</p><a href="https://en.wikipedia.org/wiki/Celery "id="13">celery</a><h4>Ca Cho </h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Celtuce.jpg/800px-Celtuce.jpg" class="images"><div class="buttons" onclick="calc(14)">+</div><div class="buttons" onclick="calc(15)">-</div><br><br><br><br><p id="14">0</p><a href="https://en.wikipedia.org/wiki/Celtuce "id="15">celtuce</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/05/26/07/22/chicory-3430763__340.jpg" class="images"><div class="buttons" onclick="calc(16)">+</div><div class="buttons" onclick="calc(17)">-</div><br><br><br><br><p id="16">0</p><a href="https://en.wikipedia.org/wiki/Chicory "id="17">chicory</a><h4></h4></div>
-<div class="plant"><img src="https://clipground.com/images/glebionis-coronaria-clipart-5.jpg" class="images"><div class="buttons" onclick="calc(18)">+</div><div class="buttons" onclick="calc(19)">-</div><br><br><br><br><p id="18">0</p><a href="https://en.wikipedia.org/wiki/Glebionis_coronaria "id="19">glebionis coronaria</a><h4></h4></div>
-<div class="plant"><img src="https://thumbs.dreamstime.com/z/collard-greens-4601216.jpg" class="images"><div class="buttons" onclick="calc(20)">+</div><div class="buttons" onclick="calc(21)">-</div><br><br><br><br><p id="20">0</p><a href="https://en.wikipedia.org/wiki/Collard_(plant) "id="21">collard</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/07/02/15/09/portulaca-oleracea-l-2464658__340.jpg" class="images"><div class="buttons" onclick="calc(22)">+</div><div class="buttons" onclick="calc(23)">-</div><br><br><br><br><p id="22">0</p><a href="https://en.wikipedia.org/wiki/Portulaca_oleracea "id="23">portulaca oleracea</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/01/21/21/37/salad-3946919__340.jpg" class="images"><div class="buttons" onclick="calc(24)">+</div><div class="buttons" onclick="calc(25)">-</div><br><br><br><br><p id="24">0</p><a href="https://en.wikipedia.org/wiki/Valerianella_locusta "id="25">Valerianella locusta</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/21/39/bloom-1239031__340.jpg" class="images"><div class="buttons" onclick="calc(26)">+</div><div class="buttons" onclick="calc(27)">-</div><br><br><br><br><p id="26">0</p><a href="https://en.wikipedia.org/wiki/Garden_cress "id="27">garden cress</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/10/07/11/06/dill-2826179__340.jpg" class="images"><div class="buttons" onclick="calc(28)">+</div><div class="buttons" onclick="calc(29)">-</div><br><br><br><br><p id="28">0</p><a href="https://en.wikipedia.org/wiki/Dill "id="29">dill</a><h4>Cu</h4></div>
-<div class="plant"><img src="https://previews.123rf.com/images/peterhermesfurian/peterhermesfurian1710/peterhermesfurian171000050/88492033-escarole-endive-front-view-over-white-leaf-vegetable-and-lettuce-with-broad-bitter-leaves-cichorium-.jpg" class="images"><div class="buttons" onclick="calc(30)">+</div><div class="buttons" onclick="calc(31)">-</div><br><br><br><br><p id="30">0</p><a href="https://en.wikipedia.org/wiki/Endive "id="31">endive</a><h4></h4></div>
-<div class="plant"><img src="https://media.gettyimages.com/photos/goosefoot-in-a-twilight-picture-id843095198?b=1&k=6&m=843095198&s=170x170&h=dIJoGOYGPyWf4C8miZCd9vbrtK_752iGATyeiLXlxYw=" class="images"><div class="buttons" onclick="calc(32)">+</div><div class="buttons" onclick="calc(33)">-</div><br><br><br><br><p id="32">0</p><a href="https://en.wikipedia.org/wiki/Chenopodium_album "id="33">Chenopodium album</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999__340.png" class="images"><div class="buttons" onclick="calc(34)">+</div><div class="buttons" onclick="calc(35)">-</div><br><br><br><br><p id="34">0</p><a href="https://en.wikipedia.org/wiki/Grape "id="35">grape</a><h4>Cho </h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/01/29/09/04/varieties-of-kale-1167557__340.jpg" class="images"><div class="buttons" onclick="calc(36)">+</div><div class="buttons" onclick="calc(37)">-</div><br><br><br><br><p id="36">0</p><a href="https://en.wikipedia.org/wiki/Kale "id="37">raw kale</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/05/13/17/18/spinach-2310134_960_720.jpg" class="images"><div class="buttons" onclick="calc(38)">+</div><div class="buttons" onclick="calc(39)">-</div><br><br><br><br><p id="38">0</p><a href="https://en.wikipedia.org/wiki/Komatsuna "id="39">komatsuna</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/08/11/12/04/valerianella-locusta-884235_960_720.jpg" class="images"><div class="buttons" onclick="calc(40)">+</div><div class="buttons" onclick="calc(41)">-</div><br><br><br><br><p id="40">0</p><a href="https://en.wikipedia.org/wiki/Valerianella_locusta "id="41">Valerianella locusta</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/05/17/14/29/salad-771056__340.jpg" class="images"><div class="buttons" onclick="calc(42)">+</div><div class="buttons" onclick="calc(43)">-</div><br><br><br><br><p id="42">0</p><a href="https://en.wikipedia.org/wiki/Lettuce "id="43">lettuce</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Basella_alba_leaves_27052014.jpg/800px-Basella_alba_leaves_27052014.jpg" class="images"><div class="buttons" onclick="calc(44)">+</div><div class="buttons" onclick="calc(45)">-</div><br><br><br><br><p id="44">0</p><a href="https://en.wikipedia.org/wiki/Basella_alba "id="45">basella alba</a><h4></h4></div>
-<div class="plant"><img src="https://st3.depositphotos.com/13157886/15626/i/450/depositphotos_156269430-stock-photo-stir-fried-jute-leaves-with.jpg" class="images"><div class="buttons" onclick="calc(46)">+</div><div class="buttons" onclick="calc(47)">-</div><br><br><br><br><p id="46">0</p><a href="https://en.wikipedia.org/wiki/Mulukhiyah "id="47">Mulukhiyah</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/12/13/08/10/vegetable-1903490__340.jpg" class="images"><div class="buttons" onclick="calc(48)">+</div><div class="buttons" onclick="calc(49)">-</div><br><br><br><br><p id="48">0</p><a href="https://en.wikipedia.org/wiki/Napa_cabbage "id="49">napa cabbage</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/10/20/peas-2686__340.jpg" class="images"><div class="buttons" onclick="calc(50)">+</div><div class="buttons" onclick="calc(51)">-</div><br><br><br><br><p id="50">0</p><a href="https://en.wikipedia.org/wiki/Pea "id="51">pea</a><h4></h4></div>
-<div class="plant"><img src="https://previews.123rf.com/images/renelebeau/renelebeau1710/renelebeau171000030/89132587-closeup-of-a-pokeweed.jpg" class="images"><div class="buttons" onclick="calc(52)">+</div><div class="buttons" onclick="calc(53)">-</div><br><br><br><br><p id="52">0</p><a href="https://en.wikipedia.org/wiki/Phytolacca_americana "id="53">Phytolacca americana</a><h4></h4></div>
-<div class="plant"><img src="https://thumbs.dreamstime.com/z/radicchio-pair-fresh-isolated-white-background-31806026.jpg" class="images"><div class="buttons" onclick="calc(54)">+</div><div class="buttons" onclick="calc(55)">-</div><br><br><br><br><p id="54">0</p><a href="https://en.wikipedia.org/wiki/Radicchio "id="55">radicchio</a><h4></h4></div>
-<div class="plant"><img src="https://previews.123rf.com/images/shopartgallerycom/shopartgallerycom1601/shopartgallerycom160100119/50846723-fresh-rapini-isolated-on-white-background-.jpg" class="images"><div class="buttons" onclick="calc(56)">+</div><div class="buttons" onclick="calc(57)">-</div><br><br><br><br><p id="56">0</p><a href="https://en.wikipedia.org/wiki/Rapini "id="57">rapini</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/07/16/16/30/spinach-1522283__340.jpg" class="images"><div class="buttons" onclick="calc(58)">+</div><div class="buttons" onclick="calc(59)">-</div><br><br><br><br><p id="58">0</p><a href="https://en.wikipedia.org/wiki/Spinach "id="59">spinach</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/09/08/20/47/flower-1655473__340.jpg" class="images"><div class="buttons" onclick="calc(60)">+</div><div class="buttons" onclick="calc(61)">-</div><br><br><br><br><p id="60">0</p><a href="https://en.wikipedia.org/wiki/Portulaca_oleracea "id="61">portulaca oleracea</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/27/17/10/kale-1775809__340.jpg" class="images"><div class="buttons" onclick="calc(62)">+</div><div class="buttons" onclick="calc(63)">-</div><br><br><br><br><p id="62">0</p><a href="https://en.wikipedia.org/wiki/Chard "id="63">cooked chard</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/10/08/turnip-1129__340.jpg" class="images"><div class="buttons" onclick="calc(64)">+</div><div class="buttons" onclick="calc(65)">-</div><br><br><br><br><p id="64">0</p><a href="https://en.wikipedia.org/wiki/Turnip "id="65">cooked turnip</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/04/25/02/43/watercress-4153775__340.jpg" class="images"><div class="buttons" onclick="calc(66)">+</div><div class="buttons" onclick="calc(67)">-</div><br><br><br><br><p id="66">0</p><a href="https://en.wikipedia.org/wiki/Watercress "id="67">watercress</a><h4></h4></div>
-<div class="plant"><img src="https://thumbs.dreamstime.com/z/water-spinach-5315663.jpg" class="images"><div class="buttons" onclick="calc(68)">+</div><div class="buttons" onclick="calc(69)">-</div><br><br><br><br><p id="68">0</p><a href="https://en.wikipedia.org/wiki/Ipomoea_aquatica "id="69">water spinach</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/19/03/appetite-1238257__340.jpg" class="images"><div class="buttons" onclick="calc(70)">+</div><div class="buttons" onclick="calc(71)">-</div><br><br><br><br><p id="70">0</p><a href="https://en.wikipedia.org/wiki/Avocado "id="71">avocado</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/07/12/19/14/peppers-154377__340.png" class="images"><div class="buttons" onclick="calc(72)">+</div><div class="buttons" onclick="calc(73)">-</div><br><br><br><br><p id="72">0</p><a href="https://en.wikipedia.org/wiki/Bell_pepper "id="73">bell pepper</a><h4></h4></div>
-<div class="plant"><img src="https://previews.123rf.com/images/teptong/teptong1403/teptong140300001/26547010-close-up-of-small-green-bitter-melon-on-wooden-chopping-block.jpg" class="images"><div class="buttons" onclick="calc(74)">+</div><div class="buttons" onclick="calc(75)">-</div><br><br><br><br><p id="74">0</p><a href="https://en.wikipedia.org/wiki/Momordica_charantia "id="75">momordica charantia</a><h4></h4></div>
-<div class="plant"><img src="https://static9.depositphotos.com/1642482/1149/i/450/depositphotos_11491372-stock-photo-fresh-vegetable-marrow-isolated-on.jpg" class="images"><div class="buttons" onclick="calc(76)">+</div><div class="buttons" onclick="calc(77)">-</div><br><br><br><br><p id="76">0</p><a href="https://en.wikipedia.org/wiki/Chayote "id="77">chayote</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/07/17/13/44/cucumbers-849269__340.jpg" class="images"><div class="buttons" onclick="calc(78)">+</div><div class="buttons" onclick="calc(79)">-</div><br><br><br><br><p id="78">0</p><a href="https://en.wikipedia.org/wiki/Cucumber "id="79">cucumber</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/09/10/17/47/eggplant-1659784__340.jpg" class="images"><div class="buttons" onclick="calc(80)">+</div><div class="buttons" onclick="calc(81)">-</div><br><br><br><br><p id="80">0</p><a href="https://en.wikipedia.org/wiki/Eggplant "id="81">eggplant</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/05/30/04/04/olives-357849__340.jpg" class="images"><div class="buttons" onclick="calc(82)">+</div><div class="buttons" onclick="calc(83)">-</div><br><br><br><br><p id="82">0</p><a href="https://en.wikipedia.org/wiki/Olive "id="83">olive</a><h4>Na</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/08/27/23/30/pumpkin-3636243__340.jpg" class="images"><div class="buttons" onclick="calc(84)">+</div><div class="buttons" onclick="calc(85)">-</div><br><br><br><br><p id="84">0</p><a href="https://en.wikipedia.org/wiki/Pumpkin "id="85">pumpkin</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/09/15/07/43/pumpkin-3678820__340.jpg" class="images"><div class="buttons" onclick="calc(86)">+</div><div class="buttons" onclick="calc(87)">-</div><br><br><br><br><p id="86">0</p><a href="https://en.wikipedia.org/wiki/Cucurbita "id="87">Cucurbita</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/07/23/12/07/sweet-pepper-400149__340.jpg" class="images"><div class="buttons" onclick="calc(88)">+</div><div class="buttons" onclick="calc(89)">-</div><br><br><br><br><p id="88">0</p><a href="https://en.wikipedia.org/wiki/Capsicum "id="89">Capsicum</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/26/16/44/tomatoes-1280859__340.jpg" class="images"><div class="buttons" onclick="calc(90)">+</div><div class="buttons" onclick="calc(91)">-</div><br><br><br><br><p id="90">0</p><a href="https://en.wikipedia.org/wiki/Tomato "id="91">tomato</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/06/19/16/48/watermelon-815072__340.jpg" class="images"><div class="buttons" onclick="calc(92)">+</div><div class="buttons" onclick="calc(93)">-</div><br><br><br><br><p id="92">0</p><a href="https://en.wikipedia.org/wiki/Watermelon "id="93">watermelon</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://thumbs.dreamstime.com/z/winter-melon-white-background-56467029.jpg" class="images"><div class="buttons" onclick="calc(94)">+</div><div class="buttons" onclick="calc(95)">-</div><br><br><br><br><p id="94">0</p><a href="https://en.wikipedia.org/wiki/Wax_gourd "id="95">wax gourd</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/05/10/02/20/artichoke-3386681__340.jpg" class="images"><div class="buttons" onclick="calc(96)">+</div><div class="buttons" onclick="calc(97)">-</div><br><br><br><br><p id="96">0</p><a href="https://en.wikipedia.org/wiki/Artichoke "id="97">artichoke</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/broccoli-1238250__340.jpg" class="images"><div class="buttons" onclick="calc(98)">+</div><div class="buttons" onclick="calc(99)">-</div><br><br><br><br><p id="98">0</p><a href="https://en.wikipedia.org/wiki/Broccoli "id="99">broccoli</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/05/11/00/55/capers-2302424__340.jpg" class="images"><div class="buttons" onclick="calc(100)">+</div><div class="buttons" onclick="calc(101)">-</div><br><br><br><br><p id="100">0</p><a href="https://en.wikipedia.org/wiki/Caper "id="101">caper</a><h4>Se Na</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/07/17/19/32/cauliflower-849643__340.jpg" class="images"><div class="buttons" onclick="calc(102)">+</div><div class="buttons" onclick="calc(103)">-</div><br><br><br><br><p id="102">0</p><a href="https://en.wikipedia.org/wiki/Cauliflower "id="103">cauliflower</a><h4></h4></div>
-<div class="plant"><img src="https://st.depositphotos.com/1010683/2664/i/450/depositphotos_26640269-stock-photo-red-bean-adzuki-isolated-on.jpg" class="images"><div class="buttons" onclick="calc(104)">+</div><div class="buttons" onclick="calc(105)">-</div><br><br><br><br><p id="104">0</p><a href="https://en.wikipedia.org/wiki/Adzuki_bean "id="105">adzuki bean</a><h4>Cu</h4></div>
-<div class="plant"><img src="https://thumbs.dreamstime.com/z/black-eyed-peas-isolated-white-background-92671455.jpg" class="images"><div class="buttons" onclick="calc(106)">+</div><div class="buttons" onclick="calc(107)">-</div><br><br><br><br><p id="106">0</p><a href="https://en.wikipedia.org/wiki/Black-eyed_pea "id="107">black-eyed pea</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/12/04/23/38/chickpeas-1882839__340.jpg" class="images"><div class="buttons" onclick="calc(108)">+</div><div class="buttons" onclick="calc(109)">-</div><br><br><br><br><p id="108">0</p><a href="https://en.wikipedia.org/wiki/Chickpea "id="109">chickpea</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/03/03/18/56/moringa-4032597__340.jpg" class="images"><div class="buttons" onclick="calc(110)">+</div><div class="buttons" onclick="calc(111)">-</div><br><br><br><br><p id="110">0</p><a href="https://en.wikipedia.org/wiki/Moringa_oleifera "id="111">moringa oleifera</a><h4></h4></div>
-<div class="plant"><img src="https://st.depositphotos.com/1009329/1857/i/450/depositphotos_18577317-stock-photo-fresh-hyacinth-bean-or-indian.jpg" class="images"><div class="buttons" onclick="calc(112)">+</div><div class="buttons" onclick="calc(113)">-</div><br><br><br><br><p id="112">0</p><a href="https://en.wikipedia.org/wiki/Lablab "id="113">Lablab</a><h4></h4></div>
-<div class="plant"><img src="https://st3.depositphotos.com/1514637/15073/i/450/depositphotos_150735722-stock-photo-fava-bean-vicia-faba.jpg" class="images"><div class="buttons" onclick="calc(114)">+</div><div class="buttons" onclick="calc(115)">-</div><br><br><br><br><p id="114">0</p><a href="https://en.wikipedia.org/wiki/Vicia_faba "id="115">vicia faba</a><h4>Se Cu</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/11/06/17/31/green-beans-519439__340.jpg" class="images"><div class="buttons" onclick="calc(116)">+</div><div class="buttons" onclick="calc(117)">-</div><br><br><br><br><p id="116">0</p><a href="https://en.wikipedia.org/wiki/Green_bean "id="117">green bean</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/02/08/13/05/lentils-628468__340.jpg" class="images"><div class="buttons" onclick="calc(118)">+</div><div class="buttons" onclick="calc(119)">-</div><br><br><br><br><p id="118">0</p><a href="https://en.wikipedia.org/wiki/Lentil "id="119">lentil</a><h4></h4></div>
-<div class="plant"><img src="https://thumbs.dreamstime.com/z/lima-beans-white-background-39179913.jpg" class="images"><div class="buttons" onclick="calc(120)">+</div><div class="buttons" onclick="calc(121)">-</div><br><br><br><br><p id="120">0</p><a href="https://en.wikipedia.org/wiki/Lima_bean "id="121">lima bean</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Matki.JPG" class="images"><div class="buttons" onclick="calc(122)">+</div><div class="buttons" onclick="calc(123)">-</div><br><br><br><br><p id="122">0</p><a href="https://en.wikipedia.org/wiki/Vigna_aconitifolia "id="123">vigna aconitifolia</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Sa_green_gram.jpg/800px-Sa_green_gram.jpg" class="images"><div class="buttons" onclick="calc(124)">+</div><div class="buttons" onclick="calc(125)">-</div><br><br><br><br><p id="124">0</p><a href="https://en.wikipedia.org/wiki/Mung_bean "id="125">mung bean</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/06/01/09/09/ladys-finger-3445963__340.jpg" class="images"><div class="buttons" onclick="calc(126)">+</div><div class="buttons" onclick="calc(127)">-</div><br><br><br><br><p id="126">0</p><a href="https://en.wikipedia.org/wiki/Okra "id="127">okra</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/01/31/14/40/peanuts-618547__340.jpg" class="images"><div class="buttons" onclick="calc(128)">+</div><div class="buttons" onclick="calc(129)">-</div><br><br><br><br><p id="128">0</p><a href="https://en.wikipedia.org/wiki/Peanut "id="129">peanut</a><h4>full-Pr</h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Pigeon_peas.jpg/800px-Pigeon_peas.jpg" class="images"><div class="buttons" onclick="calc(130)">+</div><div class="buttons" onclick="calc(131)">-</div><br><br><br><br><p id="130">0</p><a href="https://en.wikipedia.org/wiki/Pigeon_pea "id="131">pigeon pea immature</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/07/14/21/47/snap-peas-2505079_960_720.png" class="images"><div class="buttons" onclick="calc(132)">+</div><div class="buttons" onclick="calc(133)">-</div><br><br><br><br><p id="132">0</p><a href="https://en.wikipedia.org/wiki/Snap_pea "id="133">snap pea</a><h4>full-Pr Cho</h4></div>
-<div class="plant"><img src="https://image.freepik.com/free-photo/snow-pea_1205-957.jpg?1" class="images"><div class="buttons" onclick="calc(134)">+</div><div class="buttons" onclick="calc(135)">-</div><br><br><br><br><p id="134">0</p><a href="https://en.wikipedia.org/wiki/Snow_pea "id="135">snow pea</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/02/05/11/11/soybeans-2039642__340.jpg" class="images"><div class="buttons" onclick="calc(136)">+</div><div class="buttons" onclick="calc(137)">-</div><br><br><br><br><p id="136">0</p><a href="https://en.wikipedia.org/wiki/Soybean "id="137">soybean</a><h4>Cho Om6 Om3 Cu </h4></div>
-<div class="plant"><img src="https://img.freepik.com/free-photo/split-mung-bean-lentils_55610-2282.jpg?size=626&ext=jpg" class="images"><div class="buttons" onclick="calc(138)">+</div><div class="buttons" onclick="calc(139)">-</div><br><br><br><br><p id="138">0</p><a href="https://en.wikipedia.org/wiki/Vigna_mungo "id="139">vigna mungo</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Japanese_Psophocarpus_tetragonolobus.jpg/800px-Japanese_Psophocarpus_tetragonolobus.jpg" class="images"><div class="buttons" onclick="calc(140)">+</div><div class="buttons" onclick="calc(141)">-</div><br><br><br><br><p id="140">0</p><a href="https://en.wikipedia.org/wiki/Winged_bean "id="141">winged bean</a><h4>Zn</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/09/59/appetite-2039__340.jpg" class="images"><div class="buttons" onclick="calc(142)">+</div><div class="buttons" onclick="calc(143)">-</div><br><br><br><br><p id="142">0</p><a href="https://en.wikipedia.org/wiki/Asparagus_bean "id="143">asparagus bean</a><h4></h4></div>
-<div class="plant"><img src="https://image.shutterstock.com/image-photo/asparagus-fresh-green-basket-260nw-1045645381.jpg" class="images"><div class="buttons" onclick="calc(144)">+</div><div class="buttons" onclick="calc(145)">-</div><br><br><br><br><p id="144">0</p><a href="https://en.wikipedia.org/wiki/Asparagus "id="145">asparagus</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://st2.depositphotos.com/1194063/7702/i/450/depositphotos_77028363-stock-photo-milk-thistle-plant.jpg" class="images"><div class="buttons" onclick="calc(146)">+</div><div class="buttons" onclick="calc(147)">-</div><br><br><br><br><p id="146">0</p><a href="https://en.wikipedia.org/wiki/Cardoon "id="147">cardoon</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/12/13/20/31/celery-228002__340.jpg" class="images"><div class="buttons" onclick="calc(148)">+</div><div class="buttons" onclick="calc(149)">-</div><br><br><br><br><p id="148">0</p><a href="https://en.wikipedia.org/wiki/Celeriac "id="149">Celeriac</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/06/28/04/21/chives-4303417__340.jpg" class="images"><div class="buttons" onclick="calc(150)">+</div><div class="buttons" onclick="calc(151)">-</div><br><br><br><br><p id="150">0</p><a href="https://en.wikipedia.org/wiki/Chives "id="151">chives</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/04/02/16/57/fennel-307555__340.jpg" class="images"><div class="buttons" onclick="calc(152)">+</div><div class="buttons" onclick="calc(153)">-</div><br><br><br><br><p id="152">0</p><a href="https://en.wikipedia.org/wiki/Fennel "id="153">fennel seeds</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/02/21/19/12/garlic-84691__340.jpg" class="images"><div class="buttons" onclick="calc(154)">+</div><div class="buttons" onclick="calc(155)">-</div><br><br><br><br><p id="154">0</p><a href="https://en.wikipedia.org/wiki/Garlic "id="155">garlic</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/04/27/21/01/kohlrabi-2266665__340.jpg" class="images"><div class="buttons" onclick="calc(156)">+</div><div class="buttons" onclick="calc(157)">-</div><br><br><br><br><p id="156">0</p><a href="https://en.wikipedia.org/wiki/Kohlrabi "id="157">kohlrabi</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/06/25/17/35/leek-greenhouse-4298622__340.jpg" class="images"><div class="buttons" onclick="calc(158)">+</div><div class="buttons" onclick="calc(159)">-</div><br><br><br><br><p id="158">0</p><a href="https://en.wikipedia.org/wiki/Leek "id="159">leek</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/01/25/10/13/flowers-2007473__340.jpg" class="images"><div class="buttons" onclick="calc(160)">+</div><div class="buttons" onclick="calc(161)">-</div><br><br><br><br><p id="160">0</p><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera "id="161">nelumbo nucifera</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/02/21/19/14/onion-bulbs-84722__340.jpg" class="images"><div class="buttons" onclick="calc(162)">+</div><div class="buttons" onclick="calc(163)">-</div><br><br><br><br><p id="162">0</p><a href="https://en.wikipedia.org/wiki/Onion "id="163">onion</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/19/15/bulb-1238341__340.jpg" class="images"><div class="buttons" onclick="calc(164)">+</div><div class="buttons" onclick="calc(165)">-</div><br><br><br><br><p id="164">0</p><a href="https://en.wikipedia.org/wiki/Shallot "id="165">shallot</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/06/23/20/43/allium-obliquum-4294709__340.jpg" class="images"><div class="buttons" onclick="calc(166)">+</div><div class="buttons" onclick="calc(167)">-</div><br><br><br><br><p id="166">0</p><a href="https://en.wikipedia.org/wiki/Allium_fistulosum "id="167">allium fistulosum</a><h4></h4></div>
-<div class="plant"><img src="https://images.freeimages.com/images/small-previews/437/bamboo-1256792.jpg" class="images"><div class="buttons" onclick="calc(168)">+</div><div class="buttons" onclick="calc(169)">-</div><br><br><br><br><p id="168">0</p><a href="https://en.wikipedia.org/wiki/Bamboo_shoot "id="169">bamboo shoot</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Sagittaria_latifolia_%28flowers%29.jpg/450px-Sagittaria_latifolia_%28flowers%29.jpg" class="images"><div class="buttons" onclick="calc(170)">+</div><div class="buttons" onclick="calc(171)">-</div><br><br><br><br><p id="170">0</p><a href="https://en.wikipedia.org/wiki/Sagittaria_latifolia "id="171">sagittaria latifolia</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/06/09/16/39/carrots-2387394__340.jpg" class="images"><div class="buttons" onclick="calc(172)">+</div><div class="buttons" onclick="calc(173)">-</div><br><br><br><br><p id="172">0</p><a href="https://en.wikipedia.org/wiki/Carrot "id="173">carrot</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/08/07/03/14/cassava-leaves-878933__340.jpg" class="images"><div class="buttons" onclick="calc(174)">+</div><div class="buttons" onclick="calc(175)">-</div><br><br><br><br><p id="174">0</p><a href="https://en.wikipedia.org/wiki/Cassava "id="175">cassava</a><h4></h4></div>
-<div class="plant"><img src="https://thumbs.dreamstime.com/t/daikon-radishes-21373780.jpg" class="images"><div class="buttons" onclick="calc(176)">+</div><div class="buttons" onclick="calc(177)">-</div><br><br><br><br><p id="176">0</p><a href="https://en.wikipedia.org/wiki/Daikon "id="177">daikon</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/01/07/14/56/ginger-1960613__340.jpg" class="images"><div class="buttons" onclick="calc(178)">+</div><div class="buttons" onclick="calc(179)">-</div><br><br><br><br><p id="178">0</p><a href="https://en.wikipedia.org/wiki/Ginger "id="179">ginger</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/29/01/06/cilantro-1287301__340.jpg" class="images"><div class="buttons" onclick="calc(180)">+</div><div class="buttons" onclick="calc(181)">-</div><br><br><br><br><p id="180">0</p><a href="https://en.wikipedia.org/wiki/Parsley "id="181">parsley</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/03/26/02/16/flowers-3261439__340.png" class="images"><div class="buttons" onclick="calc(182)">+</div><div class="buttons" onclick="calc(183)">-</div><br><br><br><br><p id="182">0</p><a href="https://en.wikipedia.org/wiki/Jerusalem_artichoke "id="183">Jerusalem artichoke</a><h4></h4></div>
-<div class="plant"><img src="https://image.freepik.com/free-photo/pachyrhizus-erosus_1205-473.jpg?1" class="images"><div class="buttons" onclick="calc(184)">+</div><div class="buttons" onclick="calc(185)">-</div><br><br><br><br><p id="184">0</p><a href="https://en.wikipedia.org/wiki/Pachyrhizus_erosus "id="185">pachyrhizus erosus</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2012/03/01/01/40/parsnip-20320__340.jpg" class="images"><div class="buttons" onclick="calc(186)">+</div><div class="buttons" onclick="calc(187)">-</div><br><br><br><br><p id="186">0</p><a href="https://en.wikipedia.org/wiki/Parsnip "id="187">parsnip</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/10/25/potatoes-2795__340.jpg" class="images"><div class="buttons" onclick="calc(188)">+</div><div class="buttons" onclick="calc(189)">-</div><br><br><br><br><p id="188">0</p><a href="https://en.wikipedia.org/wiki/Potato "id="189">potato</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/07/23/17/10/radish-1537141__340.jpg" class="images"><div class="buttons" onclick="calc(190)">+</div><div class="buttons" onclick="calc(191)">-</div><br><br><br><br><p id="190">0</p><a href="https://en.wikipedia.org/wiki/Radish "id="191">radish</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Swede_-_rutabaga_-_veggiegroup.jpg/800px-Swede_-_rutabaga_-_veggiegroup.jpg" class="images"><div class="buttons" onclick="calc(192)">+</div><div class="buttons" onclick="calc(193)">-</div><br><br><br><br><p id="192">0</p><a href="https://en.wikipedia.org/wiki/Rutabaga "id="193">rutabaga</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Purple_Salsify_-_Stierch.jpg/220px-Purple_Salsify_-_Stierch.jpg" class="images"><div class="buttons" onclick="calc(194)">+</div><div class="buttons" onclick="calc(195)">-</div><br><br><br><br><p id="194">0</p><a href="https://en.wikipedia.org/wiki/Tragopogon_porrifolius "id="195">tragopogon porrifolius</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/09/51/sweet-1807__340.jpg" class="images"><div class="buttons" onclick="calc(196)">+</div><div class="buttons" onclick="calc(197)">-</div><br><br><br><br><p id="196">0</p><a href="https://en.wikipedia.org/wiki/Sweet_potato "id="197">raw sweet potato</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Peeled_taro_corms.jpg" class="images"><div class="buttons" onclick="calc(198)">+</div><div class="buttons" onclick="calc(199)">-</div><br><br><br><br><p id="198">0</p><a href="https://en.wikipedia.org/wiki/Taro "id="199">cooked taro</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Ulluco.jpg/720px-Ulluco.jpg" class="images"><div class="buttons" onclick="calc(200)">+</div><div class="buttons" onclick="calc(201)">-</div><br><br><br><br><p id="200">0</p><a href="https://en.wikipedia.org/wiki/Ullucus "id="201">ullucus</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wasserkastanie_2.jpg/800px-Wasserkastanie_2.jpg" class="images"><div class="buttons" onclick="calc(202)">+</div><div class="buttons" onclick="calc(203)">-</div><br><br><br><br><p id="202">0</p><a href="https://en.wikipedia.org/wiki/Eleocharis_dulcis "id="203">water chestnuts</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/05/15/sweet-potatoes-996_960_720.jpg" class="images"><div class="buttons" onclick="calc(204)">+</div><div class="buttons" onclick="calc(205)">-</div><br><br><br><br><p id="204">0</p><a href="https://en.wikipedia.org/wiki/Yam_(vegetable) "id="205">yam</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Laver_and_toast.JPG/220px-Laver_and_toast.JPG" class="images"><div class="buttons" onclick="calc(206)">+</div><div class="buttons" onclick="calc(207)">-</div><br><br><br><br><p id="206">0</p><a href="https://en.wikipedia.org/wiki/Laverbread "id="207">laverbread</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/09/26/13/31/apple-2788616__340.jpg" class="images"><div class="buttons" onclick="calc(208)">+</div><div class="buttons" onclick="calc(209)">-</div><br><br><br><br><p id="208">0</p><a href="https://en.wikipedia.org/wiki/Apple "id="209">apple</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/07/20/18/40/apricots-2523272__340.jpg" class="images"><div class="buttons" onclick="calc(210)">+</div><div class="buttons" onclick="calc(211)">-</div><br><br><br><br><p id="210">0</p><a href="https://en.wikipedia.org/wiki/Apricot "id="211">apricot</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/06/27/22/21/banana-2449019__340.jpg" class="images"><div class="buttons" onclick="calc(212)">+</div><div class="buttons" onclick="calc(213)">-</div><br><br><br><br><p id="212">0</p><a href="https://en.wikipedia.org/wiki/Banana "id="213">banana</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/07/24/23/35/blackberries-1539540__340.jpg" class="images"><div class="buttons" onclick="calc(214)">+</div><div class="buttons" onclick="calc(215)">-</div><br><br><br><br><p id="214">0</p><a href="https://en.wikipedia.org/wiki/Blackberry "id="215">blackberry</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/08/19/16/35/currant-896233__340.jpg" class="images"><div class="buttons" onclick="calc(216)">+</div><div class="buttons" onclick="calc(217)">-</div><br><br><br><br><p id="216">0</p><a href="https://en.wikipedia.org/wiki/Blackcurrant "id="217">blackcurrant</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/03/26/09/40/blueberries-690072__340.jpg" class="images"><div class="buttons" onclick="calc(218)">+</div><div class="buttons" onclick="calc(219)">-</div><br><br><br><br><p id="218">0</p><a href="https://en.wikipedia.org/wiki/Blueberry "id="219">blueberry</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/06/18/22/36/cherries-1465801__340.jpg" class="images"><div class="buttons" onclick="calc(220)">+</div><div class="buttons" onclick="calc(221)">-</div><br><br><br><br><p id="220">0</p><a href="https://en.wikipedia.org/wiki/Cherry "id="221">sweet cherries</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://images.freeimages.com/images/premium/large-thumbs/5748/57480496-cherimoya-fruit.jpg" class="images"><div class="buttons" onclick="calc(222)">+</div><div class="buttons" onclick="calc(223)">-</div><br><br><br><br><p id="222">0</p><a href="https://en.wikipedia.org/wiki/Cherimoya "id="223">cherimoya</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/12/21/23/39/coconuts-575780__340.png" class="images"><div class="buttons" onclick="calc(224)">+</div><div class="buttons" onclick="calc(225)">-</div><br><br><br><br><p id="224">0</p><a href="https://en.wikipedia.org/wiki/Coconut "id="225">coconut</a><h4>full-Pr Se Cu </h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2012/03/04/00/42/backdrop-22024__340.jpg" class="images"><div class="buttons" onclick="calc(226)">+</div><div class="buttons" onclick="calc(227)">-</div><br><br><br><br><p id="226">0</p><a href="https://en.wikipedia.org/wiki/Cranberry "id="227">cranberry</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/06/13/17/51/palma-1454793__340.jpg" class="images"><div class="buttons" onclick="calc(228)">+</div><div class="buttons" onclick="calc(229)">-</div><br><br><br><br><p id="228">0</p><a href="https://en.wikipedia.org/wiki/Date_palm "id="229">date palm</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/02/26/17/03/fruit-2100688__340.jpg" class="images"><div class="buttons" onclick="calc(230)">+</div><div class="buttons" onclick="calc(231)">-</div><br><br><br><br><p id="230">0</p><a href="https://en.wikipedia.org/wiki/Pitaya "id="231">pitaya</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/08/10/16/56/durian-3597242__340.jpg" class="images"><div class="buttons" onclick="calc(232)">+</div><div class="buttons" onclick="calc(233)">-</div><br><br><br><br><p id="232">0</p><a href="https://en.wikipedia.org/wiki/Durian "id="233">durian</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/05/27/19/33/elder-3434317__340.jpg" class="images"><div class="buttons" onclick="calc(234)">+</div><div class="buttons" onclick="calc(235)">-</div><br><br><br><br><p id="234">0</p><a href="https://en.wikipedia.org/wiki/Sambucus "id="235">sambucus</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/05/17/01/38/feijoa-4208712__340.jpg" class="images"><div class="buttons" onclick="calc(236)">+</div><div class="buttons" onclick="calc(237)">-</div><br><br><br><br><p id="236">0</p><a href="https://en.wikipedia.org/wiki/Acca_sellowiana "id="237">feijoa</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/06/17/14/38/gooseberry-3480623__340.jpg" class="images"><div class="buttons" onclick="calc(238)">+</div><div class="buttons" onclick="calc(239)">-</div><br><br><br><br><p id="238">0</p><a href="https://en.wikipedia.org/wiki/Gooseberry "id="239">gooseberry</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/02/27/17/51/grapes-276070__340.jpg" class="images"><div class="buttons" onclick="calc(240)">+</div><div class="buttons" onclick="calc(241)">-</div><br><br><br><br><p id="240">0</p><a href="https://en.wikipedia.org/wiki/Grape "id="241">grape</a><h4>Cho </h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/01/30/10/49/raisins-617416__340.jpg" class="images"><div class="buttons" onclick="calc(242)">+</div><div class="buttons" onclick="calc(243)">-</div><br><br><br><br><p id="242">0</p><a href="https://en.wikipedia.org/wiki/Raisin "id="243">raisin</a><h4>Cho Flu</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/02/24/17/31/fruit-1220367__340.png" class="images"><div class="buttons" onclick="calc(244)">+</div><div class="buttons" onclick="calc(245)">-</div><br><br><br><br><p id="244">0</p><a href="https://en.wikipedia.org/wiki/Grapefruit "id="245">grapefruit</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/07/09/14/09/guava-144145__340.jpg" class="images"><div class="buttons" onclick="calc(246)">+</div><div class="buttons" onclick="calc(247)">-</div><br><br><br><br><p id="246">0</p><a href="https://en.wikipedia.org/wiki/Guava "id="247">guava</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/05/20/01/10/jack-fruit-4215710__340.jpg" class="images"><div class="buttons" onclick="calc(248)">+</div><div class="buttons" onclick="calc(249)">-</div><br><br><br><br><p id="248">0</p><a href="https://en.wikipedia.org/wiki/Jackfruit "id="249">jackfruit</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Syzygium_cumini.jpg/220px-Syzygium_cumini.jpg" class="images"><div class="buttons" onclick="calc(250)">+</div><div class="buttons" onclick="calc(251)">-</div><br><br><br><br><p id="250">0</p><a href="https://en.wikipedia.org/wiki/Syzygium_cumini "id="251">java-plum</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/09/11/17/46/autumn-936183__340.jpg" class="images"><div class="buttons" onclick="calc(252)">+</div><div class="buttons" onclick="calc(253)">-</div><br><br><br><br><p id="252">0</p><a href="https://en.wikipedia.org/wiki/Jujube "id="253">jujube</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/2015-02-01_Kiwano_Cucumis_metuliferus_anagoria.JPG/220px-2015-02-01_Kiwano_Cucumis_metuliferus_anagoria.JPG" class="images"><div class="buttons" onclick="calc(254)">+</div><div class="buttons" onclick="calc(255)">-</div><br><br><br><br><p id="254">0</p><a href="https://en.wikipedia.org/wiki/Cucumis_metuliferus "id="255">cucumis metuliferus</a><h4>Cu</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/23/02/breakfast-1239438__340.jpg" class="images"><div class="buttons" onclick="calc(256)">+</div><div class="buttons" onclick="calc(257)">-</div><br><br><br><br><p id="256">0</p><a href="https://en.wikipedia.org/wiki/Kiwifruit "id="257">green kiwi</a><h4>Cho Cu</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/07/22/09/58/bio-1534487__340.jpg" class="images"><div class="buttons" onclick="calc(258)">+</div><div class="buttons" onclick="calc(259)">-</div><br><br><br><br><p id="258">0</p><a href="https://en.wikipedia.org/wiki/Kumquat "id="259">kumquat</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://images.pexels.com/photos/997725/pexels-photo-997725.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="images"><div class="buttons" onclick="calc(260)">+</div><div class="buttons" onclick="calc(261)">-</div><br><br><br><br><p id="260">0</p><a href="https://simple.wikipedia.org/wiki/Lemon "id="261">lemon</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Loquat_in_plate.jpg/220px-Loquat_in_plate.jpg" class="images"><div class="buttons" onclick="calc(262)">+</div><div class="buttons" onclick="calc(263)">-</div><br><br><br><br><p id="262">0</p><a href="https://en.wikipedia.org/wiki/Loquat "id="263">loquat</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/12/05/08/53/longan-2998873__340.jpg" class="images"><div class="buttons" onclick="calc(264)">+</div><div class="buttons" onclick="calc(265)">-</div><br><br><br><br><p id="264">0</p><a href="https://en.wikipedia.org/wiki/Longan "id="265">longan</a><h4>full-Pr</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/10/31/07/03/lychee-510435__340.jpg" class="images"><div class="buttons" onclick="calc(266)">+</div><div class="buttons" onclick="calc(267)">-</div><br><br><br><br><p id="266">0</p><a href="https://en.wikipedia.org/wiki/Lychee "id="267">lychee</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/11/20/23/02/mango-cut-open-214268__340.jpg" class="images"><div class="buttons" onclick="calc(268)">+</div><div class="buttons" onclick="calc(269)">-</div><br><br><br><br><p id="268">0</p><a href="https://wikipedia.org/wiki/Mango "id="269">mango</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/07/06/10/41/mangosteen-2477599__340.jpg" class="images"><div class="buttons" onclick="calc(270)">+</div><div class="buttons" onclick="calc(271)">-</div><br><br><br><br><p id="270">0</p><a href="https://en.wikipedia.org/wiki/Mangosteen "id="271">mangosteen</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/24/20/17/red-1277538__340.jpg" class="images"><div class="buttons" onclick="calc(272)">+</div><div class="buttons" onclick="calc(273)">-</div><br><br><br><br><p id="272">0</p><a href="https://en.wikipedia.org/wiki/Morus_(plant) "id="273">mulberry</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Nanche.jpg" class="images"><div class="buttons" onclick="calc(274)">+</div><div class="buttons" onclick="calc(275)">-</div><br><br><br><br><p id="274">0</p><a href="https://en.wikipedia.org/wiki/Byrsonima_crassifolia "id="275">nance</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/01/20/15/06/orange-1995056__340.jpg" class="images"><div class="buttons" onclick="calc(276)">+</div><div class="buttons" onclick="calc(277)">-</div><br><br><br><br><p id="276">0</p><a href="https://en.wikipedia.org/wiki/Orange_(fruit) "id="277">orange</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/03/07/04/32/fruit-2123166__340.jpg" class="images"><div class="buttons" onclick="calc(278)">+</div><div class="buttons" onclick="calc(279)">-</div><br><br><br><br><p id="278">0</p><a href="https://en.wikipedia.org/wiki/Papaya "id="279">papaya</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/06/10/10/43/flower-3466146__340.jpg" class="images"><div class="buttons" onclick="calc(280)">+</div><div class="buttons" onclick="calc(281)">-</div><br><br><br><br><p id="280">0</p><a href="https://cdn.pixabay.com/photo/2018/06/10/10/43/flower-3466146__340.jpg "id="281">passiflora edulis</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/07/22/09/59/fruit-1534494__340.jpg" class="images"><div class="buttons" onclick="calc(282)">+</div><div class="buttons" onclick="calc(283)">-</div><br><br><br><br><p id="282">0</p><a href="https://en.wikipedia.org/wiki/Pear "id="283">pear</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Fuyu_Persimmon_%28Diospyros_Kaki%29.jpg/1024px-Fuyu_Persimmon_%28Diospyros_Kaki%29.jpg" class="images"><div class="buttons" onclick="calc(284)">+</div><div class="buttons" onclick="calc(285)">-</div><br><br><br><br><p id="284">0</p><a href="https://en.wikipedia.org/wiki/Persimmon "id="285">American persimmons</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/08/30/10/25/plums-3641844__340.jpg" class="images"><div class="buttons" onclick="calc(286)">+</div><div class="buttons" onclick="calc(287)">-</div><br><br><br><br><p id="286">0</p><a href="https://en.wikipedia.org/wiki/Plum "id="287">plum</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/09/10/00/54/plums-933881__340.jpg" class="images"><div class="buttons" onclick="calc(288)">+</div><div class="buttons" onclick="calc(289)">-</div><br><br><br><br><p id="288">0</p><a href="https://en.wikipedia.org/wiki/Prune "id="289">prune</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/02/14/18/10/pineapple-636562__340.jpg" class="images"><div class="buttons" onclick="calc(290)">+</div><div class="buttons" onclick="calc(291)">-</div><br><br><br><br><p id="290">0</p><a href="https://en.wikipedia.org/wiki/Pineapple "id="291">pineapple</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/05/08/20/19/pomegranate-3383814__340.jpg" class="images"><div class="buttons" onclick="calc(292)">+</div><div class="buttons" onclick="calc(293)">-</div><br><br><br><br><p id="292">0</p><a href="https://en.wikipedia.org/wiki/Pomegranate "id="293">pomegranate</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/02/24/17/31/fruit-1220367__340.png" class="images"><div class="buttons" onclick="calc(294)">+</div><div class="buttons" onclick="calc(295)">-</div><br><br><br><br><p id="294">0</p><a href="https://en.wikipedia.org/wiki/Pomelo "id="295">pomelo</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/13/12/02/quince-1737596__340.jpg" class="images"><div class="buttons" onclick="calc(296)">+</div><div class="buttons" onclick="calc(297)">-</div><br><br><br><br><p id="296">0</p><a href="https://en.wikipedia.org/wiki/Quince "id="297">quince</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/06/04/23/42/raspberry-3454504__340.jpg" class="images"><div class="buttons" onclick="calc(298)">+</div><div class="buttons" onclick="calc(299)">-</div><br><br><br><br><p id="298">0</p><a href="https://en.wikipedia.org/wiki/Raspberry "id="299">raspberry</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/07/06/10/38/rambutan-2477586__340.jpg" class="images"><div class="buttons" onclick="calc(300)">+</div><div class="buttons" onclick="calc(301)">-</div><br><br><br><br><p id="300">0</p><a href="https://en.wikipedia.org/wiki/Rambutan "id="301">rambutan</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2019/06/23/16/04/currant-4294091__340.jpg" class="images"><div class="buttons" onclick="calc(302)">+</div><div class="buttons" onclick="calc(303)">-</div><br><br><br><br><p id="302">0</p><a href="https://en.wikipedia.org/wiki/Redcurrant "id="303">redcurrant</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Snake_fruit.jpg/800px-Snake_fruit.jpg" class="images"><div class="buttons" onclick="calc(304)">+</div><div class="buttons" onclick="calc(305)">-</div><br><br><br><br><p id="304">0</p><a href="https://en.wikipedia.org/wiki/Salak "id="305">salak</a><h4></h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Soursop%2C_Annona_muricata.jpg/800px-Soursop%2C_Annona_muricata.jpg" class="images"><div class="buttons" onclick="calc(306)">+</div><div class="buttons" onclick="calc(307)">-</div><br><br><br><br><p id="306">0</p><a href="https://en.wikipedia.org/wiki/Soursop "id="307">soursop</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Carambola_Starfruit.jpg/800px-Carambola_Starfruit.jpg" class="images"><div class="buttons" onclick="calc(308)">+</div><div class="buttons" onclick="calc(309)">-</div><br><br><br><br><p id="308">0</p><a href="https://en.wikipedia.org/wiki/Carambola "id="309">carambola</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/07/14/07/44/strawberry-2502961__340.jpg" class="images"><div class="buttons" onclick="calc(310)">+</div><div class="buttons" onclick="calc(311)">-</div><br><br><br><br><p id="310">0</p><a href="https://en.wikipedia.org/wiki/Strawberry "id="311">strawberry</a><h4>Cho</h4></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Eugenia_uniflora_fruits.jpg/800px-Eugenia_uniflora_fruits.jpg" class="images"><div class="buttons" onclick="calc(312)">+</div><div class="buttons" onclick="calc(313)">-</div><br><br><br><br><p id="312">0</p><a href="https://en.wikipedia.org/wiki/Eugenia_uniflora "id="313">surinam cherry</a><h4></h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/02/15/09/06/tamarind-636962__340.jpg" class="images"><div class="buttons" onclick="calc(314)">+</div><div class="buttons" onclick="calc(315)">-</div><br><br><br><br><p id="314">0</p><a href="https://en.wikipedia.org/wiki/Tamarind "id="315">tamarind</a><h4>Cho Cu</h4></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/12/11/20/45/white-currant-564737_960_720.jpg" class="images"><div class="buttons" onclick="calc(316)">+</div><div class="buttons" onclick="calc(317)">-</div><br><br><br><br><p id="316">0</p><a href="https://en.wikipedia.org/wiki/White_currant "id="317">white currant</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/12/24/05/02/drops-of-water-578897__340.jpg" class="images"><div class="buttons" onclick="calc(0)">+</div><div class="buttons" onclick="calc(1)">-</div><br><br><br><br><p id="0">0</p><a href="https://en.wikipedia.org/wiki/Water "id="1">water</a><h4>H2O</h4></div>
+<div class="plant"><img src="https://images-na.ssl-images-amazon.com/images/G/01/aplus/detail-page/NM_Vitamin-B-12-1000mcg_left_img1_lg.jpg" class="images"><div class="buttons" onclick="calc(2)">+</div><div class="buttons" onclick="calc(3)">-</div><br><br><br><br><p id="2">0</p><a href="https://duckduckgo.com/?q=b12+supplement&t=brave&iax=images&ia=images" target="_blank" id="3">B12 supplement</a><h4>B12</h4></div>
+<div class="plant"><img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F918053ac-f870-4e2c-99ee-99bbc2e62743_1.9d3974242e93cbd48c8f0c08664b42cd.jpeg&f=1" class="images"><div class="buttons" onclick="calc(4)">+</div><div class="buttons" onclick="calc(5)">-</div><br><br><br><br><p id="4">0</p><a href="https://duckduckgo.com/?q=d+supplement&t=brave&iar=images&iax=images&ia=images" target="_blank" id="5">D supplement</a><h4>D</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/02/05/11/11/soybeans-2039642__340.jpg" class="images"><div class="buttons" onclick="calc(82)">+</div><div class="buttons" onclick="calc(83)">-</div><br><br><br><br><p id="82">0</p><a href="https://en.wikipedia.org/wiki/Soybean" target="_blank" id="83">soybean</a><h4>Om3 Om6 Cu Cr full-Pr</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2012/12/24/08/39/agriculture-72254__340.jpg" class="images"><div class="buttons" onclick="calc(6)">+</div><div class="buttons" onclick="calc(7)">-</div><br><br><br><br><p id="6">0</p><a href="https://en.wikipedia.org/wiki/Potato" target="_blank" id="7">potato</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/18/20/29/corn-1751321__340.jpg" class="images"><div class="buttons" onclick="calc(8)">+</div><div class="buttons" onclick="calc(9)">-</div><br><br><br><br><p id="8">0</p><a href="https://en.wikipedia.org/wiki/Sweet_corn" target="_blank" id="9">sweet corn</a><h4>full-Pr</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/12/08/16/10/isolated-1083235__340.png" class="images"><div class="buttons" onclick="calc(10)">+</div><div class="buttons" onclick="calc(11)">-</div><br><br><br><br><p id="10">0</p><a href="https://en.wikipedia.org/wiki/Carrot" target="_blank" id="11">carrot</a><h4>A</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/06/11/15/33/broccoli-1450274__340.png" class="images"><div class="buttons" onclick="calc(12)">+</div><div class="buttons" onclick="calc(13)">-</div><br><br><br><br><p id="12">0</p><a href="https://en.wikipedia.org/wiki/Broccoli" target="_blank" id="13">broccoli</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/11/06/17/31/green-beans-519439__340.jpg" class="images"><div class="buttons" onclick="calc(14)">+</div><div class="buttons" onclick="calc(15)">-</div><br><br><br><br><p id="14">0</p><a href="https://en.wikipedia.org/wiki/Green_bean" target="_blank" id="15">green bean</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/19/15/background-1238342__340.jpg" class="images"><div class="buttons" onclick="calc(16)">+</div><div class="buttons" onclick="calc(17)">-</div><br><br><br><br><p id="16">0</p><a href="https://en.wikipedia.org/wiki/Garlic" target="_blank" id="17">garlic</a><h4>Se</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/03/23/08/04/cucumber-685704__340.jpg" class="images"><div class="buttons" onclick="calc(18)">+</div><div class="buttons" onclick="calc(19)">-</div><br><br><br><br><p id="18">0</p><a href="https://en.wikipedia.org/wiki/Cucumber" target="_blank" id="19">cucumber</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/11/05/00/05/spinach-1799266__340.jpg" class="images"><div class="buttons" onclick="calc(20)">+</div><div class="buttons" onclick="calc(21)">-</div><br><br><br><br><p id="20">0</p><a href="https://en.wikipedia.org/wiki/Spinach" target="_blank" id="21">spinach</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/02/21/19/14/onion-bulbs-84722__340.jpg" class="images"><div class="buttons" onclick="calc(22)">+</div><div class="buttons" onclick="calc(23)">-</div><br><br><br><br><p id="22">0</p><a href="https://en.wikipedia.org/wiki/Onion" target="_blank" id="23">onion</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/09/51/sweet-1807__340.jpg" class="images"><div class="buttons" onclick="calc(24)">+</div><div class="buttons" onclick="calc(25)">-</div><br><br><br><br><p id="24">0</p><a href="https://en.wikipedia.org/wiki/Sweet_potato" target="_blank" id="25">sweet potato</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2012/02/25/18/41/peas-16803__340.jpg" class="images"><div class="buttons" onclick="calc(26)">+</div><div class="buttons" onclick="calc(27)">-</div><br><br><br><br><p id="26">0</p><a href="https://en.wikipedia.org/wiki/Pea" target="_blank" id="27">pea</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/09/59/appetite-2039__340.jpg" class="images"><div class="buttons" onclick="calc(28)">+</div><div class="buttons" onclick="calc(29)">-</div><br><br><br><br><p id="28">0</p><a href="https://en.wikipedia.org/wiki/Asparagus" target="_blank" id="29">asparagus</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/09/25/16/51/cabbage-957778__340.jpg" class="images"><div class="buttons" onclick="calc(30)">+</div><div class="buttons" onclick="calc(31)">-</div><br><br><br><br><p id="30">0</p><a href="https://en.wikipedia.org/wiki/Cauliflower" target="_blank" id="31">cauliflower</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/07/12/19/14/peppers-154377__340.png" class="images"><div class="buttons" onclick="calc(32)">+</div><div class="buttons" onclick="calc(33)">-</div><br><br><br><br><p id="32">0</p><a href="https://en.wikipedia.org/wiki/Bell_pepper" target="_blank" id="33">bell pepper</a><h4></h4></div>
+<div class="plant"><img src="https://previews.123rf.com/images/imagemax/imagemax1804/imagemax180400437/100519086-fresh-romaine-lettuce-isolated-on-white-background.jpg" class="images"><div class="buttons" onclick="calc(34)">+</div><div class="buttons" onclick="calc(35)">-</div><br><br><br><br><p id="34">0</p><a href="https://en.wikipedia.org/wiki/Romaine_lettuce" target="_blank" id="35">romaine lettuce</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/01/19/11/01/olives-1992013__340.png" class="images"><div class="buttons" onclick="calc(36)">+</div><div class="buttons" onclick="calc(37)">-</div><br><br><br><br><p id="36">0</p><a href="https://en.wikipedia.org/wiki/Olive" target="_blank" id="37">olive</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/19/03/appetite-1238257__340.jpg" class="images"><div class="buttons" onclick="calc(38)">+</div><div class="buttons" onclick="calc(39)">-</div><br><br><br><br><p id="38">0</p><a href="https://en.wikipedia.org/wiki/Avocado" target="_blank" id="39">avocado</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/04/05/11/39/kale-316559__340.jpg" class="images"><div class="buttons" onclick="calc(40)">+</div><div class="buttons" onclick="calc(41)">-</div><br><br><br><br><p id="40">0</p><a href="https://en.wikipedia.org/wiki/Cabbage" target="_blank" id="41">cabbage</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/22/01/lettuce-1239155__340.jpg" class="images"><div class="buttons" onclick="calc(42)">+</div><div class="buttons" onclick="calc(43)">-</div><br><br><br><br><p id="42">0</p><a href="https://en.wikipedia.org/wiki/Lettuce" target="_blank" id="43">lettuce</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/09/27/11/25/brussels-sprouts-463378__340.jpg" class="images"><div class="buttons" onclick="calc(44)">+</div><div class="buttons" onclick="calc(45)">-</div><br><br><br><br><p id="44">0</p><a href="https://en.wikipedia.org/wiki/Brussels_sprout" target="_blank" id="45">brussels sprout</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2012/12/24/08/40/autumn-72294__340.jpg" class="images"><div class="buttons" onclick="calc(46)">+</div><div class="buttons" onclick="calc(47)">-</div><br><br><br><br><p id="46">0</p><a href="https://en.wikipedia.org/wiki/Pumpkin" target="_blank" id="47">pumpkin</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/09/13/18/15/corn-1667921__340.jpg" class="images"><div class="buttons" onclick="calc(48)">+</div><div class="buttons" onclick="calc(49)">-</div><br><br><br><br><p id="48">0</p><a href="https://en.wikipedia.org/wiki/Maize" target="_blank" id="49">maize</a><h4>full-Pr</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/09/13/39/red-beets-1725799__340.jpg" class="images"><div class="buttons" onclick="calc(50)">+</div><div class="buttons" onclick="calc(51)">-</div><br><br><br><br><p id="50">0</p><a href="https://en.wikipedia.org/wiki/Beetroot" target="_blank" id="51">beet</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/19/11/berry-1238295__340.jpg" class="images"><div class="buttons" onclick="calc(52)">+</div><div class="buttons" onclick="calc(53)">-</div><br><br><br><br><p id="52">0</p><a href="https://en.wikipedia.org/wiki/Strawberry" target="_blank" id="53">strawberry</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/07/08/13/59/fruit-1504404__340.jpg" class="images"><div class="buttons" onclick="calc(54)">+</div><div class="buttons" onclick="calc(55)">-</div><br><br><br><br><p id="54">0</p><a href="https://en.wikipedia.org/wiki/Watermelon" target="_blank" id="55">watermelon</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/02/02/14/04/grapes-2032838__340.jpg" class="images"><div class="buttons" onclick="calc(56)">+</div><div class="buttons" onclick="calc(57)">-</div><br><br><br><br><p id="56">0</p><a href="https://en.wikipedia.org/wiki/Grape" target="_blank" id="57">grape</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/01/17/14/27/oranges-602271__340.jpg" class="images"><div class="buttons" onclick="calc(58)">+</div><div class="buttons" onclick="calc(59)">-</div><br><br><br><br><p id="58">0</p><a href="https://en.wikipedia.org/wiki/Orange_(fruit)" target="_blank" id="59">orange</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/06/27/22/21/banana-2449019__340.jpg" class="images"><div class="buttons" onclick="calc(60)">+</div><div class="buttons" onclick="calc(61)">-</div><br><br><br><br><p id="60">0</p><a href="https://en.wikipedia.org/wiki/Banana" target="_blank" id="61">banana</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/07/18/15/07/mango-164572__340.jpg" class="images"><div class="buttons" onclick="calc(62)">+</div><div class="buttons" onclick="calc(63)">-</div><br><br><br><br><p id="62">0</p><a href="https://en.wikipedia.org/wiki/Mango" target="_blank" id="63">mango</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/06/24/10/25/fruit-1477016__340.jpg" class="images"><div class="buttons" onclick="calc(64)">+</div><div class="buttons" onclick="calc(65)">-</div><br><br><br><br><p id="64">0</p><a href="https://en.wikipedia.org/wiki/Pineapple" target="_blank" id="65">pineapple</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/11/18/13/47/apple-1834639__340.jpg" class="images"><div class="buttons" onclick="calc(66)">+</div><div class="buttons" onclick="calc(67)">-</div><br><br><br><br><p id="66">0</p><a href="https://en.wikipedia.org/wiki/Apple" target="_blank" id="67">apple</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/11/20/13/54/blueberry-539135__340.png" class="images"><div class="buttons" onclick="calc(68)">+</div><div class="buttons" onclick="calc(69)">-</div><br><br><br><br><p id="68">0</p><a href="https://en.wikipedia.org/wiki/Blueberry" target="_blank" id="69">blueberry</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/07/13/11/29/cherries-158241__340.png" class="images"><div class="buttons" onclick="calc(70)">+</div><div class="buttons" onclick="calc(71)">-</div><br><br><br><br><p id="70">0</p><a href="https://pixabay.com/images/search/cherry/" target="_blank" id="71">sweet cherry</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/04/28/17/12/raspberries-2268901__340.jpg" class="images"><div class="buttons" onclick="calc(72)">+</div><div class="buttons" onclick="calc(73)">-</div><br><br><br><br><p id="72">0</p><a href="https://en.wikipedia.org/wiki/Raspberry" target="_blank" id="73">raspberry</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/10/06/food-2280__340.jpg" class="images"><div class="buttons" onclick="calc(74)">+</div><div class="buttons" onclick="calc(75)">-</div><br><br><br><br><p id="74">0</p><a href="https://en.wikipedia.org/wiki/Pear" target="_blank" id="75">pear</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/10/05/berry-2275__340.jpg" class="images"><div class="buttons" onclick="calc(76)">+</div><div class="buttons" onclick="calc(77)">-</div><br><br><br><br><p id="76">0</p><a href="https://en.wikipedia.org/wiki/Blackberry" target="_blank" id="77">blackberry</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/26/12/55/plum-1771409__340.jpg" class="images"><div class="buttons" onclick="calc(78)">+</div><div class="buttons" onclick="calc(79)">-</div><br><br><br><br><p id="78">0</p><a href="https://en.wikipedia.org/wiki/Plum" target="_blank" id="79">plum</a><h4></h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/22/17/food-1239236__340.jpg" class="images"><div class="buttons" onclick="calc(80)">+</div><div class="buttons" onclick="calc(81)">-</div><br><br><br><br><p id="80">0</p><a href="https://en.wikipedia.org/wiki/Lemon" target="_blank" id="81">lemon</a><h4>Cho</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/02/08/13/05/lentils-628468__340.jpg" class="images"><div class="buttons" onclick="calc(84)">+</div><div class="buttons" onclick="calc(85)">-</div><br><br><br><br><p id="84">0</p><a href="https://en.wikipedia.org/wiki/Lentil" target="_blank" id="85">lentil</a><h4>Pr</h4></div>
 </div>
-<button class="button" type="button" onclick="results()">Output</button>
+<button type="button" onclick="results()">Output</button>
 <div id="output"width="100%"height="100%"></div>
 	<h1>References:</h1>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t2/?report=objectonly" target="_blank">DRI Vitamins</a><br>
@@ -331,58 +226,39 @@ color:black ;
 	var i=0;
 	var g=0;
 	function set() {
-        var select0=getElementById("gender");
-        var select1=getElementById("age");
 	var p=document.getElementsByTagName("p");
-	while (i<161){
-	p[i].innerHTML="0";
-	i++;
-	}
-	i=0;
-var gender=0;
-var age=0;
-        switch (select0){
-case "man": select0.innerHTML="woman"; gender=20;break;
-case "woman": select0.innerHTML="pregnancy"; gender=30;break;
-case "pregnancy": select0.innerHTML="lactation"; gender=40;break;
-case "lactation": select0.innerHTML="man"; gender=10;break;}
-switch (select1){
-case "select age group": select1.innerHTML="0-6 months"; age=0;break;
-case "0-6 months": select1.innerHTML="7-12 months"; age=1;break;
-case "7-12 months": select1.innerHTML="1-3 years"; age=2;break;
-case "1-3 years": select1.innerHTML="4-8 years"; age=3;break;
-case "4-8 years": select1.innerHTML="9-13 years"; age=4;break;
-case "9-13 years": select1.innerHTML="14-18 years"; age=5;break;
-case "14-18 years": select1.innerHTML="19-30 years"; age=6;break;
-case "19-30 years": select1.innerHTML="31-50 years"; age=7;break;
-case "31-50 years": select1.innerHTML="51-70 years"; age=8;break;
-case "51-70 years": select1.innerHTML="+70 years"; age=9;break;
-case "+70 years": select1.innerHTML="0-6 months"; age=0;break;}
+	//while (i<10){
+	//p[i].innerHTML="0";
+	//i++;
+	//}
+	//i=0;
+	var gender = document.getElementById('gender'); gender=gender[gender.selectedIndex].value;
+	var age = document.getElementById('age'); age=age[age.selectedIndex].value;
     gender=gender+age;
     switch (gender) {
-  case 10:   case 20: values=['400','40','10','4','2.0','0.2','0.3','2','0.1','65','0.4','1.7','5','125', '200','0.2','200','0.01','110','0.27','30','0.003','2','100','15','2','0.4','0.12','0.18','0.7','60','0','31','4.4','0.5','9.1'];break;
-  case 11:   case 21: values=['500','50','10','5','2.5','0.3','0.4','4','0.3','80','0.5','1.8','6','150','260','5.5','220','0.5','130','11','75','0.6','3','275','20','3','0.7','0.37','0.57','0.8','95','0','30','4.6','0.5','11.0'];break;
-  case 12:   case 22: values=['300','15','15','6','30','0.5','0.5','6','0.5','150','0.9','2','8','200', '700','11','340','0.7','90','7','80','1.2','17','460','20','3','3.0','1.0','1.5','1.3','130','19','0','7','0.7','13'];break;
-  case 13:   case 23: values=['400','25','15','7','55','0.6','0.6','8','0.6','200','1.2','3','12','250', '1000','15','440','1','90','10','130','1.5','22','500','30','5','3.8','1.2','1.9','1.7','130','25','0','10','0.9','19'];break;
-  case 14:   values=['600','45','15','11','60','0.9','0.9','12','1.0','300','1.8','4','20','375','1300','25','700','2','120','8','240','1.9','34','1250','40','8','4.5','1.5','2.3','2.4','130','31','0','12','1.2','34'];break;
-  case 15:   values=['900','75','15','15','75','1.2','1.3','16','1.3','400','2.4','5','25','550','1300','35','890','3','150','11','410','2.2','43','1250','55','11','4.7','1.5','2.3','3.3','130','38','0','16','1.6','52'];break;
-  case 16:   values=['900','90','15','15','120','1.2','1.3','16','1.3','400','2.4','5','30','550','1000','35','900','4','150','8','400','2.3','45','700','55','11','4.7','1.5','2.3','3.7','130','38','0','17','1.6','56'];break;
-  case 17:   values=['900','90','15','15','120','1.2','1.3','16','1.3','400','2.4','5','30','550','1000','35','900','4','150','8','420','2.3','45','700','55','11','4.7','1.5','2.3','3.7','130','38','0','17','1.6','56'];break;
-  case 18:   values=['900','90','15','15','120','1.2','1.3','16','1.7','400','2.4','5','30','550','1000','30','900','4','150','8','420','2.3','45','700','55','11','4.7','1.3','2.0','3.7','130','30','0','14','1.6','56'];break;
-  case 19:   values=['900','90','20','15','120','1.2','1.3','16','1.7','400','2.4','5','30','550','1200','30','900','4','150','8','420','2.3','45','700','55','11','4.7','1.2','1.8','3.7','130','30','0','14','1.6','56'];break;
-  case 24:   values=['600','45','15','11','60','0.9','0.9','12','1.0','300','1.8','4','20','375','1300','21','700','2','120','8','240','1.6','34','1250','40','8','4.5','1.5','2.3','2.1','130','26','0','10','1.0','34'];break;
-  case 25:   values=['700','65','15','15','75','1.0','1.0','14','1.2','400','2.4','5','25','400','1300','24','890','3','150','15','360','1.6','43','1250','55','9','4.7','1.5','2.3','2.3','130','26','0','11','1.1','46'];break;
-  case 26:   values=['700','75','15','15','90','1.1','1.1','14','1.3','400','2.4','5','30','425','1000','25','900','3','150','18','310','1.8','45','700','55','8','4.7','1.5','2.3','2.7','130','25','0','12','1.1','46'];break;
-  case 27:   values=['700','75','15','15','90','1.1','1.1','14','1.3','400','2.4','5','30','425','1000','25','900','3','150','18','320','1.8','45','700','55','8','4.7','1.5','2.3','2.7','130','25','0','12','1.1','46'];break;
-  case 28:   values=['700','75','15','15','90','1.1','1.1','14','1.5','400','2.4','5','30','425','1200','20','900','3','150','8','320','1.8','45','700','55','8','4.7','1.3','2.0','2.7','130','21','0','11','1.1','46'];break;
-  case 29:   values=['700','75','20','15','90','1.1','1.1','14','1.5','400','2.4','5','30','425','1200','20','900','3','150','8','320','1.8','45','700','55','8','4.7','1.2','1.8','2.7','130','21','0','11','1.1','46'];break;
-  case 35:   values=['750','80','15','15','75','1.4','1.4','18','1.9','600','2.6','6','30','450','1300','29','1000','3','220','27','400','2.0','50','1250','60','12','4.7','1.5','2.3','3.0','175','28','0','13','1.4','71'];break;
-  case 36:   values=['770','85','15','15','90','1.4','1.4','18','1.9','600','2.6','6','30','450','1000','30','1000','3','220','27','350','2.0','50','700','60','11','4.7','1.5','2.3','3.0','175','28','0','13','1.4','71'];break;
-  case 37:   values=['770','85','15','15','90','1.4','1.4','18','1.9','600','2.6','6','30','450','1000','30','1000','3','220','27','360','2.0','50','700','60','11','4.7','1.5','2.3','3.0','175','28','0','13','1.4','71'];break;
-  case 45:   values=['1200','115','15','19','75','1.4','1.6','17','2.0','500','2.8','7','35','550','1300','44','1300','3','290','10','360','2.6','50','1250','70','13','5.1','1.5','2.3','3.8','210','29','0','13','1.3','71'];break;
-  case 46:   values=['1300','120','15','19','90','1.4','1.6','17','2.0','500','2.8','7','35','550','1000','45','1300','3','290','9','310','2.6','50','700','70','12','5.1','1.5','2.3','3.8','210','29','0','13','1.3','71'];break;
-  case 47:   values=['1300','120','15','19','90','1.4','1.6','17','2.0','500','2.8','7','35','550','1000','45','1300','3','290','9','320','2.6','50','700','70','12','5.1','1.5','2.3','3.8','210','29','0','13','1.3','71'];break;
-  case 30:case 31:case 32:case 33:case 34:case 38:case 39:case 40:case 41:case 42:case 43:case 44:case 48:case 49: values=[];break;
+  case 'a1':   case 'b1': values=['400','40','10','4','2.0','0.2','0.3','2','0.1','65','0.4','1.7','5','125', '200','0.2','200','0.01','110','0.27','30','0.003','2','100','15','2','0.4','0.12','0.18','0.7','60','0','31','4.4','0.5','9.1'];break;
+  case 'a2':   case 'b2': values=['500','50','10','5','2.5','0.3','0.4','4','0.3','80','0.5','1.8','6','150','260','5.5','220','0.5','130','11','75','0.6','3','275','20','3','0.7','0.37','0.57','0.8','95','0','30','4.6','0.5','11.0'];break;
+  case 'a3':   case 'b3': values=['300','15','15','6','30','0.5','0.5','6','0.5','150','0.9','2','8','200', '700','11','340','0.7','90','7','80','1.2','17','460','20','3','3.0','1.0','1.5','1.3','130','19','0','7','0.7','13'];break;
+  case 'a4':   case 'b4': values=['400','25','15','7','55','0.6','0.6','8','0.6','200','1.2','3','12','250', '1000','15','440','1','90','10','130','1.5','22','500','30','5','3.8','1.2','1.9','1.7','130','25','0','10','0.9','19'];break;
+  case 'a5':   values=['600','45','15','11','60','0.9','0.9','12','1.0','300','1.8','4','20','375','1300','25','700','2','120','8','240','1.9','34','1250','40','8','4.5','1.5','2.3','2.4','130','31','0','12','1.2','34'];break;
+  case 'a6':   values=['900','75','15','15','75','1.2','1.3','16','1.3','400','2.4','5','25','550','1300','35','890','3','150','11','410','2.2','43','1250','55','11','4.7','1.5','2.3','3.3','130','38','0','16','1.6','52'];break;
+  case 'a7':   values=['900','90','15','15','120','1.2','1.3','16','1.3','400','2.4','5','30','550','1000','35','900','4','150','8','400','2.3','45','700','55','11','4.7','1.5','2.3','3.7','130','38','0','17','1.6','56'];break;
+  case 'a8':   values=['900','90','15','15','120','1.2','1.3','16','1.3','400','2.4','5','30','550','1000','35','900','4','150','8','420','2.3','45','700','55','11','4.7','1.5','2.3','3.7','130','38','0','17','1.6','56'];break;
+  case 'a9':   values=['900','90','15','15','120','1.2','1.3','16','1.7','400','2.4','5','30','550','1000','30','900','4','150','8','420','2.3','45','700','55','11','4.7','1.3','2.0','3.7','130','30','0','14','1.6','56'];break;
+  case 'a0':   values=['900','90','20','15','120','1.2','1.3','16','1.7','400','2.4','5','30','550','1200','30','900','4','150','8','420','2.3','45','700','55','11','4.7','1.2','1.8','3.7','130','30','0','14','1.6','56'];break;
+  case 'b5':   values=['600','45','15','11','60','0.9','0.9','12','1.0','300','1.8','4','20','375','1300','21','700','2','120','8','240','1.6','34','1250','40','8','4.5','1.5','2.3','2.1','130','26','0','10','1.0','34'];break;
+  case 'b6':   values=['700','65','15','15','75','1.0','1.0','14','1.2','400','2.4','5','25','400','1300','24','890','3','150','15','360','1.6','43','1250','55','9','4.7','1.5','2.3','2.3','130','26','0','11','1.1','46'];break;
+  case 'b7':   values=['700','75','15','15','90','1.1','1.1','14','1.3','400','2.4','5','30','425','1000','25','900','3','150','18','310','1.8','45','700','55','8','4.7','1.5','2.3','2.7','130','25','0','12','1.1','46'];break;
+  case 'b8':   values=['700','75','15','15','90','1.1','1.1','14','1.3','400','2.4','5','30','425','1000','25','900','3','150','18','320','1.8','45','700','55','8','4.7','1.5','2.3','2.7','130','25','0','12','1.1','46'];break;
+  case 'b9':   values=['700','75','15','15','90','1.1','1.1','14','1.5','400','2.4','5','30','425','1200','20','900','3','150','8','320','1.8','45','700','55','8','4.7','1.3','2.0','2.7','130','21','0','11','1.1','46'];break;
+  case 'b0':   values=['700','75','20','15','90','1.1','1.1','14','1.5','400','2.4','5','30','425','1200','20','900','3','150','8','320','1.8','45','700','55','8','4.7','1.2','1.8','2.7','130','21','0','11','1.1','46'];break;
+  case 'c6':   values=['750','80','15','15','75','1.4','1.4','18','1.9','600','2.6','6','30','450','1300','29','1000','3','220','27','400','2.0','50','1250','60','12','4.7','1.5','2.3','3.0','175','28','0','13','1.4','71'];break;
+  case 'c7':   values=['770','85','15','15','90','1.4','1.4','18','1.9','600','2.6','6','30','450','1000','30','1000','3','220','27','350','2.0','50','700','60','11','4.7','1.5','2.3','3.0','175','28','0','13','1.4','71'];break;
+  case 'c8':   values=['770','85','15','15','90','1.4','1.4','18','1.9','600','2.6','6','30','450','1000','30','1000','3','220','27','360','2.0','50','700','60','11','4.7','1.5','2.3','3.0','175','28','0','13','1.4','71'];break;
+  case 'd6':   values=['1200','115','15','19','75','1.4','1.6','17','2.0','500','2.8','7','35','550','1300','44','1300','3','290','10','360','2.6','50','1250','70','13','5.1','1.5','2.3','3.8','210','29','0','13','1.3','71'];break;
+  case 'd7':   values=['1300','120','15','19','90','1.4','1.6','17','2.0','500','2.8','7','35','550','1000','45','1300','3','290','9','310','2.6','50','700','70','12','5.1','1.5','2.3','3.8','210','29','0','13','1.3','71'];break;
+  case 'd8':   values=['1300','120','15','19','90','1.4','1.6','17','2.0','500','2.8','7','35','550','1000','45','1300','3','290','9','320','2.6','50','700','70','12','5.1','1.5','2.3','3.8','210','29','0','13','1.3','71'];break;
+  case 'c1':case 'c2':case 'c3':case 'c4':case 'c5':case 'c9':case 'c0':case 'd1':case 'd2':case 'd3':case 'd4':case 'd5':case 'd9':case 'd0': values=[];break;
 	}
   while (i < 36){
 	h[i].style.color="black";
@@ -429,210 +305,89 @@ function calc(x){
 	if (x%2 == 0) type=1;  else {type=-1;x--;}
 	if (document.getElementById(x).innerHTML == 0) type=1; 
 	switch (x){
-	case 0: plants=[250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];break; //water
-	case 2: plants=[100,371,0,4.2,1.19,0,0.116,0.2,0.923,1.457,0.591,82,159,7.61,248,3.333,557,18.7,2.87,0.508,4,0.011,65.25,6.7,7.02,13.56,0,0,0,0,0,0,0,0,0,0,0];break; //Amaranthe
-	case 4: plants=[100,43,22,4.9,0,0,0.031,0.04,0.334,0.155,0.067,109,16,0.8,23,0.329,40,0,0.35,0.325,0.078,0.088,9.56,2.8,0.17,1.61,0,0,0,0,0,0,0,0,0,0,0];break; //beet
-	case 6: plants=[100,34,392,89.2,0.78,101.6,0.071,0.117,0.639,0.573,0.175,63,47,0.73,21,0.21,66,0,0.41,0.316,0.033,0.089,6.64,2.6,0.37,2.82,19,0,0,0,0,0,0,0,0,0,0];break; //broccoli
-	case 8: plants=[100,43,488,85,0.88,177,0.139,0.09,0.745,0.309,0.219,61,42,1.4,23,0.337,69,0,0.42,0.389,0.025,0.086,8.95,3.8,0.3,3.48,19.1,0,0,0,0,0,0,0,0,0,0];break; //brussels sprout 
-	case 10: plants=[100,25,0,36.6,0,76,0.061,0.040,0.234,0.212,0.124,43,40,0.47,12,0.16,26,0,0.18,0.170,0.018,0,5.8,2.5,0.1,1.28,0,0,0,0,0,0,0,0,0,0,0.001];break; //cabbage 
-	case 12: plants=[100,16,22,3.1,0.27,29.3,0.021,0.057,0.320,0.246,0.074,36,40,0.20,11,0,24,0,0.13,0.260,0.080,0.095,2.97,1.6,0.17,0.69,6.1,0,0,0,0,0,0,0,0.035,0,0];break; //celery 
-	case 14: plants=[100,18,175,19.5,0,0,0.055,0.07,0.55,0.183,0.05,46,39,0.55,28,0.688,39,0,0.27,0.330,0.011,0,3.65,1.7,0.3,0.85,0,0,0,0,0,0,0,0,0,0,0];break; //celtuce 
-	case 16: plants=[100,23,3716,24,2.26,297.6,0.06,0.1,0.5,1.159,0.105,110,100,0.9,30,0.429,47,0,0.42,0.420,0.045,0,4.7,4,0.3,1.7,0,0,0,0,0,0,0,0,0,0,0];break; //chicory 
-	case 18: plants=[100,24,1496,1.4,0,350,0.13,0.144,0.531,0.221,0.176,177,117,2.29,32,0.943,54,0,0.71,0.567,0.118,0,3.02,3,0.56,3.36,0,0,0,0,0,0,0,0,0,0,0];break; //glebionis coronaria 
-	case 20: plants=[100,33,4893,18,0.9,407,0.04,0.11,0.58,0.22,0.13,16,141,1.13,21,0.51,32,0,0.23,0.117,0.015,0.090,5,6,4,0.7,2.7,0,0,0,0,0,0,0,0,0,0,0];break; //collard 
-	case 22: plants=[100,20,400,21,12.2,0,0.047,0.112,0.48,0,0.073,12,65,1.99,68,0.303,44,0,0.17,0.494,0,0.093,3.39,0,0.36,2.03,0,0,0,0,0,0,0,0,0,0,0];break; //portulaca oleracea 
-	case 24: plants=[100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.459,0.004,0,3.6,0,0.4,2,0,0,0,0,0,0,0,0,0,0,0];break; //Valerianella locusta 
-	case 26: plants=[100,32,4496,69,0.7,541.9,0.08,0.26,1,0.247,0.247,80,81,1.3,38,0.553,76,0,0,0.606,0,89.4,5.5,1.1,0.7,2.6,0,0,0,0,0,0,0,0,0,0,0];break; //garden cress 
-	case 28: plants=[100,43,2320,85,0,0,0.1,0.3,1.6,0.4,0.2,150,208,6.6,55,1.3,66,0,0.9,0.738,0.061,0,7,2.1,1.1,3.5,0,0,0,0,0,0,0,0,140,0,0];break; //dill 
-	case 30: plants=[100,17,1408,6.5,0.44,231,0.08,0.075,0.4,0.9,0,142,52,0.83,15,0.42,28,0,0.79,0.314,0,0,3.35,3.1,0.2,1.25,0,0,0,0,0,0,0,0,0,0,0];break; //endive 
-	case 32: plants=[100,43,580,80,0,0,0.16,0.44,1.2,0.092,0.274,30,309,1.2,34,0.782,72,0,0.44,0.452,0.043,0,7.3,4,0.8,4.2,0,0,0,0,0,0,0,0,0,0,0];break; //Chenopodium album 
-	case 34: plants=[100,69,0,3.2,0.19,14.6,0.069,0.07,0.188,0.05,0.086,2,10,0.36,7,0.071,20,0,0.07,0.191,0.002,0,18.1,0.9,0.16,0.72,5.6,0,0,0,0,0,0,0,0,0.008,0];break; //grape case 
-	case 36: plants=[100,49,241,120,1.54,390,0.11,0.13,1,0.9,0.27,141,150,1.5,47,0.66,92,0,0.6,0.491,0.038,0.084,8.8,3.6,0.9,4.3,0.8,0,0,0,0,0,0,0,0,0,0];break; //raw kale case 
-	case 38: plants=[100,22,495,130,0,0,0.068,0.093,0.678,0.178,0.153,159,210,1.5,11,0.407,28,0,0.17,0.449,0.021,0,3.9,2.8,0.3,2.2,0,0,0,0,0,0,0,0,0,0,0];break; //komatsuna case 
-	case 40: plants=[100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.459,0.004,0,3.6,0,0.4,2,0,0,0,0,0,0,0,0,0,0,0];break; //Valerianella locusta 
-	case 42: plants=[100,13,2153,3.7,0.18,102.3,0.057,0.062,0,0.15,0.082,73,35,1.24,13,0.179,33,0,0.2,0.238,0.005,0.096,2.23,1.1,0.22,1.35,0,0,0,0,0,0,0,0,0,0,0];break; //lettuce 
-	case 44: plants=[100,19,400,102,0,0,0.05,0.155,0.5,0,0.24,140,109,1.2,65,0.735,52,0,0.43,0.510,0,0,3.4,0,0.3,1.8,0,0,0,0,0,0,0,0,0,0,0];break; //basella alba 
-	case 46: plants=[100,34,278,37,0,0,0.133,0.546,1.26,0.072,0.6,123,208,4.76,64,0.123,83,0,0.79,0.559,0,0,5.8,0,0.25,4.65,0,0,0,0,0,0,0,0,0,0,0];break; //Mulukhiyah 
-	case 48: plants=[100,16,0,27,0,0,0,0,0,0,0,0,77,0.31,13,0,0,0,0,0,0.009,0,3.2,1.2,0.2,1.2,0,0,0,0,0,0,0,0,0,0,0];break; //napa cabbage 
-	case 50: plants=[100,81,487,40,0.13,24.8,0.266,0.132,2.09,0,0.169,65,25,1.47,33,0.41,108,0,1.24,0.244,0.005,0,14.45,5.1,0.4,5.42,0,0,0,0,0,0,0,0,0,0,0];break; //pea 
-	case 52: plants=[100,20,5635,82,0,108,0.07,0.25,1.1,0,0.111,0,53,1.2,14,0.336,33,0,0,0.184,0.018,0,3.1,1.5,0.4,2.3,0,0,0,0,0,0,0,0,0,0,0];break; //Phytolacca americana 
-	case 54: plants=[100,23,0,8,2.26,255.2,0.016,0.028,0.255,0.269,0.057,60,19,0.57,13,0.138,40,0,0.62,0.302,0.022,0,4.48,0.9,0.25,1.43,0,0,0,0,0,0,0,0,0,0,0];break; //radicchio 
-	case 56: plants=[100,22,1704,20.2,1.62,224,0.162,0.129,1.221,0.322,0.171,83,108,2.14,22,0.395,73,0,0.77,0.196,0.033,0.093,2.85,2.7,0.49,3.17,0,0,0,0,0,0,0,0,0,0,0];break; //rapini 
-	case 58: plants=[100,23,6095,28,2,483,0.078,0.189,0.724,0,0.195,194,99,2.71,79,0.897,49,0,0.53,0.558,0.079,0.091,3.6,2.2,0.4,2.9,0,0,0,0,0,0,0,0,0,0,0];break; //spinach 
-	case 60: plants=[100,20,400,21,12.2,0,0.047,0.112,0.48,0,0.073,12,65,1.99,68,0.303,44,0,0.17,0.494,0,0.093,3.39,0,0.36,2.03,0,0,0,0,0,0,0,0,0,0,0];break; //portulaca oleracea 
-	case 62: plants=[100,20,3958,18,1.89,327.3,0.034,0.086,0.36,0.163,0.085,9,58,2.26,86,0.334,33,0,0.33,0.549,0.179,0.093,4.13,2.1,0.08,1.88,28.7,0,0,0,0,0,0,0,0,0,0];break; //cooked chard 
-	case 64: plants=[100,22,0,11.6,0,0,0.027,0.023,0.299,0.142,0.067,9,33,0.18,9,0.071,26,0,0.12,0.177,0.016,0.094,5.1,2,0.1,0.7,0,0,0,0,0,0,0,0,0,0,0];break; //cooked turnip 
-	case 66: plants=[100,11,2074,43,1,250,0.09,0.12,0,0.31,0.129,9,120,0.2,21,0.244,60,0,0,0.330,0.041,0.095,1.29,0.5,0.1,2.3,0,0,0,0,0,0,0,0,0,0,0];break; //watercress 
-	case 68: plants=[100,19,315,55,0,0,0.03,0.1,0.9,0.141,0.096,57,77,1.67,71,0.16,39,0,0.18,0.312,0.113,0,3.14,2.1,0.2,2.6,0,0,0,0,0,0,0,0,0,0,0];break; //water spinach 
-	case 70: plants=[100,160,69,10,2.07,21,0.067,0.13,1.738,1.389,0.257,81,12,0.55,29,0.142,52,0,0.64,0.485,0.007,0.073,8.53,6.7,14.66,2,0,0,0,0,0,0,0,0,0,0.007,0];break; //avocado 
-	case 72: plants=[100,20,226,80.4,0.37,7.4,0.057,0.028,0.48,0.099,0.224,10,10,0.34,10,0.122,20,0,0.13,0.175,0.003,0.094,4.64,1.8,0.17,0.86,0,0,0,0,0,0,0,0,0,0,0];break; //bell pepper 
-	case 74: plants=[100,19,74,33,0.14,4.8,0.051,0.053,0.28,0.193,0.041,51,9,0.38,16,0.086,36,0,0.77,0.319,0.006,0.094,4.32,2,0.18,0.84,0,0,0,0,0,0,0,0,0,0,0];break; //momordica charantia 
-	case 76: plants=[100,19,0,7.7,0.12,4.1,0.025,0.029,0.47,0.249,0.076,93,17,0.34,12,0,18,0,0.74,0.125,0,0,4.51,1.7,0.13,0.82,0,0,0,0,0,0,0,0,0,0,0];break; //chayote 
-	case 78: plants=[100,16,0,2.8,0,16.4,0.027,0.033,0.098,0.259,0.04,7,16,0.28,13,0.079,24,0,0.2,0.147,0.002,0.095,3.63,0.5,0.11,0.65,0,0,0,0,0,0,0,0,0,0.0013,0];break; //cucumber 
-	case 80: plants=[100,25,0,2.2,0.3,3.5,0.039,0.037,0.649,0.281,0.084,22,9,0.23,14,0.232,24,0,0.16,0.229,0,0.092,5.88,3,0.18,0.98,0,0,0,0,0,0,0,0,0,0,0];break; //eggplant 
-	case 82: plants=[100,146,251,0,3.81,1.4,0.021,0.007,0.237,0,0.031,3,52,0.49,11,0,4,0,0,0.042,1.556,0.075,3.84,3.3,15.32,1.03,0,0,0,0,0,0,0,0,0,0,0];break; //olive 
-	case 84: plants=[100,26,3526,9,0.44,1.1,0.05,0.11,0.6,0.298,0.061,16,21,0.8,12,0.125,44,0,0.32,0.340,0.001,0.092,6.5,0.5,0.1,1,0,0,0,0,0,0,0,0,0,0,0];break; //pumpkin 
-	case 86: plants=[100,16,130,17,0,3,0.048,0.142,0.487,0.155,0.218,29,0,0.35,17,0.175,38,0,0.29,0.262,0,0.095,3.4,1.1,0.2,1.2,0,0,0,0,0,0,0,0,0,0,0];break; //Cucurbita 
-	case 88: plants=[100,20,226,80.4,0.37,7.4,0.057,0.028,0.48,0.099,0.224,10,10,0.34,10,0.122,20,0,0.13,0.175,0.003,0.094,4.64,1.8,0.17,0.86,0,0,0,0,0,0,0,0,0,0,0];break; //Capsicum 
-	case 90: plants=[100,18,491,14,0.54,7.9,0.037,0,0.594,0,0.08,0,0,0,11,0.114,24,0,0,0.237,0,0.095,3.9,1.2,0.2,0.9,0,0,0,0,0,0,0,0,0,0,0];break; //tomato 
-	case 92: plants=[100,30,331,8.1,0,0,0.033,0.021,0.178,0.221,0.045,0,7,0.24,10,0.038,11,0,0.1,0.112,0.001,0.091,7.55,0.4,0.15,0.61,4.1,0,0,0,0,0,0,0,0,0,0];break; //watermelon 
-	case 94: plants=[100,13,0,13,0,0,0.04,0.11,0.4,0.133,0.035,0,19,0.4,10,0.058,19,0,0.61,0,0.111,0,3,2.9,0.2,0.4,0,0,0,0,0,0,0,0,0,0,0];break; //wax gourd 
-	case 96: plants=[100,50,0,7.4,0.19,14.8,0.05,0.089,1.11,0.24,0.081,89,21,0.61,42,0.225,73,0,0.4,0.286,0.296,0,11.39,8.6,0.34,2.89,0,0,0,0,0,0,0,0,0,0,0];break; //artichoke 
-	case 98: plants=[100,34,392,89.2,0.78,101.6,0.071,0.117,0.639,0.573,0.175,63,47,0.73,21,0.21,66,0,0.41,0.316,0.033,0.089,6.64,2.6,0.37,2.82,19,0,0,0,0,0,0,0,0,0,0];break; //broccoli 
-	case 100: plants=[100,23,0,4,0.88,24.6,0.018,0.139,0.652,0.027,0.023,23,40,1.7,0,0,0,1.2,0,0,2.960,0.084,5,3,0.9,2,0,0,0,0,0,0,0,0,0,0,0];break; //caper 
-	case 102: plants=[100,25,0,48.2,0.08,15.5,0.05,0.06,0.507,0.667,0.184,57,22,0.42,15,0.155,44,0,0.27,0.299,0.030,0.092,5,2,0.3,1.9,0,0,0,0,0,0,0,0,0,0,0];break; //cauliflower 
-	case 104: plants=[100,128,0,0,0,0,0.12,0.06,0.72,0.43,0.1,121,28,2,52,0.57,168,1.2,1.8,0.532,0.008,0.066,24.8,7.3,0.1,7.5,0,0,0,0,0,0,0,0,0.3,0,0];break; //adzuki bean 
-	case 106: plants=[100,116,0,0,0.28,1.7,0.202,0.055,0.495,0.411,0.1,208,24,2.51,53,0.475,156,0,1.29,0.278,0.004,0,20.76,6.5,0.53,7.73,0,0,0,0,0,0,0,0,0,0,0];break; //black-eyed pea 
-	case 108: plants=[100,164,1,1.3,0.35,4,0.12,0.06,0.53,0.29,0.14,172,49,2.89,48,0,168,0,1.53,0.291,0.007,0.060,27.42,7.6,2.59,8.86,0,0,0,0,0,0,0,0,0,0,0];break; //chickpea 
-	case 110: plants=[100,64,378,51.7,0,0,0.257,0.660,2.220,0.125,1.200,40,185,4,147,0.36,112,0,0.6,0.337,0.009,0.079,8.28,2,1.4,9.4,0,0,0,0,0,0,0,0,0,0,0];break; //moringa oleifera 
-	case 112: plants=[100,50,0,5.1,0,0,0.056,0.088,0.48,0,0,47,41,0.76,42,0.21,49,0,0.38,0.262,0,0,9.2,0,0.27,2.95,0,0,0,0,0,0,0,0,0,0,0];break; //Lablab 
-	case 114: plants=[100,341,0,1.4,0,9,0.555,0.333,2.832,0,0.366,423,103,6.7,192,1.626,421,8.2,3.14,1.062,0.013,0.011,58.29,25,1.53,26.12,0,0,0,0,0,0,0,0,0.824,0,0];break; //vicia faba 
-	case 116: plants=[100,31,35,12.2,0,14.4,0.082,0.104,0.734,0.225,0.141,33,37,1.03,25,0.216,38,0,0.24,0.211,0,0,6.97,2.7,0.22,1.83,0,0,0,0,0,0,0,0,0,0,0];break; //green bean 
-	case 118: plants=[100,353,0,4.5,0,0,0.87,0.211,2.605,2.14,0.54,479,56,6.5,47,0,281,0,3.3,0.677,0.006,0.008,63,10.7,1,25,0,0,0,0,0,0,0,0,0,0,0];break; //lentil 
-	case 120: plants=[100,115,0,0,0.18,2,0.161,0.055,0.421,0.422,0.161,83,17,2.39,43,0.516,111,0,0.95,0.508,0.002,0,20.88,7,0.38,7.8,0,0,0,0,0,0,0,0,0,0.0022,0];break; //lima bean 
-	case 122: plants=[100,343,0,7,0,0,0.6,0.1,2.8,0.5,0.4,649,150,10.8,381,1.8,489,0,1.9,1.191,0.030,0.010,61.5,0,1.6,22.9,0,0,0,0,0,0,0,0,0,0,0];break; //vigna aconitifolia 
-	case 124: plants=[100,347,0,4.8,0.51,9,0.621,0.233,2.251,1.91,0.382,625,132,6.74,189,1.035,367,0,2.68,1.246,0,0,62.62,16.3,1.15,23.86,0,0,0,0,0,0,0,0,0,0,0];break; //mung bean 
-	case 126: plants=[100,33,36,23,0.27,31.3,0.2,0.06,1,0,0,60,82,0.62,57,0,61,0,0.58,0.299,0,0.090,7.46,3.3,0.19,1.9,0,0,0,0,0,0,0,0,0,0,0];break; //okra 
-	case 128: plants=[100,570,0,0,6.6,0,0.6,0.3,12.9,1.8,0.3,246,62,2,184,2,336,0,3.3,0.332,0,0.004,21,9,48,25,0,0,0,0,0,0,0,0,0,0,0];break; //peanut 
-	case 130: plants=[100,136,0,39,0.39,24,0.4,0.17,2.2,0.68,0.068,173,42,1.6,68,0.574,127,0,1.04,0.552,0.005,0,23.88,5.1,1.64,7.2,45.8,0,0,0,0,0,0,0,0,0,0];break; //pigeon pea immature 
-	case 132: plants=[100,42,684,60,0.39,25,0.15,0.08,0.6,0.75,0.16,42,43,2.08,24,0.244,53,0,0.27,0.200,0.004,0.089,7.55,2.6,0.39,2.8,17.4,0,0,0,0,0,0,0,0,0,0];break; //snap pea 
-	case 134: plants=[100,42,630,60,0.39,25,0.150,0.08,0.6,0.75,0.16,42,43,2.08,24,0.244,53,0,0.27,0.200,0.004,0.089,7.55,2.6,0.2,2.8,17.4,0,0,0,0,0,0,0,0,0,0];break; //snow pea 
-	case 136: plants=[100,446,1,6,0.85,47,0.874,0.87,1.623,0.793,0.377,375,277,15.7,280,2.517,704,0,4.89,1.797,0.002,0.009,30.16,9.3,19.94,36.49,115.9,9.925,1.330,0,0,0,0,0,1.658,0,0];break; //soybean 
-	case 138: plants=[100,0,0,0,0,0,0.273,0.254,1.447,0,0.281,216,138,7.57,267,0,379,0,3.35,0.983,0.038,0.011,58.99,19.3,1.64,25.21,0,0,0,0,0,0,0,0,0,0,0];break; //vigna mungo 
-	case 140: plants=[100,409,0,0,0,0,1.03,0.45,3.09,0.795,0.175,45,440,13.44,179,3.721,451,0,4.48,0.977,0.038,0,41.7,25.9,16.3,29.65,0,0,0,0,0,0,0,0,0,0,0];break; //winged bean 
-	case 142: plants=[100,47,43,18.8,0,0,0.107,0.11,0.41,0.55,0.024,62,50,0.47,44,0.205,59,0,0.37,0.240,0.004,0,8.35,0,0.4,2.8,0,0,0,0,0,0,0,0,0,0,0];break; //asparagus bean 
-	case 144: plants=[100,20,487,5.6,1.1,41.6,0.143,0.141,0.978,0.274,0.091,52,24,2.14,14,0.158,52,0,0.54,0.202,0.002,0,4,2.1,0.12,2.2,16,0,0,0,0,0,0,0,0,0,0];break; //asparagus 
-	case 146: plants=[100,17,0,2,0,0,0.02,0.03,0.3,0.338,0.116,68,70,0.7,42,0.256,23,0,0.17,0.400,0.170,0,4.07,1.6,0.1,0.7,0,0,0,0,0,0,0,0,0,0,0];break; //cardoon 
-	case 148: plants=[100,42,0,8,0,41,0.05,0.06,0.7,0.352,0.165,0,43,0.7,20,0.158,115,0,0.33,0.300,0.100,0.088,9.2,1.8,0.3,1.5,0,0,0,0,0,0,0,0,0,0,0];break; //Celeriac 
-	case 150: plants=[100,30,2830,58.1,0.21,212.7,0.078,0.115,0.647,0.324,0.138,105,92,1.6,42,0.373,58,0,0.56,0.296,0,0,4.35,2.5,0.73,3.27,0,0,0,0,0,0,0,0,0,0,0];break; //chives
-	case 152: plants=[100,345,0,21,0,0,0.41,0.35,6.1,0,0.47,0,1196,18.5,385,6.5,487,0,4,1.694,0.088,0,52,40,14.9,2.9,0,0,0,0,0,0,0,0,0,0,0];break; //fennel seeds 
-	case 154: plants=[100,149,0,31.2,0,0,0.2,0.11,0.7,0.596,1.235,3,181,1.7,25,1.672,153,14.2,1.16,0.401,0.017,0.059,33.06,2.1,0.5,6.36,0,0,0,0,0,0,0,0,0,0,0];break; //garlic 
-	case 156: plants=[100,0,2,62,0.48,0.1,0.05,0.02,0.4,0.165,0.15,16,24,0.4,19,0.139,46,0.7,0,0.350,0.020,0.091,6.2,3.6,0.1,1.7,0,0,0,0,0,0,0,0,0,0,0];break; //kohlrabi 
-	case 158: plants=[100,61,1083,12,0.92,47,0.06,0.03,0.4,0.14,0.233,64,59,2.1,28,0.481,35,0,0,0.180,0,0.083,14.15,1.8,0.3,1.5,0,0,0,0,0,0,0,0,0,0,0];break; //leek 
-	case 160: plants=[100,66,0,27.4,0,0,0.127,0.01,0.3,0.302,0.218,8,26,0.9,22,0.22,78,0,0.33,0.363,0.045,0.081,16.02,3.1,0.07,1.58,25.4,0,0,0,0,0,0,0,0,0,0];break; //nelumbo nucifera 
-	case 162: plants=[100,40,0,7.4,0,0,0.046,0.027,0.116,0.123,0.12,19,23,0.21,10,0.129,29,0,0.17,0.146,0,0.089,9.34,1.7,0.1,1.1,0,0,0,0,0,0,0,0,0,0.0011,0];break; //onion 
-	case 164: plants=[100,72,0,8,0.04,0.8,0.06,0.02,0.2,0.29,0.345,34,37,1.2,21,0.292,60,0,0.4,0.334,0,0,16.8,3.2,0.1,2.5,0,0,0,0,0,0,0,0,0,0,0];break; //shallot 
-	case 166: plants=[100,34,0,27,0.51,193.4,0.05,0.09,0.4,0.169,0.072,16,52,1.22,23,0.137,49,0,0.52,0.212,0.017,0,6.5,2.4,0.4,1.9,0,0,0,0,0,0,0,0,0,0,0];break; //allium fistulosum 
-	case 168: plants=[100,27,0,4,1,0,0.15,0.07,0.6,0.161,0.24,7,0,0.5,0,0.262,59,0,1.1,0.533,0,0,5.2,2.2,0.3,2.6,0,0,0,0,0,0,0,0,0,0,0];break; //bamboo shoot 
-	case 170: plants=[100,99,0,1.1,0,0,0.17,0.073,1.65,0.599,0.26,14,10,2.57,51,0.36,174,0,0.28,0.922,0.022,0,20.23,0,0.29,5.33,0,0,0,0,0,0,0,0,0,0,0];break; //sagittaria latifolia 
-	case 172: plants=[100,41,9120,5.9,0.66,13.2,0.066,0.058,0.983,0.273,0.138,19,33,0.3,12,0.143,35,0,0.24,0.320,0.069,0.088,9.6,2.8,0.24,0.93,0,0,0,0,0,0,0,0,0,0,0];break; //carrot 
-	case 174: plants=[100,160,0,20.6,0,0,0.087,0.048,0.854,0,0.088,27,16,0.27,21,0,27,0,0.34,0.271,0.014,0.060,38.1,1.8,0.3,1.4,0,0,0,0,0,0,0,0,0,0,0];break; //cassava 
-	case 176: plants=[100,18,0,22,0,0,0.02,0.02,0.2,0.138,0.046,28,27,0.4,16,0.038,23,0,0.15,0.227,0.021,0,4.1,1.6,0.1,0.6,0,0,0,0,0,0,0,0,0,0,0];break; //daikon 
-	case 178: plants=[100,80,0,5,0.26,0,0.025,0.034,0.75,0.203,0.16,11,16,0.6,43,0.229,34,0,0.34,0.415,0.013,0.079,17.77,2,0.75,1.82,0,0,0,0,0,0,0,0,0,0,0];break; //ginger 
-	case 180: plants=[100,36,5475,133,0.75,1640,0.086,0.09,1.313,0.4,0.09,152,138,6.2,50,0.16,58,0,1.07,0.554,0.056,0,6.33,3.3,0.79,2.97,0,0,0,0,0,0,0,0,0,0,0];break; //parsley 
-	case 182: plants=[100,73,0,4,0,0,0.2,0.06,1.3,0.397,0.077,13,14,3.4,17,0,78,0,0,0.429,0,0,17.44,1.6,0.01,2,0,0,0,0,0,0,0,0,0,0,0];break; //Jerusalem artichoke 
-	case 184: plants=[100,38,0,20.2,0,0,0.02,0.029,0.2,0.135,0.042,12,12,0.6,12,0.06,18,0,0.16,0.150,0.004,0,8.82,4.9,0.09,0.72,13.6,0,0,0,0,0,0,0,0,0,0];break; //pachyrhizus erosus 
-	case 186: plants=[100,75,0,17,1.49,22.5,0.09,0.05,0.7,0.6,0.09,67,36,0.59,29,0.56,71,0,0.59,0.375,0.010,0.080,18,4.9,0.2,1.2,0,0,0,0,0,0,0,0,0,0,0];break; //parsnip 
-	case 188: plants=[100,76,1,19.7,0.01,1.9,0.08,0.03,1.05,0.30,0.30,16,12,3.19,23,0.15,57,0.3,0.29,0.421,0.006,0.079,17,2.2,0.09,2,0,0,0,0,0,0,0,0,0,0,0];break; //potato 
-	case 190: plants=[100,16,0,14.8,0,0,0.012,0.039,0.254,0.165,0.071,25,25,0.34,10,0.069,20,0,0.28,0.233,0,0.095,3.4,1.6,0.1,0.68,0,0,0,0,0,0,0,0,0,0,0];break; //radish 
-	case 192: plants=[100,38,0,25,0,0,0.09,0.04,0.7,0.16,0.1,21,43,0.44,20,0.131,53,0,0.24,0.305,0,0,8.62,2.3,0.16,1.08,0,0,0,0,0,0,0,0,0,0,0];break; //rutabaga 
-	case 194: plants=[100,82,0,8,0,0,0.08,0.22,0.5,0.371,0.277,26,60,0.7,23,0.268,75,0,0.38,0.380,0.020,0,18.6,3.3,0.2,3.3,0,0,0,0,0,0,0,0,0,0,0];break; //tragopogon porrifolius 
-	case 196: plants=[100,86,9218,2.4,0.26,0,0.078,0.061,0.557,0.8,0.209,11,30,0.61,25,0.258,47,0,0.3,0.337,0.055,0,20.1,3,0.1,1.6,0,0,0,0,0,0,0,0,0,0,0];break; //raw sweet potato 
-	case 198: plants=[100,142,0,5,2.93,0,0.107,0.028,0.51,0.336,0.331,19,18,0.72,30,0.449,76,0,0.27,0.484,0,0,34.6,5.1,0.11,0.52,0,0,0,1.2,0,0,0,0,0,0,0];break; //cooked taro 
-	case 200: plants=[100,74.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15.3,0.9,0.1,2.6,0,0,0,0,0,0,0,0,0,0,0];break; //ullucus 
-	case 202: plants=[100,97,0,4,1.2,0,0.14,0.2,1,0.479,0.328,16,11,0.06,22,0.331,63,0,0.5,0.584,0,0.074,23.94,3,0.1,1.4,0,0,0,0,0,0,0,0,0,0,0];break; //water chestnuts 
-	case 204: plants=[100,118,7,17.1,0.35,2.3,0.112,0.032,0.552,0.314,0.293,23,17,0.54,21,0.397,55,0,0.24,0.816,0,0,27.9,4.1,0.17,1.5,0,0,0,0,0,0,0,0,0,0,0];break; //yam 
-	case 206: plants=[100,35,3381,39,1,4,0.098,0.446,1.47,0.521,0.159,146,70,1.8,0,0.988,58,0,1.05,0.356,0.048,0,5.11,0.3,0.28,5.81,0,0,0,0,0,0,0,0,0,0,0];break; //laverbread 
-	case 208: plants=[100,52,30,4.6,0.18,2.2,0.017,0.026,0.091,0.061,0.041,3,6,0.12,5,0.035,11,0,0.04,0.107,0.001,0.086,13.81,2.4,0.17,0.26,0,0,0,0,0,0,0,0,0,0.0033,0];break; //apple 
-	case 210: plants=[100,241,2343,1,4.33,3.1,0.015,0.074,2.589,0.516,0.143,10,55,2.66,32,0.235,71,0,0.29,1.162,0.010,0,63,7,0.5,3.4,0,0,0,0,0,0,0,0,0,0,0];break; //apricot
-	case 212: plants=[100,89,0,8.7,0,0,0.031,0.073,0.665,0.334,0.4,20,0,0.26,27,0.27,22,0,0.15,0.358,0.001,0.075,22.84,2.6,0.33,1.09,9.8,0,0,0,0,0,0,0,0,0,0];break; //banana 
-	case 214: plants=[100,43,60,21,1.17,19.8,0.020,0.026,0.646,0,0.030,25,29,0.62,20,0,22,0,0.53,0.162,0.001,0,9.61,5.3,0.49,1.39,0,0,0,0,0,0,0,0,0,0,0];break; //blackberry 
-	case 216: plants=[100,63,0,181,1,0,0.05,0.05,0.3,0.398,0.066,0,55,1.54,24,0.256,59,0,0.27,0.322,0.002,0.082,15.4,0,0.4,1.4,0,0,0,0,0,0,0,0,0,0,0];break; //blackcurrant 
-	case 218: plants=[100,57,32,9.7,0.57,19.3,0.037,0.041,0.418,0.124,0.052,6,6,0.28,6,0.336,12,0,0.165,0.077,0.001,0.084,14.49,2.4,0.33,0.74,0,0,0,0,0,0,0,0,0,0,0];break; //blueberry 
-	case 220: plants=[100,63,41,7,0,2.1,0.027,0.033,0.154,0.199,0.049,4,13,0.36,11,0.07,21,0,0.07,0.222,0,0.082,16,2.1,0.2,1.1,6.1,0,0,0,0,0,0,0,0,0,0];break; //sweet cherries 
-	case 222: plants=[100,75,0,12.6,0.27,0,0.101,0.131,0.644,0.345,0.257,23,10,0.27,17,0.093,26,0,0.16,0.287,0.007,0,17.71,3,0.68,1.57,0,0,0,0,0,0,0,0,0,0,0];break; //cherimoya 
-	case 224: plants=[100,354,0,3.3,0.24,0.2,0.066,0.020,0.540,0.300,0.054,26,14,2.43,32,1.500,113,10.1,1.10,0.356,0.020,0.047,15.23,9,33.49,3.33,0,0,0,0,0,0,0,0,435,0,0];break; //coconuts-575780__340 
-	case 226: plants=[100,46,39,13.3,1.2,5.1,0.012,0.02,0.101,0.295,0.057,1,8,0.25,6,0.36,13,0,0.1,0.085,0.002,0.087,12.2,4.6,0.13,0.39,0,0,0,0,0,0,0,0,0,0,0];break; //cranberry 
-	case 228: plants=[100,282,6,0.4,0.05,2.7,0.052,0.066,1.274,0.589,0.165,19,39,1.02,43,0.262,62,0,0.29,0.656,0.002,0.021,75.03,8,0.39,2.45,0,0,0,0,0,0,0,0,0,0,0];break; //date palm 
-	case 230: plants=[100,268,0,9.2,0,0,0,0,0,0,0,0,39,0,0,0,0,0,0,0,0.039,0,82.14,1.8,0,0,0,0,0,0,0,0,0,0,0,0,0];break; //pitaya 
-	case 232: plants=[100,147,10,19.7,0,0,0.374,0.2,1.074,0.23,0.316,36,6,0.43,30,0.325,39,0,0.28,0.436,0.002,0.065,27.09,3.8,5.33,1.47,0,0,0,0,0,0,0,0,0.207,0,0];break; //durian 
-	case 234: plants=[100,73,30,36,0,0,0.07,0.06,0.5,0.14,0.23,6,38,1.6,5,0,39,0,0.11,0.280,0,79.80,18.4,7,0.5,0.66,0,0,0,0,0,0,0,0,0,0,0];break; //sambucus 
-	case 236: plants=[100,55,0,32.9,0.16,3.5,0.006,0.018,0.295,0.233,0.067,23,17,0.14,9,0.084,19,0,0.06,0.172,0.003,0,12.92,6.4,0.6,0.98,0,0,0,0,0,0,0,0,0,0,0];break; //feijoa 
-	case 238: plants=[100,44,15,27.7,0.37,0,0.04,0.03,0.3,0.286,0.08,6,25,0.31,10,0.144,27,0,0.12,0.198,0.001,0.088,10.18,4.3,0.58,0.88,0,0,0,0,0,0,0,0,0.07,0,0];break; //gooseberry 
-	case 240: plants=[100,69,0,3.2,0.19,14.6,0.069,0.07,0.188,0.05,0.086,2,10,0.36,7,0.071,20,0,0.07,0.191,0.002,0,18.1,0.9,0.16,0.72,5.6,0,0,0,0,0,0,0,0,0.0078,0];break; //grape 
-	case 242: plants=[100,299,0,2.3,0.12,3.5,0.106,0.125,0.766,0.095,0.174,5,50,1.88,32,0.299,101,0,0.22,0.749,0.011,0,78.18,3.7,0.46,3.07,11.1,0,0,0,0,0,0,0,0,0.2339,0];break; //raisin 
-	case 244: plants=[100,33,0,33.3,0.13,0,0.037,0.020,0.269,0.283,0.043,10,12,0.06,9,0.013,8,0,0.07,0.148,0,0.090,8.41,1.1,0.10,0.8,7.7,0,0,0,0,0,0,0,0,0,0];break; //grapefruit 
-	case 246: plants=[100,68,405,228.3,0,2.2,0.067,0.04,1.084,0.451,0.11,49,18,0.26,22,0.15,40,0,0.23,0.417,0.002,0,14.32,5.4,0.95,2.55,0,0,0,0,0,0,0,0,0,0,0];break; //guava 
-	case 248: plants=[100,95,66,13.8,0.34,0,0.105,0.055,0.92,0.235,0.329,24,24,0.23,29,0.043,21,0,0.13,0.448,0.002,0.074,23.25,1.5,0.64,1.72,0,0,0,0,0,0,0,0,0,0,0];break; //jackfruit 
-	case 250: plants=[100,60,0,11.95,0,0,0.019,0.009,0.245,0,0.038,0,11.65,1.41,35,0,15.6,0,0,0.055,0.026,0.085,14,0.6,0.23,0.995,0,0,0,0,0,0,0,0,0,0,0];break; //java-plum 
-	case 252: plants=[100,79,40,69,0,0,0.02,0.04,0.9,0,0.081,0,21,0.48,10,0.084,23,0,0.05,0.250,0.003,0.078,20.23,0,0.2,1.2,0,0,0,0,0,0,0,0,0,0,0];break; //jujube 
-	case 254: plants=[100,44,95,5.3,0,0,0.025,0.015,0.565,0.183,0.063,3,13,1.13,40,0.039,37,0,0.48,0.123,0.002,0.089,7.56,0,1.26,1.78,0,0,0,0,0,0,0,0,20,0,0];break; //cucumis metuliferus 
-	case 256: plants=[100,61,122,92.7,1.46,40.3,0.027,0.025,0.341,0.183,0.063,25,34,0.31,17,0.098,34,0.2,0.14,0.312,0.003,0.083,14.66,3,0.52,1.14,7.8,0,0,0,0,0,0,0,130,0,0];break; //green kiwi 
-	case 258: plants=[100,71,15,43.9,0.15,0,0.037,0.09,0.429,0.208,0.036,17,62,0.86,20,0.135,19,0,0.17,0.186,0.010,0,15.9,6.5,0.86,1.88,8.4,0,0,0,0,0,0,0,0,0,0];break; //kumquat 
-	case 260: plants=[100,29,0,53,0,0,0.04,0.02,0.1,0.19,0.08,11,26,0.6,8,0.03,16,0,0.06,0.138,0,0,9.32,2.8,0.3,1.1,5.1,0,0,0,0,0,0,0,0,0,0];break; //lemon 
-	case 262: plants=[100,47,76,1,0,0,0.019,0.024,0.18,0,0.1,14,16,0.28,13,0.148,27,0,0.05,0.266,0.001,0,12.14,1.7,0.2,0.43,0,0,0,0,0,0,0,0,0,0,0];break; //loquat 
-	case 264: plants=[100,60,0,84,0,0,0.031,0.14,0.3,0,0,0,1,0.13,10,0.052,21,0,0.05,0.266,0,0,15.14,1.1,0.1,1.31,0,0,0,0,0,0,0,0,0,0,0];break; //longan 
-	case 266: plants=[100,66,0,71.5,0,0,0.011,0.065,0.603,0,0.1,14,5,0.13,10,0.055,31,0,0.07,0.171,0.001,0.082,16.53,1.3,0.44,0.83,0,0,0,0,0,0,0,0,0,0,0];break; //lychee 
-	case 268: plants=[100,60,694,36.4,0.9,4.2,0.028,0.038,0.669,0.197,0.119,43,11,0.16,10,0.063,14,0,0.09,0.168,0.001,0,15,1.6,0.38,0.82,7.6,0,0,0,0,0,0,0,0,0,0];break; //mango 
-	case 270: plants=[100,73,0,2.9,0,0,0.054,0.054,0.286,0.032,0.018,31,12,0.3,13,0.102,8,0,0.21,0.048,0.007,0,17.91,1.8,0.58,0.41,0,0,0,0,0,0,0,0,0,0,0];break; //mangosteen 
-	case 272: plants=[100,43,1,36.4,0.87,7.8,0.029,0.101,0.62,0,0.05,6,39,1.85,18,0,38,0,0.12,0.194,0.010,0.088,9.8,1.7,0.39,1.44,0,0,0,0,0,0,0,0,0,0,0];break; //mulberry 
-	case 274: plants=[100,73,5,92.5,1.25,11.9,0.015,0.018,0.29,0.18,0.021,8,46,0.38,20,0.248,10,0,0.09,0.244,0.003,0,16.97,7.5,1.16,0.66,0,0,0,0,0,0,0,0,0,0,0];break; //nance 
-	case 276: plants=[100,47,11,53.2,0.18,0,0.087,0.04,0.282,0.25,0.06,30,40,0.1,10,0.025,14,0,0.07,0.181,0,0.087,11.75,2.4,0.12,0.94,8.4,0,0,0,0,0,0,0,0,0,0];break; //orange 
-	case 278: plants=[100,43,321,62,0.3,2.6,0.023,0.027,0.357,0.191,0,38,20,0.25,21,0.04,10,0,0.08,0.182,0.008,0.088,10.82,1.7,0.26,0.47,0,0,0,0,0,0,0,0,0,0,0];break; //papaya 
-	case 280: plants=[100,97,807,30,0,0.7,0,0.13,1.5,0,0.1,14,12,1.6,29,0,68,0,0.1,0.348,0.028,0.073,22.4,10.4,0.7,2.2,7.6,0,0,0,0,0,0,0,0,0,0];break; //passiflora edulis 
-	case 282: plants=[100,57,0,4.3,0.12,4.4,0.012,0.026,0.161,0.049,0.029,7,9,0.18,7,0.048,12,0,0.1,0.116,0.001,0.084,15.23,3.1,0.14,0.36,5.1,0,0,0,0,0,0,0,0,0,0];break; //pear 
-	case 284: plants=[100,127,0,66,0,0,0,0,0,0,0,0,27,2.5,0,0,26,0,0,0.310,0.001,0,33.5,0,0.4,0.8,0,0,0,0,0,0,0,0,0,0,0];break; //American persimmons 
-	case 286: plants=[100,46,207,9.5,0.26,6.4,0.028,0.026,0.417,0.135,0.029,5,6,0.17,7,0.052,16,0,0.1,0.157,0,0.087,11.42,1.4,0.28,0.7,0,0,0,0,0,0,0,0,0,0,0];break; //plum 
-	case 288: plants=[100,240,433,0.6,0.43,59.5,0.051,0.186,1.882,0.422,0.205,4,43,0.93,41,0.299,69,0,0.44,0.732,0.002,0.031,63.88,7.1,0.38,2.18,10.1,0,0,0,0,0,0,0,0,0,0];break; //prune 
-	case 290: plants=[100,50,0,47.8,0,0,0.079,0.032,0.5,0.213,0.112,18,13,0.29,12,0.927,8,0,0.12,0.109,0.001,0.086,13.12,1.4,0.12,0.54,5.5,0,0,0,0,0,0,0,0,0,0];break; //pineapple 
-	case 292: plants=[100,83,0,10.2,0.6,16.4,0.067,0.053,0.293,0.377,0.075,38,10,0.3,12,0.119,36,0,0.35,0.236,0.003,0,18.7,4,1.17,1.67,7.6,0,0,0,0,0,0,0,0,0,0];break; //pomegranate 
-	case 294: plants=[100,38,0,61,0,0,0.034,0.027,0.22,0,0.036,0,0,0.11,6,0.017,17,0,0.08,0.216,0.001,0,9.62,1,0.04,0.76,0,0,0,0,0,0,0,0,0,0,0];break; //pomelo 
-	case 296: plants=[100,57,0,15,0,0,0.02,0.03,0.2,0.081,0.04,3,11,0.7,8,0,17,0,0.04,0.197,0.004,0.084,15.3,1.9,0.1,0.4,0,0,0,0,0,0,0,0,0,0,0];break; //quince 
-	case 298: plants=[100,53,0,26.2,0.87,7.8,0.032,0.038,0.598,0.329,0.055,21,25,0.69,22,0.67,29,0,0.42,0.151,0,0.086,11.94,6.5,0.65,1.2,12.3,0,0,0,0,0,0,0,0,0,0];break; //raspberry 
-	case 300: plants=[100,82,0,4.9,0,0,0.013,0.022,1.352,0,0.02,8,22,0.35,7,0.343,9,0,0.08,0.042,0.011,0,20.87,0.9,0.21,0.65,0,0,0,0,0,0,0,0,0,0,0];break; //rambutan 
-	case 302: plants=[100,56,0,41,0.1,11,0.04,0.05,0.1,0.064,0.07,8,33,1,13,0.186,44,0,0.23,0.275,0.001,0,13.8,4.3,0.2,1.4,7.6,0,0,0,0,0,0,0,0,0,0];break; //redcurrant 
-	case 304: plants=[100,368,0,8.4,0,0,0,0,0,0,0,0,38,3.9,0,0,18,0,0,0,0,0,0,0,0.4,0.8,0,0,0,0,0,0,0,0,0,0,0];break; //salak 
-	case 306: plants=[100,66,0,20.6,0,0,0.07,0.05,0.9,0.253,0.059,14,14,0.6,21,0,27,0,0.1,0.278,0.014,0,16.84,3.3,0.3,1,7.6,0,0,0,0,0,0,0,0,0,0];break; //soursop 
-	case 308: plants=[100,31,66,34.4,0.15,0,0.014,0.016,0.367,0.391,0.017,12,3,0.08,10,0.037,12,0,0.12,0.133,0.002,0.091,6.73,2.8,0.33,1.04,7.6,0,0,0,0,0,0,0,0,0,0];break; //carambola 
-	case 310: plants=[100,33,0,58.8,0.29,2.2,0.024,0.022,0.386,0.125,0.047,24,16,0.41,13,0.386,24,0,0.14,0.154,0.001,0.091,7.68,2,0.3,0.67,5.7,0,0,0,0,0,0,0,0,0.0044,0];break; //strawberry 
-	case 312: plants=[100,33,75,26.3,0,0,0.03,0.04,0.3,0,0,0,9,0.2,12,0,11,0,0,0.103,0.003,0,7.49,0,0.4,0.8,0,0,0,0,0,0,0,0,0,0,0];break; //surinam cherry 
-	case 314: plants=[100,239,2,3.5,0.1,2.8,0.428,0.152,1.938,0.143,0.066,14,74,2.8,92,0,113,1.3,0.1,0.628,0.028,0.031,62.5,5.1,0.6,2.8,8.6,0,0,0,0,0,0,0,860,0,0];break; //tamarind 
-	case 316: plants=[100,56,0,41,0.1,11,0.04,0.05,0.1,0.064,0.07,8,33,1,13,0.186,44,0,0.23,0.275,0.001,0,13.8,4.3,0.2,1.4,7.6,0,0,0,0,0,0,0,0,0,0];break; //white currant
-        case 318: plants=[0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0]; break; //b12 supplement
-        case 320: plants=[5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0]; break; //d supplement
-        case 322: plants=[0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0]; break; //omega 3
-        case 324: plants=[10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10]; break; //iodine
-        case 326: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; break; //zinc
+	case 84: plants=[10,35.3,0,0.45,0,0,0.087,0.0211,0.2605,0.214,0.054,47.9,5.6,0.65,4.7,0,28.1,0,0.33,0.0677,0.0006,0.0008,6.3,1.07,0.1,2.5,0,0,0,0,0,0,0,0,0,0,0];break; //lentil
+	case 82: plants=[10,44.6,0.1,0.6,0.085,4.7,0.0874,0.087,0.1623,0.0793,0.0377,37.5,27.7,1.57,28,0.2517,70.4,0,0.489,0.1797,0.0002,0.0009,3.016,0.93,1.994,3.649,11.59,0.9925,0.133,0,0,0,0,0,0.1658,0,0];break; //soybean
+	case 80: plants=[10,2.9,0,5.3,0,0,0.004,0.002,0.01,0.019,0.008,1.1,2.6,0.06,0.8,0.003,1.6,0,0.006,0.0138,0,0,0.932,0.28,0.03,0.11,0.51,0,0,0,0,0,0,0,0,0,0];break; //lemon
+	case 78: plants=[10,4.6,20.7,0.95,0.026,0.64,0.0028,0.0026,0.0417,0.0135,0.0029,0.5,0.6,0.017,0.7,0.0052,1.6,0,0.01,0.0157,0,0.0087,1.142,0.14,0.028,0.07,0,0,0,0,0,0,0,0,0,0,0];break; //plum
+	case 76: plants=[10,4.3,6,2.1,0.117,1.98,0.002,0.0026,0.0646,0,0.003,2.5,2.9,0.062,2,0,2.2,0,0.053,0.0162,0.0001,0,0.961,0.53,0.049,0.139,0,0,0,0,0,0,0,0,0,0,0];break; //blackberry
+	case 74: plants=[10,5.7,0,0.43,0.012,0.44,0.0012,0.0026,0.0161,0.0049,0.0029,0.7,0.9,0.018,0.7,0.0048,1.2,0,0.01,0.0116,0.0001,0.0084,1.523,0.31,0.014,0.036,0.51,0,0,0,0,0,0,0,0,0,0];break; //pear
+	case 72: plants=[10,5.3,0,2.62,0.087,0.78,0.0032,0.0038,0.0598,0.0329,0.0055,2.1,2.5,0.069,2.2,0.067,2.9,0,0.042,0.0151,0,0.0086,1.194,0.65,0.065,0.12,1.23,0,0,0,0,0,0,0,0,0,0];break; //raspberry
+	case 70: plants=[10,6.3,4.1,0.7,0,0.21,0.0027,0.0033,0.0154,0.0199,0.0049,0.4,1.3,0.036,1.1,0.007,2.1,0,0.007,0.0222,0,0.0082,1.6,0.21,0.02,0.11,0.61,0,0,0,0,0,0,0,0,0,0];break; //sweet cherry
+	case 68: plants=[10,5.7,2,0.97,0.057,1.93,0.0037,0.0041,0.0418,0.0124,0.0052,0.6,0.6,0.028,0.6,0.0336,1.2,0,0.0165,0.0077,0.0001,0.0084,1.449,0.24,0.033,0.074,0,0,0,0,0,0,0,0,0,0,0];break; //blueberry
+	case 66: plants=[10,5.2,3,0.46,0.018,0.22,0.0017,0.0026,0.0091,0.0061,0.0041,0.3,0.6,0.012,0.5,0.0035,1.1,0,0.004,0.0107,0.0001,0.0086,1.381,0.24,0.017,0.026,0,0,0,0,0,0,0,0,0,0.0003,0];break; //apple
+	case 64: plants=[10,5,0,4.78,0,0,0.0079,0.0032,0.05,0.0213,0.0112,1.8,1.3,0.029,1.2,0.0927,0.8,0,0.012,0.0109,0.0001,0.0086,1.312,0.14,0.012,0.054,0.55,0,0,0,0,0,0,0,0,0,0];break; //pineapple
+	case 62: plants=[10,6,69.4,3.64,0.09,0.42,0.0028,0.0038,0.0669,0.0197,0.0119,4.3,1.1,0.016,1,0.0063,1.4,0,0.009,0.0168,0.0001,0,1.5,0.16,0.038,0.082,0.76,0,0,0,0,0,0,0,0,0,0];break; //mango
+	case 60: plants=[10,8.9,0,0.87,0,0,0.0031,0.0073,0.0665,0.0334,0.04,2,0,0.026,2.7,0.027,2.2,0,0.015,0.0358,0.0001,0.0075,2.284,0.26,0.033,0.109,0.98,0,0,0,0,0,0,0,0,0,0];break; //banana
+	case 58: plants=[10,4.7,1.1,5.32,0.018,0,0.0087,0.004,0.0282,0.025,0.006,3,4,0.01,1,0.0025,1.4,0,0.007,0.0181,0,0.0087,1.175,0.24,0.012,0.094,0.84,0,0,0,0,0,0,0,0,0,0];break; //orange
+	case 56: plants=[10,6.9,0,0.32,0.019,1.46,0.0069,0.007,0.0188,0.005,0.0086,0.2,1,0.036,0.7,0.0071,2,0,0.007,0.0191,0.0002,0,1.81,0.09,0.016,0.072,0.56,0,0,0,0,0,0,0,0,0.0008,0];break; //grape
+	case 54: plants=[10,3,33.1,0.81,0,0,0.0033,0.0021,0.0178,0.0221,0.0045,0,0.7,0.024,1,0.0038,1.1,0,0.01,0.0112,0.0001,0.0091,0.755,0.04,0.015,0.061,0.41,0,0,0,0,0,0,0,0,0,0];break; //watermelon
+	case 52: plants=[10,3.3,0,5.88,0.029,0.22,0.0024,0.0022,0.0386,0.0125,0.0047,2.4,1.6,0.041,1.3,0.0386,2.4,0,0.014,0.0154,0.0001,0.0091,0.768,0.2,0.03,0.067,0.57,0,0,0,0,0,0,0,0,0.0004,0];break; //strawberry
+	case 50: plants=[10,4.3,2.2,0.49,0,0,0.0031,0.004,0.0334,0.0155,0.0067,10.9,1.6,0.08,2.3,0.0329,4,0,0.035,0.0325,0.0078,0.0088,0.956,0.28,0.017,0.161,0,0,0,0,0,0,0,0,0,0,0];break; //beet
+	case 48: plants=[10,8.6,0.9,0.68,0,0,0.0155,0.0055,0.177,0.0717,0.0093,4.2,0,0.052,3.7,0.0163,8.9,0,0.046,0.027,0,0.0076,1.87,0.2,0.135,0.327,0,0,0,0,0,0,0,0,0,0,0];break; //maize
+	case 46: plants=[10,2.6,352.6,0.9,0.044,0.11,0.005,0.011,0.06,0.0298,0.0061,1.6,2.1,0.08,1.2,0.0125,4.4,0,0.032,0.034,0.0001,0.0092,0.65,0.05,0.01,0.1,0,0,0,0,0,0,0,0,0,0,0];break; //pumpkin
+	case 44: plants=[10,4.3,48.8,8.5,0.088,17.7,0.0139,0.009,0.0745,0.0309,0.0219,6.1,4.2,0.14,2.3,0.0337,6.9,0,0.042,0.0389,0.0025,0.0086,0.895,0.38,0.03,0.348,1.91,0,0,0,0,0,0,0,0,0,0];break; //brussels sprout
+	case 42: plants=[10,1.3,215.3,0.37,0.018,10.23,0.0057,0.0062,0,0.015,0.0082,7.3,3.5,0.124,1.3,0.0179,3.3,0,0.02,0.0238,0.0005,0.0096,0.223,0.11,0.022,0.135,0,0,0,0,0,0,0,0,0,0,0];break; //lettuce
+	case 40: plants=[10,2.5,0,3.66,0,7.6,0.0061,0.004,0.0234,0.0212,0.0124,4.3,4,0.047,1.2,0.016,2.6,0,0.018,0.017,0.0018,0,0.58,0.25,0.01,0.128,0,0,0,0,0,0,0,0,0,0,0];break; //cabbage
+	case 38: plants=[10,16,6.9,1,0.207,2.1,0.0067,0.013,0.1738,0.1389,0.0257,8.1,1.2,0.055,2.9,0.0142,5.2,0,0.064,0.0485,0.0007,0.0073,0.853,0.67,1.466,0.2,0,0,0,0,0,0,0,0,0,0.0007,0];break; //avocado
+	case 36: plants=[10,14.6,25.1,0,0.381,0.14,0.0021,0.0007,0.0237,0,0.0031,0.3,5.2,0.049,1.1,0,0.4,0,0,0.0042,0.1556,0.0075,0.384,0.33,1.532,0.103,1.42,0,0,0,0,0,0,0,0,0,0];break; //olive
+	case 34: plants=[10,1.7,29,2.4,0,0,0,0,0,0,0,13.6,3.3,0.097,0,0,3,0,0,0.0247,0,0.0095,0.33,0.21,0.03,0.12,0,0,0,0,0,0,0,0,0,0,0];break; //romaine lettuce
+	case 32: plants=[10,2,22.6,8.04,0.037,0.74,0.0057,0.0028,0.048,0.0099,0.0224,1,1,0.034,1,0.0122,2,0,0.013,0.0175,0.0003,0.0094,0.464,0.18,0.017,0.086,0,0,0,0,0,0,0,0,0,0,0];break; //bell pepper
+	case 30: plants=[10,2.5,0,4.82,0.008,1.55,0.005,0.006,0.0507,0.0667,0.0184,5.7,2.2,0.042,1.5,0.0155,4.4,0,0.027,0.0299,0.003,0.0092,0.5,0.2,0.03,0.19,0,0,0,0,0,0,0,0,0,0,0];break; //cauliflower
+	case 28: plants=[10,2,48.7,0.56,0.11,4.16,0.0143,0.0141,0.0978,0.0274,0.0091,5.2,2.4,0.214,1.4,0.0158,5.2,0,0.054,0.0202,0.0002,0,0.4,0.21,0.012,0.22,1.6,0,0,0,0,0,0,0,0,0,0];break; //asparagus
+	case 26: plants=[10,8.1,48.7,4,0.013,2.48,0.0266,0.0132,0.209,0,0.0169,6.5,2.5,0.147,3.3,0.041,10.8,0,0.124,0.0244,0.0005,0,1.445,0.51,0.04,0.542,0,0,0,0,0,0,0,0,0,0,0];break; //pea
+	case 0: plants=[0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];break; //water
+	case 2: plants=[0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0];break; //B12 supplement
+	case 4: plants=[5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0];break; //D supplement
+    case 6: plants=[10,7.7,0.1,1.97,0.001,0.19,0.008,0.003,0.105,0.03,0.03,1.6,1.2,0.078,2.3,0,5.7,0.03,0.029,0.0421,0.0006,0.0079,1.7,0.22,0.009,0.2,0,0,0,0,0,0,0,0,0,0,0];break; //potato
+	case 8: plants=[10,8.6,0.9,0.68,0,0,0.02,0,0.17,0,0,4.6,0,0.052,3.7,0,0,0,0,0.027,0,0.0076,1.902,0.27,0.118,0.32,0,0,0,0,0,0,0,0,0,0,0];break; //sweet corn
+	case 10: plants=[10,4.1,912,0.59,0.066,1.32,0.0066,0.0058,0.0983,0.0273,0.0138,1.9,3.3,0.03,1.2,0.0143,3.5,0,0.024,0.032,0.0069,0.0088,0.96,0.28,0.024,0.093,0,0,0,0,0,0,0,0,0,0,0];break; //carrot
+	case 24: plants=[10,8.6,921.8,0.24,0.026,0,0.0078,0.0061,0.0557,0.08,0.0209,1.1,3,0.061,2.5,0.0258,4.7,0,0.03,0.0337,0.0055,0,2.01,0.3,0.01,0.16,0,0,0,0,0,0,0,0,0,0,0];break; //sweet potato
+	case 22: plants=[10,4,0,0.74,0,0,0.0046,0.0027,0.0116,0.0123,0.012,1.9,2.3,0.021,1,0.0129,2.9,0,0.017,0.0146,0,0.0089,0.934,0.17,0.01,0.11,0,0,0,0,0,0,0,0,0,0,0];break; //onion
+	case 20: plants=[10,2.3,609.5,2.8,0.2,48.3,0.0078,0.0189,0.0724,0,0.0195,19.4,9.9,0.271,7.9,0.0897,4.9,0,0.053,0.0558,0.0079,0.0091,0.36,0.22,0.04,0.29,0,0,0,0,0,0,0,0,0,0,0];break; //spinach
+	case 18: plants=[10,1.6,0,0.28,0,1.64,0.0027,0.0033,0.0098,0.0259,0.004,0.7,1.6,0.028,1.3,0.0079,2.4,0,0.02,0.0147,0.0002,0.0095,0.363,0.05,0.011,0.065,0,0,0,0,0,0,0,0,0,0,0];break; //cucumber
+	case 16: plants=[10,14.9,0,3.12,0,0,0.02,0.011,0.07,0.0596,0.1235,0.3,18.1,0.17,2.5,0.1672,15.3,1.42,0.116,0.0401,0.0017,0.0059,3.306,0.21,0.05,0.636,0,0,0,0,0,0,0,0,0,0,0];break; //garlic
+	case 14: plants=[10,3.1,3.5,1.22,0,1.44,0.0082,0.0104,0.0734,0.0225,0.0141,3.3,3.7,0.103,2.5,0.0216,3.8,0,0.024,0.0211,0,0,0.697,0.27,0.022,0.183,0,0,0,0,0,0,0,0,0,0.0019,0];break; //green bean
+	case 12: plants=[10,3.4,39.2,8.92,0.078,10.16,0.0071,0.0117,0.0639,0.0573,0.0175,6.3,4.7,0.073,2.1,0.021,6.6,0,0.041,0.0316,0.0033,8.93,0.664,0.26,0.037,0.282,1.9,0,0,0,0,0,0,0,0,0,0];break; //broccoli
 	}  
-	document.getElementById(x).innerHTML = Math.round((document.getElementById(x).innerHTML*1+plants[0]*type)*1000)/1000;//quantity
-	h[0].innerHTML = h[0].innerHTML*1+plants[2]*type;h[0].innerHTML=Math.round(h[0].innerHTML*1000)/1000;//vitamin a
-	h[3].innerHTML = h[3].innerHTML*1+plants[3]*type;h[3].innerHTML=Math.round(h[3].innerHTML*1000)/1000;//vitamin c
-	h[6].innerHTML = h[6].innerHTML*1+plants[4]*type;h[6].innerHTML=Math.round(h[6].innerHTML*1000)/1000;//vitamin e
-	h[9].innerHTML = h[9].innerHTML*1+plants[5]*type;h[9].innerHTML=Math.round(h[9].innerHTML*1000)/1000;//vitamin k
-	h[12].innerHTML = h[12].innerHTML*1+plants[6]*type;h[12].innerHTML=Math.round(h[12].innerHTML*1000)/1000;//vitamin b1
-	h[15].innerHTML = h[15].innerHTML*1+plants[7]*type;h[15].innerHTML=Math.round(h[15].innerHTML*1000)/1000;//vitamin b2
-	h[18].innerHTML = h[18].innerHTML*1+plants[8]*type;h[18].innerHTML=Math.round(h[18].innerHTML*1000)/1000;//vitamin b3
-	h[21].innerHTML = h[21].innerHTML*1+plants[9]*type;h[21].innerHTML=Math.round(h[21].innerHTML*1000)/1000;//vitamin b5
-	h[24].innerHTML = h[24].innerHTML*1+plants[10]*type;h[24].innerHTML=Math.round(h[24].innerHTML*1000)/1000;//vitamin b6
-	h[27].innerHTML = h[27].innerHTML*1+plants[11]*type;h[27].innerHTML=Math.round(h[27].innerHTML*1000)/1000;//vitamin b9
-	h[30].innerHTML = h[30].innerHTML*1+plants[30]*type;h[30].innerHTML=Math.round(h[30].innerHTML*1000)/1000;//vitamin b12
-	h[33].innerHTML = h[33].innerHTML*1+plants[29]*type;h[33].innerHTML=Math.round(h[33].innerHTML*1000)/1000;//vitamin d
+	document.getElementById(x).innerHTML = Math.round((document.getElementById(x).innerHTML*1+plants[0]*type)*10000)/10000;//quantity
+	h[0].innerHTML = h[0].innerHTML*1+plants[2]*type;h[0].innerHTML=Math.round(h[0].innerHTML*10000)/10000;//vitamin a
+	h[3].innerHTML = h[3].innerHTML*1+plants[3]*type;h[3].innerHTML=Math.round(h[3].innerHTML*10000)/10000;//vitamin c
+	h[6].innerHTML = h[6].innerHTML*1+plants[4]*type;h[6].innerHTML=Math.round(h[6].innerHTML*10000)/10000;//vitamin e
+	h[9].innerHTML = h[9].innerHTML*1+plants[5]*type;h[9].innerHTML=Math.round(h[9].innerHTML*10000)/10000;//vitamin k
+	h[12].innerHTML = h[12].innerHTML*1+plants[6]*type;h[12].innerHTML=Math.round(h[12].innerHTML*10000)/10000;//vitamin b1
+	h[15].innerHTML = h[15].innerHTML*1+plants[7]*type;h[15].innerHTML=Math.round(h[15].innerHTML*10000)/10000;//vitamin b2
+	h[18].innerHTML = h[18].innerHTML*1+plants[8]*type;h[18].innerHTML=Math.round(h[18].innerHTML*10000)/10000;//vitamin b3
+	h[21].innerHTML = h[21].innerHTML*1+plants[9]*type;h[21].innerHTML=Math.round(h[21].innerHTML*10000)/10000;//vitamin b5
+	h[24].innerHTML = h[24].innerHTML*1+plants[10]*type;h[24].innerHTML=Math.round(h[24].innerHTML*10000)/10000;//vitamin b6
+	h[27].innerHTML = h[27].innerHTML*1+plants[11]*type;h[27].innerHTML=Math.round(h[27].innerHTML*10000)/10000;//vitamin b9
+	h[30].innerHTML = h[30].innerHTML*1+plants[30]*type;h[30].innerHTML=Math.round(h[30].innerHTML*10000)/10000;//vitamin b12
+	h[33].innerHTML = h[33].innerHTML*1+plants[29]*type;h[33].innerHTML=Math.round(h[33].innerHTML*10000)/10000;//vitamin d
 	
-	h[1].innerHTML = h[1].innerHTML*1+plants[32]*type;h[1].innerHTML=Math.round(h[1].innerHTML*1000)/1000;//biotin
-	h[4].innerHTML = h[4].innerHTML*1+plants[26]*type;h[4].innerHTML=Math.round(h[4].innerHTML*1000)/1000;//choline
-	h[7].innerHTML = h[7].innerHTML*1+plants[12]*type;h[7].innerHTML=Math.round(h[7].innerHTML*1000)/1000;//calcium
-	h[10].innerHTML = h[10].innerHTML*1+plants[33]*type;h[10].innerHTML=Math.round(h[10].innerHTML*1000)/1000;//chromium
-	h[13].innerHTML = h[13].innerHTML*1+plants[34]*type;h[13].innerHTML=Math.round(h[13].innerHTML*1000)/1000;//copper
-	h[16].innerHTML = h[16].innerHTML*1+plants[35]*type;h[16].innerHTML=Math.round(h[16].innerHTML*1000)/1000;//fluoride
-	h[19].innerHTML = h[19].innerHTML*1+plants[36]*type;h[19].innerHTML=Math.round(h[19].innerHTML*1000)/1000;//iodine
-	h[22].innerHTML = h[22].innerHTML*1+plants[13]*type;h[22].innerHTML=Math.round(h[22].innerHTML*1000)/1000;//iron
-	h[25].innerHTML = h[25].innerHTML*1+plants[14]*type;h[25].innerHTML=Math.round(h[25].innerHTML*1000)/1000;//magnesium
-	h[28].innerHTML = h[28].innerHTML*1+plants[15]*type;h[28].innerHTML=Math.round(h[28].innerHTML*1000)/1000;//magnese
-	h[31].innerHTML = h[31].innerHTML*1+plants[31]*type;h[31].innerHTML=Math.round(h[31].innerHTML*1000)/1000;//molybednum
-	h[34].innerHTML = h[34].innerHTML*1+plants[24]*type;h[34].innerHTML=Math.round(h[34].innerHTML*1000)/1000;//fat
+	h[1].innerHTML = h[1].innerHTML*1+plants[32]*type;h[1].innerHTML=Math.round(h[1].innerHTML*10000)/10000;//biotin
+	h[4].innerHTML = h[4].innerHTML*1+plants[26]*type;h[4].innerHTML=Math.round(h[4].innerHTML*10000)/10000;//choline
+	h[7].innerHTML = h[7].innerHTML*1+plants[12]*type;h[7].innerHTML=Math.round(h[7].innerHTML*10000)/10000;//calcium
+	h[10].innerHTML = h[10].innerHTML*1+plants[33]*type;h[10].innerHTML=Math.round(h[10].innerHTML*10000)/10000;//chromium
+	h[13].innerHTML = h[13].innerHTML*1+plants[34]*type;h[13].innerHTML=Math.round(h[13].innerHTML*10000)/10000;//copper
+	h[16].innerHTML = h[16].innerHTML*1+plants[35]*type;h[16].innerHTML=Math.round(h[16].innerHTML*10000)/10000;//fluoride
+	h[19].innerHTML = h[19].innerHTML*1+plants[36]*type;h[19].innerHTML=Math.round(h[19].innerHTML*10000)/10000;//iodine
+	h[22].innerHTML = h[22].innerHTML*1+plants[13]*type;h[22].innerHTML=Math.round(h[22].innerHTML*10000)/10000;//iron
+	h[25].innerHTML = h[25].innerHTML*1+plants[14]*type;h[25].innerHTML=Math.round(h[25].innerHTML*10000)/10000;//magnesium
+	h[28].innerHTML = h[28].innerHTML*1+plants[15]*type;h[28].innerHTML=Math.round(h[28].innerHTML*10000)/10000;//magnese
+	h[31].innerHTML = h[31].innerHTML*1+plants[31]*type;h[31].innerHTML=Math.round(h[31].innerHTML*10000)/10000;//molybednum
+	h[34].innerHTML = h[34].innerHTML*1+plants[24]*type;h[34].innerHTML=Math.round(h[34].innerHTML*10000)/10000;//fat
 	
-	h[2].innerHTML = h[2].innerHTML*1+plants[16]*type;h[2].innerHTML=Math.round(h[2].innerHTML*1000)/1000;//phosphorus
-	h[5].innerHTML = h[5].innerHTML*1+plants[17]*type;h[5].innerHTML=Math.round(h[5].innerHTML*1000)/1000;//selenium
-	h[8].innerHTML = h[8].innerHTML*1+plants[18]*type;h[8].innerHTML=Math.round(h[8].innerHTML*1000)/1000;//zinc
-	h[11].innerHTML = h[11].innerHTML*1+plants[19]*type;h[11].innerHTML=Math.round(h[11].innerHTML*1000)/1000;//potassium
-	h[14].innerHTML = h[14].innerHTML*1+plants[20]*type;h[14].innerHTML=Math.round(h[14].innerHTML*1000)/1000;//sodium
-	h[17].innerHTML = h[17].innerHTML*1+plants[21]*type;h[17].innerHTML=Math.round(h[17].innerHTML*1000)/1000;//h2o
-	h[20].innerHTML = h[20].innerHTML*1+plants[22]*type;h[20].innerHTML=Math.round(h[20].innerHTML*1000)/1000;//carbohydrate
-	h[23].innerHTML = h[23].innerHTML*1+plants[23]*type;h[23].innerHTML=Math.round(h[23].innerHTML*1000)/1000;//dietetary diber
-	h[26].innerHTML = h[26].innerHTML*1+plants[27]*type;h[26].innerHTML=Math.round(h[26].innerHTML*1000)/1000;//om6
-	h[29].innerHTML = h[29].innerHTML*1+plants[28]*type;h[29].innerHTML=Math.round(h[29].innerHTML*1000)/1000;//om3
-	h[32].innerHTML = h[32].innerHTML*1+plants[25]*type;h[32].innerHTML=Math.round(h[32].innerHTML*1000)/1000;//protein
-	h[35].innerHTML = h[35].innerHTML*1+plants[1]*type;h[35].innerHTML=Math.round(h[35].innerHTML*1000)/1000;//kcal
+	h[2].innerHTML = h[2].innerHTML*1+plants[16]*type;h[2].innerHTML=Math.round(h[2].innerHTML*10000)/10000;//phosphorus
+	h[5].innerHTML = h[5].innerHTML*1+plants[17]*type;h[5].innerHTML=Math.round(h[5].innerHTML*10000)/10000;//selenium
+	h[8].innerHTML = h[8].innerHTML*1+plants[18]*type;h[8].innerHTML=Math.round(h[8].innerHTML*10000)/10000;//zinc
+	h[11].innerHTML = h[11].innerHTML*1+plants[19]*type;h[11].innerHTML=Math.round(h[11].innerHTML*10000)/10000;//potassium
+	h[14].innerHTML = h[14].innerHTML*1+plants[20]*type;h[14].innerHTML=Math.round(h[14].innerHTML*10000)/10000;//sodium
+	h[17].innerHTML = h[17].innerHTML*1+plants[21]*type;h[17].innerHTML=Math.round(h[17].innerHTML*10000)/10000;//h2o
+	h[20].innerHTML = h[20].innerHTML*1+plants[22]*type;h[20].innerHTML=Math.round(h[20].innerHTML*10000)/10000;//carbohydrate
+	h[23].innerHTML = h[23].innerHTML*1+plants[23]*type;h[23].innerHTML=Math.round(h[23].innerHTML*10000)/10000;//dietetary diber
+	h[26].innerHTML = h[26].innerHTML*1+plants[27]*type;h[26].innerHTML=Math.round(h[26].innerHTML*10000)/10000;//om6
+	h[29].innerHTML = h[29].innerHTML*1+plants[28]*type;h[29].innerHTML=Math.round(h[29].innerHTML*10000)/10000;//om3
+	h[32].innerHTML = h[32].innerHTML*1+plants[25]*type;h[32].innerHTML=Math.round(h[32].innerHTML*10000)/10000;//protein
+	h[35].innerHTML = h[35].innerHTML*1+plants[1]*type;h[35].innerHTML=Math.round(h[35].innerHTML*10000)/10000;//kcal
 	
 	while (i < 36){
 	if (h[i].innerHTML < 0) h[i].style.color="black";
@@ -643,7 +398,7 @@ function calc(x){
 	}
 	function results(){
 		output.innerHTML="<h1>Your package of food for today:</h1<br>";
-		while (i < 327) { //number of plants * 2+1
+		while (i < 325) { //number of plants * 2+1
   if (document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+"-"+document.getElementById(i).innerHTML+" grams of "+document.getElementById(i+1).innerHTML+"</br>";
   i++;i++;
 }i=0;
@@ -682,7 +437,7 @@ g alpha-Linolenic Acid = plats[28]
 μg Vitamin B12 = plats[30]
 μg Molybdenum = plats[31]
 μg Biotin = plats[32]
-ug Chromium = plats[33]
+μg Chromium = plats[33]
 μg Copper = plats[34]
 mg Fluoride = plats[35]
 μg Iodine = plats[36]
