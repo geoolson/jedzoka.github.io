@@ -63,14 +63,16 @@ p {
 <input value="0"><h4>uq</h4> Copper <h4>Cu</h4><br><br>
 <input value="0"><h4>mg</h4> Fluoride <h4>F</h4><br><br>
 <input value="0"><h4>uq</h4> Iodine <h4>Io</h4><br><br>
-<input> special element<br>
+<input> special element<br><br>
+<input value="0.1">Multiplay<br><br>
 <button type="button" onclick="a()">Click me</button>
-<div id="aa">&ltdiv class="plant"&gt&ltimg src="<p></p>" class="images"&gt&ltdiv class="buttons" onclick="calc(<p></p>)"&gt+&lt/div&gt&ltdiv class="buttons" onclick="calc(<p></p>)"&gt-&lt/div&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltp id="<p>0</p>"&gt0&lt/p&gt&lta href="<p></p> "id="<p></p>"&gt<p></p>&lt/a&gt&lth4&gt<p></p>&lt/h4&gt&lt/div&gt</div>case <a></a>: plants=[<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>];break; //<p></p>
+<div id="aa">&ltdiv class="plant"&gt&ltimg src="<p></p>" class="images"&gt&ltdiv class="buttons" onclick="calc(<p></p>)"&gt+&lt/div&gt&ltdiv class="buttons" onclick="calc(<p></p>)"&gt-&lt/div&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltp id="<p>0</p>"&gt0&lt/p&gt&lta href="<p></p>" target="_blank" id="<p></p>"&gt<p></p>&lt/a&gt&lth4&gt<p></p>&lt/h4&gt&lt/div&gt</div>case <a></a>: plants=[<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>];break; //<p></p>
 <script>
 	function a() {
 	a=document.getElementsByTagName("input");
 	b=document.getElementsByTagName("a");
 	p=document.getElementsByTagName("p");
+	var ab=a[42].value;
 	var pp=parseInt(a[1].value);
 	p[0].innerHTML=a[3].value;
 	p[1].innerHTML=a[1].value;
@@ -83,43 +85,43 @@ p {
 	p[8].innerHTML=a[0].value;
 	
 	b[0].innerHTML=a[1].value;
-	b[1].innerHTML=a[4].value;
-	b[2].innerHTML=a[5].value;
-	b[3].innerHTML=a[6].value;
-	b[4].innerHTML=a[7].value;
-	b[5].innerHTML=a[8].value;	
-	b[6].innerHTML=a[9].value;
-	b[7].innerHTML=a[10].value;
-	b[8].innerHTML=a[11].value;
-	b[9].innerHTML=a[12].value;
-	b[10].innerHTML=a[13].value;
-	b[11].innerHTML=a[14].value;
-	b[12].innerHTML=a[15].value;
-	b[13].innerHTML=a[16].value;
-	b[14].innerHTML=a[17].value;
-	b[15].innerHTML=a[18].value;
-	b[16].innerHTML=a[19].value;
-	b[17].innerHTML=a[20].value;
-	b[18].innerHTML=a[21].value;
-	b[19].innerHTML=a[22].value;
-	b[20].innerHTML=a[23].value;
-	b[21].innerHTML=a[24].value;
-	b[22].innerHTML=a[25].value;
-	b[23].innerHTML=a[26].value;
-	b[24].innerHTML=a[27].value;
-	b[25].innerHTML=a[28].value;
-	b[26].innerHTML=a[29].value;
-	b[27].innerHTML=a[30].value;
-	b[28].innerHTML=a[31].value;
-	b[29].innerHTML=a[32].value;
-	b[30].innerHTML=a[33].value;
-	b[31].innerHTML=a[34].value;
-	b[32].innerHTML=a[35].value;
-	b[33].innerHTML=a[36].value;
-	b[34].innerHTML=a[37].value;
-	b[35].innerHTML=a[38].value;
-	b[36].innerHTML=a[39].value;
-	b[37].innerHTML=a[40].value;
+	b[1].innerHTML=Math.round(a[4].value*ab*10000)/10000;
+	b[2].innerHTML=Math.round(a[5].value*ab*10000)/10000;
+	b[3].innerHTML=Math.round(a[6].value*ab*10000)/10000;
+	b[4].innerHTML=Math.round(a[7].value*ab*10000)/10000;
+	b[5].innerHTML=Math.round(a[8].value*ab*10000)/10000;	
+	b[6].innerHTML=Math.round(a[9].value*ab*10000)/10000;
+	b[7].innerHTML=Math.round(a[10].value*ab*10000)/10000;
+	b[8].innerHTML=Math.round(a[11].value*ab*10000)/10000;
+	b[9].innerHTML=Math.round(a[12].value*ab*10000)/10000;
+	b[10].innerHTML=Math.round(a[13].value*ab*10000)/10000;
+	b[11].innerHTML=Math.round(a[14].value*ab*10000)/10000;
+	b[12].innerHTML=Math.round(a[15].value*ab*10000)/10000;
+	b[13].innerHTML=Math.round(a[16].value*ab*10000)/10000;
+	b[14].innerHTML=Math.round(a[17].value*ab*10000)/10000;
+	b[15].innerHTML=Math.round(a[18].value*ab*10000)/10000;
+	b[16].innerHTML=Math.round(a[19].value*ab*10000)/10000;
+	b[17].innerHTML=Math.round(a[20].value*ab*10000)/10000;
+	b[18].innerHTML=Math.round(a[21].value*ab*10000)/10000;
+	b[19].innerHTML=Math.round(a[22].value*ab*10000)/10000;
+	b[20].innerHTML=Math.round(a[23].value*ab*10000)/10000;
+	b[21].innerHTML=Math.round(a[24].value*ab*10000)/10000;
+	b[22].innerHTML=Math.round(a[25].value*ab*10000)/10000;
+	b[23].innerHTML=Math.round(a[26].value*ab*10000)/10000;
+	b[24].innerHTML=Math.round(a[27].value*ab*10000)/10000;
+	b[25].innerHTML=Math.round(a[28].value*ab*10000)/10000;
+	b[26].innerHTML=Math.round(a[29].value*ab*10000)/10000;
+	b[27].innerHTML=Math.round(a[30].value*ab*10000)/10000;
+	b[28].innerHTML=Math.round(a[31].value*ab*10000)/10000;
+	b[29].innerHTML=Math.round(a[32].value*ab*10000)/10000;
+	b[30].innerHTML=Math.round(a[33].value*ab*10000)/10000;
+	b[31].innerHTML=Math.round(a[34].value*ab*10000)/10000;
+	b[32].innerHTML=Math.round(a[35].value*ab*10000)/10000;
+	b[33].innerHTML=Math.round(a[36].value*ab*10000)/10000;
+	b[34].innerHTML=Math.round(a[37].value*ab*10000)/10000;
+	b[35].innerHTML=Math.round(a[38].value*ab*10000)/10000;
+	b[36].innerHTML=Math.round(a[39].value*ab*10000)/10000;
+	b[37].innerHTML=Math.round(a[40].value*ab*10000)/10000;
 	}
 </script>
 </body>
