@@ -43,7 +43,7 @@ button {
 }
 .plant {
 	width:170px;
-	height:250px;
+	height:270px;
 	float:left;
 	-webkit-touch-callout: none; 
     -webkit-user-select: none; 
@@ -212,6 +212,9 @@ color:black ;
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2018/01/09/22/16/walnut-3072652__480.jpg" class="images"><div class="buttons" onclick="calc(92)">+</div><div class="buttons" onclick="calc(93)">-</div><br><br><br><br><p id="92">0</p><a href="https://en.m.wikipedia.org/wiki/Walnut" target="_blank" id="93">walnut</a><h4>Bio</h4></div>
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/22/06/tomatoes-1239177__480.jpg" class="images"><div class="buttons" onclick="calc(88)">+</div><div class="buttons" onclick="calc(89)">-</div><br><br><br><br><p id="88">0</p><ahref="https://en.wikipedia.org/wiki/Tomato" target="_blank" id="89">tomato</a><h4></h4></div>
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2014/02/23/18/59/salt-273105__480.jpg" class="images"><div class="buttons" onclick="calc(90)">+</div><div class="buttons" onclick="calc(91)">-</div><br><br><br><br><p id="90">0</p><a href="https://www.healthline.com/nutrition/iodized-salt#safety" target="_blank" id="91">iodized salt</a><h4>Io</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/01/06/15/26/nuts-1124331__480.jpg" class="images"><div class="buttons" onclick="calc(94)">+</div><div class="buttons" onclick="calc(95)">-</div><br><br><br><br><p id="94">0</p><a href="https://en.wikipedia.org/wiki/Hazelnut" target="_blank" id="95">hazelnut</a><h4>Se</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/07/11/17/28/peanut-390081_1280.jpg" class="images"><div class="buttons" onclick="calc(96)">+</div><div class="buttons" onclick="calc(97)">-</div><br><br><br><br><p id="96">0</p><a href="https://en.wikipedia.org/wiki/Peanut" target="_blank" id="97">peanut</a><h4>full-Pr</h4></div>
+<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/02/22/03/46/pecans-1214697__480.jpg" class="images"><div class="buttons" onclick="calc(98)">+</div><div class="buttons" onclick="calc(99)">-</div><br><br><br><br><p id="98">0</p><a href="https://en.m.wikipedia.org/wiki/Pecan" target="_blank" id="99">pecan</a><h4></h4></div>
 </div>
 <button type="button" onclick="results()">Output</button>
 <div id="output"width="100%"height="100%"></div>
@@ -235,7 +238,7 @@ color:black ;
 	var g=0;
 	function set() {
 	var p=document.getElementsByTagName("p");
-	while (i<46){
+	while (i<49){
 	p[i].innerHTML="0";
 	i++;
 	}
@@ -359,7 +362,10 @@ case 84: plants=[10,35.3,0,0.45,0,0,0.087,0.0211,0.2605,0.214,0.054,47.9,5.6,0.6
 case 86: plants=[10,58.4,0,0.14,3.517,0,0.148,0.0355,0.8335,0.113,0.1345,22.7,7.8,0.525,32.5,0.195,66,0,0.5,64.5,0.0009,0.0005,2,0.86,5.146,2.078,5.51,0,0,0,0,0,25.2,0,0,0,0];break; //sunflower seeds
 case 88: plants=[10,1.8,4.2,1.4,0.054,0.79,0.0037,0,0.0594,0,0.008,0,0,0,1.1,0.0114,2.4,0,0,0.0237,0,0.0095,0.39,0.12,0.02,0.09,0,0,0,0,0,0,0,0,0,0,0];break; //tomato
 case 90: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46];break; //iodized salt
-case 92: plants=[10,65.4,0.1,0.13,0.07,0.27,0.0341,0.015,0.1125,0.057,0.0537,9.8,9.8,0.291,15.8,0.3414,34.6,0,0.309,0.0441,0.0002,0.0005,1.371,0.67,6.521,1.523,0,0,0,0,0,0,8.7,0,0,0,0];break; //walnut	
+case 92: plants=[10,65.4,0.1,0.13,0.07,0.27,0.0341,0.015,0.1125,0.057,0.0537,9.8,9.8,0.291,15.8,0.3414,34.6,0,0.309,0.0441,0.0002,0.0005,1.371,0.67,6.521,1.523,0,0,0,0,0,0,8.7,0,0,0,0];break; //walnut
+case 94: plants=[10,62.8,0.1,0.63,1.503,1.42,0.0643,0.0113,0.18,0.0918,0.0563,11.3,11.4,0.47,16.3,0.6175,29,0.24,0.245,0.068,0,0.0005,1.67,0.97,6.075,1.495,0,0,0,0,0,0,0,0,0,0,0];break; //hazelnut
+case 96: plants=[10,57,0,0,0.66,0,0.06,0.03,1.29,0.18,0.03,24.6,6.2,0.2,18.4,0.2,33.6,0,0.33,0.0332,0,0.0004,2.1,0.9,4.8,2.5,0,0,0,0,0,0,0,0,0,0,0];break; //peanut
+case 98: plants=[10,69,2.9,0.11,0.14,0.35,0.066,0.013,0.1167,0.0863,0.021,2.2,7,0.253,12.1,0.45,27.7,0,0.453,0.041,0,0.0004,1.386,0.96,7.197,0.917,0,0,0,0,0,0,6.5,0,0,0,0];break; //pecan	
 	}  
 	document.getElementById(x).innerHTML = Math.round((document.getElementById(x).innerHTML*1+plants[0]*type)*10000)/10000;//quantity
 	h[0].innerHTML = h[0].innerHTML*1+plants[2]*type;h[0].innerHTML=Math.round(h[0].innerHTML*10000)/10000;//vitamin a
@@ -410,7 +416,7 @@ case 92: plants=[10,65.4,0.1,0.13,0.07,0.27,0.0341,0.015,0.1125,0.057,0.0537,9.
 	}
 	function results(){
 		output.innerHTML="<h1>Your package of food for today:</h1<br>";
-		while (i < 93) { //number of plants * 2+1
+		while (i < 99) { //number of plants * 2+1
   if (i<=2 && document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+"-"+document.getElementById(i).innerHTML+" μg of "+document.getElementById(i+1).innerHTML+"</br>";
   else if (document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+"-"+document.getElementById(i).innerHTML+" grams of "+document.getElementById(i+1).innerHTML+"</br>";
   
