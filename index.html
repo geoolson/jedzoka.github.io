@@ -58,13 +58,16 @@ div.scrollmenu {
 }
 table {
   border-collapse: collapse;
-  width: 100%;
+    width: 100%;
   height: 100%;
   font-size:17px;
-  table-layout: fixed;
 }
-td, th {
-  border: 1px solid black;
+td {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: hidden;
+    white-space: nowrap;
+    border: 1px solid black;
   font-weight: bold;
   color:#f916c1;
   text-align:left;
