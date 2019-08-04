@@ -73,7 +73,7 @@ td {
   text-align:left;
 }
 .select {
-	width:33%;
+	width:32%;
 	height:50px;
 }
 h2 {
@@ -107,6 +107,8 @@ color:black ;
   <option value="1">1 day</option>
   <option value="7">7 days</option>
   <option value="30">30 days</option>
+  <option value="365">365 days</option>
+  <option value="3650">3650 days</option>
 </select>
 	<table id="table">
 	<col width="33.333%">
@@ -227,18 +229,19 @@ color:black ;
 <div class="plant"><img src="https://morejuicepress.com/wp-content/themes/MoreJuicePress/img/tofu.png" class="images"><div class="buttons" onclick="calc(100)">+</div><div class="buttons" onclick="calc(101)">-</div><br><br><br><br><p id="100">0</p><a href="https://en.wikipedia.org/wiki/Tofu" target="_blank" id="101">tofu</a><h4></h4></div>
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2015/01/30/10/49/raisins-617416__340.jpg" class="images"><div class="buttons" onclick="calc(102)">+</div><div class="buttons" onclick="calc(103)">-</div><br><br><br><br><p id="102">0</p><a href="https://en.wikipedia.org/wiki/Raisin" target="_blank" id="103">raisin</a><h4>Cho Flu</h4></div>
 </div>
-<button type="button" onclick="results()">Output</button>
-<div id="output"width="100%"height="100%"></div>
-	<h1>References:</h1>
-        tomato, lettuce and olive contains high amounts of chloride!<br><br>
+<button type="button" onclick="results()">COPY OUTPUT</button>
+<div id="output" width="100%"height="100%" style="display:none"}></div>
+        tomato, lettuce and olive contains high amounts of chloride! You have to eat it!<br><br>
+	<a href="https://jedzoka.github.io" target="_blank">jedzoka</a><br><br>
+	<a href="https://steemit.com/ecology/@jedz0ka/global-veganism-we-need-it" target="_blank">Read Article</a><br><br>
+	<a href="https://jedzoka.github.io/simplant/plant_generator" target="_blank">plant generator</a><br><br>
+	<a href="https://github.com/jedzoka/simplant" target="_blank">GitHub</a><br><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t2/?report=objectonly" target="_blank">DRI Vitamins</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t3/?report=objectonly" target="_blank">DRI Minerals</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly" target="_blank">DRI Macronutrients</a><br><br>
-        <a href="https://www.dovemed.com/healthy-living/wellness-center/which-foods-contain-most-chloride/"  target="_blank" >chloride sources</a><br>
-        <a href="https://www.globalhealingcenter.com/natural-health/top-foods-high-biotin/" target="_blank">biotin sources</a><br>
-        <a href="http://apjcn.nhri.org.tw/server/info/books-phds/books/foodfacts/html/data/data5m.html" target="_blank">chromium sources</a><br><br>
-        <a href="https://jedzoka.github.io/simplant/plant_generator" target="_blank">plant generator</a><br><br>
-	<a href="https://github.com/jedzoka/simplant" target="_blank">GitHub</a><br><br>
+    <a href="https://www.dovemed.com/healthy-living/wellness-center/which-foods-contain-most-chloride/"  target="_blank" >chloride sources</a><br>
+    <a href="https://www.globalhealingcenter.com/natural-health/top-foods-high-biotin/" target="_blank">biotin sources</a><br>
+    <a href="http://apjcn.nhri.org.tw/server/info/books-phds/books/foodfacts/html/data/data5m.html" target="_blank">chromium sources</a><br><br>
 	A - <a href="https://en.wikipedia.org/wiki/Vitamin_A" target="_blank">Vitamin A</a><br>
 	C - <a href="https://en.wikipedia.org/wiki/Vitamin_C" target="_blank">Vitamin C</a><br>
 	E - <a href="https://en.wikipedia.org/wiki/Vitamin_E" target="_blank">Vitamin E</a><br>
@@ -286,7 +289,7 @@ color:black ;
 	var g=0;
 	function set() {
 	var p=document.getElementsByTagName("p");
-	while (i<49){
+	while (i<51){
 	p[i].innerHTML="0";
 	i++;
 	}
@@ -458,7 +461,7 @@ case 102: plants=[10,29.9,0,0.23,0.012,0.35,0.0106,0.0125,0.0766,0.0095,0.0174,0
 	h[32].innerHTML = h[32].innerHTML*1+plants[25]*type;h[32].innerHTML=Math.round(h[32].innerHTML*10000)/10000;//protein
 	h[35].innerHTML = h[35].innerHTML*1+plants[1]*type;h[35].innerHTML=Math.round(h[35].innerHTML*10000)/10000;//kcal
 	
-	while (i < 36){
+while (i < 36){
 	if (h[i].innerHTML < 0) h[i].style.color="black";
 	else h[i].style.color="#3fef13" ;
 	i++;
@@ -466,13 +469,19 @@ case 102: plants=[10,29.9,0,0.23,0.012,0.35,0.0106,0.0125,0.0766,0.0095,0.0174,0
 	i=0;
 	}
 	function results(){
-		output.innerHTML="<h1>Your package of food for today:</h1<br>";
-		while (i < 99) { //number of plants * 2+1
-  if (i<=2 && document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+"-"+document.getElementById(i).innerHTML+" μg of "+document.getElementById(i+1).innerHTML+"</br>";
-  else if (document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+"-"+document.getElementById(i).innerHTML+" grams of "+document.getElementById(i+1).innerHTML+"</br>";
+		output.innerHTML="";
+		while (i < 103) { //number of plants * 2+1
+  if (i<=2 && document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+document.getElementById(i).innerHTML+" μg of "+document.getElementById(i+1).innerHTML+"\n";
+  else if (document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+document.getElementById(i).innerHTML+" grams of "+document.getElementById(i+1).innerHTML+"\n";
   
   i++;i++;
 }i=0;
+var textarea = document.createElement("textarea");
+  textarea.value = output.innerHTML;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
 }
 /*
 g quantity = plats[0]
@@ -516,3 +525,4 @@ mg Fluoride = plats[35]
 </script>
   </body>
 </html> 
+
