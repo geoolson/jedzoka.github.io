@@ -73,7 +73,7 @@ td {
   text-align:left;
 }
 .select {
-	width:49%;
+	width:33%;
 	height:50px;
 }
 h2 {
@@ -102,6 +102,11 @@ color:black ;
   <option value="8">31-50 years</option>
   <option value="9">51-70 years</option>
   <option value="0">+70 years</option><br>
+</select>
+<select id="time" class="select" onchange="set()">
+  <option value="1">1 day</option>
+  <option value="7">7 days</option>
+  <option value="30">30 days</option>
 </select>
 	<table id="table">
 	<col width="33.333%">
@@ -225,7 +230,6 @@ color:black ;
 <button type="button" onclick="results()">Output</button>
 <div id="output"width="100%"height="100%"></div>
 	<h1>References:</h1>
-        <a href="https://steemit.com/ecology/@jedz0ka/global-veganism-we-need-it" target="_blank">READ ARTICLE</a><br>
         tomato, lettuce and olive contains high amounts of chloride!<br><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t2/?report=objectonly" target="_blank">DRI Vitamins</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t3/?report=objectonly" target="_blank">DRI Minerals</a><br>
@@ -289,6 +293,7 @@ color:black ;
 	i=0;
 	var gender = document.getElementById('gender'); gender=gender[gender.selectedIndex].value;
 	var age = document.getElementById('age'); age=age[age.selectedIndex].value;
+	var time=document.getElementById('time'); time=time[time.selectedIndex].value;
     gender=gender+age;
     switch (gender) {
   case 'a1':   case 'b1': values=['400','40','10','4','2.0','0.2','0.3','2','0.1','65','0.4','1.7','5','125', '200','0.2','200','0.01','110','0.27','30','0.003','2','100','15','2','0.4','0.12','0.18','0.7','60','0','31','4.4','0.5','9.1']; break;
@@ -320,41 +325,41 @@ color:black ;
 	i++;
 	}
 	i=0;
-  h[0].innerHTML = values[0]*-1; //a
-  h[3].innerHTML = values[1]*-1; //c
-  h[6].innerHTML = values[3]*-1; //e
-  h[9].innerHTML = values[4]*-1; //k
-  h[12].innerHTML = values[5]*-1; //b1	
-  h[15].innerHTML = values[6]*-1; //b2
-  h[18].innerHTML = values[7]*-1; //b3	
-  h[21].innerHTML = values[11]*-1; //b5	
-  h[24].innerHTML = values[8]*-1; //b6	
-  h[27].innerHTML = values[9]*-1; //b9	
-  h[30].innerHTML = values[10]*-1; //b12
-  h[33].innerHTML = values[2]*-1; //d		
-  h[1].innerHTML = values[12]*-1; //biotin
-  h[4].innerHTML = values[13]*-1; //choline
-  h[7].innerHTML = values[14]*-1; //calcium
-  h[10].innerHTML = values[15]*-1; //chromium
-  h[13].innerHTML = values[16]*-1; //copper
-  h[16].innerHTML = values[17]*-1; //fluoride
-  h[19].innerHTML = values[18]*-1; //iodine
-  h[22].innerHTML = values[19]*-1; //iron
-  h[25].innerHTML = values[20]*-1; //magnesium
-  h[28].innerHTML = values[21]*-1; //magnese
-  h[31].innerHTML = values[22]*-1; //molybednum
-  h[34].innerHTML = values[32]*-1; //fat
-  h[2].innerHTML = values[23]*-1; //phosphorus	
-  h[5].innerHTML = values[24]*-1; //selenium
-  h[8].innerHTML = values[25]*-1; //zinc	
-  h[11].innerHTML = values[26]*-1; //potassium
-  h[14].innerHTML = values[27]*-1; //sodium
-  h[17].innerHTML = values[29]*-1; //h2o
-  h[20].innerHTML = values[30]*-1; //carbohydrate
-  h[23].innerHTML = values[31]*-1; //dietetary fiber
-  h[26].innerHTML = values[33]*-1; //om6
-  h[29].innerHTML = values[34]*-1; //om3
-  h[32].innerHTML = values[35]*-1; //protein	
+  h[0].innerHTML = Math.round(values[0]*-1*time*10000)/10000; //a
+  h[3].innerHTML = Math.round(values[1]*-1*time*10000)/10000; //c
+  h[6].innerHTML = Math.round(values[3]*-1*time*10000)/10000; //e
+  h[9].innerHTML = Math.round(values[4]*-1*time*10000)/10000; //k
+  h[12].innerHTML = Math.round(values[5]*-1*time*10000)/10000; //b1	
+  h[15].innerHTML = Math.round(values[6]*-1*time*10000)/10000; //b2
+  h[18].innerHTML = Math.round(values[7]*-1*time*10000)/10000; //b3	
+  h[21].innerHTML = Math.round(values[11]*-1*time*10000)/10000; //b5	
+  h[24].innerHTML = Math.round(values[8]*-1*time*10000)/10000; //b6	
+  h[27].innerHTML = Math.round(values[9]*-1*time*10000)/10000; //b9	
+  h[30].innerHTML = Math.round(values[10]*-1*time*10000)/10000; //b12
+  h[33].innerHTML = Math.round(values[2]*-1*time*10000)/10000; //d		
+  h[1].innerHTML = Math.round(values[12]*-1*time*10000)/10000; //biotin
+  h[4].innerHTML = Math.round(values[13]*-1*time*10000)/10000; //choline
+  h[7].innerHTML = Math.round(values[14]*-1*time*10000)/10000; //calcium
+  h[10].innerHTML = Math.round(values[15]*-1*time*10000)/10000; //chromium
+  h[13].innerHTML = Math.round(values[16]*-1*time*10000)/10000; //copper
+  h[16].innerHTML = Math.round(values[17]*-1*time*10000)/10000; //fluoride
+  h[19].innerHTML = Math.round(values[18]*-1*time*10000)/10000; //iodine
+  h[22].innerHTML = Math.round(values[19]*-1*time*10000)/10000; //iron
+  h[25].innerHTML = Math.round(values[20]*-1*time*10000)/10000; //magnesium
+  h[28].innerHTML = Math.round(values[21]*-1*time*10000)/10000; //magnese
+  h[31].innerHTML = Math.round(values[22]*-1*time*10000)/10000; //molybednum
+  h[34].innerHTML = Math.round(values[32]*-1*time*10000)/10000; //fat
+  h[2].innerHTML = Math.round(values[23]*-1*time*10000)/10000; //phosphorus	
+  h[5].innerHTML = Math.round(values[24]*-1*time*10000)/10000; //selenium
+  h[8].innerHTML = Math.round(values[25]*-1*time*10000)/10000; //zinc	
+  h[11].innerHTML = Math.round(values[26]*-1*time*10000)/10000; //potassium
+  h[14].innerHTML = Math.round(values[27]*-1*time*10000)/10000; //sodium
+  h[17].innerHTML = Math.round(values[29]*-1*time*10000)/10000; //h2o
+  h[20].innerHTML = Math.round(values[30]*-1*time*10000)/10000; //carbohydrate
+  h[23].innerHTML = Math.round(values[31]*-1*time*10000)/10000; //dietetary fiber
+  h[26].innerHTML = Math.round(values[33]*-1*time*10000)/10000; //om6
+  h[29].innerHTML = Math.round(values[34]*-1*time*10000)/10000; //om3
+  h[32].innerHTML = Math.round(values[35]*-1*time*10000)/10000; //protein	
 }
 function calc(x){
 	if (x%2 == 0) type=1;  else {type=-1;x--;}
