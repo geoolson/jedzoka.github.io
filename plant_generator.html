@@ -1,6 +1,7 @@
-<!DOCTYPE HTML>
-<html>
-<head>
+https://jedzoka.github.io/simplant/plant_generator
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://jedzoka.github.io/simplant/plant_generator -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
 input {
 	background-color:black;
@@ -22,7 +23,7 @@ p {
 </style>
 </head>
 <body>
-<input> name<br><br>
+<br><br><input> name<br><br>
 <input> case<br><br>
 <input> wiki url<br><br>
 <input> image url<br><br>
@@ -59,20 +60,19 @@ p {
 <input value="0"><h4>uq</h4> Vitamin B12<br><br>
 <input value="0"><h4>uq</h4> Molybdenum <h4>Mo</h4><br><br>
 <input value="0"><h4>uq</h4> Biotine <h4>Bio</h4><br><br>
-<input value="0"><h4>uq</h4> Chromium <h4>Cr</h4><br><br>
+<input value="0"><h4>uq</h4> Chloride <h4>Cl</h4><br><br>
 <input value="0"><h4>uq</h4> Copper <h4>Cu</h4><br><br>
 <input value="0"><h4>mg</h4> Fluoride <h4>F</h4><br><br>
 <input value="0"><h4>uq</h4> Iodine <h4>Io</h4><br><br>
-<input> special element<br><br>
 <input value="0.1">Multiplay<br><br>
 <button type="button" onclick="a()">Click me</button>
-<div id="aa">&ltdiv class="plant"&gt&ltimg src="<p></p>" class="images"&gt&ltdiv class="buttons" onclick="calc(<p></p>)"&gt+&lt/div&gt&ltdiv class="buttons" onclick="calc(<p></p>)"&gt-&lt/div&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltbr&gt&ltp id="<p>0</p>"&gt0&lt/p&gt&lta href="<p></p>" target="_blank" id="<p></p>"&gt<p></p>&lt/a&gt&lth4&gt<p></p>&lt/h4&gt&lt/div&gt</div>case <a></a>: plants=[<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>];break; //<p></p>
+<div id="aa">&lt;div class="plant"&gt;&lt;img src="<p></p>" class="images"&gt;&lt;div class="buttons" onclick="calc(<p></p>)"&gt;+&lt;/div&gt;&lt;div class="buttons" onclick="calc(<p></p>)"&gt;-&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;p id="<p>0</p>"&gt;0&lt;/p&gt;&lt;a href="<p></p>" target="_blank" id="<p></p>"&gt;<p></p>&lt;/a&gt;&lt;/div&gt;</div>case <a></a>: plants=[<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>];break; //<p></p>
 <script>
 	function a() {
 	a=document.getElementsByTagName("input");
 	b=document.getElementsByTagName("a");
 	p=document.getElementsByTagName("p");
-	var ab=a[42].value;
+	var ab=a[41].value;
 	var pp=parseInt(a[1].value);
 	p[0].innerHTML=a[3].value;
 	p[1].innerHTML=a[1].value;
@@ -81,8 +81,7 @@ p {
 	p[4].innerHTML=a[2].value;
 	p[5].innerHTML=pp+1;
 	p[6].innerHTML=a[0].value;
-	p[7].innerHTML=a[41].value;
-	p[8].innerHTML=a[0].value;
+	p[7].innerHTML=a[0].value;
 	
 	b[0].innerHTML=a[1].value;
 	b[1].innerHTML=Math.round(a[4].value*ab*10000)/10000;
