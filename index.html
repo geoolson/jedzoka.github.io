@@ -1,8 +1,6 @@
  <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta name="description" content="Create your own plant-based diet">
-    <meta name="keywords" content="health,plant,veganism,vegetarianism,diet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/123/123234.png" />
@@ -56,7 +54,7 @@ button {
 	float:left;         
 }
 div.scrollmenu {
-	height:546px;
+	height:370px;
     overflow-y: scroll;
     overflow-x: hidden;
     overflow: scroll;
@@ -79,7 +77,7 @@ td {
 }
 .select {
 	width:32%;
-	height:50px;
+	height:45px;
 }
 h2 {
 display:inline; 
@@ -236,18 +234,17 @@ color:black ;
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2016/02/22/03/46/pecans-1214697__480.jpg" class="images"><div class="buttons" onclick="calc(98)">+</div><div class="buttons" onclick="calc(99)">-</div><br><br><p id="98">0</p><a href="https://en.m.wikipedia.org/wiki/Pecan" target="_blank" id="99">pecan</a></div>
 <div class="plant"><img src="https://morejuicepress.com/wp-content/themes/MoreJuicePress/img/tofu.png" class="images"><div class="buttons" onclick="calc(100)">+</div><div class="buttons" onclick="calc(101)">-</div><br><br><p id="100">0</p><a href="https://en.wikipedia.org/wiki/Tofu" target="_blank" id="101">tofu</a></div>
 <div class="plant"><img src="https://cdn.pixabay.com/photo/2015/01/30/10/49/raisins-617416__340.jpg" class="images"><div class="buttons" onclick="calc(102)">+</div><div class="buttons" onclick="calc(103)">-</div><br><br><p id="102">0</p><a href="https://en.wikipedia.org/wiki/Raisin" target="_blank" id="103">raisin</a></div>
+<div class="plant"><img src="https://66.media.tumblr.com/2bd6d58e53c8428b9dd955747707c748/tumblr_inline_nam8htGWqf1rhel8u.png" class="images"><div class="buttons" onclick="calc(114)">+</div><div class="buttons" onclick="calc(115)">-</div><br><br><p id="114">0</p><a href="https://www.healthline.com/health/sodium-chloride#medical-use" target="_blank" id="115">table salt</a></div>
 </div>
 <button type="button" onclick="results()">COPY OUTPUT</button>
 <div id="output" width="100%"height="100%" style="display:none"></div>
+<a href="https://steemit.com/steem/@jedz0ka/how-to-plant-two-trillion-trees" target="_blank">Read Article</a><br><br>
 	<a href="https://jedzoka.github.io" target="_blank">My main website</a><br><br>
-	<a href="https://steemit.com/ecology/@jedz0ka/global-veganism-we-need-it" target="_blank">Read Article</a><br><br>
 	<a href="https://github.com/jedzoka/simplant" target="_blank">Project's page</a><br><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t2/?report=objectonly" target="_blank">DRI Vitamins</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t3/?report=objectonly" target="_blank">DRI Minerals</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly" target="_blank">DRI Macronutrients</a><br><br>
-    <a href="https://www.dovemed.com/healthy-living/wellness-center/which-foods-contain-most-chloride/"  target="_blank" >chloride sources</a><br>
-    <a href="https://www.globalhealingcenter.com/natural-health/top-foods-high-biotin/" target="_blank">biotin sources</a><br>
-    <a href="http://apjcn.nhri.org.tw/server/info/books-phds/books/foodfacts/html/data/data5m.html" target="_blank">chromium sources</a><br><br>
+    <a href="https://www.globalhealingcenter.com/natural-health/top-foods-high-biotin/" target="_blank">biotin sources</a><br><br>
 	A - <a href="https://en.wikipedia.org/wiki/Vitamin_A" target="_blank">Vitamin A</a><br>
 	C - <a href="https://en.wikipedia.org/wiki/Vitamin_C" target="_blank">Vitamin C</a><br>
 	E - <a href="https://en.wikipedia.org/wiki/Vitamin_E" target="_blank">Vitamin E</a><br>
@@ -284,7 +281,8 @@ color:black ;
 	Om6 - <a href="https://en.wikipedia.org/wiki/Linoleic_acid" target="_blank">Linoleic acid</a><br>
 	Om3 - <a href="https://en.wikipedia.org/wiki/Alpha-Linolenic_acid" target="_blank">Alpha-Linolenic acid</a><br>
 	Pr - <a href="https://en.wikipedia.org/wiki/Protein" target="_blank">Protein</a><br>
-	kcal - <a href="https://en.wikipedia.org/wiki/Calorie" target="_blank">calorie</a>
+	kcal - <a href="https://en.wikipedia.org/wiki/Calorie" target="_blank">calorie</a><br><br>
+	<a href="https://www.md-health.com/chromium-rich-foods.html" target="_blank">broccoli, sweet potato, corn, oats, green beans, grapes and tomatoes are rich in chloride! You have to eat some of those!</a><br><br>
 <script>
 	var a=document.getElementsByTagName("a");
 	var h=document.getElementsByTagName("h2");
@@ -422,7 +420,7 @@ case 82: plants=[10,44.6,0.1,0.6,0.085,4.7,0.0874,0.087,0.1623,0.0793,0.0377,37.
 case 84: plants=[10,35.3,0,0.45,0,0,0.087,0.0211,0.2605,0.214,0.054,47.9,5.6,0.65,4.7,0,28.1,0,0.33,0.0677,0.0006,0.0008,6.3,1.07,0.1,2.5,0,0,0,0,0,0,0,0,0,0,0];break; //lentil 
 case 86: plants=[10,58.4,0,0.14,3.517,0,0.148,0.0355,0.8335,0.113,0.1345,22.7,7.8,0.525,32.5,0.195,66,0,0.5,64.5,0.0009,0.0005,2,0.86,5.146,2.078,5.51,0,0,0,0,0,25.2,0,0,0,0];break; //sunflower seeds
 case 88: plants=[10,1.8,4.2,1.4,0.054,0.79,0.0037,0,0.0594,0,0.008,0,0,0,1.1,0.0114,2.4,0,0,0.0237,0,0.0095,0.39,0.12,0.02,0.09,0,0,0,0,0,0,0,0,0,0,0];break; //tomato
-case 90: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46];break; //iodized salt
+case 90: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46];break; //iodized salt
 case 92: plants=[10,65.4,0.1,0.13,0.07,0.27,0.0341,0.015,0.1125,0.057,0.0537,9.8,9.8,0.291,15.8,0.3414,34.6,0,0.309,0.0441,0.0002,0.0005,1.371,0.67,6.521,1.523,0,0,0,0,0,0,8.7,0,0,0,0];break; //walnut
 case 94: plants=[10,62.8,0.1,0.63,1.503,1.42,0.0643,0.0113,0.18,0.0918,0.0563,11.3,11.4,0.47,16.3,0.6175,29,0.24,0.245,0.068,0,0.0005,1.67,0.97,6.075,1.495,0,0,0,0,0,0,0,0,0,0,0];break; //hazelnut
 case 96: plants=[10,57,0,0,0.66,0,0.06,0.03,1.29,0.18,0.03,24.6,6.2,0.2,18.4,0.2,33.6,0,0.33,0.0332,0,0.0004,2.1,0.9,4.8,2.5,0,0,0,0,0,0,0,0,0,0,0];break; //peanut
@@ -434,6 +432,7 @@ case 106: plants=[10,8.6,0.9,0.68,0,0,0.02,0,0.17,0,0,4.6,0,0.052,3.7,0,0,0,0,0.
 case 108: plants=[10,4.1,83.5,0.59,0.066,1.32,0.0066,0.0058,0.0983,0.0273,0.0138,1.9,3.3,0.03,1.2,0.0143,3.5,0,0.024,0.032,0.0069,0.0088,0.96,0.28,0.024,0.093,0,0,0,0,0,0,0,0,0,0,0];break; //carrot 	
 case 110: plants=[10,3.4,3.1,8.92,0.078,10.16,0.0071,0.0117,0.0639,0.0573,0.0175,6.3,4.7,0.073,2.1,0.021,6.6,0,0.041,0.0316,0.0033,8.93,0.664,0.26,0.037,0.282,1.9,0,0,0,0,0,0,0,0,0,0];break; //broccoli
 case 112: plants=[10,3.1,3.5,1.22,0,1.44,0.0082,0.0104,0.0734,0.0225,0.0141,3.3,3.7,0.103,2.5,0.0216,3.8,0,0.024,0.0211,0,0,0.697,0.27,0.022,0.183,0,0,0,0,0,0,0,0,0,0.0019,0];break; //green bean
+case 114: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0.6,0,0,0];break; //table salt
 	}  
 	document.getElementById(x).innerHTML = Math.round((document.getElementById(x).innerHTML*1+plants[0]*type)*10000)/10000;//quantity
 	h[0].innerHTML = h[0].innerHTML*1+plants[2]*type;h[0].innerHTML=Math.round(h[0].innerHTML*10000)/10000;//vitamin a
