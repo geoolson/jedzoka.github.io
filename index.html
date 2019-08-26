@@ -1,9 +1,10 @@
+
  <!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/123/123234.png" />
+	<link rel="icon" type="image/png" href="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/256/32362-ear-of-corn-icon.png" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>SimPlant</title>
 <style>
@@ -17,24 +18,55 @@ body {
         -ms-user-select: none; 
             user-select: none;
 }	
-a {
-text-decoration:none;
-text-overflow: hidden;
+button {
+	width:100%;
+	height:50px;
 }
-h4 {
-color:green;
+select {
+	width:32%;
+	height:45px;
 }
-.images {
-	width:100px;
-	height:60px;
+table {
+  border-collapse: collapse;
+    width: 100%;
+  height: 100%;
+  font-size:17px;
+}
+td {
+  max-width: 0;
+  white-space: nowrap;
+  border: 1px solid black;
+  font-weight: bold;
+  color:#f916c1;
+  text-align:left;
 }
 h6 {
 	display:inline; 
 	color:#f2840e;
 }
-button {
-	width:100%;
-	height:50px;
+h2 {
+display:inline; 
+font-size:17px;
+color:black ;
+}
+div.scrollmenu {
+	height:370px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: scroll;   
+}
+.plant {
+	text-overflow: hidden;
+	overflow: hidden;
+	border: 1px solid #000000;
+	width:100px;
+	height:175px;
+	float:left;         
+}
+.images {
+	display:none;
+	width:100px;
+	height:60px;
 }
 .buttons {
 	  width: 44px;
@@ -45,55 +77,21 @@ button {
       font-size:32px;
 	  float:left;
 }
-.plant {
-	text-overflow: hidden;
-	overflow: hidden;
-	border: 1px solid #000000;
-	width:100px;
-	height:175px;
-	float:left;         
-}
-div.scrollmenu {
-	height:370px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    overflow: scroll;
-    
-}
-table {
-  border-collapse: collapse;
-    width: 100%;
-  height: 100%;
-  font-size:17px;
-}
-td {
-    max-width: 0;
-    
-    white-space: nowrap;
-    border: 1px solid black;
-  font-weight: bold;
-  color:#f916c1;
-  text-align:left;
-}
-.select {
-	width:32%;
-	height:45px;
-}
-h2 {
-display:inline; 
-font-size:17px;
-color:black ;
+a {
+text-decoration:none;
+text-overflow: hidden;
 }
 </style>
 </head>
 <body>
-		  	<select id="gender" class="select" onchange="set()">
+<button type="button" onclick="load()" id="load">LOAD IMAGES</button>
+<select id="gender" onchange="set()">
   <option value="a">man</option>
   <option value="b">woman</option>
   <option value="c">pregnancy</option>
   <option value="d">lactation</option>
 </select>
-<select id="age" class="select" onchange="set()">
+<select id="age" onchange="set()">
   <option selected="selected">select age group</option>
   <option value="1">0-6 months</option>
   <option value="2">7-12 months</option>
@@ -106,7 +104,7 @@ color:black ;
   <option value="9">51-70 years</option>
   <option value="0">+70 years</option><br>
 </select>
-<select id="time" class="select" onchange="set()">
+<select id="time" onchange="set()">
   <option value="1">1 day</option>
   <option value="7">7 days</option>
   <option value="30">30 days</option>
@@ -177,74 +175,73 @@ color:black ;
   </tr>
 </table>
 <div class=scrollmenu>
-<div class="plant"><img src="https://sanescohealth.com/wp-content/uploads/2015/11/b12-icon.png" class="images"><div class="buttons" onclick="calc(0)">+</div><div class="buttons" onclick="calc(1)">-</div><br><br><p id="0">0</p><a href="https://duckduckgo.com/?q=b12+supplement&t=brave&iax=images&ia=images" target="_blank" id="1">B12 supplement</a></div>
-<div class="plant"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Paris_RER_D_icon.svg/767px-Paris_RER_D_icon.svg.png" class="images"><div class="buttons" onclick="calc(2)">+</div><div class="buttons" onclick="calc(3)">-</div><br><br><p id="2">0</p><a href="https://duckduckgo.com/?q=d+supplement&t=brave&iar=images&iax=images&ia=images" target="_blank" id="3">D supplement</a></div>
-<div class="plant"><img src="https://assets.materialup.com/uploads/477f81a5-5ee5-4250-ac80-0ad8d0b56149/9Pws3DtvrfyWGm7xFfO4_s9KbT6G_2z58SF54lddRqvDvVhJ0g9YlNVRStr9U2sg4Q=w300" class="images"><div class="buttons" onclick="calc(4)">+</div><div class="buttons" onclick="calc(5)">-</div><br><br><p id="4">0</p><a href="https://duckduckgo.com/?q=iodine+supplement&t=brave&iar=images&iax=images&ia=images&iai=http%3A%2F%2Fmedia.mercola.com%2Fassets%2Fshopimages%2F18-2386-Product_Primary_Image.jpg" target="_blank" id="5">Iodine supplement</a></div>
-<div class="plant"><img src="https://conceptdraw.com/a1938c3/p26/preview/640/pict--iron-(fe)-chemical-elements---vector-stencils-library.png--diagram-flowchart-example.png" class="images"><div class="buttons" onclick="calc(6)">+</div><div class="buttons" onclick="calc(7)">-</div><br><br><p id="6">0</p><a href="https://duckduckgo.com/?q=iron+supplement&t=brave&iax=images&ia=images" target="_blank" id="7">Iron supplement</a></div>
-<div class="plant"><img src="https://sanescohealth.com/wp-content/uploads/2015/11/calcium-icon.png" class="images"><div class="buttons" onclick="calc(8)">+</div><div class="buttons" onclick="calc(9)">-</div><br><br><p id="8">0</p><a href="https://duckduckgo.com/?q=calcium+supplement&t=brave&iax=images&ia=images" target="_blank" id="9">Calcium supplement</a></div>
-<div class="plant"><img src="https://cdn.dribbble.com/users/172519/screenshots/2777877/zinc-app-icon-dribble_1x.png" class="images"><div class="buttons" onclick="calc(10)">+</div><div class="buttons" onclick="calc(11)">-</div><br><br><p id="10">0</p><a href="https://duckduckgo.com/?q=zinc+supplement&t=brave&iax=images&ia=images" target="_blank" id="11">Zinc supplement</a></div>
-<div class="plant"><img src="https://st2.depositphotos.com/1439888/11781/i/450/depositphotos_117810654-stock-photo-omega-symbol-3d-rendering.jpg" class="images"><div class="buttons" onclick="calc(12)">+</div><div class="buttons" onclick="calc(13)">-</div><br><br><p id="12">0</p><a href="https://duckduckgo.com/?q=omega-3+supplement&t=brave&iar=images&iax=images&ia=images" target="_blank" id="13">Omega-3 supplement</a></div>
-<div class="plant"><img src="https://i.pinimg.com/originals/cb/34/87/cb348746814fa9c282e975806fc1b524.jpg" class="images"><div class="buttons" onclick="calc(14)">+</div><div class="buttons" onclick="calc(15)">-</div><br><br><p id="14">0</p><a href="https://en.wikipedia.org/wiki/Water" target="_blank" id="15">water</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/02/05/11/11/soybeans-2039642__340.jpg" class="images"><div class="buttons" onclick="calc(82)">+</div><div class="buttons" onclick="calc(83)">-</div><br><br><p id="82">0</p><a href="https://en.wikipedia.org/wiki/Soybean" target="_blank" id="83">soybean</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2012/12/24/08/39/agriculture-72254__340.jpg" class="images"><div class="buttons" onclick="calc(104)">+</div><div class="buttons" onclick="calc(105)">-</div><br><br><p id="104">0</p><a href="https://en.wikipedia.org/wiki/Potato" target="_blank" id="105">potato</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/18/20/29/corn-1751321__340.jpg" class="images"><div class="buttons" onclick="calc(106)">+</div><div class="buttons" onclick="calc(107)">-</div><br><br><p id="106">0</p><a href="https://en.wikipedia.org/wiki/Sweet_corn" target="_blank" id="107">sweet corn</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/12/08/16/10/isolated-1083235__340.png" class="images"><div class="buttons" onclick="calc(108)">+</div><div class="buttons" onclick="calc(109)">-</div><br><br><p id="108">0</p><a href="https://en.wikipedia.org/wiki/Carrot" target="_blank" id="109">carrot</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/06/11/15/33/broccoli-1450274__340.png" class="images"><div class="buttons" onclick="calc(110)">+</div><div class="buttons" onclick="calc(111)">-</div><br><br><p id="110">0</p><a href="https://en.wikipedia.org/wiki/Broccoli" target="_blank" id="111">broccoli</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/07/14/21/44/green-2505076_1280.png" class="images"><div class="buttons" onclick="calc(112)">+</div><div class="buttons" onclick="calc(113)">-</div><br><br><p id="112">0</p><a href="https://en.wikipedia.org/wiki/Green_bean" target="_blank" id="113">green&nbspbean</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/09/51/garlic-1808__480.jpg" class="images"><div class="buttons" onclick="calc(16)">+</div><div class="buttons" onclick="calc(17)">-</div><br><br><p id="16">0</p><a href="https://en.wikipedia.org/wiki/Garlic" target="_blank" id="17">garlic</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/11/05/00/01/cucumbers-1799262__480.jpg" class="images"><div class="buttons" onclick="calc(18)">+</div><div class="buttons" onclick="calc(19)">-</div><br><br><p id="18">0</p><a href="https://en.wikipedia.org/wiki/Cucumber" target="_blank" id="19">cucumber</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/11/05/00/05/spinach-1799266__340.jpg" class="images"><div class="buttons" onclick="calc(20)">+</div><div class="buttons" onclick="calc(21)">-</div><br><br><p id="20">0</p><a href="https://en.wikipedia.org/wiki/Spinach" target="_blank" id="21">spinach</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/02/21/19/14/onion-bulbs-84722__340.jpg" class="images"><div class="buttons" onclick="calc(22)">+</div><div class="buttons" onclick="calc(23)">-</div><br><br><p id="22">0</p><a href="https://en.wikipedia.org/wiki/Onion" target="_blank" id="23">onion</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/09/51/sweet-1807__340.jpg" class="images"><div class="buttons" onclick="calc(24)">+</div><div class="buttons" onclick="calc(25)">-</div><br><br><p id="24">0</p><a href="https://en.wikipedia.org/wiki/Sweet_potato" target="_blank" id="25">sweet&nbsppotato</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2012/02/25/18/41/peas-16803__340.jpg" class="images"><div class="buttons" onclick="calc(26)">+</div><div class="buttons" onclick="calc(27)">-</div><br><br><p id="26">0</p><a href="https://en.wikipedia.org/wiki/Pea" target="_blank" id="27">pea</a></div>
-<div class="plant"><img src="https://4.bp.blogspot.com/-jTbdCCgobvU/WdabPYgjAkI/AAAAAAAAEIk/QSKbeZqawEYaJmH7VsrlzLvE8j-mGCM6QCEwYBhgL/s1600/asparagus.jpg" class="images"><div class="buttons" onclick="calc(28)">+</div><div class="buttons" onclick="calc(29)">-</div><br><br><p id="28">0</p><a href="https://en.wikipedia.org/wiki/Asparagus" target="_blank" id="29">asparagus</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/09/25/16/51/cabbage-957778__340.jpg" class="images"><div class="buttons" onclick="calc(30)">+</div><div class="buttons" onclick="calc(31)">-</div><br><br><p id="30">0</p><a href="https://en.wikipedia.org/wiki/Cauliflower" target="_blank" id="31">cauliflower</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2013/07/12/19/14/peppers-154377__340.png" class="images"><div class="buttons" onclick="calc(32)">+</div><div class="buttons" onclick="calc(33)">-</div><br><br><p id="32">0</p><a href="https://en.wikipedia.org/wiki/Bell_pepper" target="_blank" id="33">bell&nbsppepper</a></div>
-<div class="plant"><img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/2018/cdcbroadensr.jpg" class="images"><div class="buttons" onclick="calc(34)">+</div><div class="buttons" onclick="calc(35)">-</div><br><br><p id="34">0</p><a href="https://en.wikipedia.org/wiki/Romaine_lettuce" target="_blank" id="35">romaine&nbsplettuce</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/01/19/11/01/olives-1992013__340.png" class="images"><div class="buttons" onclick="calc(36)">+</div><div class="buttons" onclick="calc(37)">-</div><br><br><p id="36">0</p><a href="https://en.wikipedia.org/wiki/Olive" target="_blank" id="37">olive</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/09/12/22/14/avocado-937459_1280.png" class="images"><div class="buttons" onclick="calc(38)">+</div><div class="buttons" onclick="calc(39)">-</div><br><br><p id="38">0</p><a href="https://en.wikipedia.org/wiki/Avocado" target="_blank" id="39">avocado</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/04/05/11/39/kale-316559__340.jpg" class="images"><div class="buttons" onclick="calc(40)">+</div><div class="buttons" onclick="calc(41)">-</div><br><br><p id="40">0</p><a href="https://en.wikipedia.org/wiki/Cabbage" target="_blank" id="41">cabbage</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/22/01/lettuce-1239155__340.jpg" class="images"><div class="buttons" onclick="calc(42)">+</div><div class="buttons" onclick="calc(43)">-</div><br><br><p id="42">0</p><a href="https://en.wikipedia.org/wiki/Lettuce" target="_blank" id="43">lettuce</a></div>
-<div class="plant"><img src="https://www.telegraph.co.uk/content/dam/news/2016/12/03/sprouts-xlarge_trans_NvBQzQNjv4BqZgEkZX3M936N5BQK4Va8RWtT0gK_6EfZT336f62EI5U.jpg" class="images"><div class="buttons" onclick="calc(44)">+</div><div class="buttons" onclick="calc(45)">-</div><br><br><p id="44">0</p><a href="https://en.wikipedia.org/wiki/Brussels_sprout" target="_blank" id="45">brussels&nbspsprout</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2012/12/24/08/40/autumn-72294__340.jpg" class="images"><div class="buttons" onclick="calc(46)">+</div><div class="buttons" onclick="calc(47)">-</div><br><br><p id="46">0</p><a href="https://en.wikipedia.org/wiki/Pumpkin" target="_blank" id="47">pumpkin</a></div>
-<div class="plant"><img src="https://1.bp.blogspot.com/-pr8tPp_CGEg/TahN_vD0_eI/AAAAAAAAAY4/qkrexp-HK14/s1600/yellow-corn-01.jpg" class="images"><div class="buttons" onclick="calc(48)">+</div><div class="buttons" onclick="calc(49)">-</div><br><br><p id="48">0</p><a href="https://en.wikipedia.org/wiki/Maize" target="_blank" id="49">maize</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/10/09/13/39/red-beets-1725799__340.jpg" class="images"><div class="buttons" onclick="calc(50)">+</div><div class="buttons" onclick="calc(51)">-</div><br><br><p id="50">0</p><a href="https://en.wikipedia.org/wiki/Beetroot" target="_blank" id="51">beet</a></div>
-<div class="plant"><img src="https://freepngimg.com/download/strawberry/23165-5-strawberry-transparent.png" class="images"><div class="buttons" onclick="calc(52)">+</div><div class="buttons" onclick="calc(53)">-</div><br><br><p id="52">0</p><a href="https://en.wikipedia.org/wiki/Strawberry" target="_blank" id="53">strawberry</a></div>
-<div class="plant"><img src="https://4.bp.blogspot.com/-GDcrrf_mbMg/U4TOgzgHK_I/AAAAAAAACwU/rbSEljOCbC0/s1600/Watermelon-Wallpaper+HD.jpg+(16).jpg" class="images"><div class="buttons" onclick="calc(54)">+</div><div class="buttons" onclick="calc(55)">-</div><br><br><p id="54">0</p><a href="https://en.wikipedia.org/wiki/Watermelon" target="_blank" id="55">watermelon</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/02/02/14/04/grapes-2032838__340.jpg" class="images"><div class="buttons" onclick="calc(56)">+</div><div class="buttons" onclick="calc(57)">-</div><br><br><p id="56">0</p><a href="https://en.wikipedia.org/wiki/Grape" target="_blank" id="57">grape</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/01/17/14/27/oranges-602271__340.jpg" class="images"><div class="buttons" onclick="calc(58)">+</div><div class="buttons" onclick="calc(59)">-</div><br><br><p id="58">0</p><a href="https://en.wikipedia.org/wiki/Orange_(fruit)" target="_blank" id="59">orange</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/06/27/22/21/banana-2449019__340.jpg" class="images"><div class="buttons" onclick="calc(60)">+</div><div class="buttons" onclick="calc(61)">-</div><br><br><p id="60">0</p><a href="https://en.wikipedia.org/wiki/Banana" target="_blank" id="61">banana</a></div>
-<div class="plant"><img src="https://purepng.com/public/uploads/large/purepng.com-mangomangofruithalvedfrontalfullsweetfresh-481521564634qp959.png" class="images"><div class="buttons" onclick="calc(62)">+</div><div class="buttons" onclick="calc(63)">-</div><br><br><p id="62">0</p><a href="https://en.wikipedia.org/wiki/Mango" target="_blank" id="63">mango</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/06/24/10/25/fruit-1477016__340.jpg" class="images"><div class="buttons" onclick="calc(64)">+</div><div class="buttons" onclick="calc(65)">-</div><br><br><p id="64">0</p><a href="https://en.wikipedia.org/wiki/Pineapple" target="_blank" id="65">pineapple</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/11/18/13/47/apple-1834639__340.jpg" class="images"><div class="buttons" onclick="calc(66)">+</div><div class="buttons" onclick="calc(67)">-</div><br><br><p id="66">0</p><a href="https://en.wikipedia.org/wiki/Apple" target="_blank" id="67">apple</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/11/20/13/54/blueberry-539135__340.png" class="images"><div class="buttons" onclick="calc(68)">+</div><div class="buttons" onclick="calc(69)">-</div><br><br><p id="68">0</p><a href="https://en.wikipedia.org/wiki/Blueberry" target="_blank" id="69">blueberry</a></div>
-<div class="plant"><img src="https://www.sagefruit.com/wp-content/uploads/2016/08/sweet-cherries-1500435_1920-2.jpg" class="images"><div class="buttons" onclick="calc(70)">+</div><div class="buttons" onclick="calc(71)">-</div><br><br><p id="70">0</p><a href="https://en.m.wikipedia.org/wiki/Cherry" target="_blank" id="71">sweet&nbspcherry</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2017/04/28/17/12/raspberries-2268901__340.jpg" class="images"><div class="buttons" onclick="calc(72)">+</div><div class="buttons" onclick="calc(73)">-</div><br><br><p id="72">0</p><a href="https://en.wikipedia.org/wiki/Raspberry" target="_blank" id="73">raspberry</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/10/06/food-2280__340.jpg" class="images"><div class="buttons" onclick="calc(74)">+</div><div class="buttons" onclick="calc(75)">-</div><br><br><p id="74">0</p><a href="https://en.wikipedia.org/wiki/Pear" target="_blank" id="75">pear</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2010/12/13/10/05/berry-2275__340.jpg" class="images"><div class="buttons" onclick="calc(76)">+</div><div class="buttons" onclick="calc(77)">-</div><br><br><p id="76">0</p><a href="https://en.wikipedia.org/wiki/Blackberry" target="_blank" id="77">blackberry</a></div>
-<div class="plant"><img src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c18f.png" class="images"><div class="buttons" onclick="calc(78)">+</div><div class="buttons" onclick="calc(79)">-</div><br><br><p id="78">0</p><a href="https://en.wikipedia.org/wiki/Plum" target="_blank" id="79">plum</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/22/17/food-1239236__340.jpg" class="images"><div class="buttons" onclick="calc(80)">+</div><div class="buttons" onclick="calc(81)">-</div><br><br><p id="80">0</p><a href="https://en.wikipedia.org/wiki/Lemon" target="_blank" id="81">lemon</a></div>
-<div class="plant"><img src="https://www.pngarts.com/files/1/Lentils-Transparent-Background-PNG.png" class="images"><div class="buttons" onclick="calc(84)">+</div><div class="buttons" onclick="calc(85)">-</div><br><br><p id="84">0</p><a href="https://en.wikipedia.org/wiki/Lentil" target="_blank" id="85">lentil</a></div>
-<div class="plant"><img src="https://68.media.tumblr.com/00babeba879dbf46359c23d24c91ac3a/tumblr_oat58qf77m1rw3evyo1_500.png" class="images"><div class="buttons" onclick="calc(86)">+</div><div class="buttons" onclick="calc(87)">-</div><br><br><p id="86">0</p><a href="https://en.wikipedia.org/wiki/Sunflower_seed" target="_blank" id="87">sunflower&nbspseed</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2018/01/09/22/16/walnut-3072652__480.jpg" class="images"><div class="buttons" onclick="calc(92)">+</div><div class="buttons" onclick="calc(93)">-</div><br><br><p id="92">0</p><a href="https://en.m.wikipedia.org/wiki/Walnut" target="_blank" id="93">walnut</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/03/05/22/06/tomatoes-1239177__480.jpg" class="images"><div class="buttons" onclick="calc(88)">+</div><div class="buttons" onclick="calc(89)">-</div><br><br><p id="88">0</p><a href="https://en.wikipedia.org/wiki/Tomato" target="_blank" id="89">tomato</a></div>
-<div class="plant"><img src="https://img00.deviantart.net/d3a0/i/2017/217/e/2/particles_of_salt_on_a_transparent_background__by_prussiaart-dbiyssp.png" class="images"><div class="buttons" onclick="calc(90)">+</div><div class="buttons" onclick="calc(91)">-</div><br><br><p id="90">0</p><a href="https://www.healthline.com/nutrition/iodized-salt#safety" target="_blank" id="91">iodized&nbspsalt</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/01/06/15/26/nuts-1124331__480.jpg" class="images"><div class="buttons" onclick="calc(94)">+</div><div class="buttons" onclick="calc(95)">-</div><br><br><p id="94">0</p><a href="https://en.wikipedia.org/wiki/Hazelnut" target="_blank" id="95">hazelnut</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2014/07/11/17/28/peanut-390081_960_720.jpg" class="images"><div class="buttons" onclick="calc(96)">+</div><div class="buttons" onclick="calc(97)">-</div><br><br><p id="96">0</p><a href="https://en.wikipedia.org/wiki/Peanut" target="_blank" id="97">peanut</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2016/02/22/03/46/pecans-1214697__480.jpg" class="images"><div class="buttons" onclick="calc(98)">+</div><div class="buttons" onclick="calc(99)">-</div><br><br><p id="98">0</p><a href="https://en.m.wikipedia.org/wiki/Pecan" target="_blank" id="99">pecan</a></div>
-<div class="plant"><img src="https://morejuicepress.com/wp-content/themes/MoreJuicePress/img/tofu.png" class="images"><div class="buttons" onclick="calc(100)">+</div><div class="buttons" onclick="calc(101)">-</div><br><br><p id="100">0</p><a href="https://en.wikipedia.org/wiki/Tofu" target="_blank" id="101">tofu</a></div>
-<div class="plant"><img src="https://cdn.pixabay.com/photo/2015/01/30/10/49/raisins-617416__340.jpg" class="images"><div class="buttons" onclick="calc(102)">+</div><div class="buttons" onclick="calc(103)">-</div><br><br><p id="102">0</p><a href="https://en.wikipedia.org/wiki/Raisin" target="_blank" id="103">raisin</a></div>
-<div class="plant"><img src="https://66.media.tumblr.com/2bd6d58e53c8428b9dd955747707c748/tumblr_inline_nam8htGWqf1rhel8u.png" class="images"><div class="buttons" onclick="calc(114)">+</div><div class="buttons" onclick="calc(115)">-</div><br><br><p id="114">0</p><a href="https://www.healthline.com/health/sodium-chloride#medical-use" target="_blank" id="115">table salt</a></div>
+<div class="plant"><img alt="https://sanescohealth.com/wp-content/uploads/2015/11/b12-icon.png" class="images"><div class="buttons" onclick="calc(0)">+</div><div class="buttons" onclick="calc(1)">-</div><br><br><p id="0">0</p><a href="https://duckduckgo.com/?q=b12+supplement&t=brave&iax=images&ia=images" target="_blank" id="1">B12 supplement</a></div>
+<div class="plant"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Paris_RER_D_icon.svg/767px-Paris_RER_D_icon.svg.png" class="images"><div class="buttons" onclick="calc(2)">+</div><div class="buttons" onclick="calc(3)">-</div><br><br><p id="2">0</p><a href="https://duckduckgo.com/?q=d+supplement&t=brave&iar=images&iax=images&ia=images" target="_blank" id="3">D supplement</a></div>
+<div class="plant"><img alt="https://assets.materialup.com/uploads/477f81a5-5ee5-4250-ac80-0ad8d0b56149/9Pws3DtvrfyWGm7xFfO4_s9KbT6G_2z58SF54lddRqvDvVhJ0g9YlNVRStr9U2sg4Q=w300" class="images"><div class="buttons" onclick="calc(4)">+</div><div class="buttons" onclick="calc(5)">-</div><br><br><p id="4">0</p><a href="https://duckduckgo.com/?q=iodine+supplement&t=brave&iar=images&iax=images&ia=images&iai=http%3A%2F%2Fmedia.mercola.com%2Fassets%2Fshopimages%2F18-2386-Product_Primary_Image.jpg" target="_blank" id="5">Iodine supplement</a></div>
+<div class="plant"><img alt="https://conceptdraw.com/a1938c3/p26/preview/640/pict--iron-(fe)-chemical-elements---vector-stencils-library.png--diagram-flowchart-example.png" class="images"><div class="buttons" onclick="calc(6)">+</div><div class="buttons" onclick="calc(7)">-</div><br><br><p id="6">0</p><a href="https://duckduckgo.com/?q=iron+supplement&t=brave&iax=images&ia=images" target="_blank" id="7">Iron supplement</a></div>
+<div class="plant"><img alt="https://sanescohealth.com/wp-content/uploads/2015/11/calcium-icon.png" class="images"><div class="buttons" onclick="calc(8)">+</div><div class="buttons" onclick="calc(9)">-</div><br><br><p id="8">0</p><a href="https://duckduckgo.com/?q=calcium+supplement&t=brave&iax=images&ia=images" target="_blank" id="9">Calcium supplement</a></div>
+<div class="plant"><img alt="https://cdn.dribbble.com/users/172519/screenshots/2777877/zinc-app-icon-dribble_1x.png" class="images"><div class="buttons" onclick="calc(10)">+</div><div class="buttons" onclick="calc(11)">-</div><br><br><p id="10">0</p><a href="https://duckduckgo.com/?q=zinc+supplement&t=brave&iax=images&ia=images" target="_blank" id="11">Zinc supplement</a></div>
+<div class="plant"><img alt="https://st2.depositphotos.com/1439888/11781/i/450/depositphotos_117810654-stock-photo-omega-symbol-3d-rendering.jpg" class="images"><div class="buttons" onclick="calc(12)">+</div><div class="buttons" onclick="calc(13)">-</div><br><br><p id="12">0</p><a href="https://duckduckgo.com/?q=omega-3+supplement&t=brave&iar=images&iax=images&ia=images" target="_blank" id="13">Omega-3 supplement</a></div>
+<div class="plant"><img alt="https://i.pinimg.com/originals/cb/34/87/cb348746814fa9c282e975806fc1b524.jpg" class="images"><div class="buttons" onclick="calc(14)">+</div><div class="buttons" onclick="calc(15)">-</div><br><br><p id="14">0</p><a href="https://en.wikipedia.org/wiki/Water" target="_blank" id="15">water</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2017/02/05/11/11/soybeans-2039642__340.jpg" class="images"><div class="buttons" onclick="calc(82)">+</div><div class="buttons" onclick="calc(83)">-</div><br><br><p id="82">0</p><a href="https://en.wikipedia.org/wiki/Soybean" target="_blank" id="83">soybean</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2012/12/24/08/39/agriculture-72254__340.jpg" class="images"><div class="buttons" onclick="calc(104)">+</div><div class="buttons" onclick="calc(105)">-</div><br><br><p id="104">0</p><a href="https://en.wikipedia.org/wiki/Potato" target="_blank" id="105">potato</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/10/18/20/29/corn-1751321__340.jpg" class="images"><div class="buttons" onclick="calc(106)">+</div><div class="buttons" onclick="calc(107)">-</div><br><br><p id="106">0</p><a href="https://en.wikipedia.org/wiki/Sweet_corn" target="_blank" id="107">sweet corn</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2015/12/08/16/10/isolated-1083235__340.png" class="images"><div class="buttons" onclick="calc(108)">+</div><div class="buttons" onclick="calc(109)">-</div><br><br><p id="108">0</p><a href="https://en.wikipedia.org/wiki/Carrot" target="_blank" id="109">carrot</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/06/11/15/33/broccoli-1450274__340.png" class="images"><div class="buttons" onclick="calc(110)">+</div><div class="buttons" onclick="calc(111)">-</div><br><br><p id="110">0</p><a href="https://en.wikipedia.org/wiki/Broccoli" target="_blank" id="111">broccoli</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2017/07/14/21/44/green-2505076_1280.png" class="images"><div class="buttons" onclick="calc(112)">+</div><div class="buttons" onclick="calc(113)">-</div><br><br><p id="112">0</p><a href="https://en.wikipedia.org/wiki/Green_bean" target="_blank" id="113">green&nbspbean</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2010/12/13/09/51/garlic-1808__480.jpg" class="images"><div class="buttons" onclick="calc(16)">+</div><div class="buttons" onclick="calc(17)">-</div><br><br><p id="16">0</p><a href="https://en.wikipedia.org/wiki/Garlic" target="_blank" id="17">garlic</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/11/05/00/01/cucumbers-1799262__480.jpg" class="images"><div class="buttons" onclick="calc(18)">+</div><div class="buttons" onclick="calc(19)">-</div><br><br><p id="18">0</p><a href="https://en.wikipedia.org/wiki/Cucumber" target="_blank" id="19">cucumber</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/11/05/00/05/spinach-1799266__340.jpg" class="images"><div class="buttons" onclick="calc(20)">+</div><div class="buttons" onclick="calc(21)">-</div><br><br><p id="20">0</p><a href="https://en.wikipedia.org/wiki/Spinach" target="_blank" id="21">spinach</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2013/02/21/19/14/onion-bulbs-84722__340.jpg" class="images"><div class="buttons" onclick="calc(22)">+</div><div class="buttons" onclick="calc(23)">-</div><br><br><p id="22">0</p><a href="https://en.wikipedia.org/wiki/Onion" target="_blank" id="23">onion</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2010/12/13/09/51/sweet-1807__340.jpg" class="images"><div class="buttons" onclick="calc(24)">+</div><div class="buttons" onclick="calc(25)">-</div><br><br><p id="24">0</p><a href="https://en.wikipedia.org/wiki/Sweet_potato" target="_blank" id="25">sweet&nbsppotato</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2012/02/25/18/41/peas-16803__340.jpg" class="images"><div class="buttons" onclick="calc(26)">+</div><div class="buttons" onclick="calc(27)">-</div><br><br><p id="26">0</p><a href="https://en.wikipedia.org/wiki/Pea" target="_blank" id="27">pea</a></div>
+<div class="plant"><img alt="https://4.bp.blogspot.com/-jTbdCCgobvU/WdabPYgjAkI/AAAAAAAAEIk/QSKbeZqawEYaJmH7VsrlzLvE8j-mGCM6QCEwYBhgL/s1600/asparagus.jpg" class="images"><div class="buttons" onclick="calc(28)">+</div><div class="buttons" onclick="calc(29)">-</div><br><br><p id="28">0</p><a href="https://en.wikipedia.org/wiki/Asparagus" target="_blank" id="29">asparagus</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2015/09/25/16/51/cabbage-957778__340.jpg" class="images"><div class="buttons" onclick="calc(30)">+</div><div class="buttons" onclick="calc(31)">-</div><br><br><p id="30">0</p><a href="https://en.wikipedia.org/wiki/Cauliflower" target="_blank" id="31">cauliflower</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2013/07/12/19/14/peppers-154377__340.png" class="images"><div class="buttons" onclick="calc(32)">+</div><div class="buttons" onclick="calc(33)">-</div><br><br><p id="32">0</p><a href="https://en.wikipedia.org/wiki/Bell_pepper" target="_blank" id="33">bell pepper</a></div>
+<div class="plant"><img alt="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/2018/cdcbroadensr.jpg" class="images"><div class="buttons" onclick="calc(34)">+</div><div class="buttons" onclick="calc(35)">-</div><br><br><p id="34">0</p><a href="https://en.wikipedia.org/wiki/Romaine_lettuce" target="_blank" id="35">romaine lettuce</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2017/01/19/11/01/olives-1992013__340.png" class="images"><div class="buttons" onclick="calc(36)">+</div><div class="buttons" onclick="calc(37)">-</div><br><br><p id="36">0</p><a href="https://en.wikipedia.org/wiki/Olive" target="_blank" id="37">olive</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2015/09/12/22/14/avocado-937459_1280.png" class="images"><div class="buttons" onclick="calc(38)">+</div><div class="buttons" onclick="calc(39)">-</div><br><br><p id="38">0</p><a href="https://en.wikipedia.org/wiki/Avocado" target="_blank" id="39">avocado</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2014/04/05/11/39/kale-316559__340.jpg" class="images"><div class="buttons" onclick="calc(40)">+</div><div class="buttons" onclick="calc(41)">-</div><br><br><p id="40">0</p><a href="https://en.wikipedia.org/wiki/Cabbage" target="_blank" id="41">cabbage</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/03/05/22/01/lettuce-1239155__340.jpg" class="images"><div class="buttons" onclick="calc(42)">+</div><div class="buttons" onclick="calc(43)">-</div><br><br><p id="42">0</p><a href="https://en.wikipedia.org/wiki/Lettuce" target="_blank" id="43">lettuce</a></div>
+<div class="plant"><img alt="https://www.telegraph.co.uk/content/dam/news/2016/12/03/sprouts-xlarge_trans_NvBQzQNjv4BqZgEkZX3M936N5BQK4Va8RWtT0gK_6EfZT336f62EI5U.jpg" class="images"><div class="buttons" onclick="calc(44)">+</div><div class="buttons" onclick="calc(45)">-</div><br><br><p id="44">0</p><a href="https://en.wikipedia.org/wiki/Brussels_sprout" target="_blank" id="45">brussels sprout</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2012/12/24/08/40/autumn-72294__340.jpg" class="images"><div class="buttons" onclick="calc(46)">+</div><div class="buttons" onclick="calc(47)">-</div><br><br><p id="46">0</p><a href="https://en.wikipedia.org/wiki/Pumpkin" target="_blank" id="47">pumpkin</a></div>
+<div class="plant"><img alt="https://1.bp.blogspot.com/-pr8tPp_CGEg/TahN_vD0_eI/AAAAAAAAAY4/qkrexp-HK14/s1600/yellow-corn-01.jpg" class="images"><div class="buttons" onclick="calc(48)">+</div><div class="buttons" onclick="calc(49)">-</div><br><br><p id="48">0</p><a href="https://en.wikipedia.org/wiki/Maize" target="_blank" id="49">maize</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/10/09/13/39/red-beets-1725799__340.jpg" class="images"><div class="buttons" onclick="calc(50)">+</div><div class="buttons" onclick="calc(51)">-</div><br><br><p id="50">0</p><a href="https://en.wikipedia.org/wiki/Beetroot" target="_blank" id="51">beet</a></div>
+<div class="plant"><img alt="https://freepngimg.com/download/strawberry/23165-5-strawberry-transparent.png" class="images"><div class="buttons" onclick="calc(52)">+</div><div class="buttons" onclick="calc(53)">-</div><br><br><p id="52">0</p><a href="https://en.wikipedia.org/wiki/Strawberry" target="_blank" id="53">strawberry</a></div>
+<div class="plant"><img alt="https://4.bp.blogspot.com/-GDcrrf_mbMg/U4TOgzgHK_I/AAAAAAAACwU/rbSEljOCbC0/s1600/Watermelon-Wallpaper+HD.jpg+(16).jpg" class="images"><div class="buttons" onclick="calc(54)">+</div><div class="buttons" onclick="calc(55)">-</div><br><br><p id="54">0</p><a href="https://en.wikipedia.org/wiki/Watermelon" target="_blank" id="55">watermelon</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2017/02/02/14/04/grapes-2032838__340.jpg" class="images"><div class="buttons" onclick="calc(56)">+</div><div class="buttons" onclick="calc(57)">-</div><br><br><p id="56">0</p><a href="https://en.wikipedia.org/wiki/Grape" target="_blank" id="57">grape</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2015/01/17/14/27/oranges-602271__340.jpg" class="images"><div class="buttons" onclick="calc(58)">+</div><div class="buttons" onclick="calc(59)">-</div><br><br><p id="58">0</p><a href="https://en.wikipedia.org/wiki/Orange_(fruit)" target="_blank" id="59">orange</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2017/06/27/22/21/banana-2449019__340.jpg" class="images"><div class="buttons" onclick="calc(60)">+</div><div class="buttons" onclick="calc(61)">-</div><br><br><p id="60">0</p><a href="https://en.wikipedia.org/wiki/Banana" target="_blank" id="61">banana</a></div>
+<div class="plant"><img alt="https://purepng.com/public/uploads/large/purepng.com-mangomangofruithalvedfrontalfullsweetfresh-481521564634qp959.png" class="images"><div class="buttons" onclick="calc(62)">+</div><div class="buttons" onclick="calc(63)">-</div><br><br><p id="62">0</p><a href="https://en.wikipedia.org/wiki/Mango" target="_blank" id="63">mango</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/06/24/10/25/fruit-1477016__340.jpg" class="images"><div class="buttons" onclick="calc(64)">+</div><div class="buttons" onclick="calc(65)">-</div><br><br><p id="64">0</p><a href="https://en.wikipedia.org/wiki/Pineapple" target="_blank" id="65">pineapple</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/11/18/13/47/apple-1834639__340.jpg" class="images"><div class="buttons" onclick="calc(66)">+</div><div class="buttons" onclick="calc(67)">-</div><br><br><p id="66">0</p><a href="https://en.wikipedia.org/wiki/Apple" target="_blank" id="67">apple</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2014/11/20/13/54/blueberry-539135__340.png" class="images"><div class="buttons" onclick="calc(68)">+</div><div class="buttons" onclick="calc(69)">-</div><br><br><p id="68">0</p><a href="https://en.wikipedia.org/wiki/Blueberry" target="_blank" id="69">blueberry</a></div>
+<div class="plant"><img alt="https://www.sagefruit.com/wp-content/uploads/2016/08/sweet-cherries-1500435_1920-2.jpg" class="images"><div class="buttons" onclick="calc(70)">+</div><div class="buttons" onclick="calc(71)">-</div><br><br><p id="70">0</p><a href="https://en.m.wikipedia.org/wiki/Cherry" target="_blank" id="71">sweet cherry</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2017/04/28/17/12/raspberries-2268901__340.jpg" class="images"><div class="buttons" onclick="calc(72)">+</div><div class="buttons" onclick="calc(73)">-</div><br><br><p id="72">0</p><a href="https://en.wikipedia.org/wiki/Raspberry" target="_blank" id="73">raspberry</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2010/12/13/10/06/food-2280__340.jpg" class="images"><div class="buttons" onclick="calc(74)">+</div><div class="buttons" onclick="calc(75)">-</div><br><br><p id="74">0</p><a href="https://en.wikipedia.org/wiki/Pear" target="_blank" id="75">pear</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2010/12/13/10/05/berry-2275__340.jpg" class="images"><div class="buttons" onclick="calc(76)">+</div><div class="buttons" onclick="calc(77)">-</div><br><br><p id="76">0</p><a href="https://en.wikipedia.org/wiki/Blackberry" target="_blank" id="77">blackberry</a></div>
+<div class="plant"><img alt="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c18f.png" class="images"><div class="buttons" onclick="calc(78)">+</div><div class="buttons" onclick="calc(79)">-</div><br><br><p id="78">0</p><a href="https://en.wikipedia.org/wiki/Plum" target="_blank" id="79">plum</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/03/05/22/17/food-1239236__340.jpg" class="images"><div class="buttons" onclick="calc(80)">+</div><div class="buttons" onclick="calc(81)">-</div><br><br><p id="80">0</p><a href="https://en.wikipedia.org/wiki/Lemon" target="_blank" id="81">lemon</a></div>
+<div class="plant"><img alt="https://www.pngarts.com/files/1/Lentils-Transparent-Background-PNG.png" class="images"><div class="buttons" onclick="calc(84)">+</div><div class="buttons" onclick="calc(85)">-</div><br><br><p id="84">0</p><a href="https://en.wikipedia.org/wiki/Lentil" target="_blank" id="85">lentil</a></div>
+<div class="plant"><img alt="https://68.media.tumblr.com/00babeba879dbf46359c23d24c91ac3a/tumblr_oat58qf77m1rw3evyo1_500.png" class="images"><div class="buttons" onclick="calc(86)">+</div><div class="buttons" onclick="calc(87)">-</div><br><br><p id="86">0</p><a href="https://en.wikipedia.org/wiki/Sunflower_seed" target="_blank" id="87">sunflower seed</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2018/01/09/22/16/walnut-3072652__480.jpg" class="images"><div class="buttons" onclick="calc(92)">+</div><div class="buttons" onclick="calc(93)">-</div><br><br><p id="92">0</p><a href="https://en.m.wikipedia.org/wiki/Walnut" target="_blank" id="93">walnut</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/03/05/22/06/tomatoes-1239177__480.jpg" class="images"><div class="buttons" onclick="calc(88)">+</div><div class="buttons" onclick="calc(89)">-</div><br><br><p id="88">0</p><a href="https://en.wikipedia.org/wiki/Tomato" target="_blank" id="89">tomato</a></div>
+<div class="plant"><img alt="https://img00.deviantart.net/d3a0/i/2017/217/e/2/particles_of_salt_on_a_transparent_background__by_prussiaart-dbiyssp.png" class="images"><div class="buttons" onclick="calc(90)">+</div><div class="buttons" onclick="calc(91)">-</div><br><br><p id="90">0</p><a href="https://www.healthline.com/nutrition/iodized-salt#safety" target="_blank" id="91">iodized salt</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/01/06/15/26/nuts-1124331__480.jpg" class="images"><div class="buttons" onclick="calc(94)">+</div><div class="buttons" onclick="calc(95)">-</div><br><br><p id="94">0</p><a href="https://en.wikipedia.org/wiki/Hazelnut" target="_blank" id="95">hazelnut</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2014/07/11/17/28/peanut-390081_960_720.jpg" class="images"><div class="buttons" onclick="calc(96)">+</div><div class="buttons" onclick="calc(97)">-</div><br><br><p id="96">0</p><a href="https://en.wikipedia.org/wiki/Peanut" target="_blank" id="97">peanut</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2016/02/22/03/46/pecans-1214697__480.jpg" class="images"><div class="buttons" onclick="calc(98)">+</div><div class="buttons" onclick="calc(99)">-</div><br><br><p id="98">0</p><a href="https://en.m.wikipedia.org/wiki/Pecan" target="_blank" id="99">pecan</a></div>
+<div class="plant"><img alt="https://morejuicepress.com/wp-content/themes/MoreJuicePress/img/tofu.png" class="images"><div class="buttons" onclick="calc(100)">+</div><div class="buttons" onclick="calc(101)">-</div><br><br><p id="100">0</p><a href="https://en.wikipedia.org/wiki/Tofu" target="_blank" id="101">tofu</a></div>
+<div class="plant"><img alt="https://cdn.pixabay.com/photo/2015/01/30/10/49/raisins-617416__340.jpg" class="images"><div class="buttons" onclick="calc(102)">+</div><div class="buttons" onclick="calc(103)">-</div><br><br><p id="102">0</p><a href="https://en.wikipedia.org/wiki/Raisin" target="_blank" id="103">raisin</a></div>
+<div class="plant"><img alt="https://66.media.tumblr.com/2bd6d58e53c8428b9dd955747707c748/tumblr_inline_nam8htGWqf1rhel8u.png" class="images"><div class="buttons" onclick="calc(114)">+</div><div class="buttons" onclick="calc(115)">-</div><br><br><p id="114">0</p><a href="https://www.healthline.com/health/sodium-chloride#medical-use" target="_blank" id="115">table salt</a></div>
 </div>
-<button type="button" onclick="results()">COPY OUTPUT</button>
-<div id="output" width="100%"height="100%" style="display:none"></div>
-<a href="https://steemit.com/steem/@jedz0ka/how-to-plant-two-trillion-trees" target="_blank">Read Article</a><br><br>
+	<button type="button" onclick="results()">COPY OUTPUT</button>
+	<a href="https://steemit.com/steem/@jedz0ka/how-to-plant-two-trillion-trees" target="_blank">Read Article</a><br><br>
 	<a href="https://jedzoka.github.io" target="_blank">My main website</a><br><br>
 	<a href="https://github.com/jedzoka/simplant" target="_blank">Project's page</a><br><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t2/?report=objectonly" target="_blank">DRI Vitamins</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t3/?report=objectonly" target="_blank">DRI Minerals</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly" target="_blank">DRI Macronutrients</a><br><br>
-    <a href="https://www.globalhealingcenter.com/natural-health/top-foods-high-biotin/" target="_blank">biotin sources</a><br><br>
+        <a href="https://www.globalhealingcenter.com/natural-health/top-foods-high-biotin/" target="_blank">biotin sources</a><br><br>
 	A - <a href="https://en.wikipedia.org/wiki/Vitamin_A" target="_blank">Vitamin A</a><br>
 	C - <a href="https://en.wikipedia.org/wiki/Vitamin_C" target="_blank">Vitamin C</a><br>
 	E - <a href="https://en.wikipedia.org/wiki/Vitamin_E" target="_blank">Vitamin E</a><br>
@@ -267,9 +264,8 @@ color:black ;
 	Mg - <a href="https://en.wikipedia.org/wiki/Magnesium" target="_blank">Magnesium</a><br>
 	Mn - <a href="https://en.wikipedia.org/wiki/Manganese" target="_blank">Manganese</a><br>
 	Mo - <a href="https://en.wikipedia.org/wiki/Molybdenum" target="_blank">Molybdenum</a><br>
-		P - <a href="https://en.wikipedia.org/wiki/Phosphorus" target="_blank">Phosphorus</a><br>
+	P - <a href="https://en.wikipedia.org/wiki/Phosphorus" target="_blank">Phosphorus</a><br>
 	fat - <a href="https://en.wikipedia.org/wiki/Fat" target="_blank">Fat</a><br><br>
-
 	Se - <a href="https://en.wikipedia.org/wiki/Selenium" target="_blank">Selenium</a><br>
 	Zn - <a href="https://en.wikipedia.org/wiki/Zinc" target="_blank">Zinc</a><br>
 	Pts - <a href="https://en.wikipedia.org/wiki/Potassium" target="_blank">Potassium</a><br>
@@ -283,10 +279,13 @@ color:black ;
 	Pr - <a href="https://en.wikipedia.org/wiki/Protein" target="_blank">Protein</a><br>
 	kcal - <a href="https://en.wikipedia.org/wiki/Calorie" target="_blank">calorie</a><br><br>
 	<a href="https://www.md-health.com/chromium-rich-foods.html" target="_blank">broccoli, sweet potato, corn, oats, green beans, grapes and tomatoes are rich in chloride! You have to eat some of those!</a><br><br>
+	<h1>I respect YOUR freedom</h1>You are free to choose what You want to eat and how much<br>
+	You are free to waste some data for loading images or not<br>
+	You are free to copy, modify and redistribute this website, any help will be appreciated!
 <script>
+	var images=document.getElementsByTagName("img");
 	var a=document.getElementsByTagName("a");
 	var h=document.getElementsByTagName("h2");
-	var output=document.getElementById('output');
 	var plants=[37]
 	var values = [36];
 	var type;
@@ -294,7 +293,7 @@ color:black ;
 	var g=0;
 	function set() {
 	var p=document.getElementsByTagName("p");
-	while (i<57){
+	while (i<58){
 	p[i].innerHTML="0";
 	i++;
 	}
@@ -371,6 +370,13 @@ color:black ;
   h[29].innerHTML = Math.round(values[34]*-1*time*10000)/10000; //om3
   h[32].innerHTML = Math.round(values[35]*-1*time*10000)/10000; //protein	
 }
+function load() {
+document.getElementById("load").style.display="none"; 
+while (i<58) {
+	images[i].style.display="block";
+	images[i].src=images[i].alt;
+	i++;
+}}i=0;
 function calc(x){
 	if (x%2 == 0) type=1;  else {type=-1;x--;}
 	if (document.getElementById(x).innerHTML == 0) type=1; 
@@ -473,24 +479,21 @@ case 114: plants=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0,0,0,0,0,0,0,0,0,
 	h[29].innerHTML = h[29].innerHTML*1+plants[28]*type;h[29].innerHTML=Math.round(h[29].innerHTML*10000)/10000;//om3
 	h[32].innerHTML = h[32].innerHTML*1+plants[25]*type;h[32].innerHTML=Math.round(h[32].innerHTML*10000)/10000;//protein
 	h[35].innerHTML = h[35].innerHTML*1+plants[1]*type;h[35].innerHTML=Math.round(h[35].innerHTML*10000)/10000;//kcal
-	
 while (i < 36){
 	if (h[i].innerHTML < 0) h[i].style.color="black";
 	else h[i].style.color="#3fef13" ;
 	i++;
 	}
-	i=0;
-	}
+	i=0;}
 	function results(){
-		output.innerHTML="";
-		while (i < 113) { //number of plants * 2+1
-  if (i<=4 && document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+document.getElementById(i).innerHTML+" μg of "+document.getElementById(i+1).innerHTML+"\n";
-  else if (i<=10 && document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+document.getElementById(i).innerHTML+" mg of "+document.getElementById(i+1).innerHTML+"\n";
-  else if (document.getElementById(i).innerHTML>0)output.innerHTML=output.innerHTML+document.getElementById(i).innerHTML+" grams of "+document.getElementById(i+1).innerHTML+"\n";
+  var textarea = document.createElement("textarea");
+		textarea.value="";
+		while (i < 115) { //number of plants * 2+1
+  if (i<=4 && document.getElementById(i).innerHTML>0)textarea.value=textarea.value+document.getElementById(i).innerHTML+" μg of "+document.getElementById(i+1).innerHTML+"\n";
+  else if (i<=10 && document.getElementById(i).innerHTML>0)textarea.value=textarea.value+document.getElementById(i).innerHTML+" mg of "+document.getElementById(i+1).innerHTML+"\n";
+  else if (document.getElementById(i).innerHTML>0)textarea.value=textarea.value+document.getElementById(i).innerHTML+" grams of "+document.getElementById(i+1).innerHTML+"\n";
   i++;i++;
 }i=0;
-var textarea = document.createElement("textarea");
-  textarea.value = output.innerHTML;
   document.body.appendChild(textarea);
   textarea.select();
   document.execCommand("copy");
