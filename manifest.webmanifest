@@ -1,0 +1,15 @@
+{
+  "background_color": "brown",
+  "description": "SimPlant",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "simplant.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "SimPlant",
+  "short_name": "SimPlant",
+  "start_url": "/simplant/index.html"
+}
