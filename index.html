@@ -1,5 +1,5 @@
  <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,7 @@
     <title>SimPlant</title>
 <style>
 body {
+	overflow-y: hidden;
 	font-family: 'Roboto', sans-serif;
 	text-align:center;
 	-webkit-touch-callout: none; 
@@ -30,6 +31,7 @@ button {
 	height:45px;
 }
 table {
+  margin-top:0px;
   width: 100%;
   height: 100%;
   font-size:17px;
@@ -51,13 +53,10 @@ font-size:17px;
 color:black ;
 }
 div.scrollmenu {
-	height:370px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+	height:500px;;
     overflow: scroll;   
 }
 .plant {
-	text-overflow: hidden;
 	overflow: hidden;
 	width:100px;
 	height:175px;
@@ -84,16 +83,12 @@ text-overflow: hidden;
 </style>
 </head>
 <body>
-<button type="button" onclick="load()" id="load" value="dd">LOAD IMAGES</button>
-<button type="button" class="select" onclick="set(1)" value="a">man</button>
-<button type="button" class="select" onclick="set(2)" value="s">select age group</button>
-<button type="button" class="select" onclick="set(3)" value="1">1 day</button>
 	<table id="table">
 	<col width="33.333%">
 	<col width="33.334%">
 	<col width="33.333%">
   <tr>
-     <td>A<h6> ug</h6><h2 style="margin-left:23px;">0</h2></td>
+     <td>A<h6> μg</h6><h2 style="margin-left:23px;">0</h2></td>
 	 <td>Bio <h6>μg</h6><h2 style="margin-left:14px;">0</h2></td>
 	 <td>Se <h6>μg</h6><h2 style="margin-left:16px;">0</h2></td>
   </tr>
@@ -153,7 +148,11 @@ text-overflow: hidden;
      <td>kcal<h2 style="margin-left:21px;">0</h2></td>
   </tr>
 </table>
-<div class=scrollmenu>
+<div class="scrollmenu">
+<button type="button" onclick="load()" id="load" value="dd">LOAD IMAGES</button>
+<button type="button" class="select" onclick="set(1)" value="a">man</button>
+<button type="button" class="select" onclick="set(2)" value="s">select age group</button>
+<button type="button" class="select" onclick="set(3)" value="1">1 day</button>
 <div class="plant"><img alt="https://sanescohealth.com/wp-content/uploads/2015/11/b12-icon.png" class="images"><div class="buttons" onclick="calc(0)">+</div><div class="buttons" onclick="calc(1)">-</div><br><br><p id="0">0</p><a href="https://duckduckgo.com/?q=b12+supplement&t=brave&iax=images&ia=images" target="_blank">B12 supplement</a></div>
 <div class="plant"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Paris_RER_D_icon.svg/767px-Paris_RER_D_icon.svg.png" class="images"><div class="buttons" onclick="calc(2)">+</div><div class="buttons" onclick="calc(3)">-</div><br><br><p id="2">0</p><a href="https://duckduckgo.com/?q=d+supplement&t=brave&iar=images&iax=images&ia=images" target="_blank">D supplement</a></div>
 <div class="plant"><img alt="https://assets.materialup.com/uploads/477f81a5-5ee5-4250-ac80-0ad8d0b56149/9Pws3DtvrfyWGm7xFfO4_s9KbT6G_2z58SF54lddRqvDvVhJ0g9YlNVRStr9U2sg4Q=w300" class="images"><div class="buttons" onclick="calc(4)">+</div><div class="buttons" onclick="calc(5)">-</div><br><br><p id="4">0</p><a href="https://duckduckgo.com/?q=iodine+supplement&t=brave&iar=images&iax=images&ia=images&iai=http%3A%2F%2Fmedia.mercola.com%2Fassets%2Fshopimages%2F18-2386-Product_Primary_Image.jpg" target="_blank">Iodine supplement</a></div>
@@ -212,7 +211,6 @@ text-overflow: hidden;
 <div class="plant"><img alt="https://morejuicepress.com/wp-content/themes/MoreJuicePress/img/tofu.png" class="images"><div class="buttons" onclick="calc(100)">+</div><div class="buttons" onclick="calc(101)">-</div><br><br><p id="100">0</p><a href="https://en.wikipedia.org/wiki/Tofu" target="_blank">tofu</a></div>
 <div class="plant"><img alt="https://cdn.pixabay.com/photo/2015/01/30/10/49/raisins-617416__340.jpg" class="images"><div class="buttons" onclick="calc(102)">+</div><div class="buttons" onclick="calc(103)">-</div><br><br><p id="102">0</p><a href="https://en.wikipedia.org/wiki/Raisin" target="_blank">raisin</a></div>
 <div class="plant"><img alt="https://66.media.tumblr.com/2bd6d58e53c8428b9dd955747707c748/tumblr_inline_nam8htGWqf1rhel8u.png" class="images"><div class="buttons" onclick="calc(114)">+</div><div class="buttons" onclick="calc(115)">-</div><br><br><p id="114">0</p><a href="https://www.healthline.com/health/sodium-chloride#medical-use" target="_blank">table salt</a></div>
-</div>
 	<button type="button" onclick="results()">OUTPUT</button>
 	<center><textarea rows="20" cols="40" id="text" style="display:none;"></textarea></center>
 	<p onclick="copy()" id="copy" style="display:none;">[COPY]</p>
@@ -260,6 +258,7 @@ text-overflow: hidden;
 	Pr - <a href="https://en.wikipedia.org/wiki/Protein" target="_blank">Protein</a><br>
 	kcal - <a href="https://en.wikipedia.org/wiki/Calorie" target="_blank">calorie</a><br><br>
 	<a href="https://www.md-health.com/chromium-rich-foods.html" target="_blank">broccoli, sweet potato, corn, oats, green beans, grapes and tomatoes are rich in chromium! You have to eat some of these!</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>	
 <script>
 	var s=document.getElementsByTagName("button")
 	var text=document.getElementById("text");
@@ -269,11 +268,10 @@ text-overflow: hidden;
 	var plants=[37];
 	var values=[36];
 	var type;
-	var y=58; //number of plants
 	var i=0;
 	var g=0;
 	function set(x) {
-	while (i<y){
+	while (i<58){
 	p[i].innerHTML="0";
 	i++;
 	}
@@ -329,48 +327,48 @@ text-overflow: hidden;
 	i++;
 	}
 	i=0;
-  h[0].innerHTML = values[0]*-1*s[3].value; //a
-  h[3].innerHTML = values[1]*-1*s[3].value; //c
-  h[6].innerHTML = values[3]*-1*s[3].value; //e
-  h[9].innerHTML = values[4]*-1*s[3].value; //k
-  h[12].innerHTML = values[5]*-1*s[3].value; //b1	
-  h[15].innerHTML = values[6]*-1*s[3].value; //b2
-  h[18].innerHTML = values[7]*-1*s[3].value; //b3	
-  h[21].innerHTML = values[11]*-1*s[3].value; //b5	
-  h[24].innerHTML = values[8]*-1*s[3].value; //b6	
-  h[27].innerHTML = values[9]*-1*s[3].value; //b9	
-  h[30].innerHTML = values[10]*-1*s[3].value; //b12
-  h[33].innerHTML = values[2]*-1*s[3].value; //d		
+  h[0].innerHTML = Math.round(values[0]*-1*s[3].value*10000)/10000; //a
+  h[3].innerHTML = Math.round(values[1]*-1*s[3].value*10000)/10000; //c
+  h[6].innerHTML = Math.round(values[3]*-1*s[3].value*10000)/10000; //e
+  h[9].innerHTML = Math.round(values[4]*-1*s[3].value*10000)/10000; //k
+  h[12].innerHTML = Math.round(values[5]*-1*s[3].value*10000)/10000; //b1	
+  h[15].innerHTML = Math.round(values[6]*-1*s[3].value*10000)/10000; //b2
+  h[18].innerHTML = Math.round(values[7]*-1*s[3].value*10000)/10000; //b3	
+  h[21].innerHTML = Math.round(values[11]*-1*s[3].value*10000)/10000; //b5	
+  h[24].innerHTML = Math.round(values[8]*-1*s[3].value*10000)/10000; //b6	
+  h[27].innerHTML = Math.round(values[9]*-1*s[3].value*10000)/10000; //b9	
+  h[30].innerHTML = Math.round(values[10]*-1*s[3].value*10000)/10000; //b12
+  h[33].innerHTML = Math.round(values[2]*-1*s[3].value*10000)/10000; //d		
   
-  h[1].innerHTML = values[12]*-1*s[3].value; //biotin
-  h[4].innerHTML = values[13]*-1*s[3].value; //choline
-  h[7].innerHTML = values[14]*-1*s[3].value; //calcium
-  h[10].innerHTML = values[16]*-1*s[3].value; //copper
-  h[13].innerHTML = values[17]*-1*s[3].value; //fluoride
-  h[16].innerHTML = values[18]*-1*s[3].value; //iodine
-  h[19].innerHTML = values[19]*-1*s[3].value; //iron
-  h[22].innerHTML = values[20]*-1*s[3].value; //magnesium
-  h[25].innerHTML = values[21]*-1*s[3].value; //magnese
-  h[28].innerHTML = values[22]*-1*s[3].value; //molybednum
-  h[31].innerHTML = values[23]*-1*s[3].value; //phosphorus	
-  h[34].innerHTML = values[32]*-1*s[3].value; //fat
+  h[1].innerHTML = Math.round(values[12]*-1*s[3].value*10000)/10000; //biotin
+  h[4].innerHTML = Math.round(values[13]*-1*s[3].value*10000)/10000; //choline
+  h[7].innerHTML = Math.round(values[14]*-1*s[3].value*10000)/10000; //calcium
+  h[10].innerHTML = Math.round(values[16]*-1*s[3].value*10000)/10000; //copper
+  h[13].innerHTML = Math.round(values[17]*-1*s[3].value*10000)/10000; //fluoride
+  h[16].innerHTML = Math.round(values[18]*-1*s[3].value*10000)/10000; //iodine
+  h[19].innerHTML = Math.round(values[19]*-1*s[3].value*10000)/10000; //iron
+  h[22].innerHTML = Math.round(values[20]*-1*s[3].value*10000)/10000; //magnesium
+  h[25].innerHTML = Math.round(values[21]*-1*s[3].value*10000)/10000; //magnese
+  h[28].innerHTML = Math.round(values[22]*-1*s[3].value*10000)/10000; //molybednum
+  h[31].innerHTML = Math.round(values[23]*-1*s[3].value*10000)/10000; //phosphorus	
+  h[34].innerHTML = Math.round(values[32]*-1*s[3].value*10000)/10000; //fat
   
-  h[2].innerHTML = values[24]*-1*s[3].value; //selenium
-  h[5].innerHTML = values[25]*-1*s[3].value; //zinc	
-  h[8].innerHTML = values[26]*-1*s[3].value; //potassium
-  h[11].innerHTML = values[27]*-1*s[3].value; //sodium
-  h[14].innerHTML = values[28]*-1*s[3].value; //chloride
-  h[17].innerHTML = values[29]*-1*s[3].value; //h2o
-  h[20].innerHTML = values[30]*-1*s[3].value; //carbohydrate
-  h[23].innerHTML = values[31]*-1*s[3].value; //dietetary fiber
-  h[26].innerHTML = values[33]*-1*s[3].value; //om6
-  h[29].innerHTML = values[34]*-1*s[3].value; //om3
-  h[32].innerHTML = values[35]*-1*s[3].value; //protein	
+  h[2].innerHTML = Math.round(values[24]*-1*s[3].value*10000)/10000; //selenium
+  h[5].innerHTML = Math.round(values[25]*-1*s[3].value*10000)/10000; //zinc	
+  h[8].innerHTML = Math.round(values[26]*-1*s[3].value*10000)/10000; //potassium
+  h[11].innerHTML = Math.round(values[27]*-1*s[3].value*10000)/10000; //sodium
+  h[14].innerHTML = Math.round(values[28]*-1*s[3].value*10000)/10000; //chloride
+  h[17].innerHTML = Math.round(values[29]*-1*s[3].value*10000)/10000; //h2o
+  h[20].innerHTML = Math.round(values[30]*-1*s[3].value*10000)/10000; //carbohydrate
+  h[23].innerHTML = Math.round(values[31]*-1*s[3].value*10000)/10000; //dietetary fiber
+  h[26].innerHTML = Math.round(values[33]*-1*s[3].value*10000)/10000; //om6
+  h[29].innerHTML = Math.round(values[34]*-1*s[3].value*10000)/10000; //om3
+  h[32].innerHTML = Math.round(values[35]*-1*s[3].value*10000)/10000; //protein	
 }
 function load() {
 s[0].style.display="none"; 
 var images=document.getElementsByTagName("img");
-while (i<y) {
+while (i<58) {
 	images[i].style.display="block";
 	images[i].src=images[i].alt;
 	images[i].alt="";
@@ -488,7 +486,7 @@ while (i < 36){
   text.style.display="block";
   document.getElementById("copy").style.display="block";
   text.value="";
-  while (i < y) { 
+  while (i < 58) { 
   if (i<=2 && p[i].innerHTML>0)text.value=text.value+p[i].innerHTML+" μg of "+a[i].innerHTML+"\n";
   else if (i<=5 && p[i].innerHTML>0)text.value=text.value+p[i].innerHTML+" mg of "+a[i].innerHTML+"\n";
   else if (p[i].innerHTML>0)text.value=text.value+p[i].innerHTML+" grams of "+a[i].innerHTML+"\n";
