@@ -1,10 +1,6 @@
-https://jedzoka.github.io/simplant/plant_generator
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Plant generator</title>
 <style>
 input {
 	background-color:black;
@@ -26,7 +22,7 @@ p {
 </style>
 </head>
 <body>
-<br><br><input> name<br><br>
+<input> name<br><br>
 <input> case<br><br>
 <input> wiki url<br><br>
 <input> image url<br><br>
@@ -68,61 +64,71 @@ p {
 <input value="0"><h4>mg</h4> Fluoride <h4>F</h4><br><br>
 <input value="0"><h4>uq</h4> Iodine <h4>Io</h4><br><br>
 <input value="0.1">Multiplay<br><br>
-<button type="button" onclick="a()">Click me</button>
-<div id="aa">&lt;div class="plant"&gt;&lt;img alt="<p></p>" class="images"&gt;&lt;div class="buttons" onclick="calc(<p></p>)"&gt;+&lt;/div&gt;&lt;div class="buttons" onclick="calc(<p></p>)"&gt;-&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;p id="<p>0</p>"&gt;0&lt;/p&gt;&lt;a href="<p></p>" target="_blank"&gt;<p></p>&lt;/a&gt;&lt;/div&gt;</div>case <a></a>: plants=[<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>,<a></a>];break; //<p></p>
+<button type="button" onclick="result()">GENERATE CODE</button><br><br>
+<button type="button" onclick="copy(0)">COPY 1</button>
+<button type="button" onclick="copy(1)">COPY 2</button><br><br>
+<textarea rows="20" cols="40"></textarea>
+<textarea rows="20" cols="40"></textarea>
 <script>
-	function a() {
-	a=document.getElementsByTagName("input");
-	b=document.getElementsByTagName("a");
-	p=document.getElementsByTagName("p");
+	var text=document.getElementsByTagName("textarea");
+	function result() {
+	var i=0;
+	var b=[38]
+	var p=[5];
+	var a=document.getElementsByTagName("input");
 	var ab=a[41].value;
 	var pp=parseInt(a[1].value);
-	p[0].innerHTML=a[3].value;
-	p[1].innerHTML=a[1].value;
-	p[2].innerHTML=pp+1;
-	p[3].innerHTML=a[1].value;
-	p[4].innerHTML=a[2].value;
-	p[5].innerHTML=a[0].value;
-	p[6].innerHTML=a[0].value;
-	
-	b[0].innerHTML=a[1].value;
-	b[1].innerHTML=Math.round(a[4].value*ab*10000)/10000;
-	b[2].innerHTML=Math.round(a[5].value*ab*10000)/10000;
-	b[3].innerHTML=Math.round(a[6].value*ab*10000)/10000;
-	b[4].innerHTML=Math.round(a[7].value*ab*10000)/10000;
-	b[5].innerHTML=Math.round(a[8].value*ab*10000)/10000;	
-	b[6].innerHTML=Math.round(a[9].value*ab*10000)/10000;
-	b[7].innerHTML=Math.round(a[10].value*ab*10000)/10000;
-	b[8].innerHTML=Math.round(a[11].value*ab*10000)/10000;
-	b[9].innerHTML=Math.round(a[12].value*ab*10000)/10000;
-	b[10].innerHTML=Math.round(a[13].value*ab*10000)/10000;
-	b[11].innerHTML=Math.round(a[14].value*ab*10000)/10000;
-	b[12].innerHTML=Math.round(a[15].value*ab*10000)/10000;
-	b[13].innerHTML=Math.round(a[16].value*ab*10000)/10000;
-	b[14].innerHTML=Math.round(a[17].value*ab*10000)/10000;
-	b[15].innerHTML=Math.round(a[18].value*ab*10000)/10000;
-	b[16].innerHTML=Math.round(a[19].value*ab*10000)/10000;
-	b[17].innerHTML=Math.round(a[20].value*ab*10000)/10000;
-	b[18].innerHTML=Math.round(a[21].value*ab*10000)/10000;
-	b[19].innerHTML=Math.round(a[22].value*ab*10000)/10000;
-	b[20].innerHTML=Math.round(a[23].value*ab*10000)/10000;
-	b[21].innerHTML=Math.round(a[24].value*ab*10000)/10000;
-	b[22].innerHTML=Math.round(a[25].value*ab*10000)/10000;
-	b[23].innerHTML=Math.round(a[26].value*ab*10000)/10000;
-	b[24].innerHTML=Math.round(a[27].value*ab*10000)/10000;
-	b[25].innerHTML=Math.round(a[28].value*ab*10000)/10000;
-	b[26].innerHTML=Math.round(a[29].value*ab*10000)/10000;
-	b[27].innerHTML=Math.round(a[30].value*ab*10000)/10000;
-	b[28].innerHTML=Math.round(a[31].value*ab*10000)/10000;
-	b[29].innerHTML=Math.round(a[32].value*ab*10000)/10000;
-	b[30].innerHTML=Math.round(a[33].value*ab*10000)/10000;
-	b[31].innerHTML=Math.round(a[34].value*ab*10000)/10000;
-	b[32].innerHTML=Math.round(a[35].value*ab*10000)/10000;
-	b[33].innerHTML=Math.round(a[36].value*ab*10000)/10000;
-	b[34].innerHTML=Math.round(a[37].value*ab*10000)/10000;
-	b[35].innerHTML=Math.round(a[38].value*ab*10000)/10000;
-	b[36].innerHTML=Math.round(a[39].value*ab*10000)/10000;
-	b[37].innerHTML=Math.round(a[40].value*ab*10000)/10000;
+	p[0]=a[0].value;
+	p[1]=a[1].value;
+	p[2]=a[2].value;
+	p[3]=a[3].value;
+	p[4]=pp+1;
+	b[0]=Math.round(a[4].value*ab*10000)/10000;
+	b[1]=Math.round(a[5].value*ab*10000)/10000;
+	b[2]=Math.round(a[6].value*ab*10000)/10000;
+	b[3]=Math.round(a[7].value*ab*10000)/10000;
+	b[4]=Math.round(a[8].value*ab*10000)/10000;	
+	b[5]=Math.round(a[9].value*ab*10000)/10000;
+	b[6]=Math.round(a[10].value*ab*10000)/10000;
+	b[7]=Math.round(a[11].value*ab*10000)/10000;
+	b[8]=Math.round(a[12].value*ab*10000)/10000;
+	b[9]=Math.round(a[13].value*ab*10000)/10000;
+	b[10]=Math.round(a[14].value*ab*10000)/10000;
+	b[11]=Math.round(a[15].value*ab*10000)/10000;
+	b[12]=Math.round(a[16].value*ab*10000)/10000;
+	b[13]=Math.round(a[17].value*ab*10000)/10000;
+	b[14]=Math.round(a[18].value*ab*10000)/10000;
+	b[15]=Math.round(a[19].value*ab*10000)/10000;
+	b[16]=Math.round(a[20].value*ab*10000)/10000;
+	b[17]=Math.round(a[21].value*ab*10000)/10000;
+	b[18]=Math.round(a[22].value*ab*10000)/10000;
+	b[19]=Math.round(a[23].value*ab*10000)/10000;
+	b[20]=Math.round(a[24].value*ab*10000)/10000;
+	b[21]=Math.round(a[25].value*ab*10000)/10000;
+	b[22]=Math.round(a[26].value*ab*10000)/10000;
+	b[23]=Math.round(a[27].value*ab*10000)/10000;
+	b[24]=Math.round(a[28].value*ab*10000)/10000;
+	b[25]=Math.round(a[29].value*ab*10000)/10000;
+	b[26]=Math.round(a[30].value*ab*10000)/10000;
+	b[27]=Math.round(a[31].value*ab*10000)/10000;
+	b[28]=Math.round(a[32].value*ab*10000)/10000;
+	b[29]=Math.round(a[33].value*ab*10000)/10000;
+	b[30]=Math.round(a[34].value*ab*10000)/10000;
+	b[31]=Math.round(a[35].value*ab*10000)/10000;
+	b[32]=Math.round(a[36].value*ab*10000)/10000;
+	b[33]=Math.round(a[37].value*ab*10000)/10000;
+	b[34]=Math.round(a[38].value*ab*10000)/10000;
+	b[35]=Math.round(a[39].value*ab*10000)/10000;
+	b[36]=Math.round(a[40].value*ab*10000)/10000;
+	text[0].value=text[0].value+'<div class="plant"><img alt="'+p[3]+'" class="images"><div class="buttons" onclick="calc('+p[1]+')">+</div><div class="buttons" onclick="calc('+p[4]+')">-</div><br><br><p id="'+p[1]+'">0</p><a href="'+p[2]+'" target="_blank">'+p[0]+'</a></div>\n';
+	text[1].value=text[1].value+'case '+p[1]+': plants=['+b[0]+','+b[1]+','+b[2]+','+b[3]+','+b[4]+','+b[5]+','+b[6]+','+b[7]+','+b[8]+','+b[9]+','+b[10]+','+b[11]+','+b[12]+','+b[13]+','+b[14]+','+b[15]+','+b[16]+','+b[17]+','+b[18]+','+b[19]+','+b[20]+','+b[21]+','+b[22]+','+b[23]+','+b[24]+','+b[25]+','+b[26]+','+b[27]+','+b[28]+','+b[29]+','+b[30]+','+b[31]+','+b[32]+','+b[33]+','+b[34]+','+b[35]+','+b[36]+'];break; //'+p[0]+';\n';
+	while (i<4){a[i].value="";i++;}
+	while (i<41){a[i].value=0;i++;}
+	a[41].value=0.1;
+	}
+	function copy(x){
+  text[x].select();
+  document.execCommand("copy");	
 	}
 </script>
 </body>
