@@ -10,7 +10,6 @@
     <title>SimPlant</title>
 <style>
 body {
-	overflow-y: hidden;
 	font-family: 'Roboto', sans-serif;
 	text-align:center;
 	-webkit-touch-callout: none; 
@@ -31,30 +30,25 @@ button {
 	height:45px;
 }
 table {
+  top:0;
+  position:fixed;
+  background-color:white;
   margin-top:0px;
   width: 100%;
-  height: 100%;
   font-size:17px;
 }
 td {
-  max-width: 0;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: hidden;
   white-space: nowrap;
-  font-weight: bold;
-  color:#f916c1;
+  color:red;
   text-align:left;
-}
-h6 {
-	display:inline; 
-	color:#f2840e;
 }
 h2 {
 display:inline; 
 font-size:17px;
 color:black ;
-}
-div.scrollmenu {
-	height:500px;;
-    overflow: scroll;   
 }
 .plant {
 	overflow: hidden;
@@ -78,6 +72,7 @@ div.scrollmenu {
 }
 a {
 text-decoration:none;
+color:blue;
 }
 </style>
 </head>
@@ -87,68 +82,67 @@ text-decoration:none;
 	<col width="33.334%">
 	<col width="33.333%">
   <tr>
-     <td>A<h6> μg</h6><h2 style="margin-left:23px;">0</h2></td>
-	 <td>Bio <h6>μg</h6><h2 style="margin-left:14px;">0</h2></td>
-	 <td>Se <h6>μg</h6><h2 style="margin-left:16px;">0</h2></td>
+     <td>A &nbsp;&nbsp;&nbsp;&nbsp;<h2 style=>0</h2></td>
+	 <td>Bio &nbsp;<h2>0</h2></td>
+	 <td>Se &nbsp;&nbsp;<h2>0</h2></td>
   </tr>
   <tr>
-     <td>C <h6>mg</h6><h2 style="margin-left:18px;">0</h2></td>
-	 <td>Cho <h6>mg</h6><h2 style="margin-left:5px;">0</h2></td>
-	 <td>Zn <h6>mg</h6><h2 style="margin-left:12px;">0</h2></td>	
+     <td>C &nbsp;&nbsp;&nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Cho <h2>0</h2></td>
+	 <td>Zn &nbsp;&nbsp;<h2>0</h2></td>	
   </tr>
   <tr>
-     <td>E <h6>mg</h6><h2 style="margin-left:20px;">0</h2></td>
-	 <td>Ca <h6>mg</h6><h2 style="margin-left:15px;">0</h2></td>
-	  <td>Pts <h6>g</h6><h2 style="margin-left:16px;">0</h2></td>
+     <td>E &nbsp;&nbsp;&nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Ca &nbsp;&nbsp;<h2>0</h2></td>
+	  <td>Pts &nbsp;<h2>0</h2></td>
   </tr>
   <tr>
-     <td>K <h6>μg</h6><h2 style="margin-left:23px;">0</h2></td>
-	 <td>Cu <h6>μg</h6><h2 style="margin-left:19px;">0</h2></td>
-	 <td>Na <h6>g</h6><h2 style="margin-left:20px;">0</h2></td>
+     <td>K &nbsp;&nbsp;&nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Cu &nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Na &nbsp;&nbsp;<h2>0</h2></td>
   </tr>
   <tr>
-     <td>B1 <h6>mg</h6><h2 style="margin-left:10px;">0</h2></td>
-	 <td>Flu <h6>mg</h6><h2 style="margin-left:13px;">0</h2></td>
-	 <td>Cl <h6>g</h6><h2 style="margin-left:27px;">0</h2></td>
+     <td>B1 &nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Flu &nbsp;<h2>0</h2></td>
+	 <td>Cl &nbsp;&nbsp;&nbsp;&nbsp;<h2>0</h2></td>
   </tr>
   <tr>
-     <td>B2 <h6>mg</h6><h2 style="margin-left:10px;">0</h2></td>
-	 <td>Io <h6>μg</h6><h2 style="margin-left:25px;">0</h2></td>
-	 <td>H2O <h6>l</h6><h2 style="margin-left:12px;">0</h2></td>     
+     <td>B2 &nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Io &nbsp;&nbsp;&nbsp;<h2>0</h2></td>
+	 <td>H2O <h2>0</h2></td>     
   </tr>
   <tr>
-     <td>B3 <h6>mg</h6><h2 style="margin-left:10px;">0</h2></td>
-	 <td>Fe <h6>mg</h6><h2 style="margin-left:17px;">0</h2></td>
-	 <td>Crb <h6>g</h6><h2 style="margin-left:15px;">0</h2></td>
+     <td>B3 &nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Fe &nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Crb &nbsp;&nbsp;<h2>0</h2></td>
   </tr>
   <tr>
-     <td>B5 <h6>mg</h6><h2 style="margin-left:10px;">0</h2></td>
-	 <td>Mg <h6>mg</h6><h2 style="margin-left:10px;">0</h2></td>
-	 <td>DF <h6>g</h6><h2 style="margin-left:21px;">0</h2></td> 
+     <td>B5 &nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Mg &nbsp;<h2>0</h2></td>
+	 <td>DF &nbsp;&nbsp;&nbsp;&nbsp;<h2>0</h2></td> 
   </tr>
   <tr>
-     <td>B6 <h6>mg</h6><h2 style="margin-left:11px;">0</h2></td>
-	 <td>Mn <h6>mg</h6><h2 style="margin-left:10px;">0</h2></td>
-     <td>Om6 <h6>g</h6><h2 style="margin-left:5px;">0</h2></td>
+     <td>B6 &nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Mn &nbsp;<h2>0</h2></td>
+     <td>Om6 <h2>0</h2></td>
   </tr>
   <tr>
-     <td>B9 <h6>μg</h6><h2 style="margin-left:14px;">0</h2></td>
-	 <td>Mo <h6>μg</h6><h2 style="margin-left:13px;">0</h2></td>
-	 <td>Om3 <h6>g</h6><h2 style="margin-left:5px;">0</h2></td>
+     <td>B9 &nbsp;&nbsp;<h2>0</h2></td>
+	 <td>Mo &nbsp;<h2>0</h2></td>
+	 <td>Om3 <h2>0</h2></td>
   </tr>
   <tr>
-	 <td>B12 <h6>μg</h6><h2 style="margin-left:5px;">0</h2></td>
-     <td>P <h6>mg</h6><h2 style="margin-left:23px;">0</h2></td> 
-     <td>Pr <h6>g</h6><h2 style="margin-left:25px;">0</h2></td>
+	 <td>B12 <h2>0</h2></td>
+     <td>P &nbsp;&nbsp;&nbsp;&nbsp;<h2>0</h2></td> 
+     <td>Pr &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2>0</h2></td>
   </tr>
   <tr>
-     <td>D <h6>μg</h6><h2 style="margin-left:24px;">0</h2></td>
-     <td>fat<h2 style="margin-left:33px;">0</h2></td>
-     <td>kcal<h2 style="margin-left:21px;">0</h2></td>
+     <td>D &nbsp;&nbsp;&nbsp;&nbsp;<h2>0</h2></td>
+     <td>fat &nbsp;&nbsp;<h2>0</h2></td>
+     <td>kcal &nbsp;&nbsp;<h2>0</h2></td>
   </tr>
 </table>
-<div class="scrollmenu">
-<button type="button" onclick="load()" id="load" value="dd">LOAD IMAGES</button>
+<button type="button" onclick="load()" style="margin-top:320px;">LOAD IMAGES</button>
 <button type="button" class="select" onclick="set(1)" value="a">man</button>
 <button type="button" class="select" onclick="set(2)" value="s">select age group</button>
 <button type="button" class="select" onclick="set(3)" value="1">1 day</button>
@@ -221,44 +215,43 @@ text-decoration:none;
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t3/?report=objectonly" target="_blank">DRI Minerals</a><br>
 	<a href="https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly" target="_blank">DRI Macronutrients</a><br><br>
     <a href="https://www.globalhealingcenter.com/natural-health/top-foods-high-biotin/" target="_blank">biotin sources</a><br><br>
-	A - <a href="https://en.wikipedia.org/wiki/Vitamin_A" target="_blank">Vitamin A</a><br>
-	C - <a href="https://en.wikipedia.org/wiki/Vitamin_C" target="_blank">Vitamin C</a><br>
-	E - <a href="https://en.wikipedia.org/wiki/Vitamin_E" target="_blank">Vitamin E</a><br>
-	K - <a href="https://en.wikipedia.org/wiki/Vitamin_K" target="_blank">Vitamin K</a><br>
-	B1 - <a href="https://en.wikipedia.org/wiki/Thiamine" target="_blank">Vitamin B1</a><br>
-	B2 - <a href="https://en.wikipedia.org/wiki/Riboflavin" target="_blank">Vitamin B2</a><br>
-	B3 - <a href="https://en.wikipedia.org/wiki/Niacin" target="_blank">Vitamin B3</a><br>
-	B5 - <a href="https://en.wikipedia.org/wiki/Pantothenic_acid" target="_blank">Vitamin B5</a><br>
-	B6 - <a href="https://en.wikipedia.org/wiki/Vitamin_B6" target="_blank">Vitamin B6</a><br>
-	B9 - <a href="https://en.wikipedia.org/wiki/Folate" target="_blank">Vitamin B9</a><br>
-	B12 - <a href="https://en.wikipedia.org/wiki/Vitamin_B12" target="_blank">Vitamin B12</a><br>
-	D - <a href="https://en.wikipedia.org/wiki/Vitamin_D" target="_blank">Vitamin D</a><br><br>
-	Bio - <a href="https://en.wikipedia.org/wiki/Biotin" target="_blank">Biotin</a><br>
-	Cho - <a href="https://en.wikipedia.org/wiki/Choline" target="_blank">Choline</a><br>
-	Ca - <a href="https://en.wikipedia.org/wiki/Calcium" target="_blank">Calcium</a><br>
-	Cu - <a href="https://en.wikipedia.org/wiki/Copper" target="_blank">Copper</a><br>
-	Flu - <a href="https://en.wikipedia.org/wiki/Fluoride" target="_blank">Fluoride</a><br>
-	Io - <a href="https://en.wikipedia.org/wiki/Iodine" target="_blank">Iodine</a><br>
-	Fe - <a href="https://en.wikipedia.org/wiki/Iron" target="_blank">Iron</a><br>
-	Mg - <a href="https://en.wikipedia.org/wiki/Magnesium" target="_blank">Magnesium</a><br>
-	Mn - <a href="https://en.wikipedia.org/wiki/Manganese" target="_blank">Manganese</a><br>
-	Mo - <a href="https://en.wikipedia.org/wiki/Molybdenum" target="_blank">Molybdenum</a><br>
-	P - <a href="https://en.wikipedia.org/wiki/Phosphorus" target="_blank">Phosphorus</a><br>
+	A - <a href="https://en.wikipedia.org/wiki/Vitamin_A" target="_blank">Vitamin A</a> - μg<br>
+	C - <a href="https://en.wikipedia.org/wiki/Vitamin_C" target="_blank">Vitamin C</a> - mg<br>
+	E - <a href="https://en.wikipedia.org/wiki/Vitamin_E" target="_blank">Vitamin E</a> - mg<br>
+	K - <a href="https://en.wikipedia.org/wiki/Vitamin_K" target="_blank">Vitamin K</a> - μg<br>
+	B1 - <a href="https://en.wikipedia.org/wiki/Thiamine" target="_blank">Vitamin B1</a> - mg<br>
+	B2 - <a href="https://en.wikipedia.org/wiki/Riboflavin" target="_blank">Vitamin B2</a> - mg<br>
+	B3 - <a href="https://en.wikipedia.org/wiki/Niacin" target="_blank">Vitamin B3</a> - mg<br>
+	B5 - <a href="https://en.wikipedia.org/wiki/Pantothenic_acid" target="_blank">Vitamin B5</a> - mg<br>
+	B6 - <a href="https://en.wikipedia.org/wiki/Vitamin_B6" target="_blank">Vitamin B6</a> - mg<br>
+	B9 - <a href="https://en.wikipedia.org/wiki/Folate" target="_blank">Vitamin B9</a> - μg<br>
+	B12 - <a href="https://en.wikipedia.org/wiki/Vitamin_B12" target="_blank">Vitamin B12</a> - μg<br>
+	D - <a href="https://en.wikipedia.org/wiki/Vitamin_D" target="_blank">Vitamin D</a> - μg<br><br>
+	Bio - <a href="https://en.wikipedia.org/wiki/Biotin" target="_blank">Biotin</a> - μg<br>
+	Cho - <a href="https://en.wikipedia.org/wiki/Choline" target="_blank">Choline</a> - mg<br>
+	Ca - <a href="https://en.wikipedia.org/wiki/Calcium" target="_blank">Calcium</a> - mg<br>
+	Cu - <a href="https://en.wikipedia.org/wiki/Copper" target="_blank">Copper</a> - μg<br>
+	Flu - <a href="https://en.wikipedia.org/wiki/Fluoride" target="_blank">Fluoride</a> - mg<br>
+	Io - <a href="https://en.wikipedia.org/wiki/Iodine" target="_blank">Iodine</a> - μg<br>
+	Fe - <a href="https://en.wikipedia.org/wiki/Iron" target="_blank">Iron</a> - mg<br>
+	Mg - <a href="https://en.wikipedia.org/wiki/Magnesium" target="_blank">Magnesium</a> - mg<br>
+	Mn - <a href="https://en.wikipedia.org/wiki/Manganese" target="_blank">Manganese</a> - mg<br>
+	Mo - <a href="https://en.wikipedia.org/wiki/Molybdenum" target="_blank">Molybdenum</a> - μg<br>
+	P - <a href="https://en.wikipedia.org/wiki/Phosphorus" target="_blank">Phosphorus</a> - mg<br>
 	fat - <a href="https://en.wikipedia.org/wiki/Fat" target="_blank">Fat</a><br><br>
-	Se - <a href="https://en.wikipedia.org/wiki/Selenium" target="_blank">Selenium</a><br>
-	Zn - <a href="https://en.wikipedia.org/wiki/Zinc" target="_blank">Zinc</a><br>
-	Pts - <a href="https://en.wikipedia.org/wiki/Potassium" target="_blank">Potassium</a><br>
-	Na - <a href="https://en.wikipedia.org/wiki/Sodium" target="_blank">Sodium</a><br>
-	Cl - <a href="https://en.wikipedia.org/wiki/Chloride" target="_blank">Chloride</a><br>
-	H2O - <a href="https://en.wikipedia.org/wiki/Water" target="_blank">Water</a><br>
-	Crb - <a href="https://en.wikipedia.org/wiki/Carbohydrate" target="_blank">Carbohydrate</a><br>
-	DF - <a href="https://en.wikipedia.org/wiki/Dietary_fiber" target="_blank">Dietary fiber</a><br>
-	Om6 - <a href="https://en.wikipedia.org/wiki/Linoleic_acid" target="_blank">Linoleic acid</a><br>
-	Om3 - <a href="https://en.wikipedia.org/wiki/Alpha-Linolenic_acid" target="_blank">Alpha-Linolenic acid</a><br>
-	Pr - <a href="https://en.wikipedia.org/wiki/Protein" target="_blank">Protein</a><br>
+	Se - <a href="https://en.wikipedia.org/wiki/Selenium" target="_blank">Selenium</a> - μg<br>
+	Zn - <a href="https://en.wikipedia.org/wiki/Zinc" target="_blank">Zinc</a> - mg<br>
+	Pts - <a href="https://en.wikipedia.org/wiki/Potassium" target="_blank">Potassium</a> - g<br>
+	Na - <a href="https://en.wikipedia.org/wiki/Sodium" target="_blank">Sodium</a> - g<br>
+	Cl - <a href="https://en.wikipedia.org/wiki/Chloride" target="_blank">Chloride</a> - g<br>
+	H2O - <a href="https://en.wikipedia.org/wiki/Water" target="_blank">Water</a> - l<br>
+	Crb - <a href="https://en.wikipedia.org/wiki/Carbohydrate" target="_blank">Carbohydrate</a> - g<br>
+	DF - <a href="https://en.wikipedia.org/wiki/Dietary_fiber" target="_blank">Dietary fiber</a> - g<br>
+	Om6 - <a href="https://en.wikipedia.org/wiki/Linoleic_acid" target="_blank">Linoleic acid</a> - g<br>
+	Om3 - <a href="https://en.wikipedia.org/wiki/Alpha-Linolenic_acid" target="_blank">Alpha-Linolenic acid</a> - g<br>
+	Pr - <a href="https://en.wikipedia.org/wiki/Protein" target="_blank">Protein</a> - g<br>
 	kcal - <a href="https://en.wikipedia.org/wiki/Calorie" target="_blank">calorie</a><br><br>
 	<a href="https://www.md-health.com/chromium-rich-foods.html" target="_blank">broccoli, sweet potato, corn, oats, green beans, grapes and tomatoes are rich in chromium! You have to eat some of these!</a>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>	
 <script>
 	var s=document.getElementsByTagName("button")
 	var text=document.getElementById("text");
