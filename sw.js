@@ -2,8 +2,7 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('video-store').then(function(cache) {
      return cache.addAll([
-       '/simplant/index.html',
-       '/simplant/index.js'
+       '/jedzoka.github.io/index.html'
      ]);
    })
  );
