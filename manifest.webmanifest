@@ -1,5 +1,5 @@
 {
-  "background_color": "brown",
+  "background_color": "#232323",
   "description": "Jedzoka",
   "display": "standalone",
   "icons": [
@@ -11,5 +11,5 @@
   ],
   "name": "Jedzoka",
   "short_name": "Jedzoka",
-  "start_url": "/jedzoka.github.io/index.html"
+  "start_url": "/index.html"
 }
