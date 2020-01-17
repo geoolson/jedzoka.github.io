@@ -2,24 +2,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Plantiet Workbench</title>
+<title>Plantiet SDK</title>
 <style>
-input,textarea {
-	background-color:black;
-	color:white;
+input,textarea{
+background-color:#232323;
+color:white;
 }
-input:focus {
-  background-color:yellow;
-  color:black;}
-body {
-	word-break: break-all;
-	white-space: normal;
-	background-color: #2e3533;
-	color:white;
+input:focus{
+background-color:yellow;
+color:black;
 }
-h4 {
-	display:inline; 
-	color:yellow;
+body{
+word-break: break-all;
+white-space: normal;
+background-color: #2e3533;
+color:white;
+}
+h4{
+display:inline; 
+color:yellow;
 }	
 </style>
 </head>
@@ -28,22 +29,22 @@ h4 {
 <input> wiki url<br><br>
 <input value="0"> quantity<br><br>
 <input value="0"> kcal<br><br>
-<input value="0"><h4>uq</h4> Vitamin A<br><br>
+<input value="0"><h4>μg</h4> Vitamin A<br><br>
 <input value="0"><h4>mg</h4> Vitamin C<br><br>
 <input value="0"><h4>mg</h4> Vitamin E<br><br>
-<input value="0"><h4>uq</h4> Vitamin K<br><br>
+<input value="0"><h4>μg</h4> Vitamin K<br><br>
 <input value="0"><h4>mg</h4> Vitamin B1<br><br>
 <input value="0"><h4>mg</h4> Vitamin B2<br><br>
 <input value="0"><h4>mg</h4> Vitamin B3<br><br>
 <input value="0"><h4>mg</h4> Vitamin B5<br><br>
 <input value="0"><h4>mg</h4> Vitamin B6<br><br>
-<input value="0"><h4>uq</h4> Vitamin B9<br><br>
+<input value="0"><h4>μg</h4> Vitamin B9<br><br>
 <input value="0"><h4>mg</h4> Calcium <h4>Ca</h4><br><br>
 <input value="0"><h4>mg</h4> Iron <h4>Fe</h4><br><br>
 <input value="0"><h4>mg</h4> Magnesium <h4>Mg</h4><br><br>
 <input value="0"><h4>mg</h4> Manganese <h4>Mn</h4><br><br>
 <input value="0"><h4>mg</h4> Phosphorus <h4>P</h4><br><br>
-<input value="0"><h4>uq</h4> Selenium <h4>Se</h4><br><br>
+<input value="0"><h4>μg</h4> Selenium <h4>Se</h4><br><br>
 <input value="0"><h4>mg</h4> Zinc <h4>Zn</h4><br><br>
 <input value="0"><h4>g</h4> Potassium <h4>Pts</h4><br><br>
 <input value="0"><h4>g</h4> Sodium <h4>Na</h4><br><br>
@@ -55,36 +56,36 @@ h4 {
 <input value="0"><h4>mg</h4> Choline <h4>Cho</h4><br><br>
 <input value="0"><h4>g</h4> Linolenic Acid <h4>Om6</h4><br><br>
 <input value="0"><h4>g</h4> alpha-Linolenic Acid <h4>Om3</h4><br><br>
-<input value="0"><h4>uq</h4> Vitamin D<br><br>
-<input value="0"><h4>uq</h4> Vitamin B12<br><br>
-<input value="0"><h4>uq</h4> Molybdenum <h4>Mo</h4><br><br>
-<input value="0"><h4>uq</h4> Biotine <h4>Bio</h4><br><br>
-<input value="0"><h4>uq</h4> Chloride <h4>Cl</h4><br><br>
-<input value="0"><h4>uq</h4> Copper <h4>Cu</h4><br><br>
-<input value="0"><h4>mg</h4> Fluoride <h4>Flu</h4><br><br>
-<input value="0"><h4>uq</h4> Iodine <h4>Io</h4><br><br>
+<input value="0"><h4>μg</h4> Chromium <h4>Chr</h4><br><br>
+<input value="0"><h4>μg</h4> Vitamin B12<br><br>
+<input value="0"><h4>μg</h4> Molybdenum <h4>Mo</h4><br><br>
+<input value="0"><h4>μg</h4> Biotine <h4>Bio</h4><br><br>
+<input value="0"><h4>μg</h4> Chloride <h4>Cl</h4><br><br>
+<input value="0"><h4>μg</h4> Copper <h4>Cu</h4><br><br>
+<input value="0"><h4>μg</h4> Fluoride <h4>Flu</h4><br><br>
+<input value="0"><h4>μg</h4> Iodine <h4>Io</h4><br><br>
 <input value="0.1">Multiplay<br><br>
 <button onclick="r();window.scrollTo(1,1);">GENERATE CODE</button><br><br>
 <button onclick="t.select();document.execCommand('copy');">COPY</button><br><br>
 <textarea rows="20" cols="300" readonly></textarea>
 <script>
-	var t=document.getElementsByTagName("textarea")[0];
-	function r() {
-	var i=0;
-	var b=[37]
-	var p=[2];
-	var a=document.getElementsByTagName("input");
-	var ab=a[39].value;
-	p[0]=a[0].value;
-	p[1]=a[1].value;
-	while (i<37){
-	b[i]=(a[i+2].value*ab).toFixed(6)*1;
-	i++;
-	}i=1;
-	t.value=t.value+'<b onclick="v=['+b[2]+','+b[3]+','+b[4]+','+b[5]+','+b[6]+','+b[7]+','+b[8]+','+b[9]+','+b[10]+','+b[11]+','+b[30]+','+b[29]+','+b[32]+','+b[26]+','+b[12]+','+b[34]+','+b[35]+','+b[36]+','+b[13]+','+b[14]+','+b[15]+','+b[31]+','+b[16]+','+b[24]+','+b[17]+','+b[18]+','+b[19]+','+b[20]+','+b[33]+','+b[21]+','+b[22]+','+b[23]+','+b[27]+','+b[28]+','+b[25]+','+b[1]+','+b[0]+'];c()"><p>0</p><a id="'+p[1]+'">'+p[0]+'</a></b>\n';
-	while (i<2){a[i].value="";i++;}
-	while (i<39){a[i].value=0;i++;}
-	a[39].value=0.1;}
+var t=document.getElementsByTagName("textarea")[0];
+function r() {
+var i=0;
+var b=[37]
+var p=[2];
+var a=document.getElementsByTagName("input");
+var ab=a[39].value;
+p[0]=a[0].value;
+p[1]=a[1].value;
+while (i<37){
+b[i]=(a[i+2].value*ab).toFixed(6)*1;
+i++;
+}i=1;
+t.value=t.value+'<b onclick="v=['+b[2]+','+b[3]+','+b[4]+','+b[5]+','+b[6]+','+b[7]+','+b[8]+','+b[9]+','+b[10]+','+b[11]+','+b[30]+','+b[29]+','+b[32]+','+b[26]+','+b[12]+','+b[34]+','+b[35]+','+b[36]+','+b[13]+','+b[14]+','+b[15]+','+b[31]+','+b[16]+','+b[24]+','+b[17]+','+b[18]+','+b[19]+','+b[20]+','+b[33]+','+b[21]+','+b[22]+','+b[23]+','+b[27]+','+b[28]+','+b[25]+','+b[1]+','+b[0]+'];c()"><p>0</p><a id="'+p[1]+'">'+p[0]+'</a></b>\n';
+while (i<2){a[i].value="";i++;}
+while (i<39){a[i].value=0;i++;}
+a[39].value=0.1;}
 </script>
 </body>
 </html>
