@@ -1,15 +1,15 @@
 {
   "background_color": "#232323",
-  "description": "Jedzoka",
+  "description": "Plantiet",
   "display": "standalone",
   "icons": [
     {
-      "src": "https://avatars1.githubusercontent.com/u/14019455?s=460&v=4",
+      "src": "https://i.imgur.com/D7OuCTA.png",
       "sizes": "192x192",
       "type": "image/png"
     }
   ],
-  "name": "Jedzoka",
-  "short_name": "Jedzoka",
+  "name": "Plantiet",
+  "short_name": "Plantiet",
   "start_url": "/index.html"
 }
