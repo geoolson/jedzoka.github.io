@@ -1,12 +1,7 @@
-# How to use [this website](https://jedzoka.github.io)?
-1. Click [select] to select your age group
-2. Click [items] to add them to your diet, try to make all of table's numbers positive
-3. Click [output] to see the list and quantity of items you've collected<br>
+# [Plantiet](https://jedzoka.github.io/plantiet) - Plan/t diet
 
-This pink counter on right is for setting the number of days for your diet. Set it to 0 to enter references mode
-
-This website isn't 100% accurate, quantity of nutrients may vary depending on many factors like soil. The purpose of this website is to make sure you don't get any deficiencies
-
-Please! Try to eat as little animal products as possible! It will be better for your [health](https://www.ncbi.nlm.nih.gov/pubmed/27886704) and our [enviroument](https://www.theguardian.com/environment/2018/may/31/avoiding-meat-and-dairy-is-single-biggest-way-to-reduce-your-impact-on-earth)
-
-You are free to make your own version of this site, [this tool](https://jedzoka.github.io/pg) will help you
+[SimPlant](https://jedzoka.github.io/plantiet/sp) presents the lists of things You need to eat within a week<br>
+If those lists aren't suitable to You, try our [diet planner](https://jedzoka.github.io/plantiet)<br>
+If diet planner is lacking something, try to create your own planner! Our [SDK](https://jedzoka.github.io/plantiet/sdk) should help You!<br><br>
+Those websites aren't 100% accurate, quantity of nutrients may vary depending on many factors like soil. The purpose of those websites is to make sure You don't get any deficiencies<br><br>
+We encourage You to eat as little animal products as possible! It will be better for Your [health](https://www.ncbi.nlm.nih.gov/pubmed/27886704) and Our [enviroument](https://www.theguardian.com/environment/2018/may/31/avoiding-meat-and-dairy-is-single-biggest-way-to-reduce-your-impact-on-earth)
