@@ -1,0 +1,10 @@
+{"background_color":"brown",
+"description":"Plantiet",
+"display":"standalone",
+"icons":[{
+"src":"https://i.imgur.com/D7OuCTA.png",
+"sizes":"192x192",
+"type":"image/png"
+}],"name":"Plantiet",
+"short_name":"Plantiet",
+"start_url":"/index.html"}
