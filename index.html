@@ -71,19 +71,19 @@ color:#5fa5d3;
 <h1 onclick="e++;q[1].innerHTML=e">+</h1><br><br><br><h1 onclick="if(e==0.1)e=0.01;else if(e==0.01)e=1;else e=0.1;q[1].innerHTML=e">1</h1><br><br><br><h1 onclick="e*=-1;q[1].innerHTML=e">--</h1>
 <div style="pointer-events:none;margin-top:150px"></div>
 <br style="clear:both">
-<button onclick="o()">LOAD CACHE</button>
+<button onclick="o()">LOAD ITEMS</button>
 <button onclick="s()" value="0">SELECT</button>
-<button onclick="localStorage.clear()">CLEAR CACHE</button>
+<button onclick="if(e==0)aa()">DELETE ITEMS</button>
 <button onclick="u()">LINK</button>
 <button onclick="r()">OUTPUT</button>
 <button onclick="t.select();document.execCommand('copy')">COPY</button>
-<textarea rows="1" cols="50" class="translate" placeholder="Search for food -> add records to cache">
-</textarea><br><div class="translate"><a href="https://github.com/jedzoka/plantiet">Project's page</a><br><br>
-<a href="https://ods.od.nih.gov/Health_Information/Dietary_Reference_Intakes.aspx">DRI Tables</a><br><br>
+<textarea rows="2" cols="50" class="translate" placeholder="Type your food name here">
+</textarea><br><br><div class="translate"><a href="https://github.com/jedzoka/plantiet">Tutorial</a><br><br>
 <a href="https://veganhealth.org/vitamin-d/">Regarding Vitamin D</a><br>
 <a href="https://www.curejoy.com/content/chromium-rich-food-source/">Regarding Chromium</a><br>
 <a href="https://www.boldsky.com/health/nutrition/2018/10-molybdenum-rich-foods-to-include-in-your-diet/articlecontent-pf195085-120684.html">Regarding Molybdenum</a><br>
 <a href="https://www.healthy-eating-support.org/healthy-eating-minerals-3.html">Regarding Chloride</a><br><br>
+<a href="https://ods.od.nih.gov/Health_Information/Dietary_Reference_Intakes.aspx">DRI Tables</a><br><br>
 A - <a>Vitamin A</a> - μg<br>
 C - <a>Vitamin C</a> - mg<br>
 E - <a>Vitamin E</a> - mg<br>
@@ -118,7 +118,7 @@ Om3 - <a>Alpha-Linolenic acid</a> - g<br>
 Pr - <a>Protein</a> - g<br>
 kcal - <a>calorie</a></div>
 <script>
-if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register('sw.js');
 var t=document.getElementsByTagName("textarea")[0];
 var b=document.getElementsByTagName("button");
 var k=document.getElementsByTagName("div");
@@ -250,17 +250,20 @@ while (i<d.length){
 if(p[i].innerHTML!=0){t.value+="-"+a[i].innerHTML+" "+p[i].innerHTML+" grams\n";t.rows++;}
 i++;}}
 function o(){
-window.scrollTo(0,0);
 b[1].innerHTML="SELECT";
 b[1].value=0;
 k[0].innerHTML="";
-f=[];e=0;
-while(e<33){
-h[e].innerHTML=0;
-e++;}e=0;q
-while(e<localStorage.length+1)
-{f[e+1]=localStorage.key(e);e++}
-e=1;l(1);q[1].innerHTML=e}
+f=[];i=0;
+while(i<33){
+h[i].innerHTML=0;
+i++;}i=0;q
+while(i<localStorage.length+1)
+{f[i+1]=localStorage.key(i);i++}
+i=1;l(1)}
+function aa(){i=0;
+while(i<d.length){
+if(p[i].innerHTML!=0)localStorage.removeItem(f[i+1]);
+i++;}}
 function u(){i=0;
 t.value="https://jedzoka.github.io/plantiet/?q";
 while (i<d.length){
