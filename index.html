@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" type="image/png" href="https://i.imgur.com/D7OuCTA.png"/>
+<link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/google/110/jack-o-lantern_1f383.png"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-<title>Plantiet</title>
+<title>Plantiet - Plan diet effectivly!</title>
 <style>
 ::-webkit-scrollbar{width:5px;}
 *{
@@ -71,13 +71,13 @@ color:#5fa5d3;
 <h1 onclick="e++;q[1].innerHTML=e">+</h1><br><br><br><h1 onclick="if(e==0.1)e=0.01;else if(e==0.01)e=1;else e=0.1;q[1].innerHTML=e">1</h1><br><br><br><h1 onclick="e*=-1;q[1].innerHTML=e">--</h1>
 <div style="pointer-events:none;margin-top:150px"></div>
 <br style="clear:both">
-<button onclick="o()">LOAD ITEMS</button>
-<button onclick="s()" value="0">SELECT</button>
-<button onclick="if(e==0)aa()">DELETE ITEMS</button>
-<button onclick="u()">LINK</button>
-<button onclick="r()">OUTPUT</button>
+<button onclick="get()">LOAD ITEMS</button>
+<button onclick="set()" value="0">SELECT</button>
+<button onclick="if(e==0)rm()">DELETE ITEMS</button>
+<button onclick="url()">LINK</button>
+<button onclick="res()">OUTPUT</button>
 <button onclick="t.select();document.execCommand('copy')">COPY</button>
-<textarea rows="2" cols="50" class="translate" placeholder="Type your food name here">
+<textarea rows="2" cols="50" class="translate" onkeypress="if(event.keyCode===13)db()"  placeholder="Type your food name here">
 </textarea><br><br><div class="translate"><a href="https://github.com/jedzoka/plantiet">Tutorial</a><br><br>
 <a href="https://veganhealth.org/vitamin-d/">Regarding Vitamin D</a><br>
 <a href="https://www.curejoy.com/content/chromium-rich-food-source/">Regarding Chromium</a><br>
@@ -127,26 +127,30 @@ var a=document.getElementsByTagName("a");
 var d=document.getElementsByTagName("b");
 var h=document.getElementsByTagName("i");
 var p=document.getElementsByTagName("p");
-var f=window.location.href.split("q");
-var j=window.location.href.split("v");
 var w=new XMLHttpRequest();
+var f=window.location.href;
+var j=f.split("v");
+var r=f.split("c");
+f=f.split("q");
+var v=[];
+var u=[];
 var g=0;
 var e=1;
 var i=0;
 var m=0;
 var n;
 var y;
-var v;
-var z;
 var x;
+var z=[];
+z.length=36;
+var o=[];
+o.length=24;
+o.fill(0,0,24);
 if(f[1])l(i+1);
 if(j[1]){e=j[1];q[1].innerHTML=e}
-if(j[2]){g=0;while(j[2]>g){s();g++;}}
-document.addEventListener("keydown",function(x){
-if(x.keyCode===68)q[0].click();
-if(x.keyCode===65)q[1].click();
-if(x.keyCode===83)q[2].click();
-if(x.keyCode===13){
+if(j[2]){g=0;while(j[2]>g){set();g++}}
+if(r[1])s();
+function db(){
 w.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query="+t.value);
 t.style.visibility="hidden";
 t.value="";
@@ -162,7 +166,7 @@ x.innerHTML="<hr>"+n.foods[g].description+"<br><a>"+n.foods[g].ingredients+"</a>
 x.id=n.foods[g].fdcId;
 x.onclick=function(){f.push(this.id);l(f.length-1)}
 k[1].appendChild(x);
-g++;}}}})
+g++;}}}
 function l(i){
 if(localStorage.getItem(f[i])){
 e=q[1].innerHTML;
@@ -183,7 +187,7 @@ if(e>0)c(g);
 g++}}}}
 else{
 v=[1106,1162,1109,1185,1165,1166,1167,1170,1175,1177,1178,1176,1180,1087,1098,1099,1100,1089,1090,1101,1091,1004,1103,1095,1092,1093,1051,2039,1079,1269,1270,1003,1008,1242,1246,1005];
-z=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+z.fill(0,0,36);
 w.open("GET","https://api.nal.usda.gov/fdc/v1/food/"+f[i]+"?api_key=MWYRxDqM56TfgHuedUvOFHWtk4jL5K9H3abkAWmn");
 w.send();
 w.onload=function(){
@@ -206,66 +210,71 @@ g++;
 }g=0;
 y+=f[i];
 localStorage.setItem(f[i],y+";"+n.description)
-if(i<f.length-1)l(i);}}}
-function s(){
+if(i<f.length-1)l(i)}}}
+function set(){
 switch (b[1].value*1){
-case 0:v=[-400,-40,-4,-2.0,-0.2,-0.3,-2,-1.7,-0.1,-65,-0.4,-5,-125,-200,-0.2,-10,-110,-0.27,-30,-0.003,-100,-31,-15,-2,-400,-120,-700,-60,0,-4.4,-0.5,-9.1,0];m=e;b[1].innerHTML="0-6 months";break;
-case 1:v=[-100,-10,-1,-0.5,-0.1,-0.1,-2,-0.1,-0.2,-15,-0.1,-1,-25,-60,-0.02,-490,-20,-10.73,-45,-0.597,-175,1,-5,-1,-300,-250,-100,-35,0,-0.2,0,-1.9,0];b[1].innerHTML="7-12 months";break;
-case 2:v=[200,35,-1,-27.5,-0.2,-0.1,-2,-0.2,-0.2,-70,-0.4,-2,-50,-440,-0.12,-200,40,4,-5,-0.6,-185,30,0,0,-2300,-630,-500,-35,-19,-2.4,-0.2,-2,0];b[1].innerHTML="1-3 years";break;
-case 3:v=[-100,-10,-1,-25,-0.1,-0.1,-2,-1,-0.1,-50,-0.3,-4,-50,-300,-0.1,-300,-0,-3,-50,-0.3,-40,0,-10,-2,-800,-200,-400,0,-6,-3,-0.2,-6,0];b[1].innerHTML="4-8 years";break;
-case 4:v=[-200,-20,-4,-5,-0.3,-0.3,-4,-1,-0.4,-100,-0.6,-8,-125,-300,-0.26,-1000,-30,2,-110,-0.4,-750,0,-10,-3,-700,-300,-700,0,-6,-2,-0.3,-15,0];b[1].innerHTML="man 9-13";break;
-case 5:v=[-300,-30,-4,-15,-0.3,-0.4,-4,-1,-0.3,-100,-0.6,-5,-175,0,-0.19,-1000,-30,-3,-170,-0.3,0,0,-15,-3,-200,0,-900,0,-7,-4,-0.4,-18,0];b[1].innerHTML="man 14-18";break;
-case 6:v=[0,-15,0,-45,0,0,0,0,0,0,0,-5,0,300,-0.01,-1000,0,3,10,-0.1,550,0,0,0,0,0,-400,0,0,-1,0,-4,0];b[1].innerHTML="man 19-30";break;
-case 7:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-20,0,0,0,0,0,0,0,0,0,0,0,0,0,0];b[1].innerHTML="man 31-50";break;
-case 8:v=[0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,200,0,0,8,3,0,0,0,0];b[1].innerHTML="man 51-70";break;
-case 9:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,-200,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0];b[1].innerHTML="man 70+";break;
-case 10:v=[300,45,4,60,0.3,0.4,4,1,0.7,100,0.6,10,175,-100,0.2,2000,30,0,180,0.7,-550,0,15,3,200,-300,1600,0,4,4,0.6,22,0];b[1].innerHTML="woman 9-13";break;
-case 11:v=[-100,-20,-4,-15,-0.1,-0.1,-2,-1,-0.2,-100,-0.6,-5,-25,0,-0.19,-1000,-30,-7,-120,0,0,0,-15,-1,-200,0,-200,0,0,-1,-0.1,-12,0];b[1].innerHTML="woman 14-18";break;
-case 12:v=[0,-10,0,-15,-0.1,-0.1,0,0,-0.1,0,0,-5,-25,300,-0.01,0,0,-3,50,-0.2,550,0,0,1,0,0,-400,0,1,-1,0,0,0];b[1].innerHTML="woman 19-30";break;
-case 13:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0];b[1].innerHTML="woman 31-50";break;
-case 14:v=[0,0,0,0,0,0,0,0,-0.2,0,0,0,0,-200,0,0,0,10,0,0,0,0,0,0,0,200,0,0,4,1,0,0,0];b[1].innerHTML="woman 50-70";break;
-case 15:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0];b[1].innerHTML="woman 70+";break;
-case 16:v=[-50,-5,0,15,-0.3,-0.3,-4,-1,-0.4,-200,-0.2,0,-25,-100,-0.1,0,-70,-19,-80,-0.2,-550,0,-5,-4,0,-300,-300,-45,-7,-2,-0.3,-25,0];b[1].innerHTML="pregnancy 14-18";break;
-case 17:v=[-20,-5,0,-15,0,0,0,0,0,0,0,0,0,300,0,0,0,0,50,0,550,0,0,1,0,0,0,0,0,0,0,0,0];b[1].innerHTML="pregnancy 19-30";break;
-case 18:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0];b[1].innerHTML="pregnancy 31-50";break;
-case 19:v=[-430,-30,-4,15,0,-0.2,1,-1,-0.1,100,-0.2,-5,-100,-300,-0.3,0,-70,17,0,-0.6,-550,0,-10,-2,-400,0,-800,-35,-1,0,0.1,0,0];b[1].innerHTML="lactation 14-18";break;
-case 20:v=[-100,-5,0,-15,0,0,0,0,0,0,0,0,0,300,0,0,0,1,50,0,550,0,0,1,0,0,0,0,0,0,0,0,0];b[1].innerHTML="lactation 19-30";break;
-case 21:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0];b[1].innerHTML="lactation 31-50";break;
-case 22:v=[1300,120,19,90,1.4,1.6,17,7,2,500,2.8,35,550,1000,1.3,3000,290,9,320,2.6,700,0,70,12,5100,1500,3800,210,29,13,1.3,71,0];b[1].innerHTML="SELECT";b[1].value=-1;break;}
+case 0:v=[-400,-40,-4,-2.0,-0.2,-0.3,-2,-1.7,-0.1,-65,-0.4,-5,-125,-200,-0.2,-10,-110,-0.27,-30,-0.003,-100,-31,-15,-2,-400,-120,-700,-60,0,-4.4,-0.5,-9.1,0,600,,,,,,,,,,,,,1000,,700,,40,,,,,45,4];m=e;b[1].innerHTML="0-6 months";break;
+case 1:v=[-100,-10,-1,-0.5,-0.1,-0.1,-2,-0.1,-0.2,-15,-0.1,-1,-25,-60,-0.02,-490,-20,-10.73,-45,-0.597,-175,1,-5,-1,-300,-250,-100,-35,0,-0.2,0,-1.9,0,0,,,,,,,,,,,,,500,,200,,0,,,,,15,1];b[1].innerHTML="7-12 months";break;
+case 2:v=[200,35,-1,-27.5,-0.2,-0.1,-2,-0.2,-0.2,-70,-0.4,-2,-50,-440,-0.12,-200,40,4,-5,-0.6,-185,30,0,0,-2300,-630,-500,-35,-19,-2.4,-0.2,-2,0,0,400,200,,,,10,,30,300,,,1000,1000,1,400,200,0,65,2,3000,,30,2];b[1].innerHTML="1-3 years";break;
+case 3:v=[-100,-10,-1,-25,-0.1,-0.1,-2,-1,-0.1,-50,-0.3,-4,-50,-300,-0.1,-300,-0,-3,-50,-0.3,-40,0,-10,-2,-800,-200,-400,0,-6,-3,-0.2,-6,0,300,250,100,,,,5,,10,100,,,0,0,2,900,100,0,45,1,0,,60,5];b[1].innerHTML="4-8 years";break;
+case 4:v=[-200,-20,-4,-5,-0.3,-0.3,-4,-1,-0.4,-100,-0.6,-8,-125,-300,-0.26,-1000,-30,2,-110,-0.4,-750,0,-10,-3,-700,-300,-700,0,-6,-2,-0.3,-15,0,800,550,300,,,,5,,20,200,,,1000,500,2,7800,300,0,240,3,1000,,130,11];b[1].innerHTML="man 9-13";break;
+case 5:v=[-300,-30,-4,-15,-0.3,-0.4,-4,-1,-0.3,-100,-0.6,-5,-175,0,-0.19,-1000,-30,-3,-170,-0.3,0,0,-15,-3,-200,0,-900,0,-7,-4,-0.4,-18,0,1100,600,200,,,,10,,20,200,,,1000,0,3,0,300,5,0,3,0,,120,11];b[1].innerHTML="man 14-18";break;
+case 6:v=[0,-15,0,-45,0,0,0,0,0,0,0,-5,0,300,-0.01,-1000,0,3,10,-0.1,550,0,0,0,0,0,-400,0,0,-1,0,-4,0,200,200,200,,,,5,,20,200,,,500,-500,2,0,200,0,0,2,0,,0,6];b[1].innerHTML="man 19-30";break;
+case 7:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="man 31-50";break;
+case 8:v=[0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,200,0,0,8,3,0,0,0,0,0,0,0,,,,0,,0,0,,0,-500,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="man 51-70";break;
+case 9:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,-200,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,-1000,,0,0];b[1].innerHTML="man 70+";break;
+case 10:v=[300,45,4,60,0.3,0.4,4,1,0.7,100,0.6,10,175,-100,0.2,2000,30,0,180,0.7,-550,0,15,3,200,-300,1600,0,4,4,0.6,22,0,-1300,-800,-400,,,,-15,,-40,-400,,,-1500,1000,-5,0,-500,-5,0,-5,1000,,-120,-17];b[1].innerHTML="woman 9-13";break;
+case 11:v=[-100,-20,-4,-15,-0.1,-0.1,-2,-1,-0.2,-100,-0.6,-5,-25,0,-0.19,-1000,-30,-7,-120,0,0,0,-15,-1,-200,0,-200,0,0,-1,-0.1,-12,0,1100,600,200,,,,10,,20,200,,,1000,0,3,0,300,5,0,3,0,,120,11];b[1].innerHTML="woman 14-18";break;
+case 12:v=[0,-10,0,-15,-0.1,-0.1,0,0,-0.1,0,0,-5,-25,300,-0.01,0,0,-3,50,-0.2,550,0,0,1,0,0,-400,0,1,-1,0,0,0,200,200,200,,,,5,,20,200,,,500,-500,2,0,200,0,0,2,0,,0,6];b[1].innerHTML="woman 19-30";break;
+case 13:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="woman 31-50";break;
+case 14:v=[0,0,0,0,0,0,0,0,-0.2,0,0,0,0,-200,0,0,0,10,0,0,0,0,0,0,0,200,0,0,4,1,0,0,0,0,0,0,,,,0,,0,0,,,0,-500,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="woman 50-70";break;
+case 15:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,-1000,,0,0];b[1].innerHTML="woman 70+";break;
+case 16:v=[-50,-5,0,15,-0.3,-0.3,-4,-1,-0.4,-200,-0.2,0,-25,-100,-0.1,0,-70,-19,-80,-0.2,-550,0,-5,-4,0,-300,-300,-45,-7,-2,-0.3,-25,0,-200,-200,-200,,,,-5,,-20,-200,,,-500,1000,-2,0,-200,0,0,-2,500,,0,-6];b[1].innerHTML="pregnancy 14-18";break;
+case 17:v=[-20,-5,0,-15,0,0,0,0,0,0,0,0,0,300,0,0,0,0,50,0,550,0,0,1,0,0,0,0,0,0,0,0,0,200,200,200,,,,5,,20,200,,,500,-500,2,0,200,0,0,2,0,,0,6];b[1].innerHTML="pregnancy 19-30";break;
+case 18:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="pregnancy 31-50";break;
+case 19:v=[-430,-30,-4,15,0,-0.2,1,-1,-0.1,100,-0.2,-5,-100,-300,-0.3,0,-70,17,0,-0.6,-550,0,-10,-2,-400,0,-800,-35,-1,0,0.1,0,0,-200,-200,-200,,,,-5,,-20,-200,,,-500,500,-2,0,-200,0,0,-2,500,,0,-6];b[1].innerHTML="lactation 14-18";break;
+case 20:v=[-100,-5,0,-15,0,0,0,0,0,0,0,0,0,300,0,0,0,1,50,0,550,0,0,1,0,0,0,0,0,0,0,0,0,200,200,200,,,,5,,20,200,,,500,-500,2,0,200,0,0,2,0,,0,6];b[1].innerHTML="lactation 19-30";break;
+case 21:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="lactation 31-50";break;
+case 22:v=[1300,120,19,90,1.4,1.6,17,7,2,500,2.8,35,550,1000,1.3,3000,290,9,320,2.6,700,0,70,12,5100,1500,3800,210,29,13,1.3,71,0];o.fill(0,0,24);b[1].innerHTML="SELECT";b[1].value=-1;break;}
+i=0;while(i<24){
+if(v[i+33] || v[i+33]>=0)o[i]=(o[i]+v[i+33]*m+v[i]*m).toFixed(6)*1;
+i++;}
 q[1].innerHTML=m;
 b[1].value++;
-e=m;c(-1)}
+e=m;c()}
 function c(x){i=0;
-if(x>-1){p[x].innerHTML=(p[x].innerHTML*1+e*100).toFixed(6)*1;v=d[x].id.split(";")}
+if(x){p[x].innerHTML=p[x].innerHTML*1+e*100;v=d[x].id.split(";")}
 if(e==0)window.open("https://fdc.nal.usda.gov/fdc-app.html#/food-details/"+v[v.length-2]+"/nutrients");
 while(i<33){
 h[i].innerHTML=(h[i].innerHTML*1+v[i]*e).toFixed(6)*1;
-if(h[i].innerHTML>=0)h[i].style.color="#bbe1fa";
-else h[i].style.color="#ff6464";
-i++;}}
-function r(){i=0;
+if(h[i].innerHTML<0)h[i].style.color="#ff6464";
+else if(o[i]!=0 && h[i].innerHTML>=o[i])h[i].style.color="#b030b0";
+else h[i].style.color="#bbe1fa";
+i++}}
+function res(){i=0;
 t.value=b[1].innerHTML+", for "+m+" day/s\n";
 t.rows="0";
 while (i<d.length){
 if(p[i].innerHTML!=0){t.value+="-"+a[i].innerHTML+" "+p[i].innerHTML+" grams\n";t.rows++;}
-i++;}}
-function o(){
+i++}}
+function get(){
 b[1].innerHTML="SELECT";
 b[1].value=0;
 k[0].innerHTML="";
 f=[];i=0;
 while(i<33){
+h[i].style.color="#bbe1fa";
 h[i].innerHTML=0;
-i++;}i=0;q
+i++}i=0;
 while(i<localStorage.length+1)
 {f[i+1]=localStorage.key(i);i++}
-i=1;l(1)}
-function aa(){i=0;
+i=0;l(1);if(r[1])s()}
+function rm(){i=0;
 while(i<d.length){
 if(p[i].innerHTML!=0)localStorage.removeItem(f[i+1]);
-i++;}}
-function u(){i=0;
-t.value="https://jedzoka.github.io/plantiet/?q";
+i++}}
+function url(){i=0;
+t.value=f[0];
 while (i<d.length){
 t.value+=f[i+1]+"q";
 i++;}i=0;
@@ -273,7 +282,14 @@ t.value+="v"+m;
 t.value+="v"+b[1].value;
 while (i<d.length){
 t.value+="v"+p[i].innerHTML/100;
-i++;}}
+i++}}
+function s(){i=0;
+b[1].disabled="true";
+b[1].innerHTML="CUSTOM";
+while(i<33){
+v[i]=r[i+1]*-1;
+o[i]=(r[i+33]-r[i+1])*e;
+i++}c()}
 </script>
 </body>
 </html>
