@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/google/110/jack-o-lantern_1f383.png"/>
+<link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/google/110/jack-o-lantern_1f383.png">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-<title>Plantiet - Plan diet effectivly!</title>
+<title>Plantiet</title>
 <style>
-::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar{display:none;}
 *{
 font-family:'Roboto',sans-serif;
 background-color:#1b262c;
@@ -16,280 +16,141 @@ color:#bbe1fa;
 }
 body{
 text-align:center;
+height:100%;
 user-select:none;
 }
-button{
-background-color:#0f4c75;
-color:white;
-height:60px;
-width:32%;
-}
-table{
-table-layout:fixed;
-text-align:left;
-position:fixed;
-font-size:17px;
-width:100%;
-top:0;
-}
-td{
-overflow:hidden;
-color:#5fa5d3;
-}
-i{
-font-style:normal;
-display:block;
-}
+i{font-style:normal;}
 b{
 font-weight:normal;
 height:120px;
 width:100px;
 float:left;
 overflow-y:auto;
-}
-h1{
-position:fixed;
 color:#5fa5d3;
-right:0;
 }
 a{
-text-decoration:none;
-color:#5fa5d3;
+position:absolute;
+left:64px;
+color:orange;
 }
 </style>
 </head>
 <body class="notranslate">
-<table>
-<col width="32"><col width="33%"><col width="32"><col width="33%"><col width="39"><col width="33%">
-<td>A<br>C<br>E<br>K<br>B1<br>B2<br>B3<br>B5<br>B6<br>B9<br>B12</td>
-<td><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i></td>
-<td>Bio<br>Cho<br>Ca<br>Cu<br>Flu<br>Io<br>Fe<br>Mg<br>Mn<br>P<br>fat</td>
-<td><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i></td>
-<td>Se<br>Zn<br>Pts<br>Na<br>H2O<br>Crb<br>DF<br>Om6<br>Om3<br>Pr<br>kcal</td>
-<td><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i></td>
-</table>
-<h1 onclick="e++;q[1].innerHTML=e">+</h1><br><br><br><h1 onclick="if(e==0.1)e=0.01;else if(e==0.01)e=1;else e=0.1;q[1].innerHTML=e">1</h1><br><br><br><h1 onclick="e*=-1;q[1].innerHTML=e">--</h1>
-<div style="pointer-events:none;margin-top:150px"></div>
+<div onclick="r()" style="top:0;left:0;text-align:left;height:100%;width:100%;position:fixed;overflow-x:hidden"></div>
+<div style="margin-left:100px;">
+<div onclick="h[1].innerHTML=e" style="position:fixed;right:0"><h1 onclick="e++">+</h1><h1 onclick="if(e==0.1)e=0.01;else if(e==0.01)e=1;else e=0.1">1</h1><h1 onclick="e--">--</h1></div><div></div>
 <br style="clear:both">
-<button onclick="get()">LOAD ITEMS</button>
-<button onclick="set()" value="0">SELECT</button>
-<button onclick="if(e==0)rm()">DELETE ITEMS</button>
-<button onclick="url()">LINK</button>
-<button onclick="res()">OUTPUT</button>
-<button onclick="t.select();document.execCommand('copy')">COPY</button>
-<textarea rows="2" cols="50" class="translate" onkeypress="if(event.keyCode===13)db()"  placeholder="Type your food name here">
-</textarea><br><br><div class="translate"><a href="https://github.com/jedzoka/plantiet">Tutorial</a><br><br>
-<a href="https://veganhealth.org/vitamin-d/">Regarding Vitamin D</a><br>
-<a href="https://www.curejoy.com/content/chromium-rich-food-source/">Regarding Chromium</a><br>
-<a href="https://www.boldsky.com/health/nutrition/2018/10-molybdenum-rich-foods-to-include-in-your-diet/articlecontent-pf195085-120684.html">Regarding Molybdenum</a><br>
-<a href="https://www.healthy-eating-support.org/healthy-eating-minerals-3.html">Regarding Chloride</a><br><br>
-<a href="https://ods.od.nih.gov/Health_Information/Dietary_Reference_Intakes.aspx">DRI Tables</a><br><br>
-A - <a>Vitamin A</a> - μg<br>
-C - <a>Vitamin C</a> - mg<br>
-E - <a>Vitamin E</a> - mg<br>
-K - <a>Vitamin K</a> - μg<br>
-B1 - <a>Thiamin</a> - mg<br>
-B2 - <a>Riboflavin</a> - mg<br>
-B3 - <a>Niacin</a> - mg<br>
-B5 - <a>Pantothenic Acid</a> - mg<br>
-B6 - <a>Vitamin B6</a> - mg<br>
-B9 - <a>Folate</a> - μg<br>
-B12 - <a>Vitamin B12</a> - μg<br><br>
-Bio - <a>Biotin</a> - μg<br>
-Cho - <a>Choline</a> - mg<br>
-Ca - <a>Calcium</a> - mg<br>
-Cu - <a>Copper</a> - mg<br>
-Flu - <a>Fluoride</a> - μg<br>
-Io - <a>Iodine</a> - μg<br>
-Fe - <a>Iron</a> - mg<br>
-Mg - <a>Magnesium</a> - mg<br>
-Mn - <a>Manganese</a> - mg<br>
-P - <a>Phosphorus</a> - mg<br>
-fat - <a>Fat</a><br><br>
-Se - <a>Selenium</a> - μg<br>
-Zn - <a>Zinc</a> - mg<br>
-Pts - <a>Potassium</a> - mg<br>
-Na - <a>Sodium</a> - mg<br>
-H2O - <a>Water</a> - g<br>
-Crb - <a>Carbohydrate</a> - g<br>
-DF - <a>Dietary fiber</a> - g<br>
-Om6 - <a>Linoleic acid</a> - g<br>
-Om3 - <a>Alpha-Linolenic acid</a> - g<br>
-Pr - <a>Protein</a> - g<br>
-kcal - <a>calorie</a></div>
+<textarea placeholder=" Search for food"></textarea>
+<br><br><div></div>
 <script>
 navigator.serviceWorker.register('sw.js');
-var t=document.getElementsByTagName("textarea")[0];
-var b=document.getElementsByTagName("button");
-var k=document.getElementsByTagName("div");
-var q=document.getElementsByTagName("h1");
-var a=document.getElementsByTagName("a");
-var d=document.getElementsByTagName("b");
-var h=document.getElementsByTagName("i");
+var t=document.querySelector("textarea");
+var d=document.querySelectorAll("div");
+var h=document.querySelectorAll("h1");
+var b=document.getElementsByTagName("b");
 var p=document.getElementsByTagName("p");
-var w=new XMLHttpRequest();
-var f=window.location.href;
-var j=f.split("v");
-var r=f.split("c");
-f=f.split("q");
-var v=[];
-var u=[];
-var g=0;
-var e=1;
+var n=new XMLHttpRequest();
+var u=window.location.href;
+var k=u.split("?");
+var s=u.split("v");
 var i=0;
-var m=0;
-var n;
-var y;
+var e=1;
+var v;
+var g;
 var x;
-var z=[];
-z.length=36;
-var o=[];
-o.length=24;
-o.fill(0,0,24);
-if(f[1])l(i+1);
-if(j[1]){e=j[1];q[1].innerHTML=e}
-if(j[2]){g=0;while(j[2]>g){set();g++}}
-if(r[1])s();
-function db(){
-w.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query="+t.value);
-t.style.visibility="hidden";
+var z;
+var j=[];
+if(k[2]==="")localStorage.setItem(0,k[1]);
+k[2]=localStorage.getItem(0);
+if(!k[2])window.location.href="simplant.html";
+while(i<localStorage.length){
+if(localStorage.key(i)>0)l(localStorage.key(i))
+else if(localStorage.key(i).includes("a")){
+x=localStorage.getItem(localStorage.key(i)).split(";");
+d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a>"+x[0]+"</a><br>";}
+i++}
+u=u.split("q");
+if(u[1]){i=0;
+u[0]="";
+d[3].innerHTML="";
+while(i<u.length-1){
+l(u[i+1]);
+e=u[i+2];
+if(e>0)c(i/2);
+i+=2}e=1}
+if(s[1]){i=1;
+while(i<s.length){
+x=localStorage.getItem(s[i]).split(";");
+localStorage.setItem(s[i],x[0]+";"+s[i+1]+";"+s[i+2])
+i+=3;}}
+document.addEventListener("keydown",q=>{
+if(h[q.key-1])h[q.key-1].click();
+else if(q.key==="Enter"){
+n.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key="+k[2]+"&query="+t.value);
 t.value="";
-w.send();
-w.onload=function(){
-t.style.visibility="visible";
-n=JSON.parse(w.responseText);
-console.log(n);
-g=0;k[1].innerHTML="<hr>name of food<br><a>ingredients</a><br>brand owner<br><a>data type</a>";
-while(g<50){
-x=document.createElement("i");
-x.innerHTML="<hr>"+n.foods[g].description+"<br><a>"+n.foods[g].ingredients+"</a><br>"+n.foods[g].brandOwner+"<br><a>"+n.foods[g].dataType+"</a>";
-x.id=n.foods[g].fdcId;
-x.onclick=function(){f.push(this.id);l(f.length-1)}
-k[1].appendChild(x);
-g++;}}}
-function l(i){
-if(localStorage.getItem(f[i])){
-e=q[1].innerHTML;
-x=document.createElement("b");
-x.id=localStorage.getItem(f[i]);
-g=x.id.split(";");
-x.onclick=function(){c(i-2)};
-x.innerHTML="<p>0</p><a class='translate'>"+g[35]+"</a>";
-k[0].appendChild(x);
-i++;
-if(i<f.length-1)l(i);
-else{k[0].style.pointerEvents="auto";
-if(j[3]){
-g=0;
-while(g<j.length-3){
-e=j[g+3];
-if(e>0)c(g);
-g++}}}}
+n.send();
+n.onload=function(){
+j=JSON.parse(n.responseText);
+i=0;d[4].innerHTML="<hr>name of food<br><br>ingredients<br><br>brand owner<br><br>data type";
+while(i<50){
+d[4].innerHTML+="<i id='"+j.foods[i].fdcId+"' onclick='l(this.id);d[4].removeChild(this);'><hr>"+j.foods[i].description+"<br><br>"+j.foods[i].ingredients+"<br><br>"+j.foods[i].brandOwner+"<br><br>"+j.foods[i].dataType+"</i>";
+i++}}}})
+function l(x){
+if(localStorage.getItem(x)){
+v=localStorage.getItem(x).split(";");
+d[3].innerHTML+="<b id='"+localStorage.getItem(x)+"' onclick='c("+b.length+")'><p>0</p> "+v[1]+"</b>"}
 else{
-v=[1106,1162,1109,1185,1165,1166,1167,1170,1175,1177,1178,1176,1180,1087,1098,1099,1100,1089,1090,1101,1091,1004,1103,1095,1092,1093,1051,2039,1079,1269,1270,1003,1008,1242,1246,1005];
-z.fill(0,0,36);
-w.open("GET","https://api.nal.usda.gov/fdc/v1/food/"+f[i]+"?api_key=MWYRxDqM56TfgHuedUvOFHWtk4jL5K9H3abkAWmn");
-w.send();
-w.onload=function(){
-n=JSON.parse(w.responseText);
-console.log(n);
-y=n.foodNutrients;
+n.open("GET","https://api.nal.usda.gov/fdc/v1/food/"+x+"?api_key="+k[2]);
+n.send();
+n.onload=function(){
+j=JSON.parse(n.responseText);
+z=j.foodNutrients;
+v=x+";";
+v+=j.description;
+if(j.ingredients)v+=" ~ "+j.ingredients;
+if(j.brandOwner)v+=" ~ "+j.brandOwner;
 g=0;
-while(g<y.length){x=0;
-if(n.foodNutrients[g].amount)
-while(x<36){
-if(v[x]==n.foodNutrients[g].nutrient.id)z[x]=n.foodNutrients[g].amount;
-x++;}g++;
-}g=0;y=z[g];
-z[2]+=z[33];
-z[10]+=z[34];
-z[27]+=z[35];
-while(g<34){
-y+=";"+z[g+1];
-g++;
-}g=0;
-y+=f[i];
-localStorage.setItem(f[i],y+";"+n.description)
-if(i<f.length-1)l(i)}}}
-function set(){
-switch (b[1].value*1){
-case 0:v=[-400,-40,-4,-2.0,-0.2,-0.3,-2,-1.7,-0.1,-65,-0.4,-5,-125,-200,-0.2,-10,-110,-0.27,-30,-0.003,-100,-31,-15,-2,-400,-120,-700,-60,0,-4.4,-0.5,-9.1,0,600,,,,,,,,,,,,,1000,,700,,40,,,,,45,4];m=e;b[1].innerHTML="0-6 months";break;
-case 1:v=[-100,-10,-1,-0.5,-0.1,-0.1,-2,-0.1,-0.2,-15,-0.1,-1,-25,-60,-0.02,-490,-20,-10.73,-45,-0.597,-175,1,-5,-1,-300,-250,-100,-35,0,-0.2,0,-1.9,0,0,,,,,,,,,,,,,500,,200,,0,,,,,15,1];b[1].innerHTML="7-12 months";break;
-case 2:v=[200,35,-1,-27.5,-0.2,-0.1,-2,-0.2,-0.2,-70,-0.4,-2,-50,-440,-0.12,-200,40,4,-5,-0.6,-185,30,0,0,-2300,-630,-500,-35,-19,-2.4,-0.2,-2,0,0,400,200,,,,10,,30,300,,,1000,1000,1,400,200,0,65,2,3000,,30,2];b[1].innerHTML="1-3 years";break;
-case 3:v=[-100,-10,-1,-25,-0.1,-0.1,-2,-1,-0.1,-50,-0.3,-4,-50,-300,-0.1,-300,-0,-3,-50,-0.3,-40,0,-10,-2,-800,-200,-400,0,-6,-3,-0.2,-6,0,300,250,100,,,,5,,10,100,,,0,0,2,900,100,0,45,1,0,,60,5];b[1].innerHTML="4-8 years";break;
-case 4:v=[-200,-20,-4,-5,-0.3,-0.3,-4,-1,-0.4,-100,-0.6,-8,-125,-300,-0.26,-1000,-30,2,-110,-0.4,-750,0,-10,-3,-700,-300,-700,0,-6,-2,-0.3,-15,0,800,550,300,,,,5,,20,200,,,1000,500,2,7800,300,0,240,3,1000,,130,11];b[1].innerHTML="man 9-13";break;
-case 5:v=[-300,-30,-4,-15,-0.3,-0.4,-4,-1,-0.3,-100,-0.6,-5,-175,0,-0.19,-1000,-30,-3,-170,-0.3,0,0,-15,-3,-200,0,-900,0,-7,-4,-0.4,-18,0,1100,600,200,,,,10,,20,200,,,1000,0,3,0,300,5,0,3,0,,120,11];b[1].innerHTML="man 14-18";break;
-case 6:v=[0,-15,0,-45,0,0,0,0,0,0,0,-5,0,300,-0.01,-1000,0,3,10,-0.1,550,0,0,0,0,0,-400,0,0,-1,0,-4,0,200,200,200,,,,5,,20,200,,,500,-500,2,0,200,0,0,2,0,,0,6];b[1].innerHTML="man 19-30";break;
-case 7:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="man 31-50";break;
-case 8:v=[0,0,0,0,0,0,0,0,-0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,200,0,0,8,3,0,0,0,0,0,0,0,,,,0,,0,0,,0,-500,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="man 51-70";break;
-case 9:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,-200,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,-1000,,0,0];b[1].innerHTML="man 70+";break;
-case 10:v=[300,45,4,60,0.3,0.4,4,1,0.7,100,0.6,10,175,-100,0.2,2000,30,0,180,0.7,-550,0,15,3,200,-300,1600,0,4,4,0.6,22,0,-1300,-800,-400,,,,-15,,-40,-400,,,-1500,1000,-5,0,-500,-5,0,-5,1000,,-120,-17];b[1].innerHTML="woman 9-13";break;
-case 11:v=[-100,-20,-4,-15,-0.1,-0.1,-2,-1,-0.2,-100,-0.6,-5,-25,0,-0.19,-1000,-30,-7,-120,0,0,0,-15,-1,-200,0,-200,0,0,-1,-0.1,-12,0,1100,600,200,,,,10,,20,200,,,1000,0,3,0,300,5,0,3,0,,120,11];b[1].innerHTML="woman 14-18";break;
-case 12:v=[0,-10,0,-15,-0.1,-0.1,0,0,-0.1,0,0,-5,-25,300,-0.01,0,0,-3,50,-0.2,550,0,0,1,0,0,-400,0,1,-1,0,0,0,200,200,200,,,,5,,20,200,,,500,-500,2,0,200,0,0,2,0,,0,6];b[1].innerHTML="woman 19-30";break;
-case 13:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="woman 31-50";break;
-case 14:v=[0,0,0,0,0,0,0,0,-0.2,0,0,0,0,-200,0,0,0,10,0,0,0,0,0,0,0,200,0,0,4,1,0,0,0,0,0,0,,,,0,,0,0,,,0,-500,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="woman 50-70";break;
-case 15:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,-1000,,0,0];b[1].innerHTML="woman 70+";break;
-case 16:v=[-50,-5,0,15,-0.3,-0.3,-4,-1,-0.4,-200,-0.2,0,-25,-100,-0.1,0,-70,-19,-80,-0.2,-550,0,-5,-4,0,-300,-300,-45,-7,-2,-0.3,-25,0,-200,-200,-200,,,,-5,,-20,-200,,,-500,1000,-2,0,-200,0,0,-2,500,,0,-6];b[1].innerHTML="pregnancy 14-18";break;
-case 17:v=[-20,-5,0,-15,0,0,0,0,0,0,0,0,0,300,0,0,0,0,50,0,550,0,0,1,0,0,0,0,0,0,0,0,0,200,200,200,,,,5,,20,200,,,500,-500,2,0,200,0,0,2,0,,0,6];b[1].innerHTML="pregnancy 19-30";break;
-case 18:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="pregnancy 31-50";break;
-case 19:v=[-430,-30,-4,15,0,-0.2,1,-1,-0.1,100,-0.2,-5,-100,-300,-0.3,0,-70,17,0,-0.6,-550,0,-10,-2,-400,0,-800,-35,-1,0,0.1,0,0,-200,-200,-200,,,,-5,,-20,-200,,,-500,500,-2,0,-200,0,0,-2,500,,0,-6];b[1].innerHTML="lactation 14-18";break;
-case 20:v=[-100,-5,0,-15,0,0,0,0,0,0,0,0,0,300,0,0,0,1,50,0,550,0,0,1,0,0,0,0,0,0,0,0,0,200,200,200,,,,5,,20,200,,,500,-500,2,0,200,0,0,2,0,,0,6];b[1].innerHTML="lactation 19-30";break;
-case 21:v=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,0,,0,0,,,0,0,0,0,0,0,0,0,0,,0,0];b[1].innerHTML="lactation 31-50";break;
-case 22:v=[1300,120,19,90,1.4,1.6,17,7,2,500,2.8,35,550,1000,1.3,3000,290,9,320,2.6,700,0,70,12,5100,1500,3800,210,29,13,1.3,71,0];o.fill(0,0,24);b[1].innerHTML="SELECT";b[1].value=-1;break;}
-i=0;while(i<24){
-if(v[i+33] || v[i+33]>=0)o[i]=(o[i]+v[i+33]*m+v[i]*m).toFixed(6)*1;
-i++;}
-q[1].innerHTML=m;
-b[1].value++;
-e=m;c()}
-function c(x){i=0;
-if(x){p[x].innerHTML=p[x].innerHTML*1+e*100;v=d[x].id.split(";")}
-if(e==0)window.open("https://fdc.nal.usda.gov/fdc-app.html#/food-details/"+v[v.length-2]+"/nutrients");
-while(i<33){
-h[i].innerHTML=(h[i].innerHTML*1+v[i]*e).toFixed(6)*1;
-if(h[i].innerHTML<0)h[i].style.color="#ff6464";
-else if(o[i]!=0 && h[i].innerHTML>=o[i])h[i].style.color="#b030b0";
-else h[i].style.color="#bbe1fa";
+while(g<z.length){
+if(z[g].amount)v+=";"+z[g].nutrient.id+";"+z[g].amount;
+if(!localStorage.getItem("a"+z[g].nutrient.id))localStorage.setItem("a"+z[g].nutrient.id,z[g].nutrient.name.split('Vitamin ')+" "+z[g].nutrient.unitName+";0;0");
+g++}
+localStorage.setItem(x,v)
+if(u[0]==="")location.reload();
+l(x)}}}
+function c(x){g=2;
+p[x].innerHTML=p[x].innerHTML*1+e*100;
+v=b[x].id.split(";");
+if(e==0)window.open("https://fdc.nal.usda.gov/fdc-app.html#/food-details/"+v[0]+"/nutrients");
+while(g<v.length){
+x=document.querySelector("i#a"+v[g]);
+x.innerHTML=(x.innerHTML*1+v[g+1]*e).toFixed(6)*1;
+if(x.innerHTML<0)x.style.color="#ff6464";
+else if(x.title!=0 && x.innerHTML*1>=x.title)x.style.color="#b030b0";
+else x.style.color="#bbe1fa";
+g+=2}g=0}
+function r(){i=0;
+if(isNaN(u[0])){u[0]=e;
+x=document.querySelectorAll("i");
+while(i<x.length){
+x[i].innerHTML*=e;
+x[i].title*=e;
 i++}}
-function res(){i=0;
-t.value=b[1].innerHTML+", for "+m+" day/s\n";
-t.rows="0";
-while (i<d.length){
-if(p[i].innerHTML!=0){t.value+="-"+a[i].innerHTML+" "+p[i].innerHTML+" grams\n";t.rows++;}
-i++}}
-function get(){
-b[1].innerHTML="SELECT";
-b[1].value=0;
-k[0].innerHTML="";
-f=[];i=0;
-while(i<33){
-h[i].style.color="#bbe1fa";
-h[i].innerHTML=0;
-i++}i=0;
-while(i<localStorage.length+1)
-{f[i+1]=localStorage.key(i);i++}
-i=0;l(1);if(r[1])s()}
-function rm(){i=0;
-while(i<d.length){
-if(p[i].innerHTML!=0)localStorage.removeItem(f[i+1]);
-i++}}
-function url(){i=0;
-t.value=f[0];
-while (i<d.length){
-t.value+=f[i+1]+"q";
-i++;}i=0;
-t.value+="v"+m;
-t.value+="v"+b[1].value;
-while (i<d.length){
-t.value+="v"+p[i].innerHTML/100;
-i++}}
-function s(){i=0;
-b[1].disabled="true";
-b[1].innerHTML="CUSTOM";
-while(i<33){
-v[i]=r[i+1]*-1;
-o[i]=(r[i+33]-r[i+1])*e;
-i++}c()}
+if(d[0].style.width==='100px')
+d[0].style.width='100%';
+else d[0].style.width='100px';
+v="for "+u[0]+" day/s:\n";
+g=k[0]+"?";
+i=0;
+while (i<b.length){
+if(p[i].innerHTML!=0){
+v+=b[i].textContent+"\n";
+x=b[i].id.split(";");
+g+="q"+x[0]+"q"+p[i].innerHTML/100;}
+i++}
+t.value=v+g;
+t.select();
+document.execCommand("copy");
+t.value=""}
 </script>
 </body>
 </html>
