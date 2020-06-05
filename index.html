@@ -41,7 +41,7 @@ color:orange;
 <div onclick="h[1].innerHTML=e" style="position:fixed;right:0"><h1 onclick="e++">+</h1><h1 onclick="if(e==0.1)e=0.01;else if(e==0.01)e=1;else e=0.1">1</h1><h1 onclick="e--">--</h1></div><div></div>
 <br style="clear:both">
 <textarea placeholder=" Search for food"></textarea>
-<br><br><div></div>
+<br><br><div></div></div>
 <script>
 navigator.serviceWorker.register('sw.js');
 var t=document.querySelector("textarea");
@@ -132,8 +132,14 @@ function r(){i=0;
 if(isNaN(u[0])){u[0]=e;
 x=document.querySelectorAll("i");
 while(i<x.length){
-x[i].innerHTML*=e;
-x[i].title*=e;
+x[i].innerHTML=(x[i].innerHTML*e).toFixed(6)*1;
+x[i].title=(x[i].title*e).toFixed(6)*1;
+if(x[i].innerHTML<0 || x[i].title!=0){
+g=x[i].nextElementSibling;
+v=x[i].nextElementSibling.nextElementSibling;
+d[0].insertBefore(x[i],x[1]);
+d[0].insertBefore(g,x[1]);
+d[0].insertBefore(v,x[1]);}
 i++}}
 if(d[0].style.width==='100px')
 d[0].style.width='100%';
