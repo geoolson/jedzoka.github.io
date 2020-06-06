@@ -12,6 +12,7 @@
 *{
 font-family:'Roboto',sans-serif;
 background-color:#1b262c;
+scrollbar-width:none;
 color:#bbe1fa;
 }
 body{
@@ -25,7 +26,7 @@ font-weight:normal;
 height:120px;
 width:100px;
 float:left;
-overflow-y:auto;
+overflow:auto;
 color:#5fa5d3;
 }
 a{
@@ -59,7 +60,7 @@ var v;
 var g;
 var x;
 var z;
-var j=[];
+var j;
 if(k[2]==="")localStorage.setItem(0,k[1]);
 k[2]=localStorage.getItem(0);
 if(!k[2])window.location.href="simplant.html";
@@ -129,22 +130,22 @@ else if(x.title!=0 && x.innerHTML*1>=x.title)x.style.color="#b030b0";
 else x.style.color="#bbe1fa";
 g+=2}g=0}
 function r(){i=0;
-if(isNaN(u[0])){u[0]=e;
+if(isNaN(s[0])){s[0]=e;
 x=document.querySelectorAll("i");
 while(i<x.length){
 x[i].innerHTML=(x[i].innerHTML*e).toFixed(6)*1;
 x[i].title=(x[i].title*e).toFixed(6)*1;
-if(x[i].innerHTML<0 || x[i].title!=0){
+if(i>0 && (x[i].innerHTML<0 || x[i].title!=0)){
 g=x[i].nextElementSibling;
-v=x[i].nextElementSibling.nextElementSibling;
-d[0].insertBefore(x[i],x[1]);
-d[0].insertBefore(g,x[1]);
-d[0].insertBefore(v,x[1]);}
+v=g.nextElementSibling;
+d[0].insertBefore(x[i],x[0]);
+d[0].insertBefore(g,x[0]);
+d[0].insertBefore(v,x[0]);}
 i++}}
 if(d[0].style.width==='100px')
 d[0].style.width='100%';
 else d[0].style.width='100px';
-v="for "+u[0]+" day/s:\n";
+v="for "+s[0]+" day/s:\n";
 g=k[0]+"?";
 i=0;
 while (i<b.length){
