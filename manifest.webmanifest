@@ -4,11 +4,10 @@
 "display":"standalone",
 "icons":[
 {
-"src":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/google/110/jack-o-lantern_1f383.png",
-"sizes":"160x160",
+"src":"noto-emoji_1f383.png",
+"sizes":"144x144",
 "type":"image/png"
 }],
 "name":"Plantiet",
-"short_name":"Plantiet",
 "start_url":"index.html"
 }

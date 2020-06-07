@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/google/110/jack-o-lantern_1f383.png">
+<link rel="icon" type="image/png" href="noto-emoji_1f383.png">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <title>Plantiet</title>
 <style>
@@ -41,11 +41,11 @@ color:orange;
 <div style="margin-left:100px;">
 <div onclick="h[1].innerHTML=e" style="position:fixed;right:0"><h1 onclick="e++">+</h1><h1 onclick="if(e==0.1)e=0.01;else if(e==0.01)e=1;else e=0.1">1</h1><h1 onclick="e--">--</h1></div><div></div>
 <br style="clear:both">
-<textarea placeholder=" Search for food"></textarea>
-<br><br><div></div></div>
+<input style="border:1px" placeholder=" Search for food">
+<br><br><div><a style="position:static" href="simplant.html">Simplant</a></div></div>
 <script>
 navigator.serviceWorker.register('sw.js');
-var t=document.querySelector("textarea");
+var t=document.querySelector("input");
 var d=document.querySelectorAll("div");
 var h=document.querySelectorAll("h1");
 var b=document.getElementsByTagName("b");
@@ -63,22 +63,13 @@ var z;
 var j;
 if(k[2]==="")localStorage.setItem(0,k[1]);
 k[2]=localStorage.getItem(0);
-if(!k[2])window.location.href="simplant.html";
+if(!k[2])k[2]="DEMO_KEY";
 while(i<localStorage.length){
 if(localStorage.key(i)>0)l(localStorage.key(i))
 else if(localStorage.key(i).includes("a")){
 x=localStorage.getItem(localStorage.key(i)).split(";");
 d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a>"+x[0]+"</a><br>";}
 i++}i=1;
-j=document.querySelectorAll("i");
-while(i<j.length){
-if(j[i].innerHTML<0 || j[i].title!=0){
-j[i].style.color="#ff6464";
-g=j[i].nextElementSibling;
-v=g.nextElementSibling;
-d[0].insertBefore(j[i],j[0]);
-d[0].insertBefore(g,j[0]);
-d[0].insertBefore(v,j[0]);}i++}
 u=u.split("q");
 if(u[1]){i=0;
 u[0]="";
@@ -92,7 +83,17 @@ if(s[1]){i=1;
 while(i<s.length){
 x=localStorage.getItem(s[i]).split(";");
 localStorage.setItem(s[i],x[0]+";"+s[i+1]+";"+s[i+2])
-i+=3;}}
+i+=3;}}i=1;
+j=document.querySelectorAll("i");
+if(j[0] && j[0].innerHTML<0){j[0].style.color="#ff6464";
+while(i<j.length){
+if(j[i].innerHTML<0 || j[i].title!=0){
+j[i].style.color="#ff6464";
+g=j[i].nextElementSibling;
+v=g.nextElementSibling;
+d[0].insertBefore(j[i],j[0]);
+d[0].insertBefore(g,j[0]);
+d[0].insertBefore(v,j[0]);}i++}}
 document.addEventListener("keydown",q=>{
 if(h[q.key-1])h[q.key-1].click();
 else if(q.key==="Enter"){
@@ -152,14 +153,11 @@ g=k[0]+"?";
 i=0;
 while (i<b.length){
 if(p[i].innerHTML!=0){
-v+=b[i].textContent+"\n";
+v+="-"+b[i].textContent+"\n";
 x=b[i].id.split(";");
-g+="q"+x[0]+"q"+p[i].innerHTML/100;}
+g+="q"+x[0]+"q"+p[i].innerHTML/100}
 i++}
-t.value=v+g;
-t.select();
-document.execCommand("copy");
-t.value=""}
+navigator.clipboard.writeText(v+g)}
 </script>
 </body>
 </html>
