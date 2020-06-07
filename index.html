@@ -41,7 +41,7 @@ color:orange;
 <div style="margin-left:100px;">
 <div onclick="h[1].innerHTML=e" style="position:fixed;right:0"><h1 onclick="e++">+</h1><h1 onclick="if(e==0.1)e=0.01;else if(e==0.01)e=1;else e=0.1">1</h1><h1 onclick="e--">--</h1></div><div></div>
 <br style="clear:both">
-<input style="border:1px" placeholder=" Search for food">
+<input placeholder=" Search for food">
 <br><br><div><a style="position:static" href="simplant.html">Simplant</a></div></div>
 <script>
 navigator.serviceWorker.register('sw.js');
@@ -71,14 +71,12 @@ x=localStorage.getItem(localStorage.key(i)).split(";");
 d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a>"+x[0]+"</a><br>";}
 i++}i=1;
 u=u.split("q");
-if(u[1]){i=0;
+if(u[1]){i=1;
 u[0]="";
 d[3].innerHTML="";
 while(i<u.length-1){
-l(u[i+1]);
-e=u[i+2];
-if(e>0)c(i/2);
-i+=2}e=1}
+l(u[i]);
+i+=2}}
 if(s[1]){i=1;
 while(i<s.length){
 x=localStorage.getItem(s[i]).split(";");
@@ -144,7 +142,11 @@ if(isNaN(s[0])){s[0]=e;
 while(i<j.length){
 j[i].innerHTML=(j[i].innerHTML*e).toFixed(6)*1;
 j[i].title=(j[i].title*e).toFixed(6)*1;
-i++}}
+i++}}i=0;
+if(u[1])while(i<u.length-1){
+e=u[i+2];
+c(i/2);
+i+=2}
 if(d[0].style.width==='100px')
 d[0].style.width='100%';
 else d[0].style.width='100px';
