@@ -83,7 +83,7 @@ x=localStorage.getItem(s[i]).split(";");
 localStorage.setItem(s[i],x[0]+";"+s[i+1]+";"+s[i+2])
 i+=3;}}i=1;
 j=document.querySelectorAll("i");
-if(j[0] && j[0].innerHTML<0){j[0].style.color="#ff6464";
+if(j[0] && j[0].innerHTML<0)j[0].style.color="#ff6464";
 while(i<j.length){
 if(j[i].innerHTML<0 || j[i].title!=0){
 j[i].style.color="#ff6464";
@@ -91,7 +91,7 @@ g=j[i].nextElementSibling;
 v=g.nextElementSibling;
 d[0].insertBefore(j[i],j[0]);
 d[0].insertBefore(g,j[0]);
-d[0].insertBefore(v,j[0]);}i++}}
+d[0].insertBefore(v,j[0]);}i++}
 document.addEventListener("keydown",q=>{
 if(h[q.key-1])h[q.key-1].click();
 else if(q.key==="Enter"){
