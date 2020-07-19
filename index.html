@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" type="image/png" href="noto-emoji_1f383.png">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="noto-1f383.png">
+<link rel="manifest" href="manifest.json">
 <title>Plantiet</title>
 <style>
-::-webkit-scrollbar{display:none;}
+::-webkit-scrollbar{display:none}
 *{
 font-family:'Roboto',sans-serif;
 background-color:#1b262c;
 scrollbar-width:none;
-color:#bbe1fa;
 }
 body{
 text-align:center;
-height:100%;
 user-select:none;
 }
-i{font-style:normal;}
 b{
-font-weight:normal;
+overflow:auto;
+color:#5fa5d3;
 height:120px;
 width:100px;
 float:left;
-overflow:auto;
-color:#5fa5d3;
 }
 a{
 position:absolute;
-left:64px;
 color:orange;
+left:64px;
 }
+i{font-style:normal}
+input,p,div{color:#bbe1fa}
 </style>
 </head>
 <body class="notranslate">
@@ -41,126 +39,14 @@ color:orange;
 <div style="margin-left:100px;">
 <div onclick="h[1].innerHTML=e" style="position:fixed;right:0"><h1 onclick="e++">+</h1><h1 onclick="e/=10;if(e<0.01)e=1">1</h1><h1 onclick="e*=-1">--</h1></div><div></div>
 <br style="clear:both">
-<input placeholder=" Search for food">
-<br><br><div><a style="position:static" href="simplant.html">Simplant</a></div></div>
-<script>
-navigator.serviceWorker.register('sw.js');
-var t=document.querySelector("input");
-var d=document.querySelectorAll("div");
-var h=document.querySelectorAll("h1");
-var b=document.getElementsByTagName("b");
-var p=document.getElementsByTagName("p");
-var n=new XMLHttpRequest();
-var u=window.location.href;
-var k=u.split("?");
-var s=u.split("v");
-var i=0;
-var e=1;
-var v;
-var g;
-var x;
-var z;
-var j;
-if(k[2]==="")localStorage.setItem(0,k[1]);
-k[2]=localStorage.getItem(0);
-if(!k[2])k[2]="DEMO_KEY";
-while(i<localStorage.length){
-if(localStorage.key(i)>0)l(localStorage.key(i))
-else if(localStorage.key(i).includes("a")){
-x=localStorage.getItem(localStorage.key(i)).split(";");
-d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a>"+x[0]+"</a><br>";}
-i++}i=1;
-u=u.split("q");
-if(u[1]){i=1;
-u[0]="";
-d[3].innerHTML="";
-while(i<u.length-1){
-l(u[i]);
-i+=2}}
-if(s[1]){i=1;
-while(i<s.length){
-x=localStorage.getItem(s[i]).split(";");
-localStorage.setItem(s[i],x[0]+";"+s[i+1]+";"+s[i+2])
-i+=3;}}i=1;
-j=document.querySelectorAll("i");
-if(j[0] && j[0].innerHTML<0)j[0].style.color="#ff6464";
-while(i<j.length){
-if(j[i].innerHTML<0 || j[i].title!=0){
-j[i].style.color="#ff6464";
-g=j[i].nextElementSibling;
-v=g.nextElementSibling;
-d[0].insertBefore(j[i],j[0]);
-d[0].insertBefore(g,j[0]);
-d[0].insertBefore(v,j[0]);}i++}
-document.addEventListener("keydown",q=>{
-if(h[q.key-1])h[q.key-1].click();
-else if(q.key==="Enter"){
-n.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key="+k[2]+"&query="+t.value);
-t.value="";
-n.send();
-n.onload=function(){
-j=JSON.parse(n.responseText);
-i=0;d[4].innerHTML="<hr>name of food<br><br>ingredients<br><br>brand owner<br><br>data type";
-while(i<50){
-d[4].innerHTML+="<i id='"+j.foods[i].fdcId+"' onclick='l(this.id);d[4].removeChild(this);'><hr>"+j.foods[i].description+"<br><br>"+j.foods[i].ingredients+"<br><br>"+j.foods[i].brandOwner+"<br><br>"+j.foods[i].dataType+"</i>";
-i++}}}})
-function l(x){
-if(localStorage.getItem(x)){
-v=localStorage.getItem(x).split(";");
-d[3].innerHTML+="<b id='"+localStorage.getItem(x)+"' onclick='c("+b.length+")'><p>0</p> "+v[1]+"</b>"}
-else{
-n.open("GET","https://api.nal.usda.gov/fdc/v1/food/"+x+"?api_key="+k[2]);
-n.send();
-n.onload=function(){
-j=JSON.parse(n.responseText);
-z=j.foodNutrients;
-v=x+";";
-v+=j.description;
-if(j.ingredients)v+=" ~ "+j.ingredients;
-if(j.brandOwner)v+=" ~ "+j.brandOwner;
-g=0;
-while(g<z.length){
-if(z[g].amount)v+=";"+z[g].nutrient.id+";"+z[g].amount;
-if(!localStorage.getItem("a"+z[g].nutrient.id))localStorage.setItem("a"+z[g].nutrient.id,z[g].nutrient.name.split('Vitamin ')+" "+z[g].nutrient.unitName+";0;0");
-g++}
-localStorage.setItem(x,v)
-if(u[0]==="")location.reload();
-l(x)}}}
-function c(x){g=2;
-p[x].innerHTML=p[x].innerHTML*1+e*100;
-v=b[x].id.split(";");
-if(e==0)window.open("https://fdc.nal.usda.gov/fdc-app.html#/food-details/"+v[0]+"/nutrients");
-while(g<v.length){
-x=document.querySelector("i#a"+v[g]);
-x.innerHTML=(x.innerHTML*1+v[g+1]*e).toFixed(6)*1;
-if(x.innerHTML<0)x.style.color="#ff6464";
-else if(x.title!=0 && x.innerHTML*1>=x.title)x.style.color="#b030b0";
-else x.style.color="#bbe1fa";
-g+=2}g=0}
-function r(){i=0;
-if(isNaN(s[0])){s[0]=e;
-while(i<j.length){
-j[i].innerHTML=(j[i].innerHTML*e).toFixed(6)*1;
-j[i].title=(j[i].title*e).toFixed(6)*1;
-i++}i=0;
-if(u[1])while(i<u.length-1){
-e=u[i+2];
-if(e>0)c(i/2);
-i+=2}
-e=h[1].innerHTML}
-if(d[0].style.width==='100px')
-d[0].style.width='100%';
-else d[0].style.width='100px';
-v="for "+s[0]+" day/s:\n";
-g=k[0]+"?";
-i=0;
-while (i<b.length){
-if(p[i].innerHTML!=0){
-v+="-"+b[i].textContent+"\n";
-x=b[i].id.split(";");
-g+="q"+x[0]+"q"+p[i].innerHTML/100}
-i++}
-navigator.clipboard.writeText(v+g)}
-</script>
+<input placeholder=" Enter food, DRI  or API Key" class="translate"><br><br><div class="translate">
+<u onclick="f('https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+v[0]+'/nutrients')">click this to visit FDC page of last clicked food</u><br><br>
+1. <u onclick="f('?169998?0?786983?0?787793?0?787465?0?787522?0?787791?0?787373?0?786699?0?786729?0?786754?0?786631?0?786652?0?174270?0?790577?0?168520?0')">Click this</u><br><br>
+2. Copy all text from results page of <u onclick="f('https://www.nal.usda.gov/fnic/dri-calculator')">DRI calculator</u> or your <u onclick="f('https://fdc.nal.usda.gov/api-key-signup.html')">API Key</u> and paste it to "Enter food..."<br><br>
+3. Reload the page, set days for your diet using the counter, you can control it with 123 keys<br><br>
+4. Click foods above to add them to your diet, every food is in grams<br><br>
+5. Click bar on left to copy your configuration<br>excesses are purple, deficiencies are red and can be beaten by supplements<br><br>
+</div></div>
+<script src="index.js"></script>
 </body>
 </html>
