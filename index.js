@@ -1,4 +1,4 @@
-//navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register('sw.js');
 var t=document.querySelector("textarea");
 var d=document.querySelectorAll("div");
 var h=document.querySelectorAll("h1");
