@@ -1,8 +1,9 @@
 navigator.serviceWorker.register('sw.js');
-var t=document.querySelector("input");
+var t=document.querySelector("textarea");
 var d=document.querySelectorAll("div");
 var h=document.querySelectorAll("h1");
 var b=document.getElementsByTagName("b");
+var p=document.getElementsByTagName("p");
 var u=window.location.href.split("?");
 var n=new XMLHttpRequest();
 var k=[];
@@ -20,12 +21,17 @@ while(i<u.length-1){
 l(u[i+1]);
 i+=2}i=0}
 while(i<localStorage.length){
-if(localStorage.key(i)>0)l(localStorage.key(i))
-else if(localStorage.key(i).includes("a")){
-x=localStorage.getItem(localStorage.key(i)).split(";");
-d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a class='translate'>"+x[0]+"</a><br>";}
+x=localStorage.key(i);
+if(x.includes("a")){
+x=localStorage.getItem(x).split(";");
+d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a class='translate'>"+x[0]+"</a><br>"}
+else if(x<999999)l(localStorage.key(i))
+else if(x>1){
+g=localStorage.getItem(x);
+j=g.split("?");
+d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)'><p>0</p>"+j[0]+"</b>"}
 i++}
-if(i==0)r();
+if(i==0)d[0].style.width="100px";
 i=1;
 j=document.querySelectorAll("i");
 if(j[0] && j[0].innerHTML<0)j[0].style.color="#ff6464";
@@ -41,7 +47,7 @@ document.addEventListener("keydown",q=>{
 if(h[q.key-1])h[q.key-1].click();
 else if(q.key==="Enter"){
 x=t.value;
-if(x.length==40){localStorage.setItem(0,x);p()}
+if(x.length==40){localStorage.setItem(0,x);z()}
 else if(x.length<100){
 n.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key="+k[0]+"&query="+x);
 x="";
@@ -83,19 +89,18 @@ while(i<68){
 if(x[i+1]!=0)x[i+1]=(x[i+1]-x[i]).toFixed(6)*1;
 j=localStorage.getItem("a"+v[i/2]).split(";");
 localStorage.setItem("a"+v[i/2],j[0]+";"+x[i]*-1+";"+x[i+1]);
-i+=2}p()}}})
+i+=2}z()}}})
 if(localStorage===null)d[0].click();
 function l(x){
 if(localStorage.getItem(x)){
 v=localStorage.getItem(x).split(";");
-d[3].innerHTML+="<b id='"+localStorage.getItem(x)+"' onclick='a(this.children[0]);c(this.id)' class='translate'><p class='notranslate'>0</p> "+v[1]+"</b>"}
+d[3].innerHTML+="<b id='"+localStorage.getItem(x)+"' onclick='a(this.children[0]);c(this.id)' class='translate'><p id='"+x+"' class='notranslate'>0</p> "+v[0]+"</b>"}
 else{
 n.open("GET","https://api.nal.usda.gov/fdc/v1/food/"+x+"?api_key="+k[0]);
 n.send();
 n.onload=function(){
 j=JSON.parse(n.responseText);
-v=x+";";
-v+=j.description;
+v=j.description;
 if(j.ingredients)v+=" ~ "+j.ingredients;
 if(j.brandOwner)v+=" ~ "+j.brandOwner;
 g=0;
@@ -105,9 +110,9 @@ if(j[g].amount)v+=";"+j[g].nutrient.id+";"+j[g].amount;
 if(!localStorage.getItem("a"+j[g].nutrient.id))localStorage.setItem("a"+j[g].nutrient.id,j[g].nutrient.name.split('Vitamin ')+" "+j[g].nutrient.unitName+";0;0");
 g++}
 localStorage.setItem(x,v)
-if(k[1])p();
+if(k[1])z();
 l(x)}}}
-function c(x){g=2;
+function c(x){g=1;
 v=x.split(";");
 while(g<v.length){
 x=document.querySelector("i#a"+v[g]);
@@ -117,9 +122,6 @@ else if(x.title!=0 && x.innerHTML*1>=x.title)x.style.color="#b030b0";
 else x.style.color="#bbe1fa";
 g+=2}g=0}
 function r(){i=0;
-if(d[0].style.width==="100px")
-d[0].style.width="100%";
-else d[0].style.width="100px";
 if(!k[2]){k[2]=e;
 while(i<j.length){
 j[i].innerHTML=(j[i].innerHTML*e).toFixed(6)*1;
@@ -130,21 +132,27 @@ e=u[i+2];
 if(e>0)b[i/2].click();
 i+=2}
 e=h[1].innerHTML}
-else{
+if(d[0].style.width==="100%")
+d[0].style.width="100px";
+else{d[0].style.width="100%";
 v="for "+k[2]+" day/s:\n";
-g=u[0];
+g="";
 i=0;
-while (i<b.length){
-if(b[i].children[0].innerHTML!=0){
+while (i<p.length){
+if(p[i].innerHTML!=0){
 v+="-"+b[i].textContent+"\n";
-x=b[i].id.split(";");
-g+="?"+x[0]+"?"+b[i].children[0].innerHTML/100}
-i++}
-navigator.clipboard.writeText(v+g)
-t.value=v+g;
-t.select();
-document.execCommand("copy");
-t.value=""}}
+if(p[i].id)g+="?"+p[i].id+"?"+p[i].innerHTML/100
+}i++}
+if(e===0){localStorage.setItem(new Date()/1,t.value+g);z()}
+g=u[0]+g;t.value=v+g}}
+function m(x){j=e;i=2;
+x=x.split("?");
+if(e===0)localStorage.removeItem(x[0]);
+else{
+while(i<x.length){
+e=(x[i+1]*j).toFixed(6)*1;
+document.querySelector("[id='"+x[i]+"']").click();
+i+=2}e=h[1].innerHTML}}
 function a(x){x.innerHTML=x.innerHTML*1+e*100;if(e===0)d[3].insertBefore(x.parentNode,b[0])}
 function f(x){window.open(x)}
-function p(){location.reload()}
+function z(){location.reload()}

@@ -30,8 +30,13 @@ position:absolute;
 color:orange;
 left:64px;
 }
+textarea{
+width:100%;
+height:1000px;
+resize:none;
+}
 i{font-style:normal}
-input,p,div{color:#bbe1fa}
+textarea,p,div{color:#bbe1fa}
 </style>
 </head>
 <body onbeforeunload="return '?'" class="notranslate">
@@ -39,15 +44,17 @@ input,p,div{color:#bbe1fa}
 <div style="margin-left:100px;">
 <div onclick="h[1].innerHTML=e" style="position:fixed;right:0"><h1 onclick="e++">+</h1><h1 onclick="e/=10;if(e<0.01)e=1">1</h1><h1 onclick="e*=-1">--</h1></div><div></div>
 <br style="clear:both">
-<input placeholder=" Enter food, DRI  or API Key" class="translate"><br><br><div class="translate">
-<u onclick="f('https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+v[0]+'/nutrients')">click this to visit FDC page of last clicked food</u><br><br>
+<br><br><div class="translate">
+<u onclick="f('https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+p[0].id+'/nutrients')">click this to visit FDC page of first food</u><br><br>
 1. <u onclick="f('?169998?0?786983?0?787793?0?787465?0?787522?0?787791?0?787373?0?786699?0?786729?0?786754?0?786631?0?786652?0?174270?0?790577?0?168520?0')">Click this</u> and wait until loading finishes<br><br>
 2. Copy all text from results page of <u onclick="f('https://www.nal.usda.gov/fnic/dri-calculator')">DRI calculator</u> or your <u onclick="f('https://fdc.nal.usda.gov/api-key-signup.html')">API Key</u> and paste it to "Enter food..."<br><br>
 3. Reload the page, set days for your diet using the counter, you can control it with 123 keys<br><br>
 4. Click foods above to add them to your diet, every food is in grams<br><br>
-5. Click bar on left to copy your configuration<br>excesses are purple, deficiencies are red and can be beaten by supplements<br><br>
-<u onclick="f('https://brave.com/jed543')">try our favourite browser</u>
-</div></div>
+excesses are purple, deficiencies are red and can be beaten by supplements<br><br>
+5. Set counter to 0, type something in "Enter food..." and click bar on left to save your configuration<br><br>
+set counter to 0 and click config to delete it<br><br>
+<u onclick="f('https://brave.com/jed543')">try our favourite browser</u><br><br>
+</div><textarea placeholder=" Enter food, DRI  or API Key" class="translate"></textarea></div>
 <script src="index.js"></script>
 </body>
 </html>
