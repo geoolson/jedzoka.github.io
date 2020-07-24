@@ -1,4 +1,4 @@
-navigator.serviceWorker.register('sw.js');
+//navigator.serviceWorker.register('sw.js');
 var t=document.querySelector("textarea");
 var d=document.querySelectorAll("div");
 var h=document.querySelectorAll("h1");
@@ -25,14 +25,13 @@ x=localStorage.key(i);
 if(x.includes("a")){
 x=localStorage.getItem(x).split(";");
 d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a class='translate'>"+x[0]+"</a><br>"}
-else if(x<999999)l(localStorage.key(i))
-else if(x>1){
+else if(x>999999){
 g=localStorage.getItem(x);
 j=g.split("?");
-d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)'><p>0</p>"+j[0]+"</b>"}
+d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)'><p>0</p> "+j[0]+"</b>"}
+else if(x>1)l(localStorage.key(i))
 i++}
-if(i==0)d[0].style.width="100px";
-i=1;
+if(i==0)d[0].style.width="1px";i=1;
 j=document.querySelectorAll("i");
 if(j[0] && j[0].innerHTML<0)j[0].style.color="#ff6464";
 while(i<j.length){
@@ -43,9 +42,8 @@ v=g.nextElementSibling;
 d[0].insertBefore(j[i],j[0]);
 d[0].insertBefore(g,j[0]);
 d[0].insertBefore(v,j[0]);}i++}
-document.addEventListener("keydown",q=>{
-if(h[q.key-1])h[q.key-1].click();
-else if(q.key==="Enter"){
+document.addEventListener("keydown",q=>{if(h[q.key-1])h[q.key-1].click()})
+function o(){
 x=t.value;
 if(x.length==40){localStorage.setItem(0,x);z()}
 else if(x.length<100){
@@ -89,7 +87,7 @@ while(i<68){
 if(x[i+1]!=0)x[i+1]=(x[i+1]-x[i]).toFixed(6)*1;
 j=localStorage.getItem("a"+v[i/2]).split(";");
 localStorage.setItem("a"+v[i/2],j[0]+";"+x[i]*-1+";"+x[i+1]);
-i+=2}z()}}})
+i+=2}z()}}
 if(localStorage===null)d[0].click();
 function l(x){
 if(localStorage.getItem(x)){
