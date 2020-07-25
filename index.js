@@ -25,7 +25,7 @@ x=localStorage.key(i);
 if(x.includes("a")){
 x=localStorage.getItem(x).split(";");
 d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a class='translate'>"+x[0]+"</a><br>"}
-else if(x>999999){
+else if(x>99999999999){
 g=localStorage.getItem(x);
 j=g.split("?");
 d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)'><p>0</p> "+j[0]+"</b>"}
