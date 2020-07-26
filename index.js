@@ -92,8 +92,9 @@ x=t.value;
 g=x.length;
 if(g==40){localStorage.setItem(0,x);z()}
 else if(g>30){
-x=x.split("Caloric Needs");x=x[1];
+x=x.split("Caloric Needs");
 if(x[1]){
+x=x[1];
 x=x.replace(/ND/g,'0');
 x=x.replace(/B12|B6|-|[^\d-\.-,]/g,'_');
 x=x.replace(/\._|,/g,'');
