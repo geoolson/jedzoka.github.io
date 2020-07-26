@@ -91,7 +91,7 @@ else{d[0].style.width="100%";
 x=t.value;
 g=x.length;
 if(g==40){localStorage.setItem(0,x);z()}
-else if(g>30){
+else if(g>30 && e!=0){
 x=x.split("Caloric Needs");
 if(x[1]){
 x=x[1];
