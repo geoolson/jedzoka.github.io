@@ -43,51 +43,6 @@ d[0].insertBefore(j[i],j[0]);
 d[0].insertBefore(g,j[0]);
 d[0].insertBefore(v,j[0]);}i++}
 document.addEventListener("keydown",q=>{if(h[q.key-1])h[q.key-1].click()})
-function o(){
-x=t.value;
-if(x.length==40){localStorage.setItem(0,x);z()}
-else if(x.length<100){
-n.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key="+k[0]+"&query="+x);
-x="";
-n.send();
-n.onload=function(){
-j=JSON.parse(n.responseText);
-i=0;d[4].innerHTML="<b><p>data type</p>food name ~ ingredients ~ brand owner</b>";
-while(i<50){
-d[4].innerHTML+="<b id='"+j.foods[i].fdcId+"' onclick='l(this.id);d[4].removeChild(this);'><p>"+j.foods[i].dataType+"</p>"+j.foods[i].description+" ~ "+j.foods[i].ingredients+" ~ "+j.foods[i].brandOwner+"</b>";
-i++}}}
-else{
-x=x.split("Caloric Needs");x=x[1];
-x=x.replace(/ND/g,'0');
-x=x.replace(/B12|B6|-|[^\d-\.-,]/g,'_');
-x=x.replace(/\._|,/g,'');
-x=x.split("_");
-x=x.filter(Boolean);
-x.splice(1,0,0);
-x.splice(5,0,0);
-x.splice(7,0,0);
-x.splice(11,0,0);
-x.splice(13,0,0);
-x.splice(43,1);
-x.splice(46,4);
-x.splice(58,2);
-x[14]*=1000;
-x[38]*=1000;
-x[39]*=1000;
-x[46]*=0.001;
-x[47]*=0.001;
-x[48]*=1000;
-x[49]*=1000;
-x[58]*=1000;
-x[59]*=1000;
-x[15]=0;
-v=[1008,1005,1079,1003,1004,1270,1269,1051,1106,1162,1114,1175,1109,1185,1165,1178,1166,1177,1167,1180,1170,1176,1087,1098,1099,1100,1089,1090,1101,1091,1092,1103,1093,1095];
-i=0;
-while(i<68){
-if(x[i+1]!=0)x[i+1]=(x[i+1]-x[i]).toFixed(6)*1;
-j=localStorage.getItem("a"+v[i/2]).split(";");
-localStorage.setItem("a"+v[i/2],j[0]+";"+x[i]*-1+";"+x[i+1]);
-i+=2}z()}}
 if(localStorage===null)d[0].click();
 function l(x){
 if(localStorage.getItem(x)){
@@ -133,6 +88,50 @@ e=h[1].innerHTML}
 if(d[0].style.width==="100%")
 d[0].style.width="100px";
 else{d[0].style.width="100%";
+x=t.value;
+g=x.length;
+if(g==40){localStorage.setItem(0,x);z()}
+else if(g>30){
+x=x.split("Caloric Needs");x=x[1];
+x=x.replace(/ND/g,'0');
+x=x.replace(/B12|B6|-|[^\d-\.-,]/g,'_');
+x=x.replace(/\._|,/g,'');
+x=x.split("_");
+x=x.filter(Boolean);
+x.splice(1,0,0);
+x.splice(5,0,0);
+x.splice(7,0,0);
+x.splice(11,0,0);
+x.splice(13,0,0);
+x.splice(43,1);
+x.splice(46,4);
+x.splice(58,2);
+x[14]*=1000;
+x[38]*=1000;
+x[39]*=1000;
+x[46]*=0.001;
+x[47]*=0.001;
+x[48]*=1000;
+x[49]*=1000;
+x[58]*=1000;
+x[59]*=1000;
+x[15]=0;
+v=[1008,1005,1079,1003,1004,1270,1269,1051,1106,1162,1114,1175,1109,1185,1165,1178,1166,1177,1167,1180,1170,1176,1087,1098,1099,1100,1089,1090,1101,1091,1092,1103,1093,1095];
+i=0;
+while(i<68){
+if(x[i+1]!=0)x[i+1]=(x[i+1]-x[i]).toFixed(6)*1;
+j=localStorage.getItem("a"+v[i/2]).split(";");
+localStorage.setItem("a"+v[i/2],j[0]+";"+x[i]*-1+";"+x[i+1]);
+i+=2}z()}
+else if(g>0 && g<30){
+n.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key="+k[0]+"&query="+x);
+n.send();
+n.onload=function(){
+j=JSON.parse(n.responseText);
+i=0;d[4].innerHTML="<b><p>data type</p>food name ~ ingredients ~ brand owner</b>";
+while(i<50){
+d[4].innerHTML+="<b id='"+j.foods[i].fdcId+"' onclick='l(this.id);d[4].removeChild(this);'><p>"+j.foods[i].dataType+"</p>"+j.foods[i].description+" ~ "+j.foods[i].ingredients+" ~ "+j.foods[i].brandOwner+"</b>";
+i++}}}
 v="for "+k[2]+" day/s:\n";
 g="";
 i=0;
@@ -149,7 +148,7 @@ if(e===0)localStorage.removeItem(x[0]);
 else{
 while(i<x.length){
 e=(x[i+1]*j).toFixed(6)*1;
-document.querySelector("[id='"+x[i]+"']").click();
+document.querySelector("p[id='"+x[i]+"']").click();
 i+=2}e=h[1].innerHTML}}
 function a(x){x.innerHTML=x.innerHTML*1+e*100;if(e===0)d[3].insertBefore(x.parentNode,b[0])}
 function f(x){window.open(x)}
