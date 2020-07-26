@@ -93,6 +93,7 @@ g=x.length;
 if(g==40){localStorage.setItem(0,x);z()}
 else if(g>30){
 x=x.split("Caloric Needs");x=x[1];
+if(x[1]){
 x=x.replace(/ND/g,'0');
 x=x.replace(/B12|B6|-|[^\d-\.-,]/g,'_');
 x=x.replace(/\._|,/g,'');
@@ -122,7 +123,7 @@ while(i<68){
 if(x[i+1]!=0)x[i+1]=(x[i+1]-x[i]).toFixed(6)*1;
 j=localStorage.getItem("a"+v[i/2]).split(";");
 localStorage.setItem("a"+v[i/2],j[0]+";"+x[i]*-1+";"+x[i+1]);
-i+=2}z()}
+i+=2}z()}}
 else if(g>0 && g<30){
 n.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key="+k[0]+"&query="+x);
 n.send();
