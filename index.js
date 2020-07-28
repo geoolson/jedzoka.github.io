@@ -28,7 +28,7 @@ d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a
 else if(x>99999999999){
 g=localStorage.getItem(x);
 j=g.split("?");
-d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)'><p>0</p> "+j[0]+"</b>"}
+d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)' class='notranslate'><p>0</p> "+j[0]+"</b>"}
 else if(x>1)l(localStorage.key(i))
 i++}
 if(i==0)d[0].style.width="1px";i=1;
