@@ -25,11 +25,8 @@ x=localStorage.key(i);
 if(x.includes("a")){
 x=localStorage.getItem(x).split(";");
 d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"'>"+x[1]+"</i><a class='translate'>"+x[0]+"</a><br>"}
-else if(x>99999999999){
-g=localStorage.getItem(x);
-j=g.split("?");
-d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)' class='notranslate'><p>0</p> "+j[0]+"</b>"}
-else if(x>1)l(localStorage.key(i))
+else if(x>99999999999)o(x);
+else if(x>1)l(x)
 i++}
 if(i==0)d[0].style.width="1px";i=1;
 j=document.querySelectorAll("i");
@@ -42,8 +39,7 @@ v=g.nextElementSibling;
 d[0].insertBefore(j[i],j[0]);
 d[0].insertBefore(g,j[0]);
 d[0].insertBefore(v,j[0]);}i++}
-document.addEventListener("keydown",q=>{if(h[q.key-1])h[q.key-1].click()})
-if(localStorage===null)d[0].click();
+document.addEventListener("keydown",q=>{if(h[q.key-1])h[q.key-1].click();else if(q.key==="Enter"){r();r()}})
 function l(x){
 if(localStorage.getItem(x)){
 v=localStorage.getItem(x).split(";");
@@ -142,8 +138,10 @@ if(p[i].innerHTML!=0){
 v+="-"+b[i].textContent+"\n";
 if(p[i].id)g+="?"+p[i].id+"?"+p[i].innerHTML/100
 }i++}
-if(e===0){localStorage.setItem(new Date()/1,t.value+g);z()}
-g=u[0]+g;t.value=v+g}}
+x=new Date()/1;
+j=t.value.split("?");
+localStorage.setItem(x,j[0]+g);
+g=u[0]+g;t.value=v+g;o(x)}}
 function m(x){j=e;i=2;
 x=x.split("?");
 if(e===0)localStorage.removeItem(x[0]);
@@ -155,3 +153,7 @@ i+=2}e=h[1].innerHTML}}
 function a(x){x.innerHTML=x.innerHTML*1+e*100;if(e===0)d[3].insertBefore(x.parentNode,b[0])}
 function f(x){window.open(x)}
 function z(){location.reload()}
+function o(x){
+g=localStorage.getItem(x);
+j=g.split("?");
+d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)' class='notranslate'><p>0</p> "+j[0]+"</b>"}
