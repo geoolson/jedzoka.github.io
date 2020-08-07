@@ -25,7 +25,8 @@ height:120px;
 width:100px;
 float:left;
 }
-a{
+u{
+text-decoration:none;
 position:absolute;
 color:orange;
 left:64px;
@@ -36,25 +37,49 @@ height:1000px;
 resize:none;
 }
 i{font-style:normal}
-textarea,p,div{color:#bbe1fa}
+textarea,select,div,p,a{color:#bbe1fa}
 </style>
 </head>
 <body class="notranslate">
 <div onclick="r()" style="top:0;left:0;text-align:left;height:100%;width:100%;position:fixed;overflow-x:hidden"></div>
 <div style="margin-left:100px;">
-<div onclick="h[1].innerHTML=e" style="position:fixed;right:0"><h1 onclick="e++">+</h1><h1 onclick="e/=10;if(e<0.01)e=1">1</h1><h1 onclick="e*=-1">--</h1></div><div></div>
+<div onclick="h[1].innerHTML=e" style="position:fixed;right:0"><h1 onclick="e++">+</h1><h1 onclick="e/=10;if(e<0.01)e=1">1</h1><h1 onclick="e*=-1">set days</h1></div><div></div>
 <br style="clear:both">
 <br><br><div class="translate">
-<u onclick="f('https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+p[0].id+'/nutrients')">FDC page of first food</u><br><br>
-1. <u onclick="f('?169998?0?786983?0?787793?0?787465?0?787522?0?787791?0?787373?0?786699?0?786729?0?786754?0?786631?0?786652?0?174270?0?790577?0?168520?0')">Click this</u> and wait until loading finishes<br><br>
-2. Reload the page, set days for your diet using the counter, you can control it with 123 keys<br><br>
+<a onclick="this.href='https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+p[0].id+'/nutrients'" href="" target="blank">FDC page of first food</a><br><br>
+1. <a href="?169998?0?786983?0?787793?0?787465?0?787522?0?787791?0?787373?0?786699?0?786729?0?786754?0?786631?0?786652?0?174270?0?790577?0?168520?0">Click this</a> and wait until loading finishes<br><br>
+2. <select onchange="f(this.selectedIndex)">
+<option>Select your age group</option>
+<option>0-6 months</option>
+<option>7-12 months</option>
+<option>1-3 years</option>
+<option>4-8 years</option>
+<option>man 9-13 years</option>
+<option>man 14-18 years</option>
+<option>man 19-30 years</option>
+<option>man 31-50 years</option>
+<option>man 51-70 years</option>
+<option>man 70+ years</option>
+<option>woman 9-13 years</option>
+<option>woman 14-18 years</option>
+<option>woman 19-30 years</option>
+<option>woman 31-50 years</option>
+<option>woman 51-70 years</option>
+<option>woman 70+ years</option>
+<option>pregnancy 14-18 years</option>
+<option>pregnancy 19-30 years</option>
+<option>pregnancy 31-50 years</option>
+<option>lactation 14-18 years</option>
+<option>lactation 19-30 years</option>
+<option>lactation 31-50 years</option>
+</select><br><br>
 3. Click foods above to add them to your diet, every food is in grams<br><br>
-4. Set counter to 0, type config name in "Enter food..." and click bar on left to save your configuration<br><br>
-set counter to 0 and click on config to delete it<br><br>
-5. Copy all text from results page of <u onclick="f('https://www.nal.usda.gov/fnic/dri-calculator')">DRI calculator</u> or your <u onclick="f('https://fdc.nal.usda.gov/api-key-signup.html')">API Key</u> and paste it to "Enter food..."<br><br>
+4. Click bar on left to save your configuration<br><br>
+set counter to 0 and click on configuration to delete it, you can use 123 keyboard keys<br><br>
 excesses are purple, deficiencies are red and can be beaten by supplements<br><br>
-<u onclick="f('https://jedzoka.github.io')">main page</u><br><br>
-</div><textarea placeholder=" Enter food name, DRI, API Key or config name -> click bar on left to apply" class="translate"></textarea></div>
+click nutrient's value to change it(inside link between ?)<br><br>
+<a href="https://fdc.nal.usda.gov/api-key-signup.html">Get an API Key</a>, my <a href="https://ods.od.nih.gov/Health_Information/Dietary_Reference_Intakes.aspx">DRI source</a> and my <a href="https://jedzoka.github.io">other work</a><br><br>
+</div><textarea placeholder=" Enter food name, your API Key or config name" class="translate"></textarea></div>
 <script src="index.js"></script>
 </body>
 </html>
