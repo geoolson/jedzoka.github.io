@@ -18,8 +18,8 @@ if(!k[0])k[0]="DEMO_KEY";
 if(u[1]===""){
 if(confirm("Apply?")){
 while(i<u.length){
-aa=localStorage.getItem(u[i]).split(";");
-localStorage.setItem(u[i],aa[0]+";"+u[i+1]+";"+u[i+2]);
+x=localStorage.getItem(u[i]).split(";");
+localStorage.setItem(u[i],x[0]+";"+u[i+1]+";"+u[i+2]);
 i+=3}}z(u[0])}
 else if(u[1]){i=0;
 k[1]="a";
@@ -28,9 +28,7 @@ l(u[i+1]);
 i+=2}}i=0;
 while(i<localStorage.length){
 x=localStorage.key(i);
-if(x.includes("a")){
-x=localStorage.getItem(x).split(";");
-d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"' onclick='s(this.id)'>"+x[1]+"</i><u class='translate'>"+x[0]+"</u><br>"}
+if(x.includes("a"))y(x);
 else if(x>99999999999)o(x);
 else if(x>1)l(x)
 i++}
@@ -62,8 +60,7 @@ g=0;
 j=j.foodNutrients;
 while(g<j.length){
 if(j[g].amount)v+=";"+j[g].nutrient.id+";"+j[g].amount;
-if(!localStorage.getItem("a"+j[g].nutrient.id))localStorage.setItem("a"+j[g].nutrient.id,j[g].nutrient.name.split('Vitamin ')+" "+j[g].nutrient.unitName+";0;0");
-g++}
+if(!localStorage.getItem("a"+j[g].nutrient.id)){localStorage.setItem("a"+j[g].nutrient.id,j[g].nutrient.name.split('Vitamin ')+" "+j[g].nutrient.unitName+";0;0");y("a"+j[g].nutrient.id)}g++}
 localStorage.setItem(x,v)
 if(k[1])location.reload();
 l(x)}}}
@@ -171,3 +168,6 @@ while(i<34){e+='?a'+n[i]+'?'+k[i]+'?'+k[i+34];i++}
 z(u[0]+"?"+e)}
 function a(x){x.innerHTML=x.innerHTML*1+e*100;if(e===0)d[3].insertBefore(x.parentNode,b[0])}
 function z(x){window.location.href=x}
+function y(x){
+x=localStorage.getItem(x).split(";");
+d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"' onclick='s(this.id)'>"+x[1]+"</i><u class='translate'>"+x[0]+"</u><br>"}
