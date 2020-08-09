@@ -53,6 +53,7 @@ n.open("GET","https://api.nal.usda.gov/fdc/v1/food/"+x+"?api_key="+k[0]);
 n.send();
 n.onload=function(){
 j=JSON.parse(n.responseText);
+if(j.error)w();
 v=j.description;
 if(j.ingredients)v+=" ~ "+j.ingredients;
 if(j.brandOwner)v+=" ~ "+j.brandOwner;
@@ -171,3 +172,4 @@ function z(x){window.location.href=x}
 function y(x){
 x=localStorage.getItem(x).split(";");
 d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"' onclick='s(this.id)'>"+x[1]+"</i><u class='translate'>"+x[0]+"</u><br>"}
+function w(){d[4].innerHTML="<h1>You have exceeded your hourly or daily call limit. Try again later or get your own <a href='https://fdc.nal.usda.gov/api-key-signup.html'>API Key</a></h1>"}
