@@ -45,9 +45,9 @@ d[0].insertBefore(g,j[0]);
 d[0].insertBefore(v,j[0]);}i++}
 document.addEventListener("keydown",q=>{if(h[q.key-1])h[q.key-1].click();else if(q.key==="Enter"){r();r()}})
 function l(x){
-if(localStorage.getItem(x)){
-v=localStorage.getItem(x).split(";");
-d[3].innerHTML+="<b id='"+localStorage.getItem(x)+"' onclick='a(this.children[0]);c(this.id)' class='translate'><p id='"+x+"' class='notranslate'>0</p> "+v[0]+"</b>"}
+v=localStorage.getItem(x)
+if(v!==null){
+d[3].innerHTML+="<b id='"+v+"' onclick='a(this.children[0]);c(this.id)' class='translate'><p id='"+x+"' class='notranslate'>0</p> "+v.split(';')[0]+"</b>"}
 else{
 n.open("GET","https://api.nal.usda.gov/fdc/v1/food/"+x+"?api_key="+k[0]);
 n.send();
@@ -128,7 +128,7 @@ d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)' cl
 function s(x){
 g=localStorage.getItem(x).split(";");
 z(u[0]+"??"+x+"?"+g[1]+"?"+g[2])}
-function f(x){g=0;
+function f(x){g=0;x--;
 n=[1114,1106,1162,1109,1185,1165,1166,1167,1170,1175,1177,1178,1176,1180,1087,1098,1099,1100,1089,1090,1101,1091,1004,1103,1095,1092,1093,1051,1005,1079,1269,1270,1003,1008];
 v=[];
 k.length=68;
