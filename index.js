@@ -32,7 +32,7 @@ if(x.includes("a"))y(x);
 else if(x>99999999999)o(x);
 else if(x>1)l(x)
 i++}
-if(i===0)d[0].style.width="1px";i=1;
+if(i===0){d[0].style.width="1px";d[2].style.display="none"}i=1;
 j=document.querySelectorAll("i");
 if(j[0] && j[0].innerHTML<0)j[0].style.color="#ff6464";
 while(i<j.length){
