@@ -77,6 +77,7 @@ g+=2}g=0}
 function r(){i=0;
 if(!k[2]){k[2]=e;
 h[2].innerHTML="--";
+h[2].onclick="e*=-1";
 while(i<j.length){
 j[i].innerHTML=(j[i].innerHTML*e).toFixed(6)*1;
 j[i].title=(j[i].title*e).toFixed(6)*1;
