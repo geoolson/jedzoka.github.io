@@ -1,4 +1,5 @@
 navigator.serviceWorker.register('sw.js');
+var k=[localStorage.getItem(0),,,"https://api.nal.usda.gov/fdc/v1/food"];
 var t=document.querySelector("textarea");
 var d=document.querySelectorAll("div");
 var h=document.querySelectorAll("h1");
@@ -6,7 +7,6 @@ var b=document.getElementsByTagName("b");
 var p=document.getElementsByTagName("p");
 var u=window.location.href.split("?");
 var n=new XMLHttpRequest();
-var k=[];
 var i=2;
 var e=1;
 var v;
@@ -20,19 +20,13 @@ if(confirm("Apply?")){
 while(i<u.length){
 x=localStorage.getItem(u[i]).split(";");
 localStorage.setItem(u[i],x[0]+";"+u[i+1]+";"+u[i+2]);
-i+=3}}z(u[0])}
-else if(u[1]){i=0;
-k[1]="a";
-while(i<u.length-1){
-l(u[i+1]);
-i+=2}}i=0;
+i+=3}}z(u[0])}i=0;
 while(i<localStorage.length){
 x=localStorage.key(i);
 if(x.includes("a"))y(x);
 else if(x>99999999999)o(x);
 else if(x>1)l(x)
 i++}
-if(i===0){d[0].style.width="1px";d[2].style.display="none"}i=1;
 j=document.querySelectorAll("i");
 if(j[0] && j[0].innerHTML<0)j[0].style.color="#ff6464";
 while(i<j.length){
@@ -49,7 +43,7 @@ v=localStorage.getItem(x)
 if(v!==null){
 d[3].innerHTML+="<b id='"+v+"' onclick='a(this.children[0]);c(this.id)' class='translate'><p id='"+x+"' class='notranslate'>0</p> "+v.split(';')[0]+"</b>"}
 else{
-n.open("GET","https://api.nal.usda.gov/fdc/v1/food/"+x+"?api_key="+k[0]);
+n.open("GET",k[3]+"/"+x+"?api_key="+k[0]);
 n.send();
 n.onload=function(){
 j=JSON.parse(n.responseText);
@@ -82,10 +76,12 @@ while(i<j.length){
 j[i].innerHTML=(j[i].innerHTML*e).toFixed(6)*1;
 j[i].title=(j[i].title*e).toFixed(6)*1;
 i++}i=0;
-if(u[1])while(i<u.length-1){
+if(u[1]){while(i<u.length-1){
 e=u[i+2];
 if(e>0)b[i/2].click();
+l(u[i+1]);
 i+=2}
+k[1]="a"}
 e=h[1].innerHTML}
 if(d[0].style.width==="100%")
 d[0].style.width="100px";
@@ -94,7 +90,7 @@ x=t.value;
 g=x.length;
 if(g==40){localStorage.setItem(0,x);z(u[0])}
 else if(g>0 && e!=0){
-n.open("GET","https://api.nal.usda.gov/fdc/v1/foods/search?api_key="+k[0]+"&query="+x);
+n.open("GET",k[3]+"s/search?api_key="+k[0]+"&query="+x);
 n.send();
 n.onload=function(){
 j=JSON.parse(n.responseText);
