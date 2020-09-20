@@ -6,13 +6,9 @@ var h=document.querySelectorAll("h1");
 var b=document.getElementsByTagName("b");
 var p=document.getElementsByTagName("p");
 var u=window.location.href.split("?");
+var v,g,x,j,n;
 var i=2;
 var e=1;
-var v;
-var g;
-var x;
-var j;
-k[0]=localStorage.getItem(0);
 if(!k[0])k[0]="DEMO_KEY";
 if(u[1]===""){
 if(confirm("Apply?")){
@@ -37,10 +33,11 @@ d[0].insertBefore(j[i],j[0]);
 d[0].insertBefore(g,j[0]);
 d[0].insertBefore(v,j[0]);}i++}
 document.addEventListener("keydown",q=>{if(h[q.key-1])h[q.key-1].click();else if(q.key==="Enter"){r();r()}})
-function l(x){
+function l(x,n){
 v=localStorage.getItem(x)
 if(v!==null){
-d[3].innerHTML+="<b id='"+v+"' onclick='a(this.children[0]);c(this.id)' class='translate'><p id='"+x+"' class='notranslate'>0</p> "+v.split(';')[0]+"</b>"}
+d[3].innerHTML+="<b id='"+v+"' onclick='a(this.children[0]);c(this.id)' class='translate'><p id='"+x+"' class='notranslate'>0</p> "+v.split(';')[0]+"</b>";
+if(n){e=n;d[3].lastChild.click()}}
 else{
 fetch(k[1]+"/"+x+"?api_key="+k[0]).then(v=>v.json()).then(j=>{
 if(j.error)w();
@@ -53,7 +50,7 @@ while(g<j.length){
 if(j[g].amount)v+=";"+j[g].nutrient.id+";"+j[g].amount;
 if(!localStorage.getItem("a"+j[g].nutrient.id)){localStorage.setItem("a"+j[g].nutrient.id,j[g].nutrient.name.split('Vitamin ')+" "+j[g].nutrient.unitName+";0;0");y("a"+j[g].nutrient.id)}g++}
 localStorage.setItem(x,v)
-l(x)})}}
+l(x,n)})}e=h[1].innerHTML}
 function c(x){g=1;
 v=x.split(";");
 while(g<v.length){
@@ -66,17 +63,14 @@ g+=2}g=0}
 function r(){i=0;
 if(!k[2]){k[2]=e;
 h[2].innerHTML="--";
-h[2].onclick="e*=-1";
+h[2].onclick=function(){e*=-1};
 while(i<j.length){
 j[i].innerHTML=(j[i].innerHTML*e).toFixed(6)*1;
 j[i].title=(j[i].title*e).toFixed(6)*1;
 i++}i=0;
 if(u[1])while(i<u.length-1){
-e=u[i+2];
-if(e>0)b[i/2].click();
-l(u[i+1]);
-i+=2}
-e=h[1].innerHTML}
+l(u[i+1],u[i+2]);
+i+=2}}
 if(d[0].style.width==="100%")
 d[0].style.width="100px";
 else{d[0].style.width="100%";
@@ -158,6 +152,6 @@ z(u[0]+"?"+e)}
 function a(x){x.innerHTML=x.innerHTML*1+e*100;if(e===0)d[3].insertBefore(x.parentNode,b[0])}
 function z(x){window.location.href=x}
 function y(x){
-x=localStorage.getItem(x).split(";");
-d[0].innerHTML+="<i id='"+localStorage.key(i)+"' title='"+x[2]+"' onclick='s(this.id)'>"+x[1]+"</i><u class='translate'>"+x[0]+"</u><br>"}
+n=localStorage.getItem(x).split(";");
+d[0].innerHTML+="<i id='"+x+"' title='"+n[2]+"' onclick='s(this.id)'>"+n[1]+"</i><u class='translate'>"+n[0]+"</u><br>"}
 function w(){d[4].innerHTML="<h1>You have exceeded your hourly or daily call limit. Try again later or get your own <a href='https://fdc.nal.usda.gov/api-key-signup.html'>API Key</a></h1>"}
