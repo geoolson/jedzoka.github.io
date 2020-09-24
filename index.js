@@ -6,9 +6,9 @@ var h=document.querySelectorAll("h1");
 var b=document.getElementsByTagName("b");
 var p=document.getElementsByTagName("p");
 var u=window.location.href.split("?");
-var v,g,x,j,n;
-var i=2;
-var e=1;
+var v,g,x,j,n,i,e;
+i=2;
+e=1;
 if(!k[0])k[0]="DEMO_KEY";
 if(u[1]===""){
 if(confirm("Apply?")){
@@ -37,7 +37,7 @@ function l(x,n){
 v=localStorage.getItem(x)
 if(v!==null){
 d[3].innerHTML+="<b id='"+v+"' onclick='a(this.children[0]);c(this.id)' class='translate'><p id='"+x+"' class='notranslate'>0</p> "+v.split(';')[0]+"</b>";
-if(n){e=n;d[3].lastChild.click()}}
+if(n){e=n;d[3].lastChild.click();e=h[1].innerHTML}}
 else{
 fetch(k[1]+"/"+x+"?api_key="+k[0]).then(v=>v.json()).then(j=>{
 if(j.error)w();
@@ -50,7 +50,7 @@ while(g<j.length){
 if(j[g].amount)v+=";"+j[g].nutrient.id+";"+j[g].amount;
 if(!localStorage.getItem("a"+j[g].nutrient.id)){localStorage.setItem("a"+j[g].nutrient.id,j[g].nutrient.name.split('Vitamin ')+" "+j[g].nutrient.unitName+";0;0");y("a"+j[g].nutrient.id)}g++}
 localStorage.setItem(x,v)
-l(x,n)})}e=h[1].innerHTML}
+l(x,n)})}}
 function c(x){g=1;
 v=x.split(";");
 while(g<v.length){
@@ -62,7 +62,7 @@ else x.style.color="#bbe1fa";
 g+=2}g=0}
 function r(){i=0;
 if(!k[2]){k[2]=e;
-h[2].innerHTML="--";
+h[2].innerHTML="-";
 h[2].onclick=function(){e*=-1};
 while(i<j.length){
 j[i].innerHTML=(j[i].innerHTML*e).toFixed(6)*1;
@@ -108,8 +108,8 @@ g=localStorage.getItem(x);
 j=g.split("?");
 d[4].innerHTML+="<b id='"+x+"?"+g+"' onclick='a(this.children[0]);m(this.id)' class='notranslate'><p>0</p> "+j[0]+"</b>"}
 function s(x){
-g=localStorage.getItem(x).split(";");
-z(u[0]+"??"+x+"?"+g[1]+"?"+g[2])}
+if(e==0){g=localStorage.getItem(x).split(";");
+z(u[0]+"??"+x+"?"+g[1]+"?"+g[2])}}
 function f(x){g=0;x--;
 n=[1114,1106,1162,1109,1185,1165,1166,1167,1170,1175,1177,1178,1176,1180,1087,1098,1099,1100,1089,1090,1101,1091,1004,1103,1095,1092,1093,1051,1005,1079,1269,1270,1003,1008];
 v=[];

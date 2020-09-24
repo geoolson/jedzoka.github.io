@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="Plan diet is a nutrition calculator that plans your diet ahead rather than tracking it. You can share your diets and receipes via links. It is ad free.">
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/xml+svg" href="icon.svg">
 <title>Plantiet - diet planner that respects its users</title>
 <style>
 ::-webkit-scrollbar{display:none}
 *{
-font-family:'Roboto',sans-serif;
+font-family:arial;
 background-color:#1b262c;
 scrollbar-width:none;
 }
@@ -48,7 +48,7 @@ textarea,select,div,p,a{color:#bbe1fa}
 <br style="clear:both">
 <br><br><div class="translate">
 <a onclick="this.href='https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+p[0].id+'/nutrients'" href="" target="blank">FDC page of first food</a><br><br>
-1. <a href="?169998?0?786983?0?787793?0?787465?0?787522?0?787791?0?787373?0?786699?0?786729?0?786754?0?786631?0?786652?0?174270?0?790577?0?168520?0">Click this</a> and wait until loading finishes<br><br>
+1. <a href="?169998?0?786983?0?787793?0?787465?0?787522?0?787791?0?787373?0?786699?0?786729?0?786754?0?786631?0?786652?0?174270?0?790577?0?168520?0">Click this</a><br><br>
 2. <select onchange="f(this.selectedIndex)">
 <option>Select your age group</option>
 <option>reset</option>
@@ -79,8 +79,8 @@ textarea,select,div,p,a{color:#bbe1fa}
 to add more foods Enter food name at the bottom and select desired option<br><br>
 4. Click bar on left to save your configuration<br><br>
 set counter to 0 and click on configuration to delete it, you can use 123 keyboard keys<br><br>
+set counter to 0 and click nutrient's value to change it(inside link between ?)<br><br>
 excesses are purple, deficiencies are red and can be beaten by supplements<br><br>
-click nutrient's value to change it(inside link between ?)<br><br>
 <a href="https://fdc.nal.usda.gov/api-key-signup.html">Get an API Key</a>, my <a href="https://ods.od.nih.gov/Health_Information/Dietary_Reference_Intakes.aspx">DRI source</a> and my <a href="https://jedzoka.github.io">other work</a><br><br>
 </div><textarea placeholder=" Enter food name, your API Key or configuration name(set counter to 0)" class="translate"></textarea></div>
 <script src="index.js"></script>
