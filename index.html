@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/xml+svg" href="icon.svg">
-<title>Plantiet - diet planner that respects its users</title>
+<title>Diet planner that respects its users</title>
 <style>
 ::-webkit-scrollbar{display:none}
 *{
-font-family:arial;
+font-family:sans-serif;
 background-color:#1b262c;
 scrollbar-width:none;
 }
@@ -47,8 +47,7 @@ textarea,select,div,p,a{color:#bbe1fa}
 <div onclick="h[1].innerHTML=e" style="position:fixed;right:0;color:orange;background:none"><h1 onclick="e++">+</h1><h1 onclick="e/=10;if(e<0.01)e=1">1</h1><h1 onclick="r()">set days</h1></div><div></div>
 <br style="clear:both">
 <br><br><div class="translate">
-<a onclick="this.href='https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+p[0].id+'/nutrients'" href="" target="blank">FDC page of first food</a><br><br>
-1. <a href="?169998?0?786983?0?787793?0?787465?0?787522?0?787791?0?787373?0?786699?0?786729?0?786754?0?786631?0?786652?0?174270?0?790577?0?168520?0">Click this</a><br><br>
+1. <a href="?786729?0.32?787791?2?787465?1?786699?3?786631?1.1?787793?1?786754?0.3?169998?1?786652?1?786983?1?787373?1?787522?1?790577?1?174270?2.14?168520?1">Click this</a><br><br>
 2. <select onchange="f(this.selectedIndex)">
 <option>Select your age group</option>
 <option>reset</option>
@@ -81,7 +80,8 @@ to add more foods Enter food name at the bottom and select desired option<br><br
 set counter to 0 and click on configuration to delete it, you can use 123 keyboard keys<br><br>
 set counter to 0 and click nutrient's value to change it(inside link between ?)<br><br>
 excesses are purple, deficiencies are red and can be beaten by supplements<br><br>
-<a href="https://fdc.nal.usda.gov/api-key-signup.html">Get an API Key</a>, my <a href="https://ods.od.nih.gov/Health_Information/Dietary_Reference_Intakes.aspx">DRI source</a> and my <a href="https://jedzoka.github.io">other work</a><br><br>
+<a href="https://fdc.nal.usda.gov/api-key-signup.html">Get an API Key</a>, my <a href="https://ods.od.nih.gov/Health_Information/Dietary_Reference_Intakes.aspx">DRI source</a> and my <a href="webslide">other work</a><br><br>
+<a onclick="this.href='https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+p[0].id+'/nutrients'" href="" target="blank">FDC page of first food</a><br><br>
 </div><textarea placeholder=" Enter food name, your API Key or configuration name(set counter to 0)" class="translate"></textarea></div>
 <script src="index.js"></script>
 </body>

@@ -21,7 +21,7 @@ x=localStorage.key(i);
 if(x.includes("a"))y(x);
 else if(x>99999999999)o(x);
 else if(x>1)l(x)
-i++}
+i++}i=1;
 j=document.querySelectorAll("i");
 if(j[0] && j[0].innerHTML<0)j[0].style.color="#ff6464";
 while(i<j.length){
