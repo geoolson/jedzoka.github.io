@@ -44,11 +44,12 @@ if(j.error)w();
 v=j.description;
 if(j.ingredients)v+=" ~ "+j.ingredients;
 if(j.brandOwner)v+=" ~ "+j.brandOwner;
+v=v.replace(/;/g,"");
 g=0;
 j=j.foodNutrients;
 while(g<j.length){
 if(j[g].amount)v+=";"+j[g].nutrient.id+";"+j[g].amount;
-if(!localStorage.getItem("a"+j[g].nutrient.id)){localStorage.setItem("a"+j[g].nutrient.id,j[g].nutrient.name.split('Vitamin ')+" "+j[g].nutrient.unitName+";0;0");y("a"+j[g].nutrient.id)}g++}
+if(!localStorage.getItem("a"+j[g].nutrient.id)){localStorage.setItem("a"+j[g].nutrient.id,j[g].nutrient.name.replace(/Vitamin|,|;/g,'')+" "+j[g].nutrient.unitName+";0;0");y("a"+j[g].nutrient.id)}g++}
 localStorage.setItem(x,v)
 l(x,n)})}}
 function c(x){if(e!=0){g=1;
@@ -118,7 +119,6 @@ v[i]=j[j.indexOf(x)+1]*1}
 else v[i]=0;
 b[i].title=v[i];
 i++}i=0;
-v=Array.from(v,q=>q||0);
 v.sort((a,b)=>b-a);
 console.log(v);
 while(i<d[3].childElementCount){
