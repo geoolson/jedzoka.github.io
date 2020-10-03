@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#0f4c75">
 <meta name="description" content="Plan diet is a nutrition calculator that plans your diet ahead rather than tracking it. You can share your diets and receipes via links. It is ad free.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="manifest" href="manifest.json">
@@ -47,8 +48,8 @@ textarea,select,div,p,a{color:#bbe1fa}
 <div onclick="h[1].innerHTML=e" style="position:fixed;right:0;color:orange;background:none"><h1 onclick="e++">+</h1><h1 onclick="e/=10;if(e<0.01)e=1">1</h1><h1 onclick="r()">set days</h1></div><div></div>
 <br style="clear:both">
 <br><br><div class="translate">
-1. <a href="?786729?0.32?787791?2?787465?1?786699?3?786631?1.1?787793?1?786754?0.3?169998?1?786652?1?786983?1?787373?1?787522?1?790577?1?174270?2.14?168520?1">Click this</a><br><br>
-2. <select onchange="f(this.selectedIndex)">
+1. <a href="?786729?0.32?787791?2?787465?1?786699?3?786631?1.1?787793?1?786754?0.3?169998?1?786652?1?786983?1?787373?1?787522?1?790577?1?174270?2.14?168520?1">Load default foods</a><br><br>
+<label>2. <select onchange="f(this.selectedIndex)">
 <option>Select your age group</option>
 <option>reset</option>
 <option>0-6 months</option>
@@ -73,17 +74,17 @@ textarea,select,div,p,a{color:#bbe1fa}
 <option>lactation 14-18 years</option>
 <option>lactation 19-30 years</option>
 <option>lactation 31-50 years</option>
-</select><br><br>
+</select></label><br><br>
 3. Click foods above to add them to your diet, every food is in grams<br><br>
 to add more foods Enter food name at the bottom and select desired option<br><br>
 4. Click bar on left to save your configuration<br><br>
 set counter to 0 and click on configuration to delete it, you can use 123 keyboard keys<br><br>
 click nutrient's value to sort foods accordingly to particular nutrient<br><br>
-set counter to 0 and click nutrient's value to change it(inside link between ?)<br><br>
+set counter to 0 and click nutrient's value to change it inside link between ?<br><br>
 excesses are purple, deficiencies are red and can be beaten by supplements<br><br>
 <a href="https://fdc.nal.usda.gov/api-key-signup.html">Get an API Key</a>, my <a href="https://ods.od.nih.gov/Health_Information/Dietary_Reference_Intakes.aspx">DRI source</a> and my <a href="webslide">other work</a><br><br>
-<a onclick="this.href='https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+p[0].id+'/nutrients'" href="" target="blank">FDC page of first food</a><br><br>
-</div><textarea placeholder=" Enter food name, your API Key or configuration name(set counter to 0)" class="translate"></textarea></div>
+<a onclick="this.href='https://fdc.nal.usda.gov/fdc-app.html#/food-details/'+p[0].id+'/nutrients'" href="" target="blank">FDC page of first food</a></div><br><br><br>
+<label> Enter food name or your API Key:<textarea class="translate"></textarea></label></div>
 <script src="index.js"></script>
 </body>
 </html>
